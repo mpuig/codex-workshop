@@ -49,7 +49,7 @@ Then start OpenAI Codex:
 codex
 ```
 
-![OpenAI Codex session after startup](images/codex.jpg)
+![OpenAI Codex session after startup](images/codex.png)
 
 _Example of OpenAI Codex running in the terminal after login._
 
