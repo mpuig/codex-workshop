@@ -1,302 +1,78 @@
 ---
-title: "Appendix C: MCP (Model Context Protocol)"
-description: "How to connect OpenAI Codex to external tools, databases, and APIs using MCP servers -- setup, transport types, scopes, and practical examples for insurance workflows."
+title: "Appendix B: MCP"
+description: "How to connect OpenAI Codex CLI to external tools with MCP using codex mcp commands and config.toml."
 ---
 
-# Appendix C: MCP (Model Context Protocol)
+# Appendix B: MCP
 
 > **Type:** Reference | **Prerequisites:** None
 
-MCP (Model Context Protocol) is an open standard by OpenAI for connecting Codex to external tools and data sources. Each MCP server exposes tools that Codex can call -- a PostgreSQL MCP provides `query`, a Jira MCP provides `search_issues` and `create_issue`, and so on. This appendix covers CLI-specific MCP setup. For the Codex Desktop perspective (remote connectors, extensions, visual toggles), see [Appendix A: Codex Cowork](/appendix/codex-cowork#mcp-connecting-cowork-to-your-tools).
-
-![MCP in OpenAI Codex -- add servers, manage via /mcp, configure in .mcp.json](/images/appendix/mcp-overview.png)
-
-_Use `mcp add <server-name>` to connect new servers and `/mcp` to manage them. Integrations are available for Atlassian, Asana, Linear, Canva, Sentry, Cloudflare, and more._
+MCP (Model Context Protocol) lets OpenAI Codex use external tools (databases, APIs, issue trackers, filesystem servers).
 
 ---
 
-## How MCP Works in OpenAI Codex
+## Core CLI Commands
 
-When you add an MCP server, OpenAI Codex gains access to that server's tools alongside its built-in tools (Read, Edit, Bash, etc.). Codex sees tool descriptions and decides when to call them based on your requests. The server handles the actual integration -- querying a database, calling an API, reading from a file system.
-
-```mermaid
-sequenceDiagram
-    participant You
-    participant Codex as OpenAI Codex
-    participant MCP as MCP Server
-    participant Ext as External Service
-
-    You->>Codex: "Show open claims for Barcelona"
-    Codex->>Codex: Selects mcp__claims-db__query tool
-    Codex->>MCP: Tool call with parameters
-    MCP->>Ext: SQL query / API request
-    Ext-->>MCP: Raw results
-    MCP-->>Codex: Formatted response
-    Codex-->>You: Summary with table
+```bash
+codex mcp list
+codex mcp get <name>
+codex mcp add <name> --url https://example.com/mcp
+codex mcp add <name> -- npx -y @modelcontextprotocol/server-filesystem /allowed/path
+codex mcp remove <name>
+codex mcp login <name>
+codex mcp logout <name>
 ```
 
-MCP servers come in two flavors:
-
-- **Remote servers** (HTTP transport): cloud-hosted, often with OAuth authentication. Examples: GitHub, Sentry, Notion.
-- **Local servers** (stdio transport): run as a process on your machine. Examples: database connectors, custom scripts, file-system tools.
+Use `codex mcp --help` and `codex mcp add --help` for exact options in your installed version.
 
 ---
 
-## Adding MCP Servers
+## Configuration File
 
-### Command Syntax
+Codex CLI configuration lives in:
 
-```bash
-codex mcp add [options] <name> [--] <command_or_url>
+- `~/.codex/config.toml`
+
+Example MCP entries:
+
+```toml
+[mcp_servers.filesystem]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "/allowed/path"]
+
+[mcp_servers.policy_db]
+command = "npx"
+args = ["-y", "@bytebase/dbhub", "--dsn", "${POLICY_DB_DSN}"]
+
+[mcp_servers.jira]
+url = "https://jira-mcp.company.com/mcp"
+bearer_token_env_var = "JIRA_TOKEN"
 ```
 
-All options must come **before** the server name. Use `--` to separate the name from the command/URL.
-
-### Remote Server (HTTP)
-
-```bash
-codex mcp add --transport http github https://api.githubcopilot.com/mcp/
-```
-
-With authentication headers:
-
-```bash
-codex mcp add --transport http company-api \
-  --header "Authorization: Bearer $API_TOKEN" \
-  https://internal.company.com/mcp
-```
-
-### Local Server (stdio)
-
-```bash
-codex mcp add --transport stdio db \
-  -- npx -y @bytebase/dbhub \
-  --dsn "postgresql://readonly:pass@db.company.com:5432/claims"
-```
-
-With environment variables:
-
-```bash
-codex mcp add --transport stdio airtable \
-  --env AIRTABLE_API_KEY=YOUR_KEY \
-  -- npx -y airtable-mcp-server
-```
-
-### OAuth-based Servers
-
-Many remote servers use OAuth for authentication. OpenAI Codex handles the flow automatically:
-
-```bash
-# Add the server
-codex mcp add --transport http sentry https://mcp.sentry.dev/mcp
-
-# Authenticate inside OpenAI Codex
-/mcp
-# Select "Authenticate" for Sentry → browser opens for login
-```
-
-For servers that need pre-configured OAuth credentials:
-
-```bash
-codex mcp add --transport http custom-api \
-  --client-id YOUR_CLIENT_ID --client-secret --callback-port 8080 \
-  https://mcp.example.com/mcp
-```
-
-The `--client-secret` flag prompts for masked input. Tokens are stored in your system keychain, not in config files.
-
-### Managing Servers
-
-```bash
-codex mcp list              # List all configured servers
-codex mcp get github        # Details for a specific server
-codex mcp remove github     # Remove a server
-```
-
-Inside an OpenAI Codex session:
-
-```
-/mcp                         # Interactive server management, authentication, status
-```
+Keep secrets in environment variables, not hardcoded in config files.
 
 ---
 
-## Configuration Files
+## Typical Insurance Use Cases
 
-MCP servers can be configured via CLI commands or by editing JSON files directly.
-
-| File | Scope | Shared with team? | Use case |
-|------|-------|--------------------|----------|
-| `.mcp.json` | Current project | Yes (commit to repo) | Team-shared servers |
-| `~/.codex.json` | All your projects | No (local) | Personal servers across projects |
-
-### `.mcp.json` Format (Project Scope)
-
-Place this file in your project root. It is safe to commit to version control:
-
-```json
-{
-  "mcpServers": {
-    "claims-db": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@bytebase/dbhub", "--dsn", "${DATABASE_URL}"],
-      "env": {}
-    },
-    "company-jira": {
-      "type": "http",
-      "url": "https://jira-mcp.company.com/mcp",
-      "headers": {
-        "Authorization": "Bearer ${JIRA_TOKEN}"
-      }
-    }
-  }
-}
-```
-
-**Environment variable expansion** is supported with `${VAR}` syntax and defaults with `${VAR:-fallback}`. This lets you commit the config while keeping secrets in environment variables.
-
-### Scope Levels
-
-When adding via CLI, use `--scope` to control where the server is stored:
-
-| Scope | Flag | Storage | Visibility |
-|-------|------|---------|------------|
-| **Local** (default) | `--scope local` | `~/.codex.json` under project path | You only, this project only |
-| **Project** | `--scope project` | `.mcp.json` in project root | Entire team via version control |
-| **User** | `--scope user` | `~/.codex.json` globally | You only, all projects |
-
-If the same server name exists at multiple scopes, local overrides project, which overrides user.
-
-> **Note:** Project-scoped servers (from `.mcp.json`) require approval before first use. This protects against untrusted configurations. Reset approvals with `codex mcp reset-project-choices`.
+- Query policy/claims data from read-only databases.
+- Pull Jira incidents for operational reporting.
+- Fetch underwriting documents from controlled file shares.
+- Trigger workflow systems through audited API tools.
 
 ---
 
-## Transport Types
+## Security Guidance
 
-| Transport | Use case | Authentication |
-|-----------|----------|----------------|
-| **HTTP** (recommended) | Cloud-hosted services, remote APIs | Headers, OAuth |
-| **stdio** | Local processes, database connectors, custom scripts | Environment variables |
-| **SSE** (deprecated) | Legacy remote servers | Headers, OAuth |
-
-Prefer HTTP for remote servers. Use stdio for anything that runs as a local process.
-
----
-
-## Practical Examples
-
-### Connect to PostgreSQL for Policy Lookups
-
-```bash
-codex mcp add --transport stdio policy-db --scope project \
-  -- npx -y @bytebase/dbhub \
-  --dsn "postgresql://readonly:pass@db.mig.local:5432/policies"
-```
-
-Then in conversation:
-
-```
-What's the current motor policy count by region?
-Show me all policies with a premium above EUR 10.000 in the Portugal book.
-```
-
-Codex calls the database MCP's query tool and returns results directly.
-
-> **MIG example:** The underwriting team can query the policy database without writing SQL. The `readonly` connection string ensures Codex cannot modify data.
-
-### Connect to Jira for Claims Tracking
-
-```bash
-codex mcp add --transport http jira \
-  --header "Authorization: Bearer $JIRA_TOKEN" \
-  https://jira-mcp.company.com/mcp
-```
-
-Then:
-
-```
-Show me all open claims tickets assigned to the Barcelona team.
-Create a new ticket for the delayed LusoProtect migration items.
-```
-
-### Connect to GitHub for Code Review
-
-```bash
-codex mcp add --transport http github https://api.githubcopilot.com/mcp/
-```
-
-After OAuth authentication:
-
-```
-Review PR #142 and summarize the changes.
-What issues are tagged with "Project Tramuntana"?
-```
-
-### Team-Shared Database Connection
-
-Add to `.mcp.json` so the entire team gets it automatically:
-
-```json
-{
-  "mcpServers": {
-    "analytics": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y", "@bytebase/dbhub",
-        "--dsn", "${ANALYTICS_DB_URL:-postgresql://readonly:pass@analytics.mig.local:5432/dwh}"
-      ],
-      "env": {}
-    }
-  }
-}
-```
-
-Team members set `ANALYTICS_DB_URL` in their environment if they need a different connection, or use the default.
-
----
-
-## MCP Config Across Codex Tools
-
-Adding an MCP server in one Codex tool does **not** make it available in others:
-
-| Configuration | Available in |
-|---------------|-------------|
-| `codex_desktop_config.json` | Chat, Cowork, Code Tab |
-| `~/.codex.json` | Code CLI (+ Code Tab) |
-| `.mcp.json` (project) | Code CLI only |
-| `codex mcp add` | Code CLI only (stored in `~/.codex.json` or `.mcp.json`) |
-
-If you need the same MCP in both Desktop and CLI, configure it in both places.
-
----
-
-## Important Caveats
-
-- **Security**: OpenAI does not verify third-party MCP servers. Only use servers from providers you trust. Be cautious with servers that process untrusted content (prompt injection risk).
-- **Output limits**: MCP tool output is capped at 25.000 tokens by default. Override with `MAX_MCP_OUTPUT_TOKENS=50000 codex` if you need more.
-- **Permission rules**: Control MCP tool access in settings with patterns like `mcp__server-name__tool-name` in `allow` or `deny` lists.
-- **Tool search**: When many MCP tools are configured (>10% of context), OpenAI Codex enables tool search to find relevant tools efficiently. Requires Sonnet 4 or Opus 4 models.
-
----
-
-## Plugins
-
-Plugins are the distribution format for extending OpenAI Codex. A single plugin can bundle MCP servers, slash commands, subagents, and hooks into one installable package.
-
-![Plugins -- unified distribution for MCP servers, slash commands, subagents, and hooks](/images/appendix/plugins-overview.png)
-
-_Organizations can create internal and external marketplaces to distribute plugins across teams or customers. Use `/plugin` to discover, install, and manage plugins._
+- Only connect MCP servers from trusted providers.
+- Prefer read-only credentials for production data.
+- Keep approval policy conservative for high-impact tools.
+- Review tool outputs before using numbers in client-facing deliverables.
 
 ---
 
 ## Key Takeaways
 
-- MCP connects OpenAI Codex to external tools (databases, APIs, issue trackers) through a standardized protocol
-- Use `codex mcp add` for quick setup; edit `.mcp.json` for team-shared configurations committed to version control
-- HTTP transport for cloud services, stdio transport for local processes -- SSE is deprecated
-- Three scope levels (local, project, user) let you control visibility and sharing
-- Environment variable expansion (`${VAR}`) in `.mcp.json` keeps secrets out of version control
-- For insurance workflows, common MCP uses include querying policy databases, connecting to claims systems, and integrating with project management tools
-- MCP configs are **not shared** between Codex Desktop and OpenAI Codex CLI -- configure each separately
+- MCP is the standard way to extend Codex with external systems.
+- Start with `codex mcp add`, inspect with `codex mcp get`, and keep config in `~/.codex/config.toml`.
+- Use environment variables for credentials and enforce least privilege.

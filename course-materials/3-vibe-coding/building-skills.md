@@ -159,18 +159,18 @@ Skills can be installed at different levels depending on how broadly they should
 
 | Location | Scope | How to install |
 |----------|-------|----------------|
-| Codex.ai Settings > Skills | Shared across Chat, Cowork, and Code Tab | Upload `.zip` or `.md` |
+| ChatGPT/Codex settings | Shared account-level skills | Upload `.zip` or `.md` |
 | `~/.codex/skills/` | All OpenAI Codex projects on your machine | Place skill folder in directory |
 | `.codex/skills/` (in project) | Only this specific project | Place skill folder in project |
 
-For more on how skills work across Codex's different interfaces, see [Appendix A: Codex Cowork](../appendix-a-cowork/README.md).
+For more on Codex extensions and MCP setup, see [Appendix: MCP](../../website/pages/appendix/mcp.mdx).
 
 ---
 
 ## Further Reading
 
-- [The Complete Guide to Building Skills for Codex](https://resources.openai.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Codex.pdf) -- OpenAI's official reference covering planning, testing, distribution, and advanced patterns
-- [openai/skills on GitHub](https://github.com/openai/skills) -- OpenAI's official skill repository with production-ready examples
+- [Codex repository documentation](https://github.com/openai/codex) -- primary reference for current Codex CLI behavior and configuration
+- [openai/skills on GitHub](https://github.com/openai/skills) -- reusable skill examples and patterns
 
 ---
 

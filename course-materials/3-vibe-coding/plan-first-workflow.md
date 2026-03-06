@@ -2,13 +2,13 @@
 
 > **Type:** Reference | **Prerequisites:** [Building an Insurance App](README.md)
 
-In the [previous section](README.md) you used `Shift+Tab` to switch to Plan mode -- a quick way to ask Codex to show its approach before acting. That works well for focused tasks like "add a filter to the dashboard."
+In the [previous section](README.md) you used planning-first prompts to ask Codex to show its approach before acting. That works well for focused tasks like "add a filter to the dashboard."
 
 For larger projects, Plan mode alone is not enough. Building a claims triage tool from scratch, adding a full reporting section, or restructuring a multi-page dashboard needs a stricter workflow so you stay in control of key decisions.
 
 This is the **"Plan First" workflow**: separate planning from execution so that Codex never builds anything you have not reviewed and approved first.
 
-*(Note: This workflow is adapted from the community-driven [Boris Tane workflow](https://boristane.com/blog/how-i-use-claude-code/).)*
+*(Note: This workflow is adapted from the community-driven Boris Tane workflow.)*
 
 ---
 
@@ -71,7 +71,7 @@ If Codex makes a mistake during execution, give brief feedback ("the chart shoul
 
 | Situation | Use |
 |-----------|-----|
-| Add a single chart to an existing dashboard | `Shift+Tab` Plan mode |
+| Add a single chart to an existing dashboard | Ask for a plan first, then implement |
 | Fix a layout issue or change colours | Direct prompt (no planning needed) |
 | Build a new multi-section feature | Plan First workflow |
 | Start an app from scratch with 5+ requirements | Plan First workflow |

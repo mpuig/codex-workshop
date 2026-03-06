@@ -94,7 +94,7 @@ Hooks are defined in JSON settings files. You can configure them at two levels:
 
 | Variable | Description |
 |----------|-------------|
-| `CLAUDE_PROJECT_DIR` | Root directory of the current project |
+| `PWD` | Current working directory |
 | Standard shell env | `PATH`, `HOME`, `USER`, etc. |
 
 Hook scripts receive JSON on **stdin** with context about the event:
@@ -184,7 +184,7 @@ Then reference it in `.codex/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.codex/hooks/protect-files.sh"
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/protect-files.sh\""
           }
         ]
       }

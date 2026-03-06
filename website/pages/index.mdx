@@ -51,7 +51,6 @@ Standalone challenges where you apply what you have learned independently. Each 
 Beyond the core course, you will find:
 
 - **[Advanced Tips](/advanced-tips/cost-management)** -- Cost management, data security, reading diffs, and context window management
-- **[Appendix: Codex Cowork](/appendix/codex-cowork)** -- Visual desktop agent for non-terminal users, with plugins, MCP connectors, and comparison across all Codex tools
 
 ## Prerequisites
 
@@ -63,10 +62,13 @@ Beyond the core course, you will find:
 
 ```bash
 # 1. Install OpenAI Codex
-curl -fsSL https://chatgpt.com/install.sh | bash
+npm install -g @openai/codex
 
-# 2. Start OpenAI Codex
+# 2. Authenticate
+codex login
+
+# 3. Start OpenAI Codex
 codex
 
-# 3. Follow Module 0.2 to get set up
+# 4. Follow Module 0.2 to get set up
 ```

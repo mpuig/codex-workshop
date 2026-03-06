@@ -189,17 +189,17 @@ This back-and-forth is how you get the best results. Think of it as editing draf
 
 ---
 
-## Understanding Modes (Shift+Tab)
+## Controlling Execution in Codex
 
-As you work, remember you can press **Shift+Tab** to cycle between modes:
+In OpenAI Codex, execution behavior is controlled by approval and sandbox settings.
 
-| Mode | Best For |
+| Setting | Best For |
 |------|----------|
-| **Plan** | "Show me what you would do before doing it" -- great for complex tasks |
-| **Edit** | Default mode. Codex proposes changes and you approve them |
-| **Auto-accept** | Codex acts immediately. Use when iterating quickly on drafts |
+| `-a on-request` | Balanced workflow where Codex asks when needed |
+| `-a never -s workspace-write` | Faster iteration in trusted project workspaces |
+| `--full-auto` | Low-friction workflow with workspace-write sandbox + on-request approvals |
 
-For these exercises, **Edit** mode is recommended so you can see what Codex does before it saves files.
+For these exercises, start with `-a on-request` so you can review risky actions.
 
 ---
 

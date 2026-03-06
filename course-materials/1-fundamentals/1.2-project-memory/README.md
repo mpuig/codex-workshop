@@ -43,23 +43,17 @@ France, and Italy, with a recent acquisition in Portugal (LusoProtect).
 Include rules for consistent terminology, formatting, and output quality.
 ```
 
-### Option B: The quick way with #
+### Option B: Edit AGENTS.md directly
 
-While in an OpenAI Codex session, type `#` followed by a rule, and OpenAI Codex will add it to your AGENTS.md automatically:
+Open `AGENTS.md` in your editor and append rules as you learn what should stay consistent.
 
-```text
-# Always use EUR as the default currency, never USD
-```
+Examples:
 
 ```text
-# When presenting financial figures, use European format: 1.000.000,00
+Always use EUR as the default currency, never USD.
+When presenting financial figures, use European format: 1.000.000,00.
+All documents should follow Solvency II terminology where applicable.
 ```
-
-```text
-# All documents should follow Solvency II terminology where applicable
-```
-
-This is the fastest way to build up your AGENTS.md over time as you discover new rules you want enforced.
 
 ---
 

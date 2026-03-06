@@ -1,6 +1,5 @@
 export default {
-  'codex-cowork': 'A: Codex Cowork',
-  'hooks': 'B: Hooks',
-  'mcp': 'C: MCP',
-  'sub-agents': 'D: Sub-agents',
+  'hooks': 'A: Hooks',
+  'mcp': 'B: MCP',
+  'sub-agents': 'C: Sub-agents',
 }
