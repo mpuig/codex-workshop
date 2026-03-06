@@ -2,8 +2,6 @@
 
 > **Type:** Reference | **Prerequisites:** [Building an Insurance App](README.md)
 
-![Power Features](images/power-features.png)
-
 ![Skills: Customize Codex to your Enterprise](images/skills-overview.png)
 
 _Skills are organized collections of files containing instructions, executable code, and assets -- so you can stop repeating instructions and codify your team's workflows._
