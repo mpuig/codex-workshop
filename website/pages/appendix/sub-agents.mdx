@@ -7,7 +7,12 @@ description: "How to use delegation patterns in OpenAI Codex safely and effectiv
 
 > **Type:** Reference | **Prerequisites:** None
 
-OpenAI Codex can break complex work into smaller delegated tasks. The practical pattern is simple:
+OpenAI uses two related ideas:
+
+- **Codex app/cloud workflows:** explicitly multi-agent, where multiple tasks can run in parallel.
+- **Codex CLI sessions:** typically one active agent loop per session, with delegation done by splitting work into clear subtasks (or by running separate sessions).
+
+For day-to-day work, the practical pattern is:
 
 1. Ask Codex to propose a plan.
 2. Split the work into independent subtasks.
@@ -39,9 +44,9 @@ Before implementation, list assumptions and risks for each subtask.
 
 ## Model Guidance
 
-Use GPT-family model names in Codex (for example `gpt-5.3`, when available in your environment).
+Prefer Codex-targeted model names available in your environment (for example `gpt-5.3-codex`).
 
-If a selected model is unavailable, retry with a model your account allows.
+If a selected model is unavailable, retry with another model your account allows.
 
 ---
 
@@ -67,6 +72,15 @@ Final: Merge A/B/C into a 1-page management brief with 5 actions.
 
 ## Key Takeaways
 
-- Delegation improves speed and clarity for complex work.
-- Strong task boundaries and explicit summaries matter more than agent jargon.
-- Use GPT-family model names and verify capabilities against your installed Codex version.
+- In Codex app, multi-agent execution is a native pattern; in CLI, treat delegation as structured task decomposition.
+- Delegation improves speed and clarity for complex work when subtask boundaries are explicit.
+- Use Codex-available model names and verify capabilities against your installed Codex version.
+
+---
+
+## References
+
+- [OpenAI Codex product page](https://openai.com/codex/)
+- [Introducing the Codex app](https://openai.com/index/introducing-the-codex-app/)
+- [GPT-5.3 Codex announcement](https://openai.com/index/introducing-gpt-5-3-codex/)
+- [Codex in ChatGPT FAQ](https://help.openai.com/en/articles/11369540-codex-in-chatgpt-faq)
