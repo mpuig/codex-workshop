@@ -141,7 +141,7 @@ description: Analyses reinsurance treaty structures and generates comparison rep
 
 ## The `skill-creator` Skill
 
-You do not have to write skills from scratch. The `skill-creator` skill is built into OpenAI Codex and available in Codex.ai. It can:
+You do not have to write skills from scratch. In Codex environments where `skill-creator` is available, it can:
 
 - Generate a properly formatted `SKILL.md` from a natural language description
 - Review an existing skill and suggest improvements
@@ -157,9 +157,9 @@ Skills can be installed at different levels depending on how broadly they should
 
 | Location | Scope | How to install |
 |----------|-------|----------------|
-| ChatGPT/Codex settings | Shared account-level skills | Upload `.zip` or `.md` |
 | `~/.codex/skills/` | All OpenAI Codex projects on your machine | Place skill folder in directory |
 | `.codex/skills/` (in project) | Only this specific project | Place skill folder in project |
+| Codex App / ChatGPT settings (optional) | Shared account-level skills | Upload `.zip` or `.md` |
 
 For more on Codex extensions and MCP setup, see [Appendix: MCP](../../website/pages/appendix/mcp.mdx).
 

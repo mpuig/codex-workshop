@@ -7,12 +7,9 @@ description: "How to use delegation patterns in OpenAI Codex safely and effectiv
 
 > **Type:** Reference | **Prerequisites:** None
 
-OpenAI uses two related ideas:
+This page is CLI-focused. In terminal workflows, treat "sub-agents" as a delegation pattern: break complex work into bounded subtasks, then synthesize outputs.
 
-- **Codex app/cloud workflows:** explicitly multi-agent, where multiple tasks can run in parallel.
-- **Codex CLI sessions:** typically one active agent loop per session, with delegation done by splitting work into clear subtasks (or by running separate sessions).
-
-For day-to-day work, the practical pattern is:
+The practical pattern is:
 
 1. Ask Codex to propose a plan.
 2. Split the work into independent subtasks.
@@ -72,7 +69,7 @@ Final: Merge A/B/C into a 1-page management brief with 5 actions.
 
 ## Key Takeaways
 
-- In Codex app, multi-agent execution is a native pattern; in CLI, treat delegation as structured task decomposition.
+- In Codex CLI, "sub-agents" are best implemented as structured task decomposition.
 - Delegation improves speed and clarity for complex work when subtask boundaries are explicit.
 - Use Codex-available model names and verify capabilities against your installed Codex version.
 
@@ -81,6 +78,5 @@ Final: Merge A/B/C into a 1-page management brief with 5 actions.
 ## References
 
 - [OpenAI Codex product page](https://openai.com/codex/)
-- [Introducing the Codex app](https://openai.com/index/introducing-the-codex-app/)
 - [GPT-5.3 Codex announcement](https://openai.com/index/introducing-gpt-5-3-codex/)
-- [Codex in ChatGPT FAQ](https://help.openai.com/en/articles/11369540-codex-in-chatgpt-faq)
+- [Codex CLI repository documentation](https://github.com/openai/codex)

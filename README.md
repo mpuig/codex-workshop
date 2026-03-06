@@ -2,6 +2,8 @@
 
 Practical training for consultancy teams on using OpenAI Codex to build solutions without writing code.
 
+> Scope note: this training is CLI-first. Core modules and exercises are designed for `codex` in a terminal. Codex App-specific material is isolated to the Codex App appendix.
+
 ## Who Is This For?
 
 Non-technical insurance professionals who want to use AI coding agents to accelerate their work: data analysis, process prototyping, reporting automation, and rapid application building.
