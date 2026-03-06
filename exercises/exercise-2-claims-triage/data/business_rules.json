@@ -1,0 +1,443 @@
+{
+  "version": "2.1",
+  "last_updated": "2025-01-15",
+  "owner": "Ana Martinez - Regional Claims Manager, Barcelona",
+  "description": "Mediterranean Insurance Group (MIG) claims triage rules for the Iberian Peninsula region. These rules define how incoming claims are classified, prioritized, and routed to the appropriate handling team.",
+
+  "category_mapping": {
+    "description": "Maps the combination of product_line and incident_type to a standardized claim category.",
+    "rules": [
+      {
+        "product_line": "Motor",
+        "incident_type": "collision",
+        "injury_reported": "Yes",
+        "category": "auto-bodily-injury"
+      },
+      {
+        "product_line": "Motor",
+        "incident_type": "collision",
+        "injury_reported": "No",
+        "category": "auto-property"
+      },
+      {
+        "product_line": "Motor",
+        "incident_type": "theft",
+        "category": "auto-property"
+      },
+      {
+        "product_line": "Motor",
+        "incident_type": "vandalism",
+        "category": "auto-property"
+      },
+      {
+        "product_line": "Motor",
+        "incident_type": "glass_damage",
+        "category": "auto-property"
+      },
+      {
+        "product_line": "Motor",
+        "incident_type": "hit_and_run",
+        "injury_reported": "Yes",
+        "category": "auto-bodily-injury"
+      },
+      {
+        "product_line": "Motor",
+        "incident_type": "hit_and_run",
+        "injury_reported": "No",
+        "category": "auto-property"
+      },
+      {
+        "product_line": "Home",
+        "incident_type": "water_damage",
+        "category": "home-water-damage"
+      },
+      {
+        "product_line": "Home",
+        "incident_type": "fire",
+        "category": "home-fire"
+      },
+      {
+        "product_line": "Home",
+        "incident_type": "theft",
+        "category": "home-theft"
+      },
+      {
+        "product_line": "Home",
+        "incident_type": "storm_damage",
+        "category": "home-water-damage"
+      },
+      {
+        "product_line": "Home",
+        "incident_type": "electrical_damage",
+        "category": "home-fire"
+      },
+      {
+        "product_line": "Home",
+        "incident_type": "vandalism",
+        "category": "home-theft"
+      },
+      {
+        "product_line": "Health",
+        "incident_type": "medical_emergency",
+        "category": "health-emergency"
+      },
+      {
+        "product_line": "Health",
+        "incident_type": "hospitalization",
+        "category": "health-emergency"
+      },
+      {
+        "product_line": "Health",
+        "incident_type": "surgery",
+        "category": "health-emergency"
+      },
+      {
+        "product_line": "Health",
+        "incident_type": "outpatient_treatment",
+        "category": "health-routine"
+      },
+      {
+        "product_line": "Health",
+        "incident_type": "dental",
+        "category": "health-routine"
+      },
+      {
+        "product_line": "Health",
+        "incident_type": "physiotherapy",
+        "category": "health-routine"
+      },
+      {
+        "product_line": "Commercial",
+        "incident_type": "slip_and_fall",
+        "category": "commercial-liability"
+      },
+      {
+        "product_line": "Commercial",
+        "incident_type": "product_liability",
+        "category": "commercial-liability"
+      },
+      {
+        "product_line": "Commercial",
+        "incident_type": "professional_negligence",
+        "category": "commercial-liability"
+      },
+      {
+        "product_line": "Commercial",
+        "incident_type": "property_damage",
+        "category": "commercial-property"
+      },
+      {
+        "product_line": "Commercial",
+        "incident_type": "fire",
+        "category": "commercial-property"
+      },
+      {
+        "product_line": "Commercial",
+        "incident_type": "flood",
+        "category": "commercial-property"
+      },
+      {
+        "product_line": "Commercial",
+        "incident_type": "equipment_breakdown",
+        "category": "commercial-property"
+      }
+    ]
+  },
+
+  "priority_rules": {
+    "description": "Determines the priority level for a claim based on estimated amount, injury involvement, and incident characteristics. Rules are evaluated top-to-bottom; the first matching rule wins.",
+    "levels": [
+      {
+        "priority": "Critical",
+        "color_code": "#DC2626",
+        "conditions_any_of": [
+          "estimated_amount_eur > 50000",
+          "injury_reported == 'Yes' AND estimated_amount_eur > 10000",
+          "incident_type == 'fire' AND product_line == 'Commercial'",
+          "incident_type == 'medical_emergency' AND estimated_amount_eur > 15000",
+          "incident_type == 'hospitalization'"
+        ],
+        "response_time_hours": 4,
+        "description": "Requires immediate senior adjuster attention. Must be acknowledged within 4 hours."
+      },
+      {
+        "priority": "High",
+        "color_code": "#F59E0B",
+        "conditions_any_of": [
+          "estimated_amount_eur > 20000",
+          "injury_reported == 'Yes'",
+          "incident_type == 'fire'",
+          "incident_type == 'theft' AND estimated_amount_eur > 10000",
+          "incident_type IN ('slip_and_fall', 'product_liability', 'professional_negligence')",
+          "category == 'auto-bodily-injury'"
+        ],
+        "response_time_hours": 24,
+        "description": "High value or injury-related claims. Must be acknowledged within 24 hours."
+      },
+      {
+        "priority": "Medium",
+        "color_code": "#3B82F6",
+        "conditions_any_of": [
+          "estimated_amount_eur BETWEEN 5000 AND 20000",
+          "incident_type == 'water_damage'",
+          "incident_type == 'storm_damage'",
+          "police_report_filed == 'Yes'"
+        ],
+        "response_time_hours": 48,
+        "description": "Standard claims requiring normal processing. Must be acknowledged within 48 hours."
+      },
+      {
+        "priority": "Low",
+        "color_code": "#10B981",
+        "conditions_any_of": [
+          "estimated_amount_eur < 5000",
+          "incident_type IN ('glass_damage', 'dental', 'physiotherapy', 'outpatient_treatment')"
+        ],
+        "response_time_hours": 72,
+        "description": "Routine low-value claims. Can be processed in standard queue within 72 hours."
+      }
+    ]
+  },
+
+  "handling_paths": {
+    "description": "Determines the processing path for each claim based on category, priority, and other factors.",
+    "paths": [
+      {
+        "path": "fast-track",
+        "description": "Automated or semi-automated processing with minimal manual review. Target: resolved within 5 business days.",
+        "criteria": [
+          "priority == 'Low' AND estimated_amount_eur < 2000",
+          "incident_type == 'glass_damage'",
+          "incident_type IN ('dental', 'physiotherapy', 'outpatient_treatment') AND estimated_amount_eur < 3000",
+          "incident_type == 'water_damage' AND estimated_amount_eur < 5000 AND no_fraud_indicators"
+        ],
+        "approval_authority": "Automated / Junior Adjuster",
+        "max_payout_without_escalation_eur": 3000
+      },
+      {
+        "path": "standard",
+        "description": "Normal processing with adjuster review, documentation collection, and assessment. Target: resolved within 15 business days.",
+        "criteria": [
+          "priority IN ('Low', 'Medium') AND NOT fast-track eligible",
+          "auto-property claims < 20000 EUR",
+          "home-water-damage claims < 15000 EUR",
+          "health-routine claims of any amount"
+        ],
+        "approval_authority": "Mid-level Adjuster",
+        "max_payout_without_escalation_eur": 15000
+      },
+      {
+        "path": "complex-review",
+        "description": "Multi-party or high-value claims requiring senior review, possibly external assessors. Target: resolved within 30 business days.",
+        "criteria": [
+          "priority IN ('High', 'Critical')",
+          "estimated_amount_eur > 20000",
+          "incident_type == 'fire'",
+          "multiple parties involved",
+          "commercial-liability claims",
+          "auto-bodily-injury with estimated_amount > 15000"
+        ],
+        "approval_authority": "Senior Adjuster / Claims Manager",
+        "max_payout_without_escalation_eur": 75000
+      },
+      {
+        "path": "fraud-investigation",
+        "description": "Claims flagged by fraud indicators. Routed to the Special Investigations Unit (SIU). Target: investigation within 45 business days.",
+        "criteria": [
+          "any fraud indicator triggered (see fraud_indicators section)",
+          "inconsistent documentation",
+          "claimant has history of denied claims"
+        ],
+        "approval_authority": "SIU Manager",
+        "max_payout_without_escalation_eur": 0
+      },
+      {
+        "path": "legal-referral",
+        "description": "Claims involving legal complexity, third-party liability disputes, or regulatory concerns. Target: legal review within 10 business days.",
+        "criteria": [
+          "commercial-liability with injury_reported == 'Yes'",
+          "professional_negligence claims",
+          "claims where policyholder has retained legal counsel",
+          "estimated_amount_eur > 100000",
+          "auto-bodily-injury with disputed liability"
+        ],
+        "approval_authority": "Legal Department / External Counsel",
+        "max_payout_without_escalation_eur": 0
+      }
+    ]
+  },
+
+  "team_assignment": {
+    "description": "Maps claim categories and handling paths to specific teams within the Barcelona regional office.",
+    "teams": [
+      {
+        "team_name": "Motor Claims Unit",
+        "team_code": "BCN-MOT",
+        "handles": ["auto-property", "auto-bodily-injury"],
+        "handling_paths": ["fast-track", "standard", "complex-review"],
+        "capacity_per_day": 25,
+        "lead": "Carlos Vega"
+      },
+      {
+        "team_name": "Property Claims Unit",
+        "team_code": "BCN-PROP",
+        "handles": ["home-water-damage", "home-fire", "home-theft"],
+        "handling_paths": ["fast-track", "standard", "complex-review"],
+        "capacity_per_day": 20,
+        "lead": "Isabel Fernandez"
+      },
+      {
+        "team_name": "Health Claims Unit",
+        "team_code": "BCN-HLT",
+        "handles": ["health-emergency", "health-routine"],
+        "handling_paths": ["fast-track", "standard", "complex-review"],
+        "capacity_per_day": 30,
+        "lead": "Dr. Pau Soler"
+      },
+      {
+        "team_name": "Commercial Lines Unit",
+        "team_code": "BCN-COM",
+        "handles": ["commercial-liability", "commercial-property"],
+        "handling_paths": ["standard", "complex-review"],
+        "capacity_per_day": 10,
+        "lead": "Marta Ruiz"
+      },
+      {
+        "team_name": "Special Investigations Unit",
+        "team_code": "BCN-SIU",
+        "handles": ["all categories"],
+        "handling_paths": ["fraud-investigation"],
+        "capacity_per_day": 5,
+        "lead": "Jordi Puig"
+      },
+      {
+        "team_name": "Legal & Compliance",
+        "team_code": "BCN-LEG",
+        "handles": ["all categories"],
+        "handling_paths": ["legal-referral"],
+        "capacity_per_day": 8,
+        "lead": "Elena Navarro"
+      }
+    ]
+  },
+
+  "sla_targets": {
+    "description": "Service Level Agreement targets by priority level.",
+    "targets": [
+      {
+        "priority": "Critical",
+        "first_contact_hours": 4,
+        "initial_assessment_days": 1,
+        "target_resolution_days": 15,
+        "max_resolution_days": 30,
+        "escalation_after_days": 10
+      },
+      {
+        "priority": "High",
+        "first_contact_hours": 24,
+        "initial_assessment_days": 3,
+        "target_resolution_days": 20,
+        "max_resolution_days": 45,
+        "escalation_after_days": 15
+      },
+      {
+        "priority": "Medium",
+        "first_contact_hours": 48,
+        "initial_assessment_days": 5,
+        "target_resolution_days": 30,
+        "max_resolution_days": 60,
+        "escalation_after_days": 25
+      },
+      {
+        "priority": "Low",
+        "first_contact_hours": 72,
+        "initial_assessment_days": 7,
+        "target_resolution_days": 15,
+        "max_resolution_days": 30,
+        "escalation_after_days": 12
+      }
+    ]
+  },
+
+  "fraud_indicators": {
+    "description": "Red flags that should trigger routing to fraud-investigation path. A single indicator raises a flag; two or more indicators mandate SIU referral.",
+    "indicators": [
+      {
+        "id": "FI-001",
+        "name": "Multiple recent claims",
+        "description": "Policyholder has filed 2 or more claims within the last 90 days.",
+        "severity": "High"
+      },
+      {
+        "id": "FI-002",
+        "name": "New policy claim",
+        "description": "Claim filed within 90 days of policy inception or last renewal.",
+        "severity": "Medium"
+      },
+      {
+        "id": "FI-003",
+        "name": "Inflated estimate",
+        "description": "Estimated claim amount exceeds 80% of the insured value for the item.",
+        "severity": "High"
+      },
+      {
+        "id": "FI-004",
+        "name": "Delayed reporting",
+        "description": "More than 30 days between incident_date and claim_date.",
+        "severity": "Medium"
+      },
+      {
+        "id": "FI-005",
+        "name": "No police report for theft/vandalism",
+        "description": "Theft or vandalism claim filed without a police report.",
+        "severity": "High"
+      },
+      {
+        "id": "FI-006",
+        "name": "Inconsistent description",
+        "description": "Incident description does not match the incident_type or claimed damages.",
+        "severity": "High"
+      },
+      {
+        "id": "FI-007",
+        "name": "Holiday/weekend clustering",
+        "description": "Incident occurred during a major holiday or long weekend when verification is harder.",
+        "severity": "Low"
+      },
+      {
+        "id": "FI-008",
+        "name": "Round number estimate",
+        "description": "Estimated amount is a suspiciously round number (e.g., exactly 10000, 25000, 50000).",
+        "severity": "Low"
+      },
+      {
+        "id": "FI-009",
+        "name": "Prior fraud history",
+        "description": "Policyholder has a previously denied claim due to fraud suspicion.",
+        "severity": "Critical"
+      },
+      {
+        "id": "FI-010",
+        "name": "Third-party only witness",
+        "description": "The only witnesses are related to or known associates of the claimant.",
+        "severity": "Medium"
+      }
+    ]
+  },
+
+  "region_codes": {
+    "description": "Region codes used across the Iberian operations.",
+    "regions": [
+      { "code": "CAT", "name": "Catalunya", "office": "Barcelona" },
+      { "code": "MAD", "name": "Madrid", "office": "Madrid" },
+      { "code": "AND", "name": "Andalucia", "office": "Sevilla" },
+      { "code": "VAL", "name": "Valencia", "office": "Valencia" },
+      { "code": "GAL", "name": "Galicia", "office": "A Coruna" },
+      { "code": "PVA", "name": "Pais Vasco", "office": "Bilbao" },
+      { "code": "BAL", "name": "Illes Balears", "office": "Palma" },
+      { "code": "ARA", "name": "Aragon", "office": "Zaragoza" },
+      { "code": "POR-N", "name": "Portugal Norte", "office": "Porto" },
+      { "code": "POR-S", "name": "Portugal Sul", "office": "Lisboa" }
+    ]
+  }
+}

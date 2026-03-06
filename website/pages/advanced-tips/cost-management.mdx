@@ -1,0 +1,133 @@
+---
+title: "Cost & Usage Management"
+description: How OpenAI Codex billing works across subscription and API plans, what tokens are, and tips to manage usage efficiently.
+---
+
+# Cost & Usage Management
+
+> **Type:** Reference | **Prerequisites:** None
+
+## How OpenAI Codex Billing Works
+
+OpenAI Codex itself is free to install. You pay for the AI model usage, either through a **subscription plan** or **OpenAI API credits**.
+
+| Plan | Monthly cost | OpenAI Codex access | Models available |
+|------|-------------|-------------------|-----------------|
+| **Free** | $0 | No OpenAI Codex | Sonnet (web only) |
+| **Pro** | $20/month | Yes | Sonnet |
+| **Max 5x** | $100/month | Yes, 5x Pro usage | Sonnet + Opus |
+| **Max 20x** | $200/month | Yes, 20x Pro usage | Sonnet + Opus |
+| **API credits** | Pay per token | Yes | All models, usage-based |
+
+> **Important:** OpenAI Codex is **not** available on the free plan. You need at least a Pro subscription or API credits.
+
+### Shared usage limits
+
+Your subscription usage is **shared** between the Codex web/desktop app and OpenAI Codex. Heavy use of OpenAI Codex counts against the same limits as chatting in the web app. If you hit your limit in OpenAI Codex, you cannot continue in the web app either (and vice versa) until the limit resets.
+
+### Subscription vs. API credits
+
+- **Subscription (Pro/Max):** Fixed monthly cost. Usage is rate-limited -- you may hit a temporary cap during heavy use, then it resets. Most individual users and workshop participants will use this option.
+- **API credits:** No monthly fee. Pay per token consumed via the OpenAI Console. No rate cap beyond your budget, but costs are variable. More common in enterprise or automation contexts.
+
+> **Note:** If you are unsure which billing model your organization uses, check with your IT team. For this workshop, either option works.
+
+### What happens when you hit your limit?
+
+On a subscription plan, you have several options:
+
+1. **Wait** for your usage limits to reset
+2. **Enable extra usage** (billed at API rates on top of your subscription)
+3. **Upgrade** from Pro to Max, or from Max 5x to Max 20x
+4. **Switch to API credits** for the remainder of the period
+
+---
+
+## Tokens in Plain Language
+
+A **token** is the unit OpenAI Codex uses to process text. Think of it as a fragment of a word:
+
+- ~4 characters = 1 token
+- ~500 tokens = 1 typical page of text
+- A 10-page PDF = ~5.000 tokens
+- A 1.000-row CSV = ~15.000-30.000 tokens (varies with column count)
+
+> **Rule of thumb:** If you can read it in 1 minute, it is roughly 1.000-1.500 tokens.
+
+Understanding tokens matters because both subscription limits and API costs are based on token consumption. More tokens = faster you hit your limit (subscription) or higher your bill (API).
+
+---
+
+## Typical Task Size
+
+Bigger tasks consume more tokens. This table gives you a sense of relative scale.
+
+| Task | Approximate tokens | Relative size |
+|------|-------------------|---------------|
+| Summarize a 2-page memo | 2.000-3.000 | Very small |
+| Clean a 200-row CSV | 10.000-20.000 | Small |
+| Analyze a claims report with tables | 15.000-30.000 | Moderate |
+| Generate a full underwriting brief | 20.000-40.000 | Moderate |
+| Build a web app (vibe coding, many iterations) | 100.000-500.000+ | Large |
+| Process a large dataset (1.000+ rows) with multiple follow-ups | 200.000-500.000+ | Large |
+
+On a **subscription**, large tasks eat into your rate limit faster. On **API credits**, large tasks directly increase your bill.
+
+---
+
+## How to Check Your Usage
+
+**In OpenAI Codex:** type `/status` to see your current usage and remaining capacity.
+
+**On the web:**
+
+- **Subscription (Pro/Max):** Check remaining usage at [chatgpt.com/settings](https://chatgpt.com/settings). Limits reset on your billing cycle.
+- **API credits:** Go to the [OpenAI Console](https://console.openai.com), navigate to **Usage** in the left sidebar. Set spending alerts to avoid surprises.
+
+> **Tip:** Run `/status` at the start of a work session so you know how much capacity you have.
+
+---
+
+## Tips to Manage Usage
+
+These tips help you stay within your subscription limits and get better results, regardless of billing model.
+
+### 1. Use `/clear` Between Tasks
+
+Every message in a conversation includes all prior messages as context. A 30-message conversation means each new message sends the entire history. Use `/clear` when you switch to a different task.
+
+### 2. Keep Prompts Focused
+
+Instead of sending a vague instruction and iterating 10 times, spend a moment writing a specific prompt. Two focused messages consume far fewer tokens than eight vague ones.
+
+| Wasteful pattern | Efficient pattern |
+|------------------|-------------------|
+| "Look at this data" / "What do you see?" / "Can you make a table?" / "Add a column for..." (4 messages) | "Read claims_q3.csv and create a summary table with columns for region, claim count, total incurred, and average claim size" (1 message) |
+
+### 3. Use Plan Mode for Complex Tasks
+
+Press **Shift+Tab** to switch to **Plan** mode before starting complex work. Codex will outline its approach before executing, which avoids wasteful wrong turns.
+
+### 4. Be Aware of Token-Heavy Operations
+
+Some operations consume significantly more tokens:
+
+- **Large CSVs and datasets:** Every row is tokenized when Codex reads the file
+- **Vibe coding sessions:** Multiple iterations of code generation, testing, and fixing
+- **Web search:** Each search adds tokens for the search results
+- **Long conversations:** Context grows with every message
+
+### 5. Break Large Tasks into Smaller Sessions
+
+Instead of one marathon session, split work across focused sessions with `/clear` between them. Save intermediate results to files so you do not need to regenerate them.
+
+---
+
+## Key Takeaways
+
+- OpenAI Codex requires at least a Pro subscription ($20/mo) or API credits -- it is not available on the free plan
+- Usage limits are shared between OpenAI Codex and the Codex web/desktop app
+- Use `/status` in OpenAI Codex to check your remaining capacity
+- A token is roughly 4 characters; a page of text is about 500 tokens
+- Use `/clear` between tasks and write specific prompts to use your capacity efficiently
+- If you hit your limit, you can wait for reset, enable extra usage, or upgrade your plan

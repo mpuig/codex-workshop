@@ -1,0 +1,203 @@
+---
+title: "Data Catalog"
+description: Complete reference for every data file used across the three hands-on exercises, with row counts, column definitions, and join keys.
+---
+
+# Data Catalog
+
+This page documents every data file used in the three exercises. Use it as a quick reference when working with the data or when designing prompts for Codex.
+
+All data is **synthetic** -- generated for training purposes. No real customer, policyholder, or claims information is included.
+
+---
+
+## Exercise 1: Data Insight Tool
+
+> **Directory:** `exercises/exercise-1-data-insight-tool/data/`
+> **Persona:** Isabel Santos (Head of Strategy)
+> **Scenario:** Market white space analysis across Southern European regions
+
+**Download:** [market_penetration.csv](/data/exercise-1/market_penetration.csv) | [demographics.csv](/data/exercise-1/demographics.csv) | [accident_frequency.csv](/data/exercise-1/accident_frequency.csv) | [product_lines.csv](/data/exercise-1/product_lines.csv)
+
+**Join key:** `region_code` links `market_penetration`, `demographics`, and `accident_frequency`.
+
+### market_penetration.csv
+
+**Rows:** 576 | **Columns:** 8
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `region_code` | string | Unique region identifier (e.g., `ES-AN`, `PT-LIS`) |
+| `region_name` | string | Human-readable region name |
+| `country` | string | Country (Spain, Italy, Portugal, France) |
+| `product_line` | string | Insurance product (Motor, Home, Health, Commercial, Life) |
+| `gross_written_premium_eur` | numeric | MIG's gross written premium in EUR for this region/product |
+| `policies_in_force` | integer | Number of active policies |
+| `market_share_pct` | numeric | MIG's market share percentage |
+| `year` | integer | Data year (2024) |
+
+### demographics.csv
+
+**Rows:** 68 | **Columns:** 9
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `region_code` | string | Unique region identifier (join key) |
+| `region_name` | string | Human-readable region name |
+| `country` | string | Country |
+| `population_2025` | integer | Estimated population |
+| `population_growth_rate_pct` | numeric | Annual population growth rate |
+| `median_age` | numeric | Median age of population |
+| `median_household_income_eur` | numeric | Median household income in EUR |
+| `urbanization_rate_pct` | numeric | Percentage of population in urban areas |
+| `gdp_per_capita_eur` | numeric | GDP per capita in EUR |
+
+### accident_frequency.csv
+
+**Rows:** 68 | **Columns:** 8
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `region_code` | string | Unique region identifier (join key) |
+| `region_name` | string | Human-readable region name |
+| `country` | string | Country |
+| `motor_claims_per_1000_vehicles` | numeric | Motor claim frequency per 1.000 registered vehicles |
+| `home_claims_per_1000_policies` | numeric | Home claim frequency per 1.000 policies |
+| `health_claims_per_1000_members` | numeric | Health claim frequency per 1.000 members |
+| `commercial_fire_incidents_per_1000_properties` | numeric | Fire incident frequency per 1.000 commercial properties |
+| `natural_disaster_risk_score` | integer | Risk score 1-10 (10 = highest risk) |
+
+### product_lines.csv
+
+**Rows:** 20 | **Columns:** 7
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `product_line` | string | Main product line (Motor, Home, Health, Commercial, Life) |
+| `sub_product` | string | Specific product within the line |
+| `avg_premium_eur` | numeric | Average annual premium in EUR |
+| `avg_claim_cost_eur` | numeric | Average claim cost in EUR |
+| `loss_ratio_target_pct` | numeric | Target loss ratio percentage |
+| `growth_rate_pct` | numeric | Year-over-year growth rate |
+| `strategic_priority` | string | Priority level (High, Medium, Low) |
+
+---
+
+## Exercise 2: Claims Triage
+
+> **Directory:** `exercises/exercise-2-claims-triage/data/`
+> **Persona:** Ana Martinez (Regional Claims Manager)
+> **Scenario:** Claims classification, prioritization, and routing prototype
+
+**Download:** [incoming_claims.csv](/data/exercise-2/incoming_claims.csv) | [historical_outcomes.csv](/data/exercise-2/historical_outcomes.csv) | [business_rules.json](/data/exercise-2/business_rules.json)
+
+### incoming_claims.csv
+
+**Rows:** 220 | **Columns:** 15
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `claim_id` | string | Unique claim identifier (e.g., `CLM-2025-30001`) |
+| `policy_number` | string | Policy identifier (e.g., `MIG-MOT-364742`) |
+| `policyholder_name` | string | Synthetic policyholder name |
+| `claim_date` | date | Date the claim was filed (YYYY-MM-DD) |
+| `incident_date` | date | Date the incident occurred |
+| `product_line` | string | Product line (Motor, Home, Health, Commercial, Life) |
+| `incident_type` | string | Type of incident (collision, fire, water_damage, theft, etc.) |
+| `incident_description` | string | Free-text description of the incident |
+| `estimated_amount_eur` | numeric | Estimated claim amount in EUR |
+| `injury_reported` | string | Whether injury was reported (Yes/No) |
+| `police_report_filed` | string | Whether a police report was filed (Yes/No) |
+| `region_code` | string | Region code |
+| `region_name` | string | Region name |
+| `adjuster_assigned` | string | Adjuster name (blank for new claims) |
+| `status` | string | Claim status (all "New" for incoming claims) |
+
+### historical_outcomes.csv
+
+**Rows:** 160 | **Columns:** 8
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `claim_id` | string | Claim identifier (e.g., `CLM-2024-20001`) |
+| `claim_category` | string | Assigned category (auto-property, auto-bodily-injury, etc.) |
+| `priority_assigned` | string | Priority level (High, Medium, Low) |
+| `handling_path` | string | Routing path (fast-track, standard, specialist, investigation) |
+| `resolution_days` | integer | Days from filing to resolution |
+| `final_amount_eur` | numeric | Final settled amount in EUR |
+| `outcome` | string | Resolution outcome (Approved, Denied, Partial) |
+| `adjuster_notes` | string | Free-text notes from the adjuster |
+
+### business_rules.json
+
+**Format:** JSON | **Sections:** 7
+
+| Section | Description |
+|---------|-------------|
+| `category_mapping` | Rules mapping product_line + incident_type to claim categories |
+| `priority_rules` | Criteria for assigning High, Medium, or Low priority |
+| `handling_paths` | Definitions for fast-track, standard, specialist, and investigation paths |
+| `team_assignment` | Rules for routing claims to the correct handling team |
+| `sla_targets` | Service level agreement targets by priority and handling path |
+| `fraud_indicators` | Red flags and patterns that trigger fraud investigation |
+| `region_codes` | Reference table of region codes and their full names |
+
+**Metadata:** version 2.1, last updated 2025-01-15, owner: Ana Martinez
+
+---
+
+## Exercise 3: Automated Reporting
+
+> **Directory:** `exercises/exercise-3-automated-reporting/data/`
+> **Persona:** Pierre Dupont (Actuarial Analyst)
+> **Scenario:** Quarterly claims report automation
+
+**Download:** [claims_q1_2025.csv](/data/exercise-3/claims_q1_2025.csv) | [claims_q2_2025.csv](/data/exercise-3/claims_q2_2025.csv) | [claims_q3_2025.csv](/data/exercise-3/claims_q3_2025.csv) | [claims_q4_2025.csv](/data/exercise-3/claims_q4_2025.csv) | [report_template.md](/data/exercise-3/report_template.md)
+
+### Quarterly Claims CSVs
+
+Four files with identical structure, one per quarter:
+
+| File | Rows |
+|------|------|
+| `claims_q1_2025.csv` | 132 |
+| `claims_q2_2025.csv` | 126 |
+| `claims_q3_2025.csv` | 136 |
+| `claims_q4_2025.csv` | 133 |
+| **Total** | **527** |
+
+**Columns (all 4 files):** 17
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `claim_id` | string | Unique claim identifier (e.g., `CLM-2025-Q1131`) |
+| `claim_date` | date | Date the claim was filed (YYYY-MM-DD) |
+| `settlement_date` | date | Date settled (blank if open) |
+| `product_line` | string | Product line (Motor, Home, Health, Commercial, Life) |
+| `sub_product` | string | Specific sub-product |
+| `region_code` | string | Region code (e.g., `ES-CAT`, `PT-ALG`) |
+| `region_name` | string | Region name |
+| `country` | string | Country |
+| `claim_type` | string | Nature of the claim (Vandalism, Fire, Collision, etc.) |
+| `claim_status` | string | Current status (Paid, Open, Under Investigation, Denied) |
+| `reported_amount_eur` | numeric | Amount reported by policyholder |
+| `paid_amount_eur` | numeric | Amount paid (0 if not yet settled) |
+| `reserved_amount_eur` | numeric | Amount held in reserve |
+| `policyholder_segment` | string | Segment (Individual, Corporate) |
+| `fraud_flag` | string | Fraud indicator (N, Suspected, Confirmed) |
+| `adjuster_id` | string | Adjuster identifier (e.g., `ADJ-004`) |
+| `resolution_days` | integer | Days to resolution (blank if open) |
+
+### report_template.md
+
+**Format:** Markdown template
+
+A structured report template with placeholder sections for:
+
+1. Executive Summary
+2. Key Performance Indicators (with KPI definitions table)
+3. Claims analysis breakdowns (by product line, region, status)
+4. Fraud monitoring
+5. Trends and recommendations
+
+The template includes `[PLACEHOLDER]` markers where Codex should insert computed values and narrative.

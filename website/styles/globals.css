@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, .nextra-code-block {
+  font-family: var(--font-mono) !important;
+}
+
+pre code.nextra-code {
+  white-space: pre;
+  word-break: normal;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+article details {
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  background: rgba(128, 128, 128, 0.04);
+}
+
+.dark article details {
+  background: rgba(128, 128, 128, 0.08);
+}
+
+article details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+article details summary::before {
+  content: '▶';
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+article details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+article details summary::-webkit-details-marker {
+  display: none;
+}
+
+article details[open] > *:not(summary) {
+  animation: details-fade-in 0.2s ease;
+}
+
+@keyframes details-fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dark {
+  --nextra-primary-hue: 169deg;
+  --nextra-primary-saturation: 60%;
+}
+
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+article table th,
+article table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+article table th {
+  font-weight: 600;
+}
+
+article blockquote {
+  border-left: 3px solid hsl(169, 60%, 50%);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  opacity: 0.9;
+}
+
+.nextra-content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.nextra-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+}

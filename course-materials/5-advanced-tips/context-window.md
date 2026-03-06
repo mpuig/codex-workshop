@@ -1,0 +1,124 @@
+# Context Window Management
+
+> **Type:** Reference | **Prerequisites:** None
+
+## What Is the Context Window?
+
+The **context window** is OpenAI Codex's short-term memory. It holds everything OpenAI Codex can "see" at once: your messages, its responses, file contents, and system instructions. The current context window is approximately **200.000 tokens** (~400 pages of text).
+
+Think of it like a desk:
+
+- **Clean desk** = fresh session, OpenAI Codex is fast and focused
+- **Papers everywhere** = long session, OpenAI Codex is slower and may lose track of earlier details
+
+---
+
+## Why Long Sessions Degrade
+
+Every message you send includes **all previous messages** in the conversation as context. This means:
+
+| Messages in session | What Codex processes per message | Effect |
+|--------------------|--------------------------------|--------|
+| 1-5 | Just your current request + short history | Fast, cheap, focused |
+| 10-15 | Growing history of prior exchanges | Still good, slightly slower |
+| 20-30 | Large history filling context | Slower, more expensive, may miss details |
+| 30+ | Context approaching capacity | Noticeably slower, expensive, may forget early instructions |
+
+**Three problems compound in long sessions:**
+
+1. **Cost increases:** Each message re-sends all prior messages, so message #30 costs much more than message #3
+2. **Speed decreases:** More tokens to process means longer response times
+3. **Quality decreases:** With a crowded context, Codex may lose focus on earlier instructions or important details
+
+---
+
+## The Desk Analogy
+
+Imagine you are working at a desk:
+
+- **Fresh session:** Your desk is clear. You put one document on it and focus completely. You work quickly and accurately.
+- **After 20 messages:** Your desk has 20 documents piled up. When someone asks you something, you have to scan through all of them. It takes longer and you might miss something buried at the bottom.
+- **After `/clear`:** You file everything away and start with a clean desk again.
+
+---
+
+## Signs Your Context Is Full
+
+Watch for these signals that your session has grown too large:
+
+- Codex takes noticeably longer to respond
+- Codex repeats suggestions it already made
+- Codex forgets instructions you gave earlier in the conversation
+- Codex's responses become less precise or more generic
+- You see a message about context compression or truncation
+
+---
+
+## When to Use `/clear`
+
+**Good times to clear:**
+
+- After completing a task and before starting a different one
+- After ~20 messages, even if still on the same general topic
+- When Codex starts repeating itself or forgetting earlier instructions
+- When you switch from analysis to writing, or from one dataset to another
+- After a vibe coding session before starting document work
+
+**Bad times to clear:**
+
+- In the middle of a multi-step task (you will lose the thread)
+- Before saving results that only exist in Codex's responses (copy them to a file first)
+- When Codex is referencing earlier context that you still need
+
+> **Tip:** Before clearing, ask Codex to save any important outputs to a file. That way you keep the results without keeping the full conversation history.
+
+---
+
+## How `/clear` Interacts with AGENTS.md
+
+When you use `/clear`:
+
+- **Cleared:** All conversation history -- your messages and Codex's responses
+- **Reloaded:** Your AGENTS.md file is automatically reloaded, so project context is preserved
+
+This is why AGENTS.md is so valuable ([Module 1.2](/fundamentals/project-memory)). It ensures that essential project context survives a `/clear`. Put any instructions you want OpenAI Codex to always follow into AGENTS.md rather than repeating them in conversation.
+
+---
+
+## Cost Implications
+
+A concrete example of how context growth affects cost:
+
+| Point in session | Context size (approx.) | Relative cost per message |
+|-----------------|----------------------|--------------------------|
+| Message #1 | ~2.000 tokens | 1x (baseline) |
+| Message #10 | ~20.000 tokens | ~10x |
+| Message #20 | ~40.000 tokens | ~20x |
+| Message #30 | ~60.000 tokens | ~30x |
+| After `/clear` + new message | ~2.000 tokens | 1x (reset) |
+
+Using `/clear` regularly is one of the simplest ways to manage costs. A 30-message session where each message re-sends all prior context costs dramatically more than three 10-message sessions with `/clear` between them.
+
+---
+
+## Practical Workflow
+
+A cost-effective and quality-preserving workflow:
+
+1. **Start a task** with a clear, specific prompt
+2. **Iterate** for 10-15 messages
+3. **Save results** to files (`"Save this analysis as motor-loss-ratios.md"`)
+4. **Clear** with `/clear`
+5. **Start the next task** -- AGENTS.md reloads automatically
+6. **Reference saved files** from the previous task if needed
+
+---
+
+## Key Takeaways
+
+- The context window (~200.000 tokens) is OpenAI Codex's short-term memory -- it fills up during a session
+- Long sessions are slower, more expensive, and lower quality
+- Use `/clear` between tasks and after ~20 messages
+- Save important outputs to files before clearing
+- AGENTS.md survives `/clear` -- use it for persistent instructions
+- Three short sessions cost less and produce better results than one long session

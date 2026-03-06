@@ -1,0 +1,21 @@
+product_line,sub_product,avg_premium_eur,avg_claim_cost_eur,loss_ratio_target_pct,growth_rate_pct,strategic_priority
+Motor,Comprehensive Auto,520,2800,65,3.2,High
+Motor,Third-Party Liability,280,4200,72,1.8,Medium
+Motor,Fleet Insurance,1850,5600,60,5.1,High
+Motor,Motorcycle,310,3100,68,2.4,Low
+Home,Homeowner Standard,195,1400,55,4.5,High
+Home,Tenant Insurance,120,850,50,6.8,Medium
+Home,High-Value Property,680,4500,48,7.2,High
+Home,Natural Catastrophe Rider,85,6200,80,12.3,Medium
+Health,Individual Health,720,580,70,6.1,High
+Health,Group Health (SME),540,420,68,8.5,High
+Health,Dental & Vision,180,140,65,9.0,Medium
+Health,Travel Health,95,310,58,11.4,Low
+Commercial,SME Package,1350,3800,58,5.8,High
+Commercial,Professional Liability,890,7200,52,4.3,Medium
+Commercial,Cyber Insurance,2100,15000,45,22.5,High
+Commercial,Construction & Engineering,3200,12000,55,3.1,Low
+Life,Term Life,280,45000,42,2.0,Medium
+Life,Whole Life,520,62000,38,1.5,Low
+Life,Unit-Linked Savings,1200,0,0,7.8,Medium
+Life,Credit Life,150,28000,35,3.4,Low

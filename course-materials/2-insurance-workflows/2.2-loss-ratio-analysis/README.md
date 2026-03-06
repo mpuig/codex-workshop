@@ -1,0 +1,465 @@
+# Module 2.2: Loss Ratio Analysis with OpenAI Codex
+
+> **Time:** 30 minutes | **Prerequisites:** [Module 2.1: Underwriting Brief](../2.1-underwriting-brief/README.md)
+
+## The Scenario
+
+MIG's Chief Underwriting Officer has asked you to analyze the **motor insurance portfolio's loss ratios across Spanish regions** over the past three years. Several regions appear to be underperforming, and she wants a clear picture before the quarterly portfolio review.
+
+You have two data files: historical claims data and earned premium data by region.
+
+---
+
+## What You Will Do
+
+1. Generate realistic sample data (or use your own files)
+2. Ask Codex to calculate loss ratios by region, product segment, and time period
+3. Identify trends and outliers
+4. Generate visualizations
+5. Produce an executive summary with recommendations
+
+---
+
+## Step 1: Set Up the Data
+
+If you have actual data files, reference them with `@`. Otherwise, ask Codex to create realistic sample data for the exercise.
+
+### Sample prompt:
+
+```text
+I need to analyze MIG's motor insurance loss ratios. Create two CSV files
+with realistic data for this exercise:
+
+FILE 1: mig-motor-premiums.csv
+- Columns: year, quarter, region, segment, earned_premium_eur
+- Years: 2023, 2024, 2025
+- Regions: Catalonia, Madrid, Andalusia, Valencia, Basque Country, Galicia
+- Segments: Private Motor, Commercial Fleet, Motorcycle
+- Earned premiums should be realistic for a mid-size Spanish insurer
+  (total portfolio around EUR 400M-500M annual GWP for motor)
+
+FILE 2: mig-motor-claims.csv
+- Columns: claim_id, year, quarter, region, segment, claim_type,
+  incurred_amount_eur, status, date_of_loss
+- About 2.000 claims across the three years
+- Claim types: Collision, Theft, Third-party liability, Windscreen,
+  Weather damage, Total loss
+- Make some regions worse than others -- Andalusia and Valencia should
+  have higher claim frequency
+- Include a realistic mix of open and closed claims
+- Some large claims (above EUR 100.000) scattered in the data
+
+Save both files in the current directory.
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+Codex generates a Python script, runs it, and creates both CSV files. Here is a preview of the data:
+
+```
+Generated 216 premium records
+Generated 2000 claim records
+```
+
+**mig-motor-premiums.csv** (first rows):
+
+```
+year,quarter,region,segment,earned_premium_eur
+2023,1,Catalonia,Private Motor,19559765.76
+2023,1,Catalonia,Commercial Fleet,8404039.52
+2023,1,Catalonia,Motorcycle,3063847.32
+2023,1,Madrid,Private Motor,17460612.08
+2023,1,Madrid,Commercial Fleet,8216552.31
+```
+
+**mig-motor-claims.csv** (first rows):
+
+```
+claim_id,year,quarter,region,segment,claim_type,incurred_amount_eur,status,date_of_loss
+CLM-10001,2023,1,Andalusia,Commercial Fleet,Theft,141489.85,Closed,18/01/2023
+CLM-10002,2023,1,Andalusia,Commercial Fleet,Third-party liability,131498.37,Closed,21/03/2023
+CLM-10003,2023,1,Andalusia,Commercial Fleet,Collision,47498.14,Closed,21/02/2023
+CLM-10004,2023,1,Andalusia,Commercial Fleet,Theft,99498.19,Closed,05/03/2023
+```
+
+**Annual totals:**
+
+| Year | Earned Premium | Claims | Incurred |
+|------|---------------|--------|----------|
+| 2023 | EUR 455,5M | 644 | EUR 312,3M |
+| 2024 | EUR 473,8M | 670 | EUR 332,2M |
+| 2025 | EUR 487,2M | 686 | EUR 348,2M |
+
+</details>
+
+---
+
+## Step 2: Calculate Loss Ratios
+
+Once you have the data, ask Codex to perform the analysis.
+
+> **Why "write and execute a script"?** OpenAI Codex can run code directly in your terminal. By asking it to write and execute a Python script rather than calculate in its head, you get mathematically guaranteed results. LLMs are text predictors -- they can make arithmetic mistakes on large datasets. A Python script does perfect math every time.
+
+### Sample prompt:
+
+```text
+Using the data in @mig-motor-premiums.csv and @mig-motor-claims.csv,
+write and execute a Python script to calculate loss ratios with the
+following breakdowns:
+
+1. Overall portfolio loss ratio by year (2023, 2024, 2025)
+2. Loss ratio by region for each year
+3. Loss ratio by segment (Private Motor, Commercial Fleet, Motorcycle)
+4. Loss ratio by region AND segment for the most recent full year (2025)
+
+For each calculation:
+- Loss ratio = Incurred claims / Earned premium
+- Show both the numerator and denominator so I can verify
+- Flag any loss ratio above 70% as concerning (yellow) and above 85% as
+  critical (red)
+- Include claim count and average claim size alongside the ratios
+
+Present the results in clear tables.
+```
+
+### Expected output format:
+
+Codex should produce tables like:
+
+```text
+LOSS RATIO BY REGION -- 2025
+==============================
+
+| Region         | Earned Prem (EUR) | Incurred (EUR) | # Claims | Avg Claim | Loss Ratio | Status |
+|----------------|-------------------|----------------|----------|-----------|------------|--------|
+| Catalonia      | 95.200.000        | 61.880.000     | 312      | 198.333   | 65,0%      | OK     |
+| Madrid         | 88.400.000        | 60.112.000     | 287      | 209.417   | 68,0%      | OK     |
+| Andalusia      | 72.100.000        | 62.006.000     | 341      | 181.835   | 86,0%      | RED    |
+| Valencia       | 65.300.000        | 52.240.000     | 298      | 175.302   | 80,0%      | YELLOW |
+| Basque Country | 41.500.000        | 25.730.000     | 124      | 207.500   | 62,0%      | OK     |
+| Galicia        | 38.900.000        | 24.497.000     | 118      | 207.601   | 63,0%      | OK     |
+
+TOTAL            | 401.400.000       | 286.465.000    | 1.480    | 193.557   | 71,4%      | YELLOW |
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+Codex writes and executes a Python script that reads both CSV files and produces four analysis tables. Here are the results:
+
+**1. Overall Portfolio Loss Ratio by Year**
+
+| Year | Earned Premium | Incurred Claims | # Claims | Avg Claim | Loss Ratio | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2023 | 455,5M | 312,3M | 644 | 484.870 | 68,6% | OK |
+| 2024 | 473,8M | 332,2M | 670 | 495.819 | 70,1% | YELLOW |
+| 2025 | 487,2M | 348,2M | 686 | 507.586 | 71,5% | YELLOW |
+| **TOTAL** | 1.416,5M | 992,7M | 2.000 | 496.330 | 70,1% | YELLOW |
+
+**2. Loss Ratio by Region -- 2025**
+
+| Region | Earned Premium | Incurred Claims | # Claims | Avg Claim | Loss Ratio | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Andalusia | 80,4M | 73,2M | 141 | 519.224 | 91,1% | RED |
+| Valencia | 63,8M | 53,0M | 100 | 530.371 | 83,1% | YELLOW |
+| Madrid | 127,9M | 85,8M | 175 | 490.398 | 67,1% | OK |
+| Catalonia | 140,2M | 91,3M | 182 | 501.649 | 65,1% | OK |
+| Galicia | 34,2M | 21,3M | 41 | 518.483 | 62,1% | OK |
+| Basque Country | 40,6M | 23,6M | 47 | 501.669 | 58,1% | OK |
+| **TOTAL** | 487,2M | 348,2M | 686 | 507.586 | 71,5% | YELLOW |
+
+**3. Loss Ratio by Segment (All Years)**
+
+| Segment | Earned Premium | Incurred Claims | # Claims | Avg Claim | Loss Ratio | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Commercial Fleet | 395,3M | 292,4M | 634 | 461.129 | 74,0% | YELLOW |
+| Private Motor | 879,5M | 606,9M | 1.227 | 494.594 | 69,0% | OK |
+| Motorcycle | 141,7M | 93,4M | 139 | 672.206 | 66,0% | OK |
+
+**4. Loss Ratio by Region and Segment -- 2025** (top entries)
+
+| Region | Segment | Earned Premium | Incurred Claims | Loss Ratio | Status |
+| --- | --- | --- | --- | --- | --- |
+| Andalusia | Commercial Fleet | 22,2M | 21,1M | 95,0% | RED |
+| Andalusia | Private Motor | 50,1M | 45,1M | 90,0% | RED |
+| Andalusia | Motorcycle | 8,0M | 7,0M | 87,0% | RED |
+| Valencia | Commercial Fleet | 17,8M | 15,5M | 87,0% | RED |
+| Valencia | Private Motor | 39,6M | 32,4M | 82,0% | YELLOW |
+| Valencia | Motorcycle | 6,4M | 5,1M | 79,0% | YELLOW |
+| Madrid | Commercial Fleet | 35,8M | 25,4M | 71,0% | YELLOW |
+
+</details>
+
+---
+
+## Step 3: Identify Trends and Outliers
+
+Push Codex to go beyond the numbers and identify patterns.
+
+### Sample prompt:
+
+```text
+Based on the loss ratio analysis, I need you to dig deeper:
+
+1. TREND ANALYSIS: For the two worst-performing regions, show how their
+   loss ratios have moved quarter by quarter over the 3-year period. Are
+   they getting worse, improving, or stable?
+
+2. LARGE LOSS IMPACT: Identify all claims above EUR 100.000. What
+   percentage of total incurred do they represent? If we stripped out
+   large losses, how would the loss ratios change by region? This tells
+   us whether the problem is frequency or severity.
+
+3. CLAIM TYPE ANALYSIS: For the worst-performing regions, break down
+   claims by type. Is the problem driven by a specific peril (e.g.,
+   theft in Andalusia, weather damage in Valencia)?
+
+4. OUTLIER DETECTION: Are there any individual claims that look unusual?
+   Very high amounts, unusual claim types for the region, clusters of
+   claims on the same date?
+
+Present each analysis as a separate section with its own table.
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+Codex runs a deeper analysis script and produces four sections:
+
+**1. Quarterly Loss Ratio Trends -- Worst Regions**
+
+| Quarter | Andalusia LR | Valencia LR | Portfolio Avg |
+| --- | --- | --- | --- |
+| 2023 Q1 | 57,6% | 78,8% | 65,8% |
+| 2023 Q2 | 95,9% | 87,6% | 67,2% |
+| 2023 Q3 | 85,6% | 91,2% | 76,9% |
+| 2023 Q4 | 91,6% | 51,2% | 64,3% |
+| 2024 Q1 | 96,8% | 46,2% | 68,6% |
+| 2024 Q2 | 57,8% | 85,5% | 56,2% |
+| 2024 Q3 | 112,2% | 98,0% | 78,1% |
+| 2024 Q4 | 83,5% | 88,9% | 78,0% |
+| 2025 Q1 | 103,2% | 75,3% | 80,2% |
+| 2025 Q2 | 73,1% | 80,8% | 62,8% |
+| 2025 Q3 | 103,6% | 83,5% | 76,9% |
+| 2025 Q4 | 85,1% | 92,6% | 66,8% |
+
+Key finding: Andalusia's annual loss ratio has deteriorated from ~83% in 2023 to ~91% in 2025. Valencia moved from ~77% to ~83%. Both regions are pulling the portfolio into YELLOW territory.
+
+**2. Large Loss Impact (claims > EUR 500.000)**
+
+| Region | Full Loss Ratio | Excl. Large Losses | Impact of Large Losses |
+| --- | --- | --- | --- |
+| Andalusia | 87,2% | 27,8% | 59,4% |
+| Valencia | 80,2% | 25,1% | 55,1% |
+| Catalonia | 64,1% | 20,9% | 43,2% |
+| Madrid | 66,8% | 24,0% | 42,8% |
+| Basque Country | 58,4% | 19,6% | 38,8% |
+| Galicia | 61,4% | 19,4% | 42,1% |
+
+**3. Claim Type Analysis -- Andalusia**
+
+| Claim Type | # Claims | Incurred (EUR) | % of Total | Avg Claim |
+| --- | --- | --- | --- | --- |
+| Third-party liability | 84 | 60,4M | 29,5% | 719.327 |
+| Collision | 127 | 46,4M | 22,7% | 365.428 |
+| Total loss | 48 | 45,8M | 22,4% | 954.100 |
+| Theft | 86 | 40,9M | 20,0% | 475.762 |
+| Weather damage | 33 | 9,0M | 4,4% | 272.995 |
+| Windscreen | 34 | 2,1M | 1,0% | 62.593 |
+
+In Andalusia, Theft claims represent a disproportionately high 20,0% share of incurred costs. In Valencia, Weather damage is the standout driver at 13,3% -- consistent with the region's exposure to DANA flooding events.
+
+**4. Outlier Detection -- Date Clustering (3+ claims on same date/region)**
+
+39 date clusters found. Example:
+
+| Date | Region | # Claims | Total Incurred | Claim Types |
+| --- | --- | --- | --- | --- |
+| 23/10/2023 | Madrid | 4 | 1,7M | Collision, Theft, Total loss |
+| 29/04/2025 | Catalonia | 4 | 2,0M | Collision, Theft, Third-party liability |
+| 29/06/2025 | Madrid | 4 | 2,2M | Collision, Third-party liability, Total loss |
+
+These could indicate weather events, multi-vehicle accidents, or potential fraud patterns worth investigating.
+
+</details>
+
+---
+
+## Step 4: Generate Visualizations
+
+OpenAI Codex can create charts and visual aids. Ask for them directly.
+
+### Sample prompt:
+
+```text
+Create the following visualizations and save them as files:
+
+1. A bar chart comparing loss ratios by region for 2025, with a
+   horizontal line at 70% (target) and 85% (critical threshold).
+   Save as loss-ratio-by-region.html
+
+2. A line chart showing quarterly loss ratio trends for Andalusia and
+   Valencia vs. the portfolio average over the 3-year period.
+   Save as quarterly-trend-worst-regions.html
+
+3. A heatmap table showing loss ratios by region (rows) and segment
+   (columns) with color coding: green (<65%), yellow (65-80%),
+   red (>80%).
+   Save as loss-ratio-heatmap.html
+
+Make them clean and professional -- these will go into a presentation
+for the CUO.
+```
+
+> **Note:** Codex will likely create these as HTML files with embedded JavaScript charts (using a library like Chart.js). You can open them in any web browser by double-clicking the file.
+
+<details>
+<summary>Example output from this step</summary>
+
+Codex creates three HTML files with Chart.js visualizations:
+
+**1. loss-ratio-by-region.html** -- Bar chart showing 2025 loss ratios by region. Andalusia (91,1%) and Valencia (83,1%) are highlighted in red and yellow respectively, clearly exceeding the 70% target line and 85% critical threshold line. Catalonia, Madrid, Basque Country, and Galicia all appear in green below the target.
+
+**2. quarterly-trend-worst-regions.html** -- Line chart tracking quarterly loss ratios for Andalusia (red line), Valencia (orange line), and the portfolio average (blue dashed line) across 12 quarters from 2023 Q1 to 2025 Q4. Both Andalusia and Valencia show significant volatility quarter-to-quarter but a clear upward trend, consistently above the 70% target line.
+
+**3. loss-ratio-heatmap.html** -- Color-coded table with regions as rows and segments as columns. The heatmap makes it immediately clear that all three segments in Andalusia are red (>80%), and Commercial Fleet is the worst-performing segment across regions. Basque Country and Galicia are uniformly green.
+
+Open any of these files in a browser to view the interactive charts. They use Chart.js loaded from a CDN, so an internet connection is needed.
+
+</details>
+
+---
+
+## Step 5: Produce the Executive Summary
+
+Pull everything together into a document suitable for senior leadership.
+
+### Sample prompt:
+
+```text
+Write an executive summary for the CUO's quarterly portfolio review.
+Save it as motor-portfolio-review-q4-2025.md
+
+Structure:
+1. EXECUTIVE SUMMARY (3-4 bullet points, the headline findings)
+2. PORTFOLIO OVERVIEW (total GWP, claim count, overall loss ratio,
+   combined ratio estimate assuming a 28% expense ratio)
+3. REGIONAL PERFORMANCE (summary table + commentary on each region)
+4. KEY CONCERNS (the 3 most important issues, ranked)
+5. ROOT CAUSE ANALYSIS (what is driving the underperformance)
+6. RECOMMENDATIONS (specific, actionable items with expected impact)
+   - Pricing actions (which regions/segments need rate increases)
+   - Portfolio actions (any segments to exit or restrict)
+   - Claims management actions (large loss protocols, fraud detection)
+   - Risk selection improvements
+7. OUTLOOK (what we expect for 2026 if we act vs. if we don't)
+
+Be specific with numbers. Reference actual figures from the data.
+Write it for a senior insurance executive who wants facts and
+recommendations, not filler.
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+Codex generates `motor-portfolio-review-q4-2025.md` with seven sections. Here are the executive summary and recommendations:
+
+**Executive Summary**
+
+- **Portfolio loss ratio deteriorated to 71,5% in 2025**, up from 68,6% in 2023 -- a 2,9 percentage point increase over two years. The estimated combined ratio of 99,5% means the motor book is now loss-making.
+- **Andalusia is in critical territory at 91,1% loss ratio**, driven by high theft frequency and elevated third-party liability costs. This region alone accounts for EUR 73,2M in incurred claims.
+- **Valencia has crossed the concerning threshold at 83,1%**, with weather damage (DANA-related flooding) as the primary driver. The trend is worsening quarter on quarter.
+- **Immediate pricing and portfolio actions are required** in both regions to prevent further erosion. Without intervention, the portfolio loss ratio is projected to exceed 75% by 2026.
+
+**Recommendations**
+
+*Pricing Actions (Implement by Q1 2026):*
+- Andalusia: 18-22% rate increase across all segments. A 20% increase would bring the projected loss ratio to ~76%.
+- Valencia: 12-15% rate increase, with an additional 5% loading for weather-exposed postal codes.
+- Commercial Fleet nationwide: 8-10% rate increase to address the segment's structural underperformance.
+
+*Portfolio Actions:*
+- Restrict new Commercial Fleet business in Andalusia until loss ratio drops below 80%.
+- Introduce a minimum premium floor for Motorcycle policies in Andalusia and Valencia.
+
+*Claims Management Actions:*
+- Deploy anti-fraud analytics in Andalusia, focusing on theft claims (20% theft share vs. 12% portfolio average).
+- Establish a large loss protocol requiring management sign-off on reserves above EUR 500.000.
+
+*Outlook: If We Act* -- Projected 2026 portfolio loss ratio: 67-69% (combined ratio ~95-97%). *If We Don't Act* -- Projected 2026: 73-76% (combined ratio ~101-104%), with the motor book becoming loss-making at portfolio level.
+
+</details>
+
+---
+
+## Refining the Output
+
+Here are useful follow-up prompts for this type of analysis:
+
+### Stress test the recommendations:
+
+```text
+If we implement a 15% rate increase in Andalusia and Valencia, and
+assume claims stay flat, what would the projected loss ratios be for
+2026? Show me a simple projection.
+```
+
+### Prepare for questions:
+
+```text
+The CUO will likely ask why Andalusia is so much worse than other
+regions. Give me three possible explanations with supporting evidence
+from the data, and flag which ones I can confirm vs. which need
+further investigation.
+```
+
+### Create a one-page summary:
+
+```text
+Compress the entire analysis into a single-page briefing note. Maximum
+300 words plus one summary table. This is for board members who will
+spend 60 seconds reading it.
+```
+
+### Export for a presentation:
+
+```text
+Convert the key findings into 5 presentation slides in markdown format.
+Each slide should have a title, 3-4 bullet points, and reference one
+table or chart. Keep the language suitable for a non-technical board
+audience.
+```
+
+---
+
+## Key Techniques Used in This Module
+
+| Technique | Why It Matters |
+|-----------|---------------|
+| Structured data input | Clean input produces clean analysis |
+| Layered analysis (ratios, then trends, then root causes) | Builds understanding step by step |
+| Explicit formatting requests | "Present as a table with these columns" gives you consistent, usable output |
+| Threshold-based flagging | Tells Codex what "good" and "bad" look like in your context |
+| Visualization requests | Codex creates charts you can open in a browser or paste into slides |
+| Multiple audience formats | Same analysis, different lengths and depths for different stakeholders |
+
+---
+
+## Summary
+
+In this module you learned to:
+
+- Work with tabular data (claims, premiums) in OpenAI Codex
+- Perform multi-dimensional loss ratio analysis (region, segment, time)
+- Identify trends, outliers, and root causes
+- Generate professional visualizations
+- Produce executive-ready summaries with actionable recommendations
+
+The key takeaway: **OpenAI Codex can do in 30 minutes what typically takes a half-day of spreadsheet work.** When you ask Codex to write and execute scripts for calculations, the math is exact. Still, spot-check at least two or three results against your own math as a second layer of assurance -- this confirms the script logic is correct, not just the arithmetic.
+
+---
+
+## Next Step
+
+Proceed to [Module 2.3: Market Entry Assessment](../2.3-market-assessment/README.md) to learn how OpenAI Codex can help with strategic analysis using web research.

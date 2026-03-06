@@ -1,0 +1,422 @@
+# Module 2.1: Writing an Underwriting Brief with OpenAI Codex
+
+> **Time:** 30 minutes | **Prerequisites:** [Module 1.2: Project Memory](../../1-fundamentals/1.2-project-memory/README.md)
+
+## The Scenario
+
+You are an underwriting analyst at Mediterranean Insurance Group. A broker has submitted a new commercial property portfolio for quoting: **a chain of 14 warehouse and logistics facilities across eastern Spain** operated by Levante Logistics S.A.
+
+You need to prepare a structured underwriting brief for the senior underwriter's review. The brief should assess the risk, highlight concerns, and provide pricing considerations.
+
+---
+
+## What You Will Do
+
+1. Provide Codex with portfolio data and risk factors
+2. Ask Codex to analyze exposure concentrations
+3. Generate a structured underwriting brief
+4. Iterate and refine with follow-up questions
+5. Use Codex as a thinking partner to challenge assumptions
+
+---
+
+## Step 1: Provide the Portfolio Data
+
+Start your OpenAI Codex session and give it the context. You can either reference an actual file or provide the information directly.
+
+### Sample prompt:
+
+```text
+I need to prepare an underwriting brief for a new commercial property
+submission. Here is the portfolio data:
+
+Client: Levante Logistics S.A.
+Broker: Marsh Spain
+Line of business: Commercial Property
+Policy period: 1 July 2026 to 30 June 2027
+
+The portfolio consists of 14 warehouse/logistics facilities:
+
+| # | Location | City | Built | Area (m2) | Total Sum Insured (TSI, EUR) | Construction | Use |
+|---|----------|------|-------|-----------|-----------|-------------|-----|
+| 1 | Warehouse A1 | Valencia | 2015 | 8.500 | 12.000.000 | Steel frame, metal cladding | General storage |
+| 2 | Warehouse A2 | Valencia | 2015 | 8.500 | 12.000.000 | Steel frame, metal cladding | General storage |
+| 3 | Cold storage | Valencia | 2019 | 4.200 | 9.500.000 | Insulated panels, concrete | Refrigerated goods |
+| 4 | Distribution hub | Castellon | 2012 | 12.000 | 18.000.000 | Steel frame, concrete floor | Cross-docking |
+| 5 | Warehouse B1 | Castellon | 2008 | 6.000 | 7.500.000 | Pre-fab concrete | General storage |
+| 6 | Warehouse B2 | Castellon | 2008 | 6.000 | 7.500.000 | Pre-fab concrete | General storage |
+| 7 | Logistics center | Alicante | 2020 | 15.000 | 22.000.000 | Modern steel/composite | Automated sorting |
+| 8 | Warehouse C1 | Alicante | 2010 | 5.500 | 6.800.000 | Concrete block | General storage |
+| 9 | Warehouse C2 | Alicante | 2010 | 5.500 | 6.800.000 | Concrete block | General storage |
+| 10 | Port facility | Alicante | 2005 | 3.800 | 8.200.000 | Mixed steel/concrete | Marine cargo staging |
+| 11 | Warehouse D | Murcia | 2017 | 7.000 | 10.000.000 | Steel frame, cladding | General storage |
+| 12 | Sorting center | Murcia | 2021 | 9.000 | 14.500.000 | Modern composite | E-commerce fulfillment |
+| 13 | Overflow unit | Albacete | 2003 | 3.000 | 3.200.000 | Older pre-fab | Seasonal overflow |
+| 14 | Admin/ops center | Valencia | 2018 | 2.000 | 5.500.000 | Office grade concrete | Offices and IT |
+
+Total Sum Insured: EUR 143.500.000
+
+Key claims history (last 5 years):
+- 2023: Roof collapse at Castellon B1 due to heavy rain, EUR 340.000
+- 2022: Fire in cold storage Valencia (electrical fault), EUR 1.200.000
+- 2021: Flood damage at Alicante port facility, EUR 520.000
+- 2024: Minor water damage Murcia warehouse, EUR 45.000
+
+The broker is requesting an "all risks" property cover including fire,
+natural catastrophe, flood, theft, and business interruption (12 months
+indemnity period).
+
+Please acknowledge the data and let me know if you need anything else
+before we proceed.
+```
+
+**Why this works:** You gave Codex structured data, claims history, and clear scope. Codex now has everything it needs to begin analysis.
+
+<details>
+<summary>Example output from this step</summary>
+
+**Data Acknowledged -- Initial Observations**
+
+I have received the portfolio data for Levante Logistics S.A. Here is a summary of what we are working with, along with initial observations before we begin the formal analysis.
+
+**Portfolio at a Glance**
+
+| Parameter | Value |
+|-----------|-------|
+| Client | Levante Logistics S.A. |
+| Broker | Marsh Spain |
+| Line of Business | Commercial Property -- All Risks |
+| Policy Period | 01/07/2026 -- 30/06/2027 |
+| Number of Locations | 14 |
+| Total Sum Insured (TSI) | EUR 143.500.000 |
+| Business Interruption | 12 months indemnity period |
+| Incurred Claims (5 years) | EUR 2.105.000 |
+
+**Initial Observations**
+
+1. **Geographic concentration in eastern Spain.** All 14 facilities are located along the Mediterranean coast (Valencia, Alicante, Castellon, Murcia) plus one inland site (Albacete). This creates significant natural catastrophe accumulation risk, particularly for flood and windstorm perils along the Levante corridor.
+
+2. **Mixed construction quality.** The portfolio ranges from modern composite builds (2020-2021) to an older pre-fab unit dating from 2003. The Albacete overflow unit (built 2003, pre-fab construction) and the Castellon B1/B2 pair (built 2008, pre-fab concrete) warrant closer scrutiny for maintenance standards.
+
+3. **Claims history warrants attention.** Four claims totalling EUR 2.105.000 over five years is material for a portfolio of this size. The 2022 cold storage fire (EUR 1.200.000) is the dominant loss and suggests electrical installation risks in temperature-controlled environments.
+
+4. **Diverse occupancy types.** The portfolio is not homogeneous -- it includes general warehousing, cold storage, automated sorting, marine cargo staging, e-commerce fulfillment, and office space. Each occupancy class carries different risk characteristics and rating considerations.
+
+5. **Alicante port facility.** The marine cargo staging operation introduces additional exposure to flood and storm surge, and the 2021 flood claim (EUR 520.000) confirms this is not a theoretical risk.
+
+I have everything needed to proceed. Shall I begin the exposure concentration analysis?
+
+</details>
+
+---
+
+## Step 2: Analyze Exposure Concentrations
+
+Now ask Codex to think analytically about the risk.
+
+### Sample prompt:
+
+```text
+Analyze the exposure concentrations in this portfolio. I want to understand:
+
+1. Geographic concentration -- how much total sum insured (TSI) is concentrated in each city?
+   What is our probable maximum loss (PML) scenario if a single event hits
+   one location cluster?
+
+2. Construction risk -- which facilities have the highest risk based on
+   age and construction type?
+
+3. Natural catastrophe exposure -- these are all in eastern Spain. What
+   are the key nat-cat perils (flood, earthquake, windstorm) and which
+   locations are most exposed?
+
+4. Accumulation risk -- are any locations close enough that a single event
+   (e.g., a wildfire or flood) could affect multiple facilities?
+
+Present this as a risk concentration analysis with a summary table.
+```
+
+### Expected output format:
+
+Codex should produce something structured like:
+
+```text
+EXPOSURE CONCENTRATION ANALYSIS
+================================
+
+1. Geographic Distribution of TSI
+----------------------------------
+| City      | # Sites | Total TSI (EUR) | % of Portfolio |
+|-----------|---------|-----------------|----------------|
+| Valencia  | 4       | 39.000.000      | 27,2%          |
+| Alicante  | 4       | 43.800.000      | 30,5%          |
+| Castellon | 3       | 33.000.000      | 23,0%          |
+| Murcia    | 2       | 24.500.000      | 17,1%          |
+| Albacete  | 1       | 3.200.000       | 2,2%           |
+
+Key concern: Alicante represents 30,5% of total exposure...
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+### Exposure Concentration Analysis -- Levante Logistics S.A.
+
+#### 1. Geographic Distribution of TSI
+
+| City | # Sites | Total TSI (EUR) | % of Portfolio | PML Scenario |
+|-----------|---------|-----------------|----------------|--------------|
+| Alicante | 4 | 43.800.000 | 30,5% | Coastal flood/storm event |
+| Valencia | 4 | 39.000.000 | 27,2% | Urban flood (Turia basin) |
+| Castellon | 3 | 33.000.000 | 23,0% | Heavy precipitation event |
+| Murcia | 2 | 24.500.000 | 17,1% | Flash flood (Segura basin) |
+| Albacete | 1 | 3.200.000 | 2,2% | Isolated windstorm/hail |
+| **Total** | **14** | **143.500.000** | **100,0%** | |
+
+**Key concern:** Alicante and Valencia together represent 57,7% of total exposure (EUR 82.800.000). A single large-scale weather event affecting the coast between Valencia and Alicante could impact up to 8 facilities simultaneously.
+
+**PML estimate (single-event worst case):** A major DANA event (Spanish meteorological term for an isolated upper-level low) affecting the Valencia-Alicante corridor could produce aggregate losses across the four Alicante sites and four Valencia sites. Assuming 15-20% damage ratio, the single-event PML is in the range of EUR 12.400.000 to EUR 16.600.000.
+
+#### 2. Construction Risk Assessment
+
+| Risk Tier | Facilities | Built | Construction | Concern |
+|-----------|-----------|-------|--------------|---------|
+| **High** | Overflow unit (Albacete) | 2003 | Older pre-fab | 23 years old, pre-fab construction, likely minimal fire resistance |
+| **High** | Port facility (Alicante) | 2005 | Mixed steel/concrete | 21 years old, marine environment corrosion, confirmed flood exposure |
+| **Medium** | B1, B2 (Castellon) | 2008 | Pre-fab concrete | 18 years old, B1 had roof collapse in 2023 |
+| **Medium** | C1, C2 (Alicante) | 2010 | Concrete block | 16 years old, standard construction |
+| **Medium** | Cold storage (Valencia) | 2019 | Insulated panels, concrete | Fire claim in 2022, electrical risk in refrigeration systems |
+| **Low** | A1, A2 (Valencia) | 2015 | Steel frame, metal cladding | Modern build, standard risk |
+| **Low** | Distribution hub (Castellon) | 2012 | Steel frame, concrete | Modern build, large footprint |
+| **Low** | Warehouse D (Murcia) | 2017 | Steel frame, cladding | Recent build |
+| **Low** | Admin/ops (Valencia) | 2018 | Office grade concrete | Low hazard occupancy |
+| **Low** | Logistics center (Alicante) | 2020 | Modern steel/composite | Newest large facility, automated |
+| **Low** | Sorting center (Murcia) | 2021 | Modern composite | Newest facility |
+
+**Weighted average building age:** ~12,4 years. The portfolio skews modern, but the three high/medium-risk older facilities (Albacete, Alicante port, Castellon B1/B2) account for EUR 26.400.000 (18,4% of TSI).
+
+#### 3. Natural Catastrophe Exposure
+
+Eastern Spain is subject to three principal nat-cat perils:
+
+| Peril | Severity | Most Exposed Sites | Commentary |
+|-------|----------|-------------------|------------|
+| **Flood** | **High** | Alicante port, Castellon B1/B2, Murcia D and sorting center | The Levante coast is one of the highest flood-risk areas in Europe. DANA events in 2019 and 2024 caused widespread damage across the Valencian Community and Murcia. The Consorcio de Compensacion de Seguros (CCS) covers extraordinary flood risk, but standard policy deductibles and business interruption (BI) losses remain the insurer's exposure. |
+| **Windstorm** | **Medium** | All coastal sites, particularly Alicante logistics center (large roof area of 15.000 m2) | Mediterranean cyclones (medicanes) are increasing in frequency. Metal-clad and composite roofs are vulnerable to uplift. |
+| **Earthquake** | **Low** | All sites (Zone V-VI on the Spanish seismic hazard map) | Eastern Spain has moderate seismicity. The 2011 Lorca earthquake (Murcia) caused significant damage. Murcia and Alicante sites have the highest relative exposure. |
+
+#### 4. Accumulation Risk
+
+| Cluster | Facilities | Combined TSI (EUR) | Proximity | Event Scenario |
+|---------|-----------|-------------------|-----------|----------------|
+| Valencia cluster | A1, A2, Cold storage, Admin | 39.000.000 | Likely within same industrial park | Fire spread, urban flood |
+| Alicante cluster | Logistics center, C1, C2 | 35.600.000 | Potentially co-located | Flood, windstorm |
+| Castellon cluster | Distribution hub, B1, B2 | 33.000.000 | Same industrial zone | Flood (B1 roof already collapsed) |
+| Murcia cluster | Warehouse D, Sorting center | 24.500.000 | Potentially co-located | Flash flood (Segura river basin) |
+
+**Critical observation:** We do not have precise geo-coordinates for these facilities. Before quoting, we should request exact addresses to model proximity and determine whether any facilities share perimeter walls, fire separations, or common utility connections. If the Valencia cluster is within a single industrial estate, a fire spreading between A1, A2, and the cold storage unit could produce a loss of up to EUR 33.500.000.
+
+**Recommendation:** Request from the broker: (a) exact addresses and coordinates, (b) site plans showing inter-facility distances, (c) details of fire separation walls and sprinkler systems, and (d) most recent risk survey reports.
+
+</details>
+
+---
+
+## Step 3: Generate the Underwriting Brief
+
+Ask Codex to pull everything together into a formal document.
+
+### Sample prompt:
+
+```text
+Now generate a complete underwriting brief for the senior underwriter.
+Use this structure:
+
+1. EXECUTIVE SUMMARY (5 lines max)
+2. RISK OVERVIEW (client profile, portfolio summary)
+3. EXPOSURE ANALYSIS (the concentration analysis you just did)
+4. CLAIMS EXPERIENCE (loss history analysis, loss ratio if estimable)
+5. KEY RISK FACTORS (top 5 concerns ranked by severity)
+6. PRICING CONSIDERATIONS (factors that should drive the rate,
+   benchmarks if you can estimate them)
+7. RISK IMPROVEMENT RECOMMENDATIONS (what we should require or suggest
+   to the client)
+8. UNDERWRITING RECOMMENDATION (quote / decline / quote with conditions)
+
+Be specific. Use actual figures from the data. Flag anything that would
+make you uncomfortable as an underwriter.
+
+Save this as levante-logistics-uw-brief.md
+```
+
+**What to look for:** The brief should be detailed, reference specific data points from the portfolio, and read like a professional underwriting document.
+
+<details>
+<summary>Example output from this step (excerpt — executive summary and key risk factors)</summary>
+
+Codex will save the full document to `levante-logistics-uw-brief.md`. Below is an excerpt showing two key sections. The full brief runs approximately 4-5 pages.
+
+---
+
+### 1. Executive Summary
+
+Levante Logistics S.A. is a warehouse and logistics operator seeking all-risks commercial property cover for 14 facilities across eastern Spain with a total sum insured of EUR 143.500.000 and 12 months business interruption indemnity. The portfolio is geographically concentrated along the Mediterranean coast (97,8% of TSI in four coastal cities), creating material natural catastrophe accumulation exposure. Claims experience over the past five years totals EUR 2.105.000 across four incidents, including a significant cold storage fire (EUR 1.200.000). We recommend quoting with conditions, subject to satisfactory risk surveys, tiered deductibles for flood-exposed and fire-affected locations, and specific risk improvement requirements.
+
+---
+
+### 5. Key Risk Factors
+
+| Rank | Risk Factor | Severity | Impact | Mitigation |
+|------|------------|----------|--------|------------|
+| 1 | **Flood accumulation -- DANA exposure** | High | Up to 8 sites (EUR 82,8M TSI) could be affected by a single DANA event along the Valencia-Alicante corridor. The 2021 Alicante port claim confirms real flood exposure. | Tiered deductibles for flood-prone sites; require flood risk surveys; verify CCS coverage scope. |
+| 2 | **Cold storage fire risk** | High | The 2022 electrical fault fire (EUR 1.200.000) in Valencia cold storage indicates systemic risk in refrigeration electrical systems. Insulated panels can accelerate fire spread. | Require electrical installation audit; mandate automatic fire suppression in cold storage; apply increased deductible. |
+| 3 | **Geographic concentration** | Medium-High | 57,7% of TSI concentrated in Valencia and Alicante. No geographic diversification benefit. Single-event PML estimated at EUR 12,4M -- 16,6M. | Consider per-event aggregate limit; model accumulation scenarios; assess reinsurance implications. |
+| 4 | **Older facility standards** | Medium | Three facilities (Albacete 2003, Alicante port 2005, Castellon B1/B2 2008) may not meet current building codes. Castellon B1 roof collapse in 2023 confirms structural concerns. | Require structural engineering surveys for pre-2010 buildings; mandate remediation or exclude until completed. |
+| 5 | **Business interruption interdependency** | Medium | If the distribution hub (Castellon, EUR 18M) or logistics center (Alicante, EUR 22M) is damaged, downstream operations across the network could be disrupted, amplifying the BI claim beyond the single-site loss. | Request supply chain dependency mapping; consider sub-limits for contingent BI; clarify BI triggers. |
+
+---
+
+*The full generated brief also includes sections on Risk Overview, Exposure Analysis (incorporating the concentration analysis from Step 2), Claims Experience (with loss ratio estimates), Pricing Considerations (benchmark rate ranges for Spanish logistics property), Risk Improvement Recommendations, and the Underwriting Recommendation with proposed terms.*
+
+</details>
+
+---
+
+## Step 4: Iterate and Refine
+
+The first draft is rarely perfect. Here are follow-up prompts to refine the output:
+
+### Challenge the analysis:
+
+```text
+What are the three weakest points in this submission from an underwriting
+perspective? What additional information would you want from the broker
+before quoting?
+```
+
+### Adjust the recommendation:
+
+```text
+The senior underwriter thinks we should quote but wants a higher deductible
+for the flood-exposed locations. Revise the recommendation section to
+include a tiered deductible structure:
+- Standard locations: EUR 25.000 deductible
+- Flood-exposed locations (Alicante port, Castellon): EUR 100.000 deductible
+- Cold storage (Valencia): EUR 50.000 deductible due to the 2022 fire claim
+```
+
+### Add a section:
+
+```text
+Add a reinsurance considerations section. Given that MIG's property treaty
+has a EUR 5M excess, identify which scenarios could breach the retention
+and what facultative cover we might need.
+```
+
+### Ask Codex to think differently:
+
+```text
+Put yourself in the broker's shoes. What arguments would they make to push
+back on our proposed deductibles and exclusions? How should we prepare to
+respond?
+```
+
+<details>
+<summary>Example output from this step (representative Q&A exchanges)</summary>
+
+**Prompt: "What are the three weakest points in this submission?"**
+
+The three weakest points from an underwriting perspective are:
+
+1. **No risk survey reports provided.** We are being asked to quote EUR 143,5M in TSI based on a facilities table alone. We have no information on fire protection systems (sprinklers, detection, suppression), security arrangements, housekeeping standards, or electrical installation condition. The 2022 cold storage fire should have triggered a risk improvement programme -- we need evidence this was done.
+
+2. **Incomplete flood exposure data.** Given that eastern Spain is one of the highest flood-risk areas in Europe and we already have a confirmed flood claim (Alicante port, 2021), the absence of flood zone mapping for each site is a significant gap. We cannot properly price nat-cat cover without knowing whether facilities sit in CCS extraordinary risk zones or within 100-year flood plains.
+
+3. **No information on values basis or business interruption calculation.** The TSI figures are presented without clarification on whether these are replacement value, indemnity value, or first-loss limits. For BI, we have no revenue breakdown per site, no indication of interdependencies, and no declared gross profit figures. The 12-month indemnity period is standard but the adequacy of the declared sums insured is unverifiable.
+
+**Additional information to request from the broker:**
+- Most recent risk engineering survey reports for all 14 locations
+- Flood zone classification for each site address (PATRICOVA maps for Valencia Community)
+- Fire protection inventory (sprinkler type, detection systems, last inspection dates)
+- Breakdown of TSI between building, contents, stock, and machinery per location
+- Declared gross profit and revenue allocation for BI cover
+- Post-loss risk improvements implemented after the 2022 fire and 2023 roof collapse
+
+---
+
+**Prompt: "Revise the recommendation with tiered deductibles..."**
+
+### Revised Underwriting Recommendation
+
+**Decision:** Quote with conditions
+
+**Proposed Deductible Structure:**
+
+| Category | Locations | Deductible (EUR) | Rationale |
+|----------|-----------|-------------------|-----------|
+| Standard | A1, A2, Distribution hub, Warehouse D, Logistics center, Sorting center, Admin/ops | 25.000 | Modern construction, no adverse claims |
+| Flood-exposed | Port facility (Alicante), B1, B2 (Castellon), C1, C2 (Alicante), Warehouse D (Murcia), Sorting center (Murcia) | 100.000 for flood peril; 25.000 all other perils | Confirmed flood claims; DANA corridor exposure; Segura river basin risk |
+| Cold storage / fire-affected | Cold storage (Valencia) | 50.000 all perils | 2022 electrical fire claim of EUR 1.200.000; elevated fire risk from refrigeration systems and insulated panels |
+| Older facilities | Overflow unit (Albacete) | 50.000 all perils | Pre-2005 construction; pre-fab build; likely below current code standards |
+
+**Additional conditions:**
+- Risk surveys required for all locations prior to inception, with satisfactory results being a condition precedent to cover
+- Electrical installation audit for cold storage facility within 60 days of inception
+- Structural assessment for Castellon B1 following the 2023 roof collapse
+- 72-hour waiting period for business interruption claims
+- Flood sub-limit of EUR 10.000.000 any one event, EUR 15.000.000 aggregate
+
+---
+
+**Prompt: "Add reinsurance considerations..."**
+
+### Reinsurance Considerations
+
+MIG's property treaty has an excess point of EUR 5.000.000. The following scenarios could breach the retention:
+
+| Scenario | Estimated Gross Loss (EUR) | Treaty Recovery | Net Retention |
+|----------|---------------------------|-----------------|---------------|
+| DANA event affecting Valencia + Alicante (8 sites, 15% damage) | 12.400.000 -- 16.600.000 | 7.400.000 -- 11.600.000 | 5.000.000 |
+| Major fire at logistics center (Alicante, TSI EUR 22M, 40% loss) | 8.800.000 | 3.800.000 | 5.000.000 |
+| Fire spread across Valencia cluster (A1+A2+cold storage) | 10.000.000 -- 15.000.000 | 5.000.000 -- 10.000.000 | 5.000.000 |
+| Earthquake Murcia (2 sites, moderate damage) | 3.000.000 -- 5.000.000 | 0 -- limited | 3.000.000 -- 5.000.000 |
+
+**Facultative reinsurance recommendation:** Given the accumulation exposure, consider purchasing facultative cover for the Alicante logistics center (EUR 22M TSI) and the Valencia cluster (EUR 39M combined TSI). A facultative placement of EUR 10M xs EUR 5M on a per-location or per-cluster basis would protect the net position against the most plausible large-loss scenarios.
+
+**Treaty notification:** The underwriting team should notify the treaty reinsurers of this new risk, as the aggregate TSI of EUR 143,5M is material to the property portfolio and the geographic concentration in the DANA corridor may affect treaty accumulation calculations.
+
+</details>
+
+---
+
+## Using Codex as a Thinking Partner
+
+The real power of OpenAI Codex is not just document generation -- it is structured thinking. Try prompts like these:
+
+| Prompt | Purpose |
+|--------|---------|
+| "What am I missing in this analysis?" | Surface blind spots |
+| "What would a loss adjuster flag if they reviewed this portfolio?" | Stress-test from a different perspective |
+| "Compare this submission to a 'good risk' benchmark for logistics warehouses in Spain" | Contextualize the risk quality |
+| "If this portfolio had one more major claim, what would happen to the loss ratio?" | Scenario analysis |
+| "Draft three questions I should ask the broker in our call tomorrow" | Meeting preparation |
+
+---
+
+## Summary
+
+In this module you learned to:
+
+- Feed structured portfolio data into OpenAI Codex
+- Ask for analytical work (exposure concentration, risk assessment)
+- Generate a professional underwriting brief with a specific structure
+- Iterate on drafts with targeted feedback
+- Use Codex as a thinking partner, not just a writer
+
+The key takeaway: **give Codex the data, tell it what structure you want, and then challenge the output.** The best results come from two or three rounds of refinement.
+
+---
+
+## Next Step
+
+Proceed to [Module 2.2: Loss Ratio Analysis](../2.2-loss-ratio-analysis/README.md) to work with claims and premium data in a quantitative workflow.

@@ -1,0 +1,161 @@
+claim_id,claim_category,priority_assigned,handling_path,resolution_days,final_amount_eur,outcome,adjuster_notes
+CLM-2024-20001,auto-property,Medium,standard,16,12200,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20002,auto-property,Medium,standard,17,23300,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20003,commercial-liability,Medium,standard,13,0.0,Denied,Late filing beyond 60-day policy requirement. Claim denied.
+CLM-2024-20004,health-emergency,Low,fast-track,8,2250,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20005,home-fire,Medium,standard,16,14200,Approved,Damage assessment completed by certified surveyor. Claim approved as estimated.
+CLM-2024-20006,commercial-property,Medium,standard,17,0.0,Withdrawn,Claim withdrawn: policyholder resolved issue with third party directly.
+CLM-2024-20007,health-emergency,Medium,standard,24,1920.94,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20008,health-emergency,Medium,standard,8,6170,Approved,Damage assessment completed by certified surveyor. Claim approved as estimated.
+CLM-2024-20009,home-water-damage,Medium,standard,24,0.0,Withdrawn,Withdrawn by claimant; indicated they will cover costs personally.
+CLM-2024-20010,health-routine,Medium,standard,19,343.9,Partially Approved,Pre-existing damage identified on inspection. Adjusted amount approved.
+CLM-2024-20011,home-theft,High,complex-review,21,13000,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20012,health-routine,Low,standard,16,1874.81,Partially Approved,Estimate exceeded policy sublimit for this category. Partial approval.
+CLM-2024-20013,commercial-property,Medium,standard,8,17000,Approved,Third-party liability confirmed. Subrogation initiated. Claim paid.
+CLM-2024-20014,health-routine,High,complex-review,37,0.0,Denied,Policy exclusion applies: wear and tear damage is not covered.
+CLM-2024-20015,auto-property,Medium,standard,18,2295.46,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20016,auto-property,Low,standard,23,7430,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20017,auto-property,High,complex-review,54,23500,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20018,health-routine,Medium,standard,25,2560,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20019,home-fire,Low,standard,23,44503.35,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20020,auto-property,Medium,standard,25,20000,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20021,home-fire,High,standard,8,10000,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20022,home-water-damage,Medium,standard,25,0.0,Withdrawn,Withdrawn by claimant; indicated they will cover costs personally.
+CLM-2024-20023,home-water-damage,Medium,standard,19,4629.79,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20024,health-routine,Low,standard,25,1190,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20025,home-fire,Critical,complex-review,55,0.0,Denied,Insufficient documentation provided despite multiple requests. Denied.
+CLM-2024-20026,auto-property,Low,fast-track,3,0.0,Denied,Claim denied: incident type not covered under current policy tier.
+CLM-2024-20027,commercial-liability,High,standard,25,29500,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20028,home-water-damage,Medium,standard,25,15700,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20029,health-routine,Medium,standard,17,0.0,Fraud Confirmed,Claimant submitted altered repair invoices. Referred to legal for recovery.
+CLM-2024-20030,home-water-damage,Medium,standard,10,20000,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20031,health-emergency,Low,standard,22,0.0,Denied,Late filing beyond 60-day policy requirement. Claim denied.
+CLM-2024-20032,commercial-property,Medium,standard,8,15600,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20033,auto-property,Medium,standard,23,1280,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20034,auto-property,Medium,standard,20,7800,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20035,auto-property,Low,fast-track,7,7461.29,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20036,commercial-property,Medium,standard,25,21511.08,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20037,home-water-damage,Medium,standard,19,4930,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20038,home-water-damage,High,complex-review,15,15300,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20039,home-fire,Critical,standard,8,63747.19,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20040,home-water-damage,Medium,standard,20,9688.21,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20041,auto-property,Medium,standard,16,0.0,Denied,Claim denied: incident type not covered under current policy tier.
+CLM-2024-20042,auto-property,Critical,legal-referral,39,18700,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20043,auto-property,Critical,legal-referral,93,2000,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20044,health-routine,Low,fast-track,4,10000,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20045,health-routine,Medium,standard,9,0.0,Withdrawn,Policyholder withdrew claim after initial assessment.
+CLM-2024-20046,auto-property,Medium,standard,13,0.0,Denied,Claim denied. Incident occurred outside policy coverage period.
+CLM-2024-20047,auto-property,Low,fast-track,9,29800,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20048,home-theft,Low,fast-track,6,0.0,Denied,Investigation found claimant was in violation of policy terms at time of incident.
+CLM-2024-20049,commercial-property,Medium,standard,17,0.0,Fraud Confirmed,Multiple inconsistencies in documentation. Witness statements contradictory. Fraud confirmed.
+CLM-2024-20050,commercial-property,High,complex-review,15,18000,Approved,Third-party liability confirmed. Subrogation initiated. Claim paid.
+CLM-2024-20051,auto-bodily-injury,Critical,complex-review,53,47400,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20052,auto-bodily-injury,Medium,standard,9,0.0,Denied,Claim denied. Incident occurred outside policy coverage period.
+CLM-2024-20053,auto-property,High,standard,19,13400,Approved,Damage assessment completed by certified surveyor. Claim approved as estimated.
+CLM-2024-20054,home-water-damage,High,standard,22,6160.68,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20055,home-water-damage,Low,fast-track,10,10900,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20056,home-theft,Medium,standard,24,5290,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20057,health-routine,High,standard,25,408.93,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20058,health-emergency,Medium,standard,11,33600,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20059,auto-property,Critical,legal-referral,49,0.0,Denied,Investigation found claimant was in violation of policy terms at time of incident.
+CLM-2024-20060,home-fire,Medium,standard,9,74700,Approved,Third-party liability confirmed. Subrogation initiated. Claim paid.
+CLM-2024-20061,health-emergency,Low,standard,9,0.0,Fraud Confirmed,Claimant submitted altered repair invoices. Referred to legal for recovery.
+CLM-2024-20062,health-routine,Critical,standard,17,0.0,Withdrawn,Policyholder withdrew claim after initial assessment.
+CLM-2024-20063,auto-property,High,complex-review,27,2983.15,Partially Approved,Approved for structural damage only; cosmetic repairs not covered.
+CLM-2024-20064,home-theft,Low,standard,22,11100,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20065,home-theft,Medium,standard,25,11500,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20066,home-theft,Low,standard,21,8630,Approved,Third-party liability confirmed. Subrogation initiated. Claim paid.
+CLM-2024-20067,home-water-damage,Medium,standard,19,9230,Approved,Documentation complete. Claim verified by field inspector. Payment approved.
+CLM-2024-20068,commercial-property,Medium,standard,17,10000,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20069,auto-bodily-injury,Low,standard,25,12464.42,Partially Approved,Pre-existing damage identified on inspection. Adjusted amount approved.
+CLM-2024-20070,home-water-damage,High,complex-review,52,5500,Approved,Damage assessment completed by certified surveyor. Claim approved as estimated.
+CLM-2024-20071,home-theft,High,complex-review,35,0.0,Denied,Investigation found claimant was in violation of policy terms at time of incident.
+CLM-2024-20072,health-routine,Low,fast-track,6,25000,Approved,Documentation complete. Claim verified by field inspector. Payment approved.
+CLM-2024-20073,commercial-property,Medium,standard,21,0.0,Fraud Confirmed,Multiple inconsistencies in documentation. Witness statements contradictory. Fraud confirmed.
+CLM-2024-20074,health-routine,Low,standard,20,1000,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20075,home-water-damage,Low,fast-track,8,5176.17,Partially Approved,Pre-existing damage identified on inspection. Adjusted amount approved.
+CLM-2024-20076,auto-property,Medium,standard,10,9408.4,Partially Approved,Pre-existing damage identified on inspection. Adjusted amount approved.
+CLM-2024-20077,home-theft,Low,fast-track,4,5590,Approved,Third-party liability confirmed. Subrogation initiated. Claim paid.
+CLM-2024-20078,home-theft,Low,fast-track,5,25000,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20079,auto-property,Medium,standard,14,18000,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20080,auto-property,Medium,standard,22,0.0,Withdrawn,Claim withdrawn: policyholder resolved issue with third party directly.
+CLM-2024-20081,auto-property,Medium,standard,10,0.0,Withdrawn,Claim withdrawn: policyholder resolved issue with third party directly.
+CLM-2024-20082,commercial-liability,Low,fast-track,3,49800,Approved,Third-party liability confirmed. Subrogation initiated. Claim paid.
+CLM-2024-20083,auto-property,Medium,standard,23,17901.37,Partially Approved,Pre-existing damage identified on inspection. Adjusted amount approved.
+CLM-2024-20084,health-emergency,Medium,fraud-investigation,41,10000,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20085,auto-bodily-injury,Medium,fraud-investigation,69,0.0,Withdrawn,Withdrawn by claimant; indicated they will cover costs personally.
+CLM-2024-20086,commercial-liability,Critical,standard,11,17320.07,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20087,home-theft,Medium,standard,8,15000,Approved,Damage assessment completed by certified surveyor. Claim approved as estimated.
+CLM-2024-20088,health-routine,Critical,complex-review,34,1956.13,Partially Approved,Approved for structural damage only; cosmetic repairs not covered.
+CLM-2024-20089,auto-property,Medium,standard,8,28500,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20090,commercial-property,Medium,standard,20,0.0,Fraud Confirmed,Multiple inconsistencies in documentation. Witness statements contradictory. Fraud confirmed.
+CLM-2024-20091,home-water-damage,Medium,standard,17,2719.84,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20092,health-emergency,Low,fast-track,4,12918.92,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20093,health-emergency,Medium,standard,10,47500,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20094,commercial-liability,High,legal-referral,77,0.0,Denied,Investigation found claimant was in violation of policy terms at time of incident.
+CLM-2024-20095,commercial-property,High,standard,13,8633.44,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20096,auto-property,Low,fast-track,9,15103.8,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20097,commercial-liability,Medium,legal-referral,29,0.0,Withdrawn,Claim withdrawn after deductible amount exceeded claimed damages.
+CLM-2024-20098,auto-property,Medium,standard,14,0.0,Fraud Confirmed,Investigation revealed claim was filed for pre-existing damage. Fraud confirmed.
+CLM-2024-20099,health-routine,Low,standard,9,0.0,Denied,Claim denied: incident type not covered under current policy tier.
+CLM-2024-20100,health-emergency,Low,fast-track,10,35800,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20101,home-fire,Low,fast-track,5,0.0,Denied,Late filing beyond 60-day policy requirement. Claim denied.
+CLM-2024-20102,home-water-damage,Low,standard,22,0.0,Denied,Claim denied: incident type not covered under current policy tier.
+CLM-2024-20103,auto-property,Medium,standard,24,4837.92,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20104,auto-property,Low,standard,12,10000,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20105,health-emergency,Low,fast-track,9,10914.84,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20106,health-routine,High,complex-review,43,0.0,Denied,Investigation found claimant was in violation of policy terms at time of incident.
+CLM-2024-20107,health-routine,Medium,standard,20,208.21,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20108,home-theft,Medium,standard,12,18000,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20109,health-routine,Low,fast-track,4,464.19,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20110,auto-bodily-injury,Medium,standard,8,32100,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20111,home-fire,Medium,standard,8,37405.9,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20112,auto-bodily-injury,High,fraud-investigation,24,0.0,Denied,Claim denied. Incident occurred outside policy coverage period.
+CLM-2024-20113,auto-bodily-injury,Medium,standard,17,28134.4,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20114,commercial-property,Low,fast-track,2,19400,Approved,Damage assessment completed by certified surveyor. Claim approved as estimated.
+CLM-2024-20115,commercial-liability,Low,fraud-investigation,35,0.0,Fraud Confirmed,Surveillance evidence contradicts claimant's injury statements. Fraud determination.
+CLM-2024-20116,auto-property,High,complex-review,51,0.0,Withdrawn,Claim withdrawn after deductible amount exceeded claimed damages.
+CLM-2024-20117,health-routine,Medium,standard,17,2560,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20118,commercial-property,Medium,standard,23,7673.92,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20119,auto-bodily-injury,Critical,complex-review,28,59900,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20120,home-water-damage,Low,fast-track,5,5460,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20121,home-theft,Medium,fraud-investigation,62,0.0,Fraud Confirmed,SIU investigation confirmed staged incident. Claim denied. Policy under review.
+CLM-2024-20122,commercial-liability,High,standard,23,38602.53,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20123,commercial-property,Medium,standard,9,0.0,Denied,Insufficient documentation provided despite multiple requests. Denied.
+CLM-2024-20124,home-theft,Critical,complex-review,37,5000,Approved,Documentation complete. Claim verified by field inspector. Payment approved.
+CLM-2024-20125,home-water-damage,Medium,standard,13,5581.44,Partially Approved,Estimate exceeded policy sublimit for this category. Partial approval.
+CLM-2024-20126,health-routine,Medium,fraud-investigation,72,0.0,Fraud Confirmed,Claimant submitted altered repair invoices. Referred to legal for recovery.
+CLM-2024-20127,auto-property,Medium,standard,9,27400,Approved,Documentation complete. Claim verified by field inspector. Payment approved.
+CLM-2024-20128,health-routine,Low,fast-track,7,1440.76,Partially Approved,Depreciation applied to claimed items. Partial payment issued.
+CLM-2024-20129,health-routine,High,standard,12,186.73,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20130,auto-bodily-injury,Low,standard,10,53900,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20131,auto-bodily-injury,Low,standard,14,20200,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20132,health-routine,High,complex-review,22,2000,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20133,home-theft,High,standard,15,0.0,Fraud Confirmed,Surveillance evidence contradicts claimant's injury statements. Fraud determination.
+CLM-2024-20134,home-water-damage,High,complex-review,18,1550,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20135,health-routine,Low,standard,22,0.0,Denied,Investigation found claimant was in violation of policy terms at time of incident.
+CLM-2024-20136,health-routine,Low,fast-track,9,0.0,Denied,Investigation found claimant was in violation of policy terms at time of incident.
+CLM-2024-20137,home-fire,Medium,standard,22,114000,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20138,commercial-property,Medium,standard,18,16684.52,Partially Approved,Pre-existing damage identified on inspection. Adjusted amount approved.
+CLM-2024-20139,auto-property,Medium,standard,17,18300,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20140,home-water-damage,Low,fast-track,10,7685.88,Partially Approved,Pre-existing damage identified on inspection. Adjusted amount approved.
+CLM-2024-20141,auto-property,High,complex-review,45,0.0,Denied,Late filing beyond 60-day policy requirement. Claim denied.
+CLM-2024-20142,home-water-damage,Low,fast-track,7,1712.12,Partially Approved,Approved for structural damage only; cosmetic repairs not covered.
+CLM-2024-20143,home-theft,Medium,standard,22,3160,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20144,commercial-property,Critical,legal-referral,101,14329.78,Partially Approved,Claim partially approved. Some items not covered under policy terms.
+CLM-2024-20145,auto-property,High,standard,8,8623.53,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20146,home-theft,High,standard,17,0.0,Denied,Insufficient documentation provided despite multiple requests. Denied.
+CLM-2024-20147,commercial-property,Medium,standard,24,9400,Approved,Police report corroborates claim. No discrepancies found. Approved.
+CLM-2024-20148,commercial-property,Low,fast-track,10,0.0,Fraud Confirmed,SIU investigation confirmed staged incident. Claim denied. Policy under review.
+CLM-2024-20149,auto-property,Low,fast-track,7,12500,Approved,Third-party liability confirmed. Subrogation initiated. Claim paid.
+CLM-2024-20150,health-routine,Medium,standard,20,1130,Approved,Medical records verified. Treatment costs within policy limits. Approved.
+CLM-2024-20151,commercial-property,Medium,standard,10,0.0,Fraud Confirmed,Investigation revealed claim was filed for pre-existing damage. Fraud confirmed.
+CLM-2024-20152,commercial-property,High,complex-review,41,38662.83,Partially Approved,Treatment approved but elective procedures excluded per policy.
+CLM-2024-20153,auto-property,Medium,standard,22,7160,Approved,Documentation complete. Claim verified by field inspector. Payment approved.
+CLM-2024-20154,home-theft,Low,fast-track,10,7309.34,Partially Approved,Claim partially approved. Some items not covered under policy terms.
+CLM-2024-20155,home-theft,Low,fast-track,9,0.0,Denied,Late filing beyond 60-day policy requirement. Claim denied.
+CLM-2024-20156,commercial-property,Low,standard,10,37400,Approved,All supporting documents received. Repair estimates confirmed. Approved in full.
+CLM-2024-20157,health-routine,Medium,standard,9,1640,Approved,Verified with eyewitness statement and CCTV footage. Full approval.
+CLM-2024-20158,home-theft,Medium,standard,21,24500,Approved,Straightforward claim. Policyholder cooperative. Fast-tracked to payment.
+CLM-2024-20159,auto-bodily-injury,Low,standard,16,27889.35,Partially Approved,Approved for structural damage only; cosmetic repairs not covered.
+CLM-2024-20160,commercial-property,Low,standard,10,0.0,Denied,Insufficient documentation provided despite multiple requests. Denied.

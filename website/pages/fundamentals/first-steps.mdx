@@ -1,0 +1,213 @@
+---
+title: "Module 1.1: First Steps with OpenAI Codex"
+description: "Learn how to give Codex instructions in natural language, reference files, and complete three insurance scenarios."
+---
+
+# Module 1.1: First Steps with OpenAI Codex
+
+> **Time:** 30 minutes | **Prerequisites:** OpenAI Codex installed and authenticated ([Getting Started](../../0-getting-started/README.md))
+
+## What You Will Learn
+
+- How to give Codex instructions in natural language
+- How to reference files so Codex can read them
+- How to create new files and documents
+- Three practical insurance scenarios you can try immediately
+
+---
+
+## How to Give Instructions
+
+OpenAI Codex works like talking to a very capable colleague. You type what you need in plain language, and Codex figures out how to do it.
+
+**Good instructions are:**
+
+- **Specific** -- say exactly what you want, not vaguely what you hope for
+- **Contextual** -- give background so Codex understands the situation
+- **Iterative** -- start simple, then refine with follow-up instructions
+
+| Instead of this | Try this |
+|----------------|----------|
+| "Help me with claims" | "Summarize the top 5 claims by value from the Q3 claims report and flag any that exceed our EUR 500K threshold" |
+| "Make a table" | "Create a table showing loss ratios by region for 2024, with columns for region, earned premium, incurred claims, and loss ratio percentage" |
+| "Write something for the client" | "Draft a professional email to the CFO of a mid-size manufacturer explaining why their property premium is increasing by 12% at renewal, citing rising reinsurance costs and claims frequency" |
+
+## Referencing Files with @
+
+When you want Codex to read a file on your computer, use the `@` symbol followed by the file path:
+
+```text
+Summarize the key findings in @/Users/yourname/Documents/mig-claims-q3-2024.csv
+```
+
+Codex will read the file and work with its contents. This works with:
+
+- CSV and Excel exports
+- PDF documents
+- Word documents
+- Text files
+- Any file on your computer
+
+> **Tip:** You can also just tell Codex the file name and location in plain language: "Read the file called claims-report.pdf in my Documents folder." OpenAI Codex will find it.
+
+## Creating Files
+
+Ask Codex to create any document, and it will save it to your computer:
+
+```text
+Create a file called renewal-summary.md with a structured summary of the
+key renewal terms for our marine cargo portfolio.
+```
+
+Codex will write the file and tell you where it saved it.
+
+---
+
+> **Data Privacy Warning:** Never feed real PII, PHI, or un-anonymized proprietary data into Codex unless your organization has an enterprise data agreement in place. Always use synthetic or anonymized data for practice. If you need to work with real data, ask Codex to help you write a script to anonymize it locally first.
+
+---
+
+## Scenario 1: Summarize a Claims Report
+
+**The task:** You received a long claims report and need a quick structured summary for a meeting in 30 minutes.
+
+### Try it:
+
+If you have a claims document available, reference it directly:
+
+```text
+Read @/path/to/claims-report.pdf and give me a structured summary with:
+- Total number of claims
+- Total incurred amount in EUR
+- Top 3 claims by value with brief descriptions
+- Any notable trends or red flags
+
+Format it as a brief I can scan in 2 minutes.
+```
+
+If you do not have a file handy, ask Codex to work with a hypothetical:
+
+```text
+I'm going to describe a claims scenario. Pretend this is a quarterly claims
+report for MIG's commercial property line in Catalonia.
+
+We had 47 claims this quarter, total incurred EUR 3.2M. The largest was a
+warehouse fire in Tarragona at EUR 890K. There were 12 water damage claims
+averaging EUR 45K each, which is up 30% from last quarter.
+
+Summarize this as a structured claims brief for our underwriting committee.
+```
+
+**What to look for:** Codex should produce a clean, organized summary with sections, not a wall of text.
+
+---
+
+## Scenario 2: Organize Messy Data
+
+**The task:** You exported data from a legacy system, and it is a mess. You need it clean and structured before you can use it.
+
+### Try it:
+
+```text
+Create a file called sample-claims-messy.csv with realistic but messy
+insurance claims data. Include about 15 rows with these problems:
+- Inconsistent date formats (some DD/MM/YYYY, some MM-DD-YYYY)
+- Mixed case in status fields (some "Open", some "OPEN", some "open")
+- Currency symbols mixed in with numbers
+- Some missing values
+- Duplicate entries
+
+Use realistic MIG claim types: property, motor, liability, marine.
+Use Spanish city names for locations.
+```
+
+Once Codex creates the file, follow up with:
+
+```text
+Now clean up sample-claims-messy.csv:
+- Standardize all dates to DD/MM/YYYY format
+- Make all status values consistent (capitalize first letter only)
+- Remove currency symbols from amount columns (keep numbers only)
+- Flag duplicates but don't remove them yet
+- Fill obvious missing values where possible, mark others as "MISSING"
+
+Save the cleaned version as sample-claims-clean.csv and give me a summary
+of what you changed.
+```
+
+**What to look for:** Codex should create both files and explain every change it made.
+
+---
+
+## Scenario 3: Draft a Client Communication
+
+**The task:** A commercial client's property policy is up for renewal, and the premium is going up. You need a professional email explaining why.
+
+### Try it:
+
+```text
+Draft a professional email from me (Senior Account Manager at Mediterranean
+Insurance Group) to Maria Torres, CFO of Iberian Logistics S.L.
+
+Context:
+- Their commercial property policy renews on 1 April 2026
+- Premium is increasing from EUR 145,000 to EUR 168,000 (approx. 16%)
+- Reasons: two large claims in the past 18 months (warehouse flood EUR 220K
+  and equipment damage EUR 95K), plus hardening reinsurance market
+- We want to keep the relationship -- offer a risk improvement plan that
+  could reduce premium at next renewal
+- Tone: professional but warm, this is a valued long-term client
+
+Save it as torres-renewal-email.md
+```
+
+**What to look for:** The email should be polished, cite specific numbers, and balance firmness on the increase with relationship management.
+
+### Iterate and improve:
+
+After reviewing the first draft, give Codex feedback:
+
+```text
+Good start, but:
+- Make the opening warmer -- reference our 8-year relationship
+- Add a bullet-point breakdown of the premium drivers
+- Include a specific mention of the risk improvement consultation we can
+  offer in Q2
+- Keep it under 300 words
+```
+
+This back-and-forth is how you get the best results. Think of it as editing drafts with a colleague.
+
+---
+
+## Tips for Effective Prompting
+
+1. **Be specific about format.** Say "create a table" or "use bullet points" or "write it as an executive summary under 200 words." Codex will match whatever format you request.
+
+2. **Provide context.** Codex does not know about your specific projects unless you tell it. Spend a sentence or two explaining the situation.
+
+3. **Iterate freely.** Your first prompt rarely produces the perfect result. Follow up with refinements. This is normal and expected.
+
+4. **Use Codex as a thinking partner.** Do not just ask Codex to write -- ask it to challenge your assumptions, identify what you might be missing, or suggest alternatives.
+
+5. **Check the output.** Codex is powerful but not infallible. Always review numbers, regulatory references, and client-facing communications before using them.
+
+---
+
+## Understanding Modes (Shift+Tab)
+
+As you work, remember you can press **Shift+Tab** to cycle between modes:
+
+| Mode | Best For |
+|------|----------|
+| **Plan** | "Show me what you would do before doing it" -- great for complex tasks |
+| **Edit** | Default mode. Codex proposes changes and you approve them |
+| **Auto-accept** | Codex acts immediately. Use when iterating quickly on drafts |
+
+For these exercises, **Edit** mode is recommended so you can see what Codex does before it saves files.
+
+---
+
+## Next Step
+
+Proceed to [Module 1.2: Project Memory with AGENTS.md](../1.2-project-memory/README.md) to learn how to give OpenAI Codex persistent context about your projects and preferences.

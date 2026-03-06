@@ -1,0 +1,2001 @@
+claim_id,year,quarter,region,segment,claim_type,incurred_amount_eur,status,date_of_loss
+CLM-10001,2023,1,Andalusia,Commercial Fleet,Weather damage,155074.06,Closed,31/01/2023
+CLM-10002,2023,1,Andalusia,Commercial Fleet,Windscreen,53265.02,Open,27/03/2023
+CLM-10003,2023,1,Andalusia,Commercial Fleet,Theft,311240.15,Closed,23/02/2023
+CLM-10004,2023,1,Andalusia,Commercial Fleet,Collision,342039.89,Closed,31/01/2023
+CLM-10005,2023,1,Andalusia,Commercial Fleet,Collision,208649.47,Closed,12/02/2023
+CLM-10006,2023,1,Andalusia,Commercial Fleet,Theft,271261.3,Closed,23/02/2023
+CLM-10007,2023,1,Andalusia,Motorcycle,Third-party liability,802325.54,Closed,18/02/2023
+CLM-10008,2023,1,Andalusia,Private Motor,Third-party liability,625267.26,Closed,29/01/2023
+CLM-10009,2023,1,Andalusia,Private Motor,Third-party liability,741396.29,Closed,04/03/2023
+CLM-10010,2023,1,Andalusia,Private Motor,Third-party liability,957782.12,Closed,08/03/2023
+CLM-10011,2023,1,Andalusia,Private Motor,Third-party liability,647500.21,Closed,06/01/2023
+CLM-10012,2023,1,Andalusia,Private Motor,Windscreen,58538.47,Closed,28/03/2023
+CLM-10013,2023,1,Andalusia,Private Motor,Third-party liability,776244.69,Closed,23/01/2023
+CLM-10014,2023,1,Andalusia,Private Motor,Collision,519093.12,Closed,08/03/2023
+CLM-10015,2023,1,Andalusia,Private Motor,Windscreen,80710.46,Closed,12/03/2023
+CLM-10016,2023,1,Andalusia,Private Motor,Collision,540592.13,Closed,22/03/2023
+CLM-10017,2023,1,Andalusia,Private Motor,Collision,427797.47,Closed,23/03/2023
+CLM-10018,2023,1,Andalusia,Private Motor,Collision,211542.92,Closed,11/02/2023
+CLM-10019,2023,1,Andalusia,Private Motor,Weather damage,142421.85,Closed,10/03/2023
+CLM-10020,2023,1,Andalusia,Private Motor,Total loss,667298.66,Closed,10/03/2023
+CLM-10021,2023,1,Andalusia,Private Motor,Collision,402471.26,Closed,23/03/2023
+CLM-10022,2023,1,Andalusia,Private Motor,Collision,409438.27,Closed,14/03/2023
+CLM-10023,2023,1,Andalusia,Private Motor,Collision,422244.12,Closed,02/02/2023
+CLM-10024,2023,1,Andalusia,Private Motor,Theft,670389.69,Closed,06/03/2023
+CLM-10025,2023,1,Basque Country,Commercial Fleet,Third-party liability,1243973.45,Closed,15/02/2023
+CLM-10026,2023,1,Basque Country,Commercial Fleet,Total loss,793716.6,Closed,06/02/2023
+CLM-10027,2023,1,Basque Country,Commercial Fleet,Weather damage,534836.03,Closed,26/03/2023
+CLM-10028,2023,1,Basque Country,Commercial Fleet,Collision,244960.78,Open,23/03/2023
+CLM-10029,2023,1,Basque Country,Commercial Fleet,Windscreen,158297.81,Closed,07/01/2023
+CLM-10030,2023,1,Basque Country,Private Motor,Third-party liability,460369.16,Closed,06/02/2023
+CLM-10031,2023,1,Basque Country,Private Motor,Total loss,1745492.21,Closed,19/03/2023
+CLM-10032,2023,1,Basque Country,Private Motor,Third-party liability,470734.21,Closed,13/01/2023
+CLM-10033,2023,1,Basque Country,Private Motor,Theft,1199411.36,Closed,26/02/2023
+CLM-10034,2023,1,Catalonia,Commercial Fleet,Collision,525520.07,Closed,06/02/2023
+CLM-10035,2023,1,Catalonia,Commercial Fleet,Collision,238743.58,Closed,23/02/2023
+CLM-10036,2023,1,Catalonia,Commercial Fleet,Theft,573224.65,Closed,31/01/2023
+CLM-10037,2023,1,Catalonia,Commercial Fleet,Theft,356082.88,Closed,18/01/2023
+CLM-10038,2023,1,Catalonia,Commercial Fleet,Theft,496791.85,Closed,24/01/2023
+CLM-10039,2023,1,Catalonia,Commercial Fleet,Third-party liability,488804.6,Closed,23/01/2023
+CLM-10040,2023,1,Catalonia,Commercial Fleet,Windscreen,53654.05,Closed,18/01/2023
+CLM-10041,2023,1,Catalonia,Commercial Fleet,Weather damage,306656.67,Closed,15/03/2023
+CLM-10042,2023,1,Catalonia,Commercial Fleet,Windscreen,65243.99,Closed,08/01/2023
+CLM-10043,2023,1,Catalonia,Commercial Fleet,Theft,408585.85,Closed,10/02/2023
+CLM-10044,2023,1,Catalonia,Commercial Fleet,Collision,342281.05,Closed,15/02/2023
+CLM-10045,2023,1,Catalonia,Commercial Fleet,Collision,305989.89,Closed,18/01/2023
+CLM-10046,2023,1,Catalonia,Motorcycle,Total loss,814783.77,Closed,04/03/2023
+CLM-10047,2023,1,Catalonia,Private Motor,Theft,224782.23,Closed,06/01/2023
+CLM-10048,2023,1,Catalonia,Private Motor,Collision,923587.03,Closed,23/01/2023
+CLM-10049,2023,1,Catalonia,Private Motor,Third-party liability,676508.6,Closed,06/03/2023
+CLM-10050,2023,1,Catalonia,Private Motor,Windscreen,55767.0,Closed,09/02/2023
+CLM-10051,2023,1,Catalonia,Private Motor,Third-party liability,157286.47,Closed,12/03/2023
+CLM-10052,2023,1,Catalonia,Private Motor,Third-party liability,1372478.65,Closed,07/02/2023
+CLM-10053,2023,1,Catalonia,Private Motor,Collision,280251.26,Closed,19/01/2023
+CLM-10054,2023,1,Catalonia,Private Motor,Weather damage,124777.54,Closed,31/01/2023
+CLM-10055,2023,1,Catalonia,Private Motor,Theft,327035.59,Closed,19/01/2023
+CLM-10056,2023,1,Catalonia,Private Motor,Total loss,889608.84,Closed,27/03/2023
+CLM-10057,2023,1,Catalonia,Private Motor,Collision,126383.01,Closed,20/01/2023
+CLM-10058,2023,1,Catalonia,Private Motor,Theft,397444.41,Closed,22/01/2023
+CLM-10059,2023,1,Catalonia,Private Motor,Collision,297161.0,Closed,10/02/2023
+CLM-10060,2023,1,Catalonia,Private Motor,Collision,232529.87,Closed,24/01/2023
+CLM-10061,2023,1,Catalonia,Private Motor,Third-party liability,577164.35,Closed,12/03/2023
+CLM-10062,2023,1,Catalonia,Private Motor,Windscreen,16431.64,Open,01/03/2023
+CLM-10063,2023,1,Catalonia,Private Motor,Collision,541104.49,Closed,08/02/2023
+CLM-10064,2023,1,Catalonia,Private Motor,Third-party liability,1255375.97,Closed,18/03/2023
+CLM-10065,2023,1,Catalonia,Private Motor,Collision,259240.77,Closed,15/01/2023
+CLM-10066,2023,1,Catalonia,Private Motor,Collision,746596.04,Closed,14/01/2023
+CLM-10067,2023,1,Catalonia,Private Motor,Third-party liability,501889.93,Closed,27/03/2023
+CLM-10068,2023,1,Catalonia,Private Motor,Third-party liability,692889.39,Closed,15/01/2023
+CLM-10069,2023,1,Catalonia,Private Motor,Third-party liability,579277.14,Closed,19/02/2023
+CLM-10070,2023,1,Catalonia,Private Motor,Third-party liability,765444.69,Closed,29/01/2023
+CLM-10071,2023,1,Galicia,Commercial Fleet,Collision,482489.54,Closed,05/02/2023
+CLM-10072,2023,1,Galicia,Motorcycle,Third-party liability,587993.11,Closed,10/03/2023
+CLM-10073,2023,1,Galicia,Private Motor,Collision,872624.51,Closed,21/01/2023
+CLM-10074,2023,1,Galicia,Private Motor,Weather damage,224948.24,Closed,27/03/2023
+CLM-10075,2023,1,Galicia,Private Motor,Collision,323011.23,Closed,17/03/2023
+CLM-10076,2023,1,Galicia,Private Motor,Windscreen,79145.32,Closed,19/02/2023
+CLM-10077,2023,1,Galicia,Private Motor,Windscreen,47140.61,Closed,25/03/2023
+CLM-10078,2023,1,Galicia,Private Motor,Collision,269480.31,Closed,20/02/2023
+CLM-10079,2023,1,Galicia,Private Motor,Theft,857904.45,Closed,11/01/2023
+CLM-10080,2023,1,Galicia,Private Motor,Total loss,657972.5,Closed,27/03/2023
+CLM-10081,2023,1,Madrid,Commercial Fleet,Total loss,1133372.22,Closed,12/02/2023
+CLM-10082,2023,1,Madrid,Commercial Fleet,Third-party liability,1555866.3,Open,09/03/2023
+CLM-10083,2023,1,Madrid,Commercial Fleet,Theft,263294.23,Closed,30/01/2023
+CLM-10084,2023,1,Madrid,Commercial Fleet,Third-party liability,477788.96,Closed,26/01/2023
+CLM-10085,2023,1,Madrid,Commercial Fleet,Windscreen,45623.78,Open,15/02/2023
+CLM-10086,2023,1,Madrid,Commercial Fleet,Collision,223731.45,Closed,21/01/2023
+CLM-10087,2023,1,Madrid,Commercial Fleet,Collision,407544.58,Closed,11/02/2023
+CLM-10088,2023,1,Madrid,Commercial Fleet,Third-party liability,1054697.48,Closed,08/02/2023
+CLM-10089,2023,1,Madrid,Commercial Fleet,Theft,507429.74,Closed,29/01/2023
+CLM-10090,2023,1,Madrid,Commercial Fleet,Collision,328944.46,Closed,09/03/2023
+CLM-10091,2023,1,Madrid,Commercial Fleet,Third-party liability,477794.59,Open,31/03/2023
+CLM-10092,2023,1,Madrid,Commercial Fleet,Third-party liability,756397.97,Closed,27/01/2023
+CLM-10093,2023,1,Madrid,Commercial Fleet,Collision,221667.23,Closed,19/02/2023
+CLM-10094,2023,1,Madrid,Commercial Fleet,Third-party liability,670832.34,Closed,12/02/2023
+CLM-10095,2023,1,Madrid,Motorcycle,Theft,743156.01,Closed,06/01/2023
+CLM-10096,2023,1,Madrid,Motorcycle,Theft,653893.55,Closed,31/03/2023
+CLM-10097,2023,1,Madrid,Motorcycle,Theft,1532162.3,Closed,05/01/2023
+CLM-10098,2023,1,Madrid,Motorcycle,Theft,662726.57,Open,11/01/2023
+CLM-10099,2023,1,Madrid,Private Motor,Theft,497250.31,Closed,22/02/2023
+CLM-10100,2023,1,Madrid,Private Motor,Windscreen,56528.68,Closed,26/01/2023
+CLM-10101,2023,1,Madrid,Private Motor,Third-party liability,720059.94,Closed,03/02/2023
+CLM-10102,2023,1,Madrid,Private Motor,Third-party liability,495567.67,Closed,15/03/2023
+CLM-10103,2023,1,Madrid,Private Motor,Collision,232357.17,Closed,25/03/2023
+CLM-10104,2023,1,Madrid,Private Motor,Collision,778124.48,Closed,17/01/2023
+CLM-10105,2023,1,Madrid,Private Motor,Weather damage,387345.33,Closed,08/02/2023
+CLM-10106,2023,1,Madrid,Private Motor,Weather damage,273392.59,Closed,09/02/2023
+CLM-10107,2023,1,Madrid,Private Motor,Weather damage,746921.87,Closed,25/01/2023
+CLM-10108,2023,1,Madrid,Private Motor,Weather damage,205906.8,Closed,20/01/2023
+CLM-10109,2023,1,Madrid,Private Motor,Collision,307844.16,Closed,06/01/2023
+CLM-10110,2023,1,Madrid,Private Motor,Collision,497441.01,Closed,21/02/2023
+CLM-10111,2023,1,Madrid,Private Motor,Collision,145594.2,Closed,25/03/2023
+CLM-10112,2023,1,Madrid,Private Motor,Collision,161679.82,Closed,29/03/2023
+CLM-10113,2023,1,Madrid,Private Motor,Collision,687511.16,Closed,15/02/2023
+CLM-10114,2023,1,Madrid,Private Motor,Collision,184624.42,Closed,03/02/2023
+CLM-10115,2023,1,Madrid,Private Motor,Windscreen,118296.21,Closed,21/01/2023
+CLM-10116,2023,1,Madrid,Private Motor,Collision,277264.12,Closed,05/03/2023
+CLM-10117,2023,1,Madrid,Private Motor,Collision,304914.6,Closed,22/02/2023
+CLM-10118,2023,1,Madrid,Private Motor,Theft,840960.97,Closed,22/02/2023
+CLM-10119,2023,1,Madrid,Private Motor,Windscreen,89118.38,Closed,19/01/2023
+CLM-10120,2023,1,Madrid,Private Motor,Collision,202360.33,Closed,11/02/2023
+CLM-10121,2023,1,Madrid,Private Motor,Theft,376357.08,Closed,29/01/2023
+CLM-10122,2023,1,Madrid,Private Motor,Collision,364303.42,Closed,13/01/2023
+CLM-10123,2023,1,Madrid,Private Motor,Total loss,929106.99,Closed,27/03/2023
+CLM-10124,2023,1,Valencia,Commercial Fleet,Collision,707583.29,Closed,31/03/2023
+CLM-10125,2023,1,Valencia,Commercial Fleet,Weather damage,172395.17,Closed,29/03/2023
+CLM-10126,2023,1,Valencia,Commercial Fleet,Third-party liability,543928.84,Closed,02/02/2023
+CLM-10127,2023,1,Valencia,Commercial Fleet,Theft,379547.03,Closed,21/03/2023
+CLM-10128,2023,1,Valencia,Commercial Fleet,Theft,400534.37,Closed,25/03/2023
+CLM-10129,2023,1,Valencia,Motorcycle,Third-party liability,896097.69,Closed,22/01/2023
+CLM-10130,2023,1,Valencia,Motorcycle,Third-party liability,624797.34,Closed,19/03/2023
+CLM-10131,2023,1,Valencia,Motorcycle,Third-party liability,376303.51,Closed,15/03/2023
+CLM-10132,2023,1,Valencia,Private Motor,Theft,414279.6,Closed,19/02/2023
+CLM-10133,2023,1,Valencia,Private Motor,Weather damage,476699.28,Closed,18/01/2023
+CLM-10134,2023,1,Valencia,Private Motor,Weather damage,262282.36,Closed,25/03/2023
+CLM-10135,2023,1,Valencia,Private Motor,Collision,350848.49,Closed,13/03/2023
+CLM-10136,2023,1,Valencia,Private Motor,Collision,573469.14,Closed,29/01/2023
+CLM-10137,2023,1,Valencia,Private Motor,Weather damage,149214.69,Open,26/03/2023
+CLM-10138,2023,1,Valencia,Private Motor,Collision,208694.91,Closed,31/03/2023
+CLM-10139,2023,1,Valencia,Private Motor,Theft,935873.29,Closed,03/02/2023
+CLM-10140,2023,1,Valencia,Private Motor,Collision,677813.77,Closed,23/01/2023
+CLM-10141,2023,1,Valencia,Private Motor,Collision,193022.06,Closed,14/01/2023
+CLM-10142,2023,1,Valencia,Private Motor,Collision,640966.46,Open,11/03/2023
+CLM-10143,2023,1,Valencia,Private Motor,Weather damage,221847.94,Closed,27/01/2023
+CLM-10144,2023,1,Valencia,Private Motor,Collision,147837.3,Closed,03/02/2023
+CLM-10145,2023,1,Valencia,Private Motor,Weather damage,347442.79,Closed,23/02/2023
+CLM-10146,2023,1,Valencia,Private Motor,Theft,289108.01,Closed,22/01/2023
+CLM-10147,2023,1,Valencia,Private Motor,Collision,228406.05,Closed,03/02/2023
+CLM-10148,2023,1,Valencia,Private Motor,Collision,553079.11,Closed,06/02/2023
+CLM-10149,2023,1,Valencia,Private Motor,Collision,328432.22,Closed,15/02/2023
+CLM-10150,2023,2,Andalusia,Commercial Fleet,Third-party liability,634280.53,Closed,08/04/2023
+CLM-10151,2023,2,Andalusia,Commercial Fleet,Collision,264107.02,Closed,25/06/2023
+CLM-10152,2023,2,Andalusia,Commercial Fleet,Collision,192029.3,Open,11/05/2023
+CLM-10153,2023,2,Andalusia,Commercial Fleet,Third-party liability,901310.97,Closed,07/04/2023
+CLM-10154,2023,2,Andalusia,Commercial Fleet,Theft,616651.18,Closed,27/05/2023
+CLM-10155,2023,2,Andalusia,Commercial Fleet,Theft,840487.7,Closed,04/04/2023
+CLM-10156,2023,2,Andalusia,Commercial Fleet,Total loss,589005.99,Closed,11/05/2023
+CLM-10157,2023,2,Andalusia,Commercial Fleet,Weather damage,230866.57,Closed,22/05/2023
+CLM-10158,2023,2,Andalusia,Commercial Fleet,Third-party liability,656121.77,Closed,23/04/2023
+CLM-10159,2023,2,Andalusia,Commercial Fleet,Weather damage,102233.65,Closed,21/04/2023
+CLM-10160,2023,2,Andalusia,Commercial Fleet,Windscreen,86544.73,Closed,16/05/2023
+CLM-10161,2023,2,Andalusia,Motorcycle,Theft,318056.69,Closed,24/05/2023
+CLM-10162,2023,2,Andalusia,Motorcycle,Collision,519727.11,Closed,04/06/2023
+CLM-10163,2023,2,Andalusia,Motorcycle,Collision,566005.26,Closed,17/05/2023
+CLM-10164,2023,2,Andalusia,Private Motor,Weather damage,247369.81,Closed,15/06/2023
+CLM-10165,2023,2,Andalusia,Private Motor,Weather damage,344971.17,Closed,18/06/2023
+CLM-10166,2023,2,Andalusia,Private Motor,Theft,428556.33,Closed,16/05/2023
+CLM-10167,2023,2,Andalusia,Private Motor,Theft,1152265.34,Closed,02/04/2023
+CLM-10168,2023,2,Andalusia,Private Motor,Windscreen,34739.8,Closed,03/05/2023
+CLM-10169,2023,2,Andalusia,Private Motor,Total loss,1294373.66,Closed,09/05/2023
+CLM-10170,2023,2,Andalusia,Private Motor,Collision,222008.41,Closed,07/04/2023
+CLM-10171,2023,2,Andalusia,Private Motor,Total loss,614437.81,Closed,12/06/2023
+CLM-10172,2023,2,Andalusia,Private Motor,Collision,523223.11,Closed,27/06/2023
+CLM-10173,2023,2,Andalusia,Private Motor,Total loss,864172.75,Closed,14/04/2023
+CLM-10174,2023,2,Andalusia,Private Motor,Collision,196609.05,Closed,16/06/2023
+CLM-10175,2023,2,Andalusia,Private Motor,Windscreen,124908.54,Closed,24/06/2023
+CLM-10176,2023,2,Andalusia,Private Motor,Windscreen,33314.6,Closed,11/04/2023
+CLM-10177,2023,2,Andalusia,Private Motor,Weather damage,365500.63,Closed,02/06/2023
+CLM-10178,2023,2,Andalusia,Private Motor,Collision,160733.06,Closed,27/06/2023
+CLM-10179,2023,2,Andalusia,Private Motor,Total loss,538944.78,Closed,03/05/2023
+CLM-10180,2023,2,Andalusia,Private Motor,Theft,520178.27,Closed,03/05/2023
+CLM-10181,2023,2,Andalusia,Private Motor,Theft,264035.0,Open,08/05/2023
+CLM-10182,2023,2,Andalusia,Private Motor,Total loss,1058258.0,Closed,14/06/2023
+CLM-10183,2023,2,Andalusia,Private Motor,Collision,488712.75,Closed,26/04/2023
+CLM-10184,2023,2,Andalusia,Private Motor,Theft,559738.87,Open,21/06/2023
+CLM-10185,2023,2,Andalusia,Private Motor,Total loss,506650.95,Closed,01/05/2023
+CLM-10186,2023,2,Andalusia,Private Motor,Collision,423237.46,Closed,01/05/2023
+CLM-10187,2023,2,Andalusia,Private Motor,Collision,248307.29,Closed,15/04/2023
+CLM-10188,2023,2,Andalusia,Private Motor,Theft,338654.03,Closed,27/05/2023
+CLM-10189,2023,2,Andalusia,Private Motor,Collision,334145.0,Closed,21/06/2023
+CLM-10190,2023,2,Andalusia,Private Motor,Third-party liability,514933.23,Closed,04/06/2023
+CLM-10191,2023,2,Basque Country,Commercial Fleet,Collision,521318.6,Closed,29/05/2023
+CLM-10192,2023,2,Basque Country,Commercial Fleet,Windscreen,78236.86,Closed,20/04/2023
+CLM-10193,2023,2,Basque Country,Commercial Fleet,Third-party liability,943161.03,Closed,17/04/2023
+CLM-10194,2023,2,Basque Country,Commercial Fleet,Collision,574736.04,Closed,29/04/2023
+CLM-10195,2023,2,Basque Country,Commercial Fleet,Collision,238647.82,Closed,14/05/2023
+CLM-10196,2023,2,Basque Country,Commercial Fleet,Collision,568249.39,Closed,21/04/2023
+CLM-10197,2023,2,Basque Country,Commercial Fleet,Windscreen,57241.75,Closed,26/06/2023
+CLM-10198,2023,2,Basque Country,Motorcycle,Collision,356758.79,Closed,12/05/2023
+CLM-10199,2023,2,Basque Country,Private Motor,Collision,257114.44,Closed,26/05/2023
+CLM-10200,2023,2,Basque Country,Private Motor,Collision,327958.99,Closed,10/05/2023
+CLM-10201,2023,2,Basque Country,Private Motor,Collision,297789.02,Closed,07/05/2023
+CLM-10202,2023,2,Catalonia,Commercial Fleet,Collision,149754.73,Closed,05/06/2023
+CLM-10203,2023,2,Catalonia,Commercial Fleet,Theft,663341.79,Open,15/05/2023
+CLM-10204,2023,2,Catalonia,Commercial Fleet,Theft,374885.1,Closed,11/04/2023
+CLM-10205,2023,2,Catalonia,Commercial Fleet,Third-party liability,1844027.68,Closed,18/06/2023
+CLM-10206,2023,2,Catalonia,Commercial Fleet,Collision,261817.48,Closed,24/05/2023
+CLM-10207,2023,2,Catalonia,Commercial Fleet,Total loss,950376.08,Closed,21/06/2023
+CLM-10208,2023,2,Catalonia,Commercial Fleet,Third-party liability,1409874.61,Closed,06/04/2023
+CLM-10209,2023,2,Catalonia,Commercial Fleet,Theft,880254.09,Closed,06/06/2023
+CLM-10210,2023,2,Catalonia,Commercial Fleet,Collision,207170.91,Closed,28/06/2023
+CLM-10211,2023,2,Catalonia,Commercial Fleet,Theft,454318.67,Closed,28/05/2023
+CLM-10212,2023,2,Catalonia,Commercial Fleet,Theft,630384.28,Closed,09/04/2023
+CLM-10213,2023,2,Catalonia,Commercial Fleet,Third-party liability,497057.43,Closed,10/06/2023
+CLM-10214,2023,2,Catalonia,Commercial Fleet,Windscreen,47187.95,Closed,10/06/2023
+CLM-10215,2023,2,Catalonia,Commercial Fleet,Third-party liability,636324.19,Closed,09/05/2023
+CLM-10216,2023,2,Catalonia,Commercial Fleet,Weather damage,183681.97,Closed,30/05/2023
+CLM-10217,2023,2,Catalonia,Commercial Fleet,Total loss,595224.21,Closed,17/05/2023
+CLM-10218,2023,2,Catalonia,Motorcycle,Third-party liability,951279.44,Closed,05/06/2023
+CLM-10219,2023,2,Catalonia,Motorcycle,Third-party liability,315865.0,Closed,26/06/2023
+CLM-10220,2023,2,Catalonia,Motorcycle,Third-party liability,1558890.88,Closed,27/06/2023
+CLM-10221,2023,2,Catalonia,Motorcycle,Third-party liability,884888.21,Closed,24/05/2023
+CLM-10222,2023,2,Catalonia,Motorcycle,Collision,259198.95,Closed,09/05/2023
+CLM-10223,2023,2,Catalonia,Private Motor,Third-party liability,461609.19,Closed,01/06/2023
+CLM-10224,2023,2,Catalonia,Private Motor,Windscreen,31788.63,Closed,14/04/2023
+CLM-10225,2023,2,Catalonia,Private Motor,Collision,188681.52,Closed,03/05/2023
+CLM-10226,2023,2,Catalonia,Private Motor,Third-party liability,485395.6,Closed,13/05/2023
+CLM-10227,2023,2,Catalonia,Private Motor,Collision,530456.92,Closed,17/06/2023
+CLM-10228,2023,2,Catalonia,Private Motor,Third-party liability,551158.24,Closed,10/05/2023
+CLM-10229,2023,2,Catalonia,Private Motor,Total loss,716406.51,Closed,19/05/2023
+CLM-10230,2023,2,Catalonia,Private Motor,Weather damage,244362.71,Open,15/05/2023
+CLM-10231,2023,2,Catalonia,Private Motor,Third-party liability,789406.06,Closed,20/04/2023
+CLM-10232,2023,2,Catalonia,Private Motor,Collision,233884.06,Closed,18/05/2023
+CLM-10233,2023,2,Catalonia,Private Motor,Windscreen,39054.55,Closed,04/05/2023
+CLM-10234,2023,2,Catalonia,Private Motor,Third-party liability,719898.81,Closed,26/04/2023
+CLM-10235,2023,2,Catalonia,Private Motor,Windscreen,19098.7,Open,09/06/2023
+CLM-10236,2023,2,Catalonia,Private Motor,Weather damage,290470.57,Closed,10/04/2023
+CLM-10237,2023,2,Catalonia,Private Motor,Third-party liability,422574.62,Open,18/06/2023
+CLM-10238,2023,2,Catalonia,Private Motor,Third-party liability,380336.06,Closed,02/05/2023
+CLM-10239,2023,2,Catalonia,Private Motor,Third-party liability,458034.69,Closed,20/05/2023
+CLM-10240,2023,2,Catalonia,Private Motor,Collision,268122.57,Closed,24/05/2023
+CLM-10241,2023,2,Catalonia,Private Motor,Third-party liability,561744.99,Closed,19/05/2023
+CLM-10242,2023,2,Catalonia,Private Motor,Total loss,530551.71,Closed,27/04/2023
+CLM-10243,2023,2,Catalonia,Private Motor,Collision,277179.67,Open,25/05/2023
+CLM-10244,2023,2,Catalonia,Private Motor,Windscreen,81435.84,Closed,01/04/2023
+CLM-10245,2023,2,Catalonia,Private Motor,Third-party liability,380803.34,Closed,07/04/2023
+CLM-10246,2023,2,Catalonia,Private Motor,Total loss,781455.62,Closed,11/06/2023
+CLM-10247,2023,2,Galicia,Commercial Fleet,Windscreen,60158.12,Closed,24/05/2023
+CLM-10248,2023,2,Galicia,Commercial Fleet,Collision,929709.35,Closed,06/05/2023
+CLM-10249,2023,2,Galicia,Motorcycle,Total loss,1101119.8,Closed,07/05/2023
+CLM-10250,2023,2,Galicia,Private Motor,Third-party liability,1123845.94,Closed,27/06/2023
+CLM-10251,2023,2,Galicia,Private Motor,Weather damage,226416.66,Closed,19/05/2023
+CLM-10252,2023,2,Galicia,Private Motor,Weather damage,590851.91,Closed,25/05/2023
+CLM-10253,2023,2,Galicia,Private Motor,Collision,478447.17,Closed,16/06/2023
+CLM-10254,2023,2,Galicia,Private Motor,Weather damage,203803.96,Closed,20/05/2023
+CLM-10255,2023,2,Galicia,Private Motor,Collision,764510.61,Closed,07/06/2023
+CLM-10256,2023,2,Madrid,Commercial Fleet,Third-party liability,617827.07,Closed,17/05/2023
+CLM-10257,2023,2,Madrid,Commercial Fleet,Total loss,611321.05,Closed,21/05/2023
+CLM-10258,2023,2,Madrid,Commercial Fleet,Total loss,438261.91,Closed,10/06/2023
+CLM-10259,2023,2,Madrid,Commercial Fleet,Windscreen,42154.66,Open,22/04/2023
+CLM-10260,2023,2,Madrid,Commercial Fleet,Theft,544833.21,Closed,25/05/2023
+CLM-10261,2023,2,Madrid,Commercial Fleet,Total loss,832947.71,Closed,16/05/2023
+CLM-10262,2023,2,Madrid,Commercial Fleet,Windscreen,36597.57,Closed,05/05/2023
+CLM-10263,2023,2,Madrid,Commercial Fleet,Collision,296446.18,Closed,13/05/2023
+CLM-10264,2023,2,Madrid,Commercial Fleet,Total loss,735786.49,Open,18/04/2023
+CLM-10265,2023,2,Madrid,Commercial Fleet,Third-party liability,506228.69,Closed,11/05/2023
+CLM-10266,2023,2,Madrid,Commercial Fleet,Third-party liability,699228.94,Closed,04/04/2023
+CLM-10267,2023,2,Madrid,Private Motor,Third-party liability,669276.01,Closed,19/04/2023
+CLM-10268,2023,2,Madrid,Private Motor,Weather damage,273777.92,Closed,05/05/2023
+CLM-10269,2023,2,Madrid,Private Motor,Collision,435912.53,Closed,02/06/2023
+CLM-10270,2023,2,Madrid,Private Motor,Windscreen,54888.1,Closed,04/06/2023
+CLM-10271,2023,2,Madrid,Private Motor,Windscreen,60829.35,Closed,27/06/2023
+CLM-10272,2023,2,Madrid,Private Motor,Total loss,655418.85,Closed,05/04/2023
+CLM-10273,2023,2,Madrid,Private Motor,Weather damage,184673.82,Closed,16/04/2023
+CLM-10274,2023,2,Madrid,Private Motor,Weather damage,201281.53,Closed,27/04/2023
+CLM-10275,2023,2,Madrid,Private Motor,Theft,393578.45,Closed,01/04/2023
+CLM-10276,2023,2,Madrid,Private Motor,Collision,277693.73,Closed,07/06/2023
+CLM-10277,2023,2,Madrid,Private Motor,Collision,474203.02,Open,27/06/2023
+CLM-10278,2023,2,Madrid,Private Motor,Collision,443922.4,Closed,17/06/2023
+CLM-10279,2023,2,Madrid,Private Motor,Collision,229332.17,Open,06/06/2023
+CLM-10280,2023,2,Madrid,Private Motor,Third-party liability,1563659.57,Closed,08/05/2023
+CLM-10281,2023,2,Madrid,Private Motor,Total loss,461565.86,Closed,14/05/2023
+CLM-10282,2023,2,Madrid,Private Motor,Theft,706874.79,Closed,01/06/2023
+CLM-10283,2023,2,Madrid,Private Motor,Windscreen,52470.59,Closed,18/06/2023
+CLM-10284,2023,2,Madrid,Private Motor,Collision,196975.41,Closed,11/06/2023
+CLM-10285,2023,2,Madrid,Private Motor,Third-party liability,844613.45,Closed,13/04/2023
+CLM-10286,2023,2,Madrid,Private Motor,Third-party liability,556228.5,Closed,01/06/2023
+CLM-10287,2023,2,Madrid,Private Motor,Collision,312013.17,Closed,11/06/2023
+CLM-10288,2023,2,Madrid,Private Motor,Windscreen,100310.79,Closed,13/06/2023
+CLM-10289,2023,2,Valencia,Commercial Fleet,Third-party liability,472285.54,Closed,20/06/2023
+CLM-10290,2023,2,Valencia,Commercial Fleet,Weather damage,181573.79,Closed,27/06/2023
+CLM-10291,2023,2,Valencia,Commercial Fleet,Collision,426268.54,Closed,24/06/2023
+CLM-10292,2023,2,Valencia,Commercial Fleet,Weather damage,364094.47,Closed,22/06/2023
+CLM-10293,2023,2,Valencia,Commercial Fleet,Collision,156667.18,Closed,15/04/2023
+CLM-10294,2023,2,Valencia,Commercial Fleet,Weather damage,211922.8,Closed,09/04/2023
+CLM-10295,2023,2,Valencia,Commercial Fleet,Collision,1069349.97,Closed,25/06/2023
+CLM-10296,2023,2,Valencia,Commercial Fleet,Collision,745928.35,Closed,28/05/2023
+CLM-10297,2023,2,Valencia,Commercial Fleet,Weather damage,389832.02,Closed,10/05/2023
+CLM-10298,2023,2,Valencia,Commercial Fleet,Collision,334716.74,Closed,18/04/2023
+CLM-10299,2023,2,Valencia,Commercial Fleet,Third-party liability,569862.97,Closed,29/04/2023
+CLM-10300,2023,2,Valencia,Commercial Fleet,Total loss,1239318.75,Closed,29/04/2023
+CLM-10301,2023,2,Valencia,Commercial Fleet,Theft,800939.17,Closed,15/05/2023
+CLM-10302,2023,2,Valencia,Motorcycle,Third-party liability,930066.92,Closed,02/05/2023
+CLM-10303,2023,2,Valencia,Motorcycle,Collision,706945.65,Closed,12/06/2023
+CLM-10304,2023,2,Valencia,Private Motor,Weather damage,311753.29,Closed,06/04/2023
+CLM-10305,2023,2,Valencia,Private Motor,Weather damage,289305.01,Closed,01/04/2023
+CLM-10306,2023,2,Valencia,Private Motor,Weather damage,226424.05,Closed,14/06/2023
+CLM-10307,2023,2,Valencia,Private Motor,Weather damage,223218.78,Closed,27/06/2023
+CLM-10308,2023,2,Valencia,Private Motor,Windscreen,45229.84,Closed,16/06/2023
+CLM-10309,2023,2,Valencia,Private Motor,Collision,406943.25,Closed,04/05/2023
+CLM-10310,2023,2,Valencia,Private Motor,Third-party liability,778543.25,Closed,27/04/2023
+CLM-10311,2023,2,Valencia,Private Motor,Weather damage,205903.31,Closed,13/06/2023
+CLM-10312,2023,2,Valencia,Private Motor,Third-party liability,537512.88,Closed,01/05/2023
+CLM-10313,2023,2,Valencia,Private Motor,Collision,413445.46,Open,11/06/2023
+CLM-10314,2023,2,Valencia,Private Motor,Total loss,806388.66,Closed,10/04/2023
+CLM-10315,2023,2,Valencia,Private Motor,Collision,234952.28,Closed,15/06/2023
+CLM-10316,2023,2,Valencia,Private Motor,Third-party liability,464770.62,Closed,29/06/2023
+CLM-10317,2023,3,Andalusia,Commercial Fleet,Third-party liability,636537.66,Closed,03/09/2023
+CLM-10318,2023,3,Andalusia,Commercial Fleet,Total loss,761689.71,Closed,03/09/2023
+CLM-10319,2023,3,Andalusia,Commercial Fleet,Total loss,1193675.18,Closed,09/09/2023
+CLM-10320,2023,3,Andalusia,Commercial Fleet,Third-party liability,549753.06,Closed,30/09/2023
+CLM-10321,2023,3,Andalusia,Commercial Fleet,Theft,428512.16,Closed,19/07/2023
+CLM-10322,2023,3,Andalusia,Commercial Fleet,Collision,173718.74,Closed,15/08/2023
+CLM-10323,2023,3,Andalusia,Commercial Fleet,Theft,436790.71,Closed,21/08/2023
+CLM-10324,2023,3,Andalusia,Commercial Fleet,Collision,183856.8,Closed,22/09/2023
+CLM-10325,2023,3,Andalusia,Commercial Fleet,Theft,270582.83,Closed,05/09/2023
+CLM-10326,2023,3,Andalusia,Commercial Fleet,Third-party liability,361350.48,Closed,29/09/2023
+CLM-10327,2023,3,Andalusia,Commercial Fleet,Collision,240942.94,Closed,21/08/2023
+CLM-10328,2023,3,Andalusia,Commercial Fleet,Weather damage,249005.44,Closed,23/09/2023
+CLM-10329,2023,3,Andalusia,Motorcycle,Collision,1085166.51,Open,04/07/2023
+CLM-10330,2023,3,Andalusia,Motorcycle,Collision,266850.28,Closed,28/07/2023
+CLM-10331,2023,3,Andalusia,Motorcycle,Weather damage,286919.94,Closed,18/08/2023
+CLM-10332,2023,3,Andalusia,Private Motor,Weather damage,310234.96,Closed,22/09/2023
+CLM-10333,2023,3,Andalusia,Private Motor,Collision,218264.24,Closed,31/07/2023
+CLM-10334,2023,3,Andalusia,Private Motor,Collision,373416.48,Closed,14/08/2023
+CLM-10335,2023,3,Andalusia,Private Motor,Weather damage,230157.98,Closed,20/07/2023
+CLM-10336,2023,3,Andalusia,Private Motor,Third-party liability,486131.19,Closed,21/07/2023
+CLM-10337,2023,3,Andalusia,Private Motor,Third-party liability,413275.47,Closed,30/08/2023
+CLM-10338,2023,3,Andalusia,Private Motor,Third-party liability,957975.94,Closed,20/09/2023
+CLM-10339,2023,3,Andalusia,Private Motor,Collision,169853.61,Closed,12/07/2023
+CLM-10340,2023,3,Andalusia,Private Motor,Windscreen,157784.77,Closed,23/09/2023
+CLM-10341,2023,3,Andalusia,Private Motor,Collision,319760.85,Closed,08/09/2023
+CLM-10342,2023,3,Andalusia,Private Motor,Theft,577079.93,Closed,20/07/2023
+CLM-10343,2023,3,Andalusia,Private Motor,Collision,272874.21,Closed,11/09/2023
+CLM-10344,2023,3,Andalusia,Private Motor,Weather damage,225016.72,Closed,10/07/2023
+CLM-10345,2023,3,Andalusia,Private Motor,Collision,204590.57,Closed,07/07/2023
+CLM-10346,2023,3,Andalusia,Private Motor,Third-party liability,1058008.39,Closed,18/07/2023
+CLM-10347,2023,3,Andalusia,Private Motor,Weather damage,217329.35,Closed,13/08/2023
+CLM-10348,2023,3,Andalusia,Private Motor,Theft,224193.26,Open,20/08/2023
+CLM-10349,2023,3,Andalusia,Private Motor,Third-party liability,589997.1,Closed,15/07/2023
+CLM-10350,2023,3,Andalusia,Private Motor,Third-party liability,771280.93,Closed,04/07/2023
+CLM-10351,2023,3,Andalusia,Private Motor,Collision,880305.86,Closed,09/09/2023
+CLM-10352,2023,3,Basque Country,Commercial Fleet,Collision,590661.79,Closed,29/07/2023
+CLM-10353,2023,3,Basque Country,Commercial Fleet,Windscreen,89477.83,Closed,23/08/2023
+CLM-10354,2023,3,Basque Country,Motorcycle,Third-party liability,919907.5,Closed,30/07/2023
+CLM-10355,2023,3,Basque Country,Private Motor,Windscreen,96843.29,Closed,29/09/2023
+CLM-10356,2023,3,Basque Country,Private Motor,Collision,358547.38,Closed,06/09/2023
+CLM-10357,2023,3,Basque Country,Private Motor,Total loss,1004094.47,Closed,13/09/2023
+CLM-10358,2023,3,Basque Country,Private Motor,Total loss,957274.3,Closed,19/09/2023
+CLM-10359,2023,3,Basque Country,Private Motor,Weather damage,442720.59,Closed,29/08/2023
+CLM-10360,2023,3,Basque Country,Private Motor,Collision,453983.46,Closed,03/09/2023
+CLM-10361,2023,3,Basque Country,Private Motor,Windscreen,57968.72,Closed,12/08/2023
+CLM-10362,2023,3,Basque Country,Private Motor,Collision,344169.28,Open,23/09/2023
+CLM-10363,2023,3,Basque Country,Private Motor,Third-party liability,392735.32,Closed,17/07/2023
+CLM-10364,2023,3,Basque Country,Private Motor,Windscreen,90027.43,Closed,21/09/2023
+CLM-10365,2023,3,Basque Country,Private Motor,Third-party liability,887296.95,Closed,18/09/2023
+CLM-10366,2023,3,Basque Country,Private Motor,Total loss,575576.48,Closed,17/08/2023
+CLM-10367,2023,3,Catalonia,Commercial Fleet,Collision,96327.96,Closed,16/09/2023
+CLM-10368,2023,3,Catalonia,Commercial Fleet,Third-party liability,638732.9,Closed,12/09/2023
+CLM-10369,2023,3,Catalonia,Commercial Fleet,Collision,577888.69,Closed,28/09/2023
+CLM-10370,2023,3,Catalonia,Commercial Fleet,Theft,498306.89,Closed,08/07/2023
+CLM-10371,2023,3,Catalonia,Commercial Fleet,Third-party liability,375873.57,Closed,04/07/2023
+CLM-10372,2023,3,Catalonia,Commercial Fleet,Third-party liability,540535.77,Closed,16/09/2023
+CLM-10373,2023,3,Catalonia,Commercial Fleet,Collision,251178.27,Closed,28/09/2023
+CLM-10374,2023,3,Catalonia,Commercial Fleet,Weather damage,132182.13,Closed,31/08/2023
+CLM-10375,2023,3,Catalonia,Commercial Fleet,Total loss,523592.54,Closed,17/07/2023
+CLM-10376,2023,3,Catalonia,Commercial Fleet,Third-party liability,266537.92,Closed,13/09/2023
+CLM-10377,2023,3,Catalonia,Commercial Fleet,Collision,487123.37,Closed,06/08/2023
+CLM-10378,2023,3,Catalonia,Commercial Fleet,Weather damage,146578.33,Closed,21/08/2023
+CLM-10379,2023,3,Catalonia,Commercial Fleet,Theft,455627.69,Closed,10/07/2023
+CLM-10380,2023,3,Catalonia,Commercial Fleet,Theft,530932.46,Closed,17/09/2023
+CLM-10381,2023,3,Catalonia,Motorcycle,Theft,1057347.7,Open,03/08/2023
+CLM-10382,2023,3,Catalonia,Motorcycle,Windscreen,100888.87,Closed,13/09/2023
+CLM-10383,2023,3,Catalonia,Motorcycle,Collision,210715.9,Closed,21/09/2023
+CLM-10384,2023,3,Catalonia,Motorcycle,Collision,282788.51,Closed,18/08/2023
+CLM-10385,2023,3,Catalonia,Private Motor,Third-party liability,312697.8,Closed,20/09/2023
+CLM-10386,2023,3,Catalonia,Private Motor,Collision,210354.41,Closed,18/07/2023
+CLM-10387,2023,3,Catalonia,Private Motor,Collision,457001.79,Closed,12/07/2023
+CLM-10388,2023,3,Catalonia,Private Motor,Collision,225594.63,Closed,25/07/2023
+CLM-10389,2023,3,Catalonia,Private Motor,Weather damage,208880.81,Open,24/07/2023
+CLM-10390,2023,3,Catalonia,Private Motor,Third-party liability,1118816.79,Closed,07/08/2023
+CLM-10391,2023,3,Catalonia,Private Motor,Third-party liability,1074723.16,Closed,11/07/2023
+CLM-10392,2023,3,Catalonia,Private Motor,Collision,289374.41,Closed,08/07/2023
+CLM-10393,2023,3,Catalonia,Private Motor,Theft,995270.52,Closed,06/07/2023
+CLM-10394,2023,3,Catalonia,Private Motor,Third-party liability,748843.37,Closed,14/08/2023
+CLM-10395,2023,3,Catalonia,Private Motor,Collision,318007.61,Closed,21/08/2023
+CLM-10396,2023,3,Catalonia,Private Motor,Weather damage,188064.6,Closed,14/09/2023
+CLM-10397,2023,3,Catalonia,Private Motor,Weather damage,919559.11,Closed,18/07/2023
+CLM-10398,2023,3,Catalonia,Private Motor,Windscreen,34325.11,Closed,16/09/2023
+CLM-10399,2023,3,Catalonia,Private Motor,Collision,476932.83,Closed,28/07/2023
+CLM-10400,2023,3,Catalonia,Private Motor,Weather damage,180503.53,Closed,10/08/2023
+CLM-10401,2023,3,Catalonia,Private Motor,Theft,636469.87,Closed,26/09/2023
+CLM-10402,2023,3,Catalonia,Private Motor,Windscreen,46096.35,Closed,28/08/2023
+CLM-10403,2023,3,Catalonia,Private Motor,Third-party liability,441985.51,Closed,17/09/2023
+CLM-10404,2023,3,Catalonia,Private Motor,Third-party liability,532619.2,Open,07/09/2023
+CLM-10405,2023,3,Catalonia,Private Motor,Collision,192806.15,Closed,15/08/2023
+CLM-10406,2023,3,Catalonia,Private Motor,Theft,322775.27,Closed,28/09/2023
+CLM-10407,2023,3,Catalonia,Private Motor,Collision,188999.06,Closed,19/08/2023
+CLM-10408,2023,3,Catalonia,Private Motor,Collision,106834.83,Closed,19/08/2023
+CLM-10409,2023,3,Catalonia,Private Motor,Windscreen,31431.36,Closed,22/07/2023
+CLM-10410,2023,3,Catalonia,Private Motor,Windscreen,66735.29,Closed,28/08/2023
+CLM-10411,2023,3,Catalonia,Private Motor,Collision,453035.93,Closed,12/08/2023
+CLM-10412,2023,3,Catalonia,Private Motor,Theft,778747.23,Closed,08/08/2023
+CLM-10413,2023,3,Catalonia,Private Motor,Theft,405887.8,Closed,08/09/2023
+CLM-10414,2023,3,Catalonia,Private Motor,Total loss,1817477.47,Closed,11/07/2023
+CLM-10415,2023,3,Catalonia,Private Motor,Collision,314071.57,Open,11/09/2023
+CLM-10416,2023,3,Catalonia,Private Motor,Collision,115507.55,Closed,27/09/2023
+CLM-10417,2023,3,Catalonia,Private Motor,Theft,263166.63,Closed,03/09/2023
+CLM-10418,2023,3,Catalonia,Private Motor,Collision,246467.5,Closed,25/08/2023
+CLM-10419,2023,3,Catalonia,Private Motor,Third-party liability,745364.93,Closed,14/09/2023
+CLM-10420,2023,3,Catalonia,Private Motor,Theft,366001.57,Closed,08/08/2023
+CLM-10421,2023,3,Galicia,Commercial Fleet,Weather damage,308409.06,Closed,27/07/2023
+CLM-10422,2023,3,Galicia,Commercial Fleet,Weather damage,298339.28,Closed,22/07/2023
+CLM-10423,2023,3,Galicia,Commercial Fleet,Collision,506479.56,Closed,01/08/2023
+CLM-10424,2023,3,Galicia,Motorcycle,Weather damage,162777.37,Closed,12/07/2023
+CLM-10425,2023,3,Galicia,Private Motor,Collision,568333.4,Closed,21/07/2023
+CLM-10426,2023,3,Galicia,Private Motor,Collision,428276.25,Closed,30/07/2023
+CLM-10427,2023,3,Galicia,Private Motor,Collision,398208.39,Closed,15/09/2023
+CLM-10428,2023,3,Galicia,Private Motor,Collision,487228.67,Closed,23/08/2023
+CLM-10429,2023,3,Galicia,Private Motor,Third-party liability,1065722.78,Closed,22/09/2023
+CLM-10430,2023,3,Galicia,Private Motor,Weather damage,273373.41,Closed,04/08/2023
+CLM-10431,2023,3,Madrid,Commercial Fleet,Weather damage,336225.13,Closed,23/08/2023
+CLM-10432,2023,3,Madrid,Commercial Fleet,Collision,606598.53,Closed,01/08/2023
+CLM-10433,2023,3,Madrid,Commercial Fleet,Theft,460139.34,Closed,08/07/2023
+CLM-10434,2023,3,Madrid,Commercial Fleet,Windscreen,36981.07,Closed,13/09/2023
+CLM-10435,2023,3,Madrid,Commercial Fleet,Total loss,1070439.51,Closed,23/07/2023
+CLM-10436,2023,3,Madrid,Commercial Fleet,Collision,229981.26,Closed,12/07/2023
+CLM-10437,2023,3,Madrid,Commercial Fleet,Collision,243548.78,Closed,26/09/2023
+CLM-10438,2023,3,Madrid,Commercial Fleet,Collision,473174.7,Closed,03/08/2023
+CLM-10439,2023,3,Madrid,Motorcycle,Collision,369889.28,Closed,01/09/2023
+CLM-10440,2023,3,Madrid,Motorcycle,Collision,571243.9,Closed,15/09/2023
+CLM-10441,2023,3,Madrid,Motorcycle,Collision,529593.11,Closed,12/07/2023
+CLM-10442,2023,3,Madrid,Motorcycle,Weather damage,970739.45,Open,16/07/2023
+CLM-10443,2023,3,Madrid,Private Motor,Third-party liability,859598.95,Closed,02/07/2023
+CLM-10444,2023,3,Madrid,Private Motor,Third-party liability,383267.58,Closed,30/08/2023
+CLM-10445,2023,3,Madrid,Private Motor,Collision,151915.79,Closed,05/07/2023
+CLM-10446,2023,3,Madrid,Private Motor,Collision,203509.57,Closed,05/08/2023
+CLM-10447,2023,3,Madrid,Private Motor,Theft,153929.82,Closed,31/07/2023
+CLM-10448,2023,3,Madrid,Private Motor,Windscreen,49542.69,Open,23/09/2023
+CLM-10449,2023,3,Madrid,Private Motor,Collision,447458.87,Closed,22/09/2023
+CLM-10450,2023,3,Madrid,Private Motor,Collision,385047.69,Closed,04/07/2023
+CLM-10451,2023,3,Madrid,Private Motor,Total loss,1307809.71,Closed,26/09/2023
+CLM-10452,2023,3,Madrid,Private Motor,Third-party liability,739802.99,Closed,14/08/2023
+CLM-10453,2023,3,Madrid,Private Motor,Collision,492472.09,Open,15/09/2023
+CLM-10454,2023,3,Madrid,Private Motor,Third-party liability,732986.34,Closed,23/08/2023
+CLM-10455,2023,3,Madrid,Private Motor,Theft,813041.92,Closed,06/08/2023
+CLM-10456,2023,3,Madrid,Private Motor,Collision,282282.34,Closed,27/07/2023
+CLM-10457,2023,3,Madrid,Private Motor,Collision,469147.54,Closed,24/08/2023
+CLM-10458,2023,3,Madrid,Private Motor,Third-party liability,841019.31,Open,08/07/2023
+CLM-10459,2023,3,Madrid,Private Motor,Collision,557955.64,Closed,11/09/2023
+CLM-10460,2023,3,Madrid,Private Motor,Total loss,1642044.34,Closed,18/09/2023
+CLM-10461,2023,3,Madrid,Private Motor,Third-party liability,482759.65,Closed,19/08/2023
+CLM-10462,2023,3,Madrid,Private Motor,Total loss,577155.32,Closed,21/08/2023
+CLM-10463,2023,3,Madrid,Private Motor,Third-party liability,1292445.34,Open,28/08/2023
+CLM-10464,2023,3,Madrid,Private Motor,Collision,296796.34,Closed,22/08/2023
+CLM-10465,2023,3,Madrid,Private Motor,Total loss,513832.3,Closed,07/07/2023
+CLM-10466,2023,3,Madrid,Private Motor,Collision,402364.64,Closed,16/09/2023
+CLM-10467,2023,3,Madrid,Private Motor,Weather damage,249161.27,Closed,10/08/2023
+CLM-10468,2023,3,Madrid,Private Motor,Total loss,1025334.8,Closed,07/08/2023
+CLM-10469,2023,3,Madrid,Private Motor,Theft,570759.51,Closed,29/07/2023
+CLM-10470,2023,3,Madrid,Private Motor,Third-party liability,1034400.13,Closed,16/09/2023
+CLM-10471,2023,3,Madrid,Private Motor,Total loss,581436.22,Closed,18/09/2023
+CLM-10472,2023,3,Valencia,Commercial Fleet,Windscreen,57336.37,Closed,11/07/2023
+CLM-10473,2023,3,Valencia,Commercial Fleet,Windscreen,62332.63,Open,10/08/2023
+CLM-10474,2023,3,Valencia,Commercial Fleet,Collision,151130.46,Closed,21/09/2023
+CLM-10475,2023,3,Valencia,Commercial Fleet,Collision,479984.84,Closed,03/07/2023
+CLM-10476,2023,3,Valencia,Commercial Fleet,Third-party liability,862245.25,Closed,12/07/2023
+CLM-10477,2023,3,Valencia,Commercial Fleet,Weather damage,162782.95,Closed,11/09/2023
+CLM-10478,2023,3,Valencia,Commercial Fleet,Collision,233550.11,Closed,05/09/2023
+CLM-10479,2023,3,Valencia,Commercial Fleet,Third-party liability,538066.76,Closed,10/07/2023
+CLM-10480,2023,3,Valencia,Motorcycle,Collision,119560.19,Closed,31/08/2023
+CLM-10481,2023,3,Valencia,Private Motor,Third-party liability,1173557.77,Closed,22/07/2023
+CLM-10482,2023,3,Valencia,Private Motor,Collision,388708.21,Closed,20/07/2023
+CLM-10483,2023,3,Valencia,Private Motor,Collision,315347.36,Closed,01/07/2023
+CLM-10484,2023,3,Valencia,Private Motor,Collision,255132.46,Closed,18/07/2023
+CLM-10485,2023,3,Valencia,Private Motor,Windscreen,79880.62,Closed,21/07/2023
+CLM-10486,2023,3,Valencia,Private Motor,Third-party liability,2056444.56,Closed,26/09/2023
+CLM-10487,2023,3,Valencia,Private Motor,Third-party liability,227914.02,Closed,28/09/2023
+CLM-10488,2023,3,Valencia,Private Motor,Collision,265597.99,Closed,05/09/2023
+CLM-10489,2023,3,Valencia,Private Motor,Weather damage,502519.91,Closed,10/09/2023
+CLM-10490,2023,3,Valencia,Private Motor,Theft,741459.97,Closed,25/07/2023
+CLM-10491,2023,3,Valencia,Private Motor,Third-party liability,685847.67,Open,13/08/2023
+CLM-10492,2023,3,Valencia,Private Motor,Weather damage,432614.4,Closed,18/08/2023
+CLM-10493,2023,3,Valencia,Private Motor,Weather damage,230964.96,Closed,04/07/2023
+CLM-10494,2023,3,Valencia,Private Motor,Third-party liability,545489.41,Closed,07/07/2023
+CLM-10495,2023,3,Valencia,Private Motor,Total loss,1646970.67,Closed,01/09/2023
+CLM-10496,2023,3,Valencia,Private Motor,Third-party liability,740104.82,Closed,08/07/2023
+CLM-10497,2023,3,Valencia,Private Motor,Collision,185204.57,Open,23/07/2023
+CLM-10498,2023,3,Valencia,Private Motor,Theft,298660.82,Closed,16/09/2023
+CLM-10499,2023,4,Andalusia,Commercial Fleet,Third-party liability,259291.64,Closed,09/10/2023
+CLM-10500,2023,4,Andalusia,Commercial Fleet,Third-party liability,411882.41,Closed,01/11/2023
+CLM-10501,2023,4,Andalusia,Commercial Fleet,Total loss,640288.35,Closed,30/12/2023
+CLM-10502,2023,4,Andalusia,Commercial Fleet,Total loss,1000942.9,Closed,14/10/2023
+CLM-10503,2023,4,Andalusia,Commercial Fleet,Collision,238514.13,Closed,14/11/2023
+CLM-10504,2023,4,Andalusia,Commercial Fleet,Windscreen,30430.01,Closed,05/11/2023
+CLM-10505,2023,4,Andalusia,Commercial Fleet,Total loss,651113.92,Closed,27/12/2023
+CLM-10506,2023,4,Andalusia,Commercial Fleet,Third-party liability,600098.04,Closed,04/12/2023
+CLM-10507,2023,4,Andalusia,Commercial Fleet,Theft,457099.05,Closed,22/10/2023
+CLM-10508,2023,4,Andalusia,Commercial Fleet,Collision,168578.71,Closed,10/10/2023
+CLM-10509,2023,4,Andalusia,Commercial Fleet,Third-party liability,488416.92,Closed,16/10/2023
+CLM-10510,2023,4,Andalusia,Commercial Fleet,Weather damage,820046.78,Closed,18/12/2023
+CLM-10511,2023,4,Andalusia,Commercial Fleet,Theft,387116.88,Closed,29/10/2023
+CLM-10512,2023,4,Andalusia,Motorcycle,Collision,494153.86,Closed,31/12/2023
+CLM-10513,2023,4,Andalusia,Motorcycle,Third-party liability,1509206.09,Closed,27/12/2023
+CLM-10514,2023,4,Andalusia,Private Motor,Windscreen,30990.6,Closed,28/12/2023
+CLM-10515,2023,4,Andalusia,Private Motor,Collision,292306.26,Closed,07/12/2023
+CLM-10516,2023,4,Andalusia,Private Motor,Collision,528583.86,Closed,26/10/2023
+CLM-10517,2023,4,Andalusia,Private Motor,Third-party liability,2245743.85,Closed,10/10/2023
+CLM-10518,2023,4,Andalusia,Private Motor,Windscreen,81855.32,Closed,26/11/2023
+CLM-10519,2023,4,Andalusia,Private Motor,Theft,532183.99,Closed,10/12/2023
+CLM-10520,2023,4,Andalusia,Private Motor,Collision,246136.24,Closed,05/12/2023
+CLM-10521,2023,4,Andalusia,Private Motor,Weather damage,267364.28,Closed,07/11/2023
+CLM-10522,2023,4,Andalusia,Private Motor,Weather damage,344507.97,Closed,23/11/2023
+CLM-10523,2023,4,Andalusia,Private Motor,Total loss,648144.26,Closed,22/11/2023
+CLM-10524,2023,4,Andalusia,Private Motor,Third-party liability,560165.2,Closed,13/10/2023
+CLM-10525,2023,4,Andalusia,Private Motor,Windscreen,71092.91,Closed,29/10/2023
+CLM-10526,2023,4,Andalusia,Private Motor,Third-party liability,1405629.13,Closed,22/10/2023
+CLM-10527,2023,4,Andalusia,Private Motor,Collision,600884.82,Closed,29/10/2023
+CLM-10528,2023,4,Andalusia,Private Motor,Theft,720054.59,Closed,23/11/2023
+CLM-10529,2023,4,Andalusia,Private Motor,Windscreen,127704.16,Closed,18/12/2023
+CLM-10530,2023,4,Andalusia,Private Motor,Collision,418536.15,Closed,15/11/2023
+CLM-10531,2023,4,Andalusia,Private Motor,Weather damage,258528.13,Closed,30/10/2023
+CLM-10532,2023,4,Basque Country,Motorcycle,Third-party liability,809170.44,Closed,08/10/2023
+CLM-10533,2023,4,Basque Country,Private Motor,Weather damage,141737.19,Closed,19/10/2023
+CLM-10534,2023,4,Basque Country,Private Motor,Collision,157745.85,Closed,23/12/2023
+CLM-10535,2023,4,Basque Country,Private Motor,Theft,375597.67,Closed,15/12/2023
+CLM-10536,2023,4,Basque Country,Private Motor,Total loss,659671.38,Closed,17/10/2023
+CLM-10537,2023,4,Basque Country,Private Motor,Third-party liability,351054.65,Open,13/11/2023
+CLM-10538,2023,4,Basque Country,Private Motor,Theft,565900.37,Closed,30/10/2023
+CLM-10539,2023,4,Basque Country,Private Motor,Collision,444730.49,Closed,17/11/2023
+CLM-10540,2023,4,Basque Country,Private Motor,Third-party liability,492835.1,Closed,04/12/2023
+CLM-10541,2023,4,Catalonia,Commercial Fleet,Third-party liability,657289.82,Closed,09/12/2023
+CLM-10542,2023,4,Catalonia,Commercial Fleet,Collision,111803.14,Closed,05/10/2023
+CLM-10543,2023,4,Catalonia,Commercial Fleet,Collision,601736.21,Closed,09/12/2023
+CLM-10544,2023,4,Catalonia,Commercial Fleet,Collision,353654.57,Closed,07/10/2023
+CLM-10545,2023,4,Catalonia,Commercial Fleet,Collision,190708.79,Closed,26/11/2023
+CLM-10546,2023,4,Catalonia,Commercial Fleet,Collision,272353.53,Closed,24/10/2023
+CLM-10547,2023,4,Catalonia,Commercial Fleet,Collision,568994.68,Closed,08/10/2023
+CLM-10548,2023,4,Catalonia,Commercial Fleet,Third-party liability,533432.24,Closed,29/10/2023
+CLM-10549,2023,4,Catalonia,Commercial Fleet,Third-party liability,983508.84,Closed,12/12/2023
+CLM-10550,2023,4,Catalonia,Commercial Fleet,Theft,320369.76,Closed,29/11/2023
+CLM-10551,2023,4,Catalonia,Commercial Fleet,Windscreen,54184.81,Closed,18/10/2023
+CLM-10552,2023,4,Catalonia,Motorcycle,Third-party liability,537378.75,Closed,08/10/2023
+CLM-10553,2023,4,Catalonia,Motorcycle,Third-party liability,711497.21,Closed,28/11/2023
+CLM-10554,2023,4,Catalonia,Private Motor,Third-party liability,998192.25,Closed,30/11/2023
+CLM-10555,2023,4,Catalonia,Private Motor,Windscreen,18132.44,Closed,07/11/2023
+CLM-10556,2023,4,Catalonia,Private Motor,Collision,285968.87,Closed,06/11/2023
+CLM-10557,2023,4,Catalonia,Private Motor,Collision,278936.98,Closed,26/11/2023
+CLM-10558,2023,4,Catalonia,Private Motor,Third-party liability,590654.85,Closed,30/11/2023
+CLM-10559,2023,4,Catalonia,Private Motor,Theft,923953.78,Open,22/12/2023
+CLM-10560,2023,4,Catalonia,Private Motor,Theft,658375.59,Closed,18/11/2023
+CLM-10561,2023,4,Catalonia,Private Motor,Total loss,721487.85,Closed,01/10/2023
+CLM-10562,2023,4,Catalonia,Private Motor,Collision,228869.82,Closed,15/10/2023
+CLM-10563,2023,4,Catalonia,Private Motor,Third-party liability,2295780.39,Closed,31/10/2023
+CLM-10564,2023,4,Catalonia,Private Motor,Weather damage,236963.65,Closed,11/11/2023
+CLM-10565,2023,4,Catalonia,Private Motor,Collision,566094.48,Closed,23/10/2023
+CLM-10566,2023,4,Catalonia,Private Motor,Third-party liability,1240137.47,Closed,05/10/2023
+CLM-10567,2023,4,Catalonia,Private Motor,Weather damage,243746.61,Closed,13/10/2023
+CLM-10568,2023,4,Catalonia,Private Motor,Third-party liability,404589.28,Closed,28/12/2023
+CLM-10569,2023,4,Catalonia,Private Motor,Theft,376414.45,Closed,25/11/2023
+CLM-10570,2023,4,Catalonia,Private Motor,Total loss,566334.56,Closed,10/11/2023
+CLM-10571,2023,4,Catalonia,Private Motor,Third-party liability,417414.07,Closed,25/11/2023
+CLM-10572,2023,4,Catalonia,Private Motor,Total loss,778246.33,Closed,11/10/2023
+CLM-10573,2023,4,Catalonia,Private Motor,Third-party liability,815969.55,Closed,23/10/2023
+CLM-10574,2023,4,Catalonia,Private Motor,Third-party liability,728809.25,Closed,02/12/2023
+CLM-10575,2023,4,Galicia,Commercial Fleet,Collision,305782.8,Closed,10/12/2023
+CLM-10576,2023,4,Galicia,Commercial Fleet,Third-party liability,497181.77,Closed,09/12/2023
+CLM-10577,2023,4,Galicia,Commercial Fleet,Collision,504456.6,Closed,14/10/2023
+CLM-10578,2023,4,Galicia,Commercial Fleet,Third-party liability,450918.9,Closed,12/10/2023
+CLM-10579,2023,4,Galicia,Commercial Fleet,Total loss,1350868.96,Closed,15/12/2023
+CLM-10580,2023,4,Galicia,Commercial Fleet,Windscreen,49119.6,Closed,26/12/2023
+CLM-10581,2023,4,Galicia,Private Motor,Theft,281422.62,Closed,18/12/2023
+CLM-10582,2023,4,Galicia,Private Motor,Third-party liability,733332.72,Closed,10/10/2023
+CLM-10583,2023,4,Galicia,Private Motor,Collision,848069.86,Closed,08/10/2023
+CLM-10584,2023,4,Galicia,Private Motor,Windscreen,102148.37,Closed,06/12/2023
+CLM-10585,2023,4,Madrid,Commercial Fleet,Weather damage,154215.94,Closed,13/12/2023
+CLM-10586,2023,4,Madrid,Commercial Fleet,Collision,157702.86,Open,23/10/2023
+CLM-10587,2023,4,Madrid,Commercial Fleet,Collision,438716.01,Closed,13/12/2023
+CLM-10588,2023,4,Madrid,Commercial Fleet,Theft,563818.44,Open,06/10/2023
+CLM-10589,2023,4,Madrid,Commercial Fleet,Collision,263549.45,Closed,11/11/2023
+CLM-10590,2023,4,Madrid,Commercial Fleet,Theft,334883.36,Closed,19/12/2023
+CLM-10591,2023,4,Madrid,Commercial Fleet,Theft,494584.74,Closed,11/10/2023
+CLM-10592,2023,4,Madrid,Commercial Fleet,Weather damage,108246.96,Closed,12/10/2023
+CLM-10593,2023,4,Madrid,Commercial Fleet,Collision,195667.56,Closed,05/10/2023
+CLM-10594,2023,4,Madrid,Commercial Fleet,Third-party liability,727042.02,Closed,01/12/2023
+CLM-10595,2023,4,Madrid,Commercial Fleet,Collision,192859.7,Closed,07/12/2023
+CLM-10596,2023,4,Madrid,Commercial Fleet,Collision,322753.47,Closed,08/10/2023
+CLM-10597,2023,4,Madrid,Commercial Fleet,Total loss,212982.02,Closed,23/10/2023
+CLM-10598,2023,4,Madrid,Commercial Fleet,Third-party liability,1266327.49,Closed,04/10/2023
+CLM-10599,2023,4,Madrid,Commercial Fleet,Collision,290808.28,Closed,03/12/2023
+CLM-10600,2023,4,Madrid,Commercial Fleet,Collision,99886.32,Closed,11/11/2023
+CLM-10601,2023,4,Madrid,Commercial Fleet,Theft,235256.87,Closed,19/10/2023
+CLM-10602,2023,4,Madrid,Commercial Fleet,Theft,248900.43,Closed,14/11/2023
+CLM-10603,2023,4,Madrid,Commercial Fleet,Theft,242988.32,Closed,21/10/2023
+CLM-10604,2023,4,Madrid,Motorcycle,Collision,330884.11,Closed,30/11/2023
+CLM-10605,2023,4,Madrid,Motorcycle,Collision,475351.89,Closed,15/12/2023
+CLM-10606,2023,4,Madrid,Motorcycle,Collision,515165.49,Closed,27/12/2023
+CLM-10607,2023,4,Madrid,Private Motor,Theft,612947.81,Closed,09/10/2023
+CLM-10608,2023,4,Madrid,Private Motor,Third-party liability,356085.06,Closed,11/11/2023
+CLM-10609,2023,4,Madrid,Private Motor,Third-party liability,911683.13,Closed,22/12/2023
+CLM-10610,2023,4,Madrid,Private Motor,Windscreen,56137.94,Closed,11/12/2023
+CLM-10611,2023,4,Madrid,Private Motor,Collision,208189.58,Open,24/10/2023
+CLM-10612,2023,4,Madrid,Private Motor,Collision,260623.76,Closed,28/11/2023
+CLM-10613,2023,4,Madrid,Private Motor,Collision,457555.98,Closed,12/10/2023
+CLM-10614,2023,4,Madrid,Private Motor,Theft,484868.55,Closed,05/12/2023
+CLM-10615,2023,4,Madrid,Private Motor,Theft,431328.32,Closed,11/11/2023
+CLM-10616,2023,4,Madrid,Private Motor,Collision,149300.29,Closed,07/11/2023
+CLM-10617,2023,4,Madrid,Private Motor,Third-party liability,557746.43,Closed,31/12/2023
+CLM-10618,2023,4,Madrid,Private Motor,Windscreen,62981.94,Closed,28/11/2023
+CLM-10619,2023,4,Madrid,Private Motor,Theft,1032352.43,Closed,23/10/2023
+CLM-10620,2023,4,Madrid,Private Motor,Total loss,338835.73,Closed,23/10/2023
+CLM-10621,2023,4,Madrid,Private Motor,Total loss,1484225.77,Closed,08/12/2023
+CLM-10622,2023,4,Madrid,Private Motor,Collision,132569.69,Closed,27/12/2023
+CLM-10623,2023,4,Madrid,Private Motor,Windscreen,66688.14,Closed,05/10/2023
+CLM-10624,2023,4,Madrid,Private Motor,Third-party liability,253918.57,Closed,06/11/2023
+CLM-10625,2023,4,Madrid,Private Motor,Collision,262222.73,Closed,27/12/2023
+CLM-10626,2023,4,Madrid,Private Motor,Third-party liability,993295.68,Closed,29/10/2023
+CLM-10627,2023,4,Madrid,Private Motor,Third-party liability,422800.91,Closed,10/10/2023
+CLM-10628,2023,4,Madrid,Private Motor,Collision,429960.93,Closed,06/12/2023
+CLM-10629,2023,4,Madrid,Private Motor,Third-party liability,540003.38,Closed,19/12/2023
+CLM-10630,2023,4,Madrid,Private Motor,Collision,496284.05,Closed,15/10/2023
+CLM-10631,2023,4,Madrid,Private Motor,Third-party liability,966830.52,Closed,27/11/2023
+CLM-10632,2023,4,Valencia,Commercial Fleet,Collision,126082.26,Closed,09/12/2023
+CLM-10633,2023,4,Valencia,Commercial Fleet,Windscreen,92706.94,Closed,28/10/2023
+CLM-10634,2023,4,Valencia,Commercial Fleet,Third-party liability,1432700.22,Closed,18/12/2023
+CLM-10635,2023,4,Valencia,Commercial Fleet,Weather damage,249504.96,Closed,03/11/2023
+CLM-10636,2023,4,Valencia,Motorcycle,Weather damage,737199.93,Closed,28/10/2023
+CLM-10637,2023,4,Valencia,Private Motor,Total loss,1326251.92,Closed,16/12/2023
+CLM-10638,2023,4,Valencia,Private Motor,Collision,695179.28,Closed,08/12/2023
+CLM-10639,2023,4,Valencia,Private Motor,Third-party liability,1304128.68,Closed,14/11/2023
+CLM-10640,2023,4,Valencia,Private Motor,Theft,685911.4,Open,27/12/2023
+CLM-10641,2023,4,Valencia,Private Motor,Weather damage,211860.2,Closed,13/12/2023
+CLM-10642,2023,4,Valencia,Private Motor,Third-party liability,291561.91,Open,28/11/2023
+CLM-10643,2023,4,Valencia,Private Motor,Theft,343250.92,Closed,27/11/2023
+CLM-10644,2023,4,Valencia,Private Motor,Collision,293407.55,Closed,30/11/2023
+CLM-10645,2024,1,Andalusia,Commercial Fleet,Windscreen,26175.38,Open,02/02/2024
+CLM-10646,2024,1,Andalusia,Commercial Fleet,Windscreen,19121.01,Closed,19/02/2024
+CLM-10647,2024,1,Andalusia,Commercial Fleet,Theft,270536.89,Closed,11/03/2024
+CLM-10648,2024,1,Andalusia,Commercial Fleet,Collision,322403.15,Closed,05/02/2024
+CLM-10649,2024,1,Andalusia,Commercial Fleet,Theft,219754.1,Closed,03/03/2024
+CLM-10650,2024,1,Andalusia,Commercial Fleet,Theft,231748.46,Closed,24/01/2024
+CLM-10651,2024,1,Andalusia,Commercial Fleet,Third-party liability,522990.81,Closed,16/02/2024
+CLM-10652,2024,1,Andalusia,Commercial Fleet,Collision,190309.73,Open,23/03/2024
+CLM-10653,2024,1,Andalusia,Commercial Fleet,Third-party liability,770576.01,Closed,24/01/2024
+CLM-10654,2024,1,Andalusia,Commercial Fleet,Theft,236674.21,Open,18/01/2024
+CLM-10655,2024,1,Andalusia,Motorcycle,Theft,967085.12,Closed,10/01/2024
+CLM-10656,2024,1,Andalusia,Motorcycle,Collision,605196.41,Open,20/02/2024
+CLM-10657,2024,1,Andalusia,Private Motor,Theft,569109.75,Closed,12/03/2024
+CLM-10658,2024,1,Andalusia,Private Motor,Theft,879521.34,Open,06/01/2024
+CLM-10659,2024,1,Andalusia,Private Motor,Collision,183181.04,Closed,27/01/2024
+CLM-10660,2024,1,Andalusia,Private Motor,Collision,382448.8,Closed,22/01/2024
+CLM-10661,2024,1,Andalusia,Private Motor,Theft,517322.3,Closed,24/03/2024
+CLM-10662,2024,1,Andalusia,Private Motor,Collision,402371.19,Closed,19/03/2024
+CLM-10663,2024,1,Andalusia,Private Motor,Third-party liability,829943.03,Closed,04/01/2024
+CLM-10664,2024,1,Andalusia,Private Motor,Collision,268011.49,Closed,29/01/2024
+CLM-10665,2024,1,Andalusia,Private Motor,Third-party liability,355411.03,Open,15/03/2024
+CLM-10666,2024,1,Andalusia,Private Motor,Total loss,1078641.88,Closed,19/01/2024
+CLM-10667,2024,1,Andalusia,Private Motor,Third-party liability,648504.68,Closed,17/03/2024
+CLM-10668,2024,1,Andalusia,Private Motor,Third-party liability,580298.73,Closed,23/01/2024
+CLM-10669,2024,1,Andalusia,Private Motor,Theft,1086450.61,Closed,08/02/2024
+CLM-10670,2024,1,Andalusia,Private Motor,Weather damage,180742.65,Closed,16/01/2024
+CLM-10671,2024,1,Andalusia,Private Motor,Third-party liability,815012.65,Closed,08/02/2024
+CLM-10672,2024,1,Andalusia,Private Motor,Collision,306574.37,Closed,18/01/2024
+CLM-10673,2024,1,Andalusia,Private Motor,Weather damage,175395.71,Open,17/02/2024
+CLM-10674,2024,1,Andalusia,Private Motor,Windscreen,99012.42,Open,02/03/2024
+CLM-10675,2024,1,Andalusia,Private Motor,Collision,98964.7,Closed,25/03/2024
+CLM-10676,2024,1,Andalusia,Private Motor,Collision,549332.74,Closed,26/01/2024
+CLM-10677,2024,1,Andalusia,Private Motor,Collision,246248.93,Closed,20/01/2024
+CLM-10678,2024,1,Andalusia,Private Motor,Collision,705960.93,Closed,10/03/2024
+CLM-10679,2024,1,Andalusia,Private Motor,Theft,862723.67,Closed,04/01/2024
+CLM-10680,2024,1,Andalusia,Private Motor,Collision,685790.38,Closed,09/02/2024
+CLM-10681,2024,1,Andalusia,Private Motor,Third-party liability,646574.13,Closed,19/03/2024
+CLM-10682,2024,1,Andalusia,Private Motor,Theft,360726.95,Closed,14/02/2024
+CLM-10683,2024,1,Basque Country,Commercial Fleet,Total loss,565275.33,Closed,06/03/2024
+CLM-10684,2024,1,Basque Country,Motorcycle,Total loss,1521449.87,Open,02/03/2024
+CLM-10685,2024,1,Basque Country,Private Motor,Third-party liability,323950.13,Closed,03/03/2024
+CLM-10686,2024,1,Basque Country,Private Motor,Third-party liability,869956.08,Closed,05/02/2024
+CLM-10687,2024,1,Basque Country,Private Motor,Weather damage,181334.43,Closed,24/03/2024
+CLM-10688,2024,1,Basque Country,Private Motor,Collision,229319.62,Closed,12/01/2024
+CLM-10689,2024,1,Basque Country,Private Motor,Windscreen,39410.82,Closed,10/03/2024
+CLM-10690,2024,1,Basque Country,Private Motor,Collision,620793.82,Closed,04/03/2024
+CLM-10691,2024,1,Catalonia,Commercial Fleet,Theft,669393.11,Open,06/01/2024
+CLM-10692,2024,1,Catalonia,Commercial Fleet,Third-party liability,434026.52,Closed,29/03/2024
+CLM-10693,2024,1,Catalonia,Commercial Fleet,Collision,389436.21,Closed,25/01/2024
+CLM-10694,2024,1,Catalonia,Commercial Fleet,Collision,352264.64,Closed,24/03/2024
+CLM-10695,2024,1,Catalonia,Commercial Fleet,Theft,1113766.52,Closed,15/03/2024
+CLM-10696,2024,1,Catalonia,Commercial Fleet,Collision,377295.55,Closed,20/03/2024
+CLM-10697,2024,1,Catalonia,Commercial Fleet,Third-party liability,396674.91,Open,09/02/2024
+CLM-10698,2024,1,Catalonia,Commercial Fleet,Collision,445363.59,Closed,14/01/2024
+CLM-10699,2024,1,Catalonia,Commercial Fleet,Third-party liability,615827.14,Open,13/02/2024
+CLM-10700,2024,1,Catalonia,Commercial Fleet,Third-party liability,296065.51,Open,13/01/2024
+CLM-10701,2024,1,Catalonia,Commercial Fleet,Windscreen,45676.03,Closed,04/02/2024
+CLM-10702,2024,1,Catalonia,Commercial Fleet,Theft,889448.05,Closed,24/01/2024
+CLM-10703,2024,1,Catalonia,Commercial Fleet,Theft,422213.09,Open,15/01/2024
+CLM-10704,2024,1,Catalonia,Commercial Fleet,Third-party liability,1114248.41,Open,26/03/2024
+CLM-10705,2024,1,Catalonia,Commercial Fleet,Windscreen,71577.99,Closed,31/01/2024
+CLM-10706,2024,1,Catalonia,Commercial Fleet,Theft,632875.83,Closed,01/03/2024
+CLM-10707,2024,1,Catalonia,Commercial Fleet,Theft,237106.08,Open,22/02/2024
+CLM-10708,2024,1,Catalonia,Commercial Fleet,Collision,169013.73,Closed,02/03/2024
+CLM-10709,2024,1,Catalonia,Commercial Fleet,Third-party liability,882701.9,Closed,24/02/2024
+CLM-10710,2024,1,Catalonia,Commercial Fleet,Third-party liability,686874.66,Closed,28/03/2024
+CLM-10711,2024,1,Catalonia,Commercial Fleet,Collision,223269.7,Closed,16/02/2024
+CLM-10712,2024,1,Catalonia,Commercial Fleet,Weather damage,119851.35,Closed,10/01/2024
+CLM-10713,2024,1,Catalonia,Commercial Fleet,Theft,436975.71,Open,30/01/2024
+CLM-10714,2024,1,Catalonia,Motorcycle,Collision,360149.07,Closed,21/01/2024
+CLM-10715,2024,1,Catalonia,Motorcycle,Collision,693092.98,Closed,31/01/2024
+CLM-10716,2024,1,Catalonia,Motorcycle,Theft,1007016.43,Closed,08/01/2024
+CLM-10717,2024,1,Catalonia,Motorcycle,Third-party liability,826361.8,Closed,06/03/2024
+CLM-10718,2024,1,Catalonia,Motorcycle,Third-party liability,1105766.79,Closed,26/03/2024
+CLM-10719,2024,1,Catalonia,Private Motor,Collision,274951.82,Closed,26/02/2024
+CLM-10720,2024,1,Catalonia,Private Motor,Theft,813504.16,Closed,08/02/2024
+CLM-10721,2024,1,Catalonia,Private Motor,Theft,790805.6,Closed,18/02/2024
+CLM-10722,2024,1,Catalonia,Private Motor,Third-party liability,776362.89,Closed,05/02/2024
+CLM-10723,2024,1,Catalonia,Private Motor,Third-party liability,603122.38,Closed,06/03/2024
+CLM-10724,2024,1,Catalonia,Private Motor,Collision,194138.89,Open,29/02/2024
+CLM-10725,2024,1,Catalonia,Private Motor,Collision,339848.5,Closed,21/03/2024
+CLM-10726,2024,1,Catalonia,Private Motor,Collision,598477.71,Closed,02/03/2024
+CLM-10727,2024,1,Catalonia,Private Motor,Collision,305934.08,Closed,02/02/2024
+CLM-10728,2024,1,Catalonia,Private Motor,Third-party liability,307662.63,Closed,28/01/2024
+CLM-10729,2024,1,Catalonia,Private Motor,Total loss,317670.79,Open,13/01/2024
+CLM-10730,2024,1,Catalonia,Private Motor,Windscreen,76293.3,Closed,11/02/2024
+CLM-10731,2024,1,Catalonia,Private Motor,Collision,250871.17,Closed,22/01/2024
+CLM-10732,2024,1,Catalonia,Private Motor,Third-party liability,718473.99,Open,07/01/2024
+CLM-10733,2024,1,Catalonia,Private Motor,Weather damage,220973.6,Open,25/03/2024
+CLM-10734,2024,1,Catalonia,Private Motor,Collision,413694.56,Closed,19/02/2024
+CLM-10735,2024,1,Catalonia,Private Motor,Total loss,771640.87,Closed,16/02/2024
+CLM-10736,2024,1,Catalonia,Private Motor,Collision,241036.29,Closed,11/02/2024
+CLM-10737,2024,1,Catalonia,Private Motor,Theft,547492.0,Closed,31/03/2024
+CLM-10738,2024,1,Catalonia,Private Motor,Third-party liability,771781.22,Closed,29/02/2024
+CLM-10739,2024,1,Catalonia,Private Motor,Collision,345103.51,Closed,25/01/2024
+CLM-10740,2024,1,Catalonia,Private Motor,Collision,212389.73,Closed,01/02/2024
+CLM-10741,2024,1,Catalonia,Private Motor,Total loss,661866.1,Closed,23/01/2024
+CLM-10742,2024,1,Catalonia,Private Motor,Theft,779420.73,Open,03/01/2024
+CLM-10743,2024,1,Catalonia,Private Motor,Theft,368755.34,Closed,12/03/2024
+CLM-10744,2024,1,Catalonia,Private Motor,Collision,224074.04,Closed,15/01/2024
+CLM-10745,2024,1,Catalonia,Private Motor,Total loss,1074377.0,Closed,07/01/2024
+CLM-10746,2024,1,Catalonia,Private Motor,Collision,428033.43,Open,06/03/2024
+CLM-10747,2024,1,Galicia,Commercial Fleet,Collision,357967.83,Closed,21/03/2024
+CLM-10748,2024,1,Galicia,Commercial Fleet,Collision,313365.79,Closed,28/03/2024
+CLM-10749,2024,1,Galicia,Motorcycle,Total loss,1040554.76,Closed,29/02/2024
+CLM-10750,2024,1,Galicia,Motorcycle,Weather damage,249744.97,Open,08/02/2024
+CLM-10751,2024,1,Galicia,Motorcycle,Third-party liability,597952.56,Closed,06/01/2024
+CLM-10752,2024,1,Galicia,Private Motor,Weather damage,257236.39,Closed,18/03/2024
+CLM-10753,2024,1,Galicia,Private Motor,Weather damage,228850.97,Closed,02/03/2024
+CLM-10754,2024,1,Galicia,Private Motor,Windscreen,27398.62,Closed,20/01/2024
+CLM-10755,2024,1,Galicia,Private Motor,Weather damage,152369.19,Closed,14/03/2024
+CLM-10756,2024,1,Galicia,Private Motor,Third-party liability,490025.57,Closed,25/01/2024
+CLM-10757,2024,1,Galicia,Private Motor,Collision,442681.71,Closed,26/01/2024
+CLM-10758,2024,1,Galicia,Private Motor,Collision,215910.09,Closed,29/01/2024
+CLM-10759,2024,1,Madrid,Commercial Fleet,Collision,395150.75,Closed,23/02/2024
+CLM-10760,2024,1,Madrid,Commercial Fleet,Theft,435973.24,Closed,06/03/2024
+CLM-10761,2024,1,Madrid,Commercial Fleet,Theft,533474.08,Closed,10/03/2024
+CLM-10762,2024,1,Madrid,Commercial Fleet,Windscreen,36130.92,Open,24/03/2024
+CLM-10763,2024,1,Madrid,Commercial Fleet,Collision,110141.82,Closed,31/03/2024
+CLM-10764,2024,1,Madrid,Commercial Fleet,Theft,554936.41,Open,21/01/2024
+CLM-10765,2024,1,Madrid,Commercial Fleet,Windscreen,60438.41,Closed,03/01/2024
+CLM-10766,2024,1,Madrid,Commercial Fleet,Total loss,532910.55,Closed,06/03/2024
+CLM-10767,2024,1,Madrid,Commercial Fleet,Third-party liability,728179.17,Closed,02/03/2024
+CLM-10768,2024,1,Madrid,Motorcycle,Third-party liability,1004813.38,Closed,24/03/2024
+CLM-10769,2024,1,Madrid,Motorcycle,Collision,312564.95,Closed,07/03/2024
+CLM-10770,2024,1,Madrid,Private Motor,Theft,439619.75,Closed,29/01/2024
+CLM-10771,2024,1,Madrid,Private Motor,Third-party liability,1260196.24,Closed,01/02/2024
+CLM-10772,2024,1,Madrid,Private Motor,Collision,165094.91,Open,21/03/2024
+CLM-10773,2024,1,Madrid,Private Motor,Third-party liability,709874.49,Closed,05/01/2024
+CLM-10774,2024,1,Madrid,Private Motor,Weather damage,476593.09,Closed,26/02/2024
+CLM-10775,2024,1,Madrid,Private Motor,Third-party liability,626323.53,Closed,07/01/2024
+CLM-10776,2024,1,Madrid,Private Motor,Theft,382546.19,Open,24/03/2024
+CLM-10777,2024,1,Madrid,Private Motor,Windscreen,52497.94,Closed,14/01/2024
+CLM-10778,2024,1,Madrid,Private Motor,Theft,510447.75,Open,12/03/2024
+CLM-10779,2024,1,Madrid,Private Motor,Windscreen,43257.8,Closed,26/02/2024
+CLM-10780,2024,1,Madrid,Private Motor,Theft,361851.43,Closed,17/02/2024
+CLM-10781,2024,1,Madrid,Private Motor,Collision,373616.45,Closed,05/03/2024
+CLM-10782,2024,1,Madrid,Private Motor,Third-party liability,656973.62,Closed,19/02/2024
+CLM-10783,2024,1,Madrid,Private Motor,Collision,358024.56,Closed,07/03/2024
+CLM-10784,2024,1,Madrid,Private Motor,Theft,612446.89,Open,25/02/2024
+CLM-10785,2024,1,Madrid,Private Motor,Third-party liability,146264.21,Closed,21/01/2024
+CLM-10786,2024,1,Madrid,Private Motor,Third-party liability,1151957.69,Closed,04/03/2024
+CLM-10787,2024,1,Madrid,Private Motor,Collision,222457.54,Closed,21/02/2024
+CLM-10788,2024,1,Madrid,Private Motor,Collision,273262.32,Closed,27/01/2024
+CLM-10789,2024,1,Madrid,Private Motor,Collision,220081.61,Closed,10/02/2024
+CLM-10790,2024,1,Madrid,Private Motor,Collision,412263.95,Open,07/01/2024
+CLM-10791,2024,1,Madrid,Private Motor,Theft,228859.3,Closed,03/03/2024
+CLM-10792,2024,1,Madrid,Private Motor,Collision,353886.95,Closed,12/01/2024
+CLM-10793,2024,1,Madrid,Private Motor,Collision,393383.66,Closed,01/02/2024
+CLM-10794,2024,1,Madrid,Private Motor,Third-party liability,844358.19,Closed,16/02/2024
+CLM-10795,2024,1,Valencia,Commercial Fleet,Total loss,411289.56,Closed,11/01/2024
+CLM-10796,2024,1,Valencia,Commercial Fleet,Collision,587439.15,Closed,28/01/2024
+CLM-10797,2024,1,Valencia,Commercial Fleet,Collision,271608.82,Open,28/02/2024
+CLM-10798,2024,1,Valencia,Commercial Fleet,Weather damage,119350.34,Open,27/03/2024
+CLM-10799,2024,1,Valencia,Motorcycle,Weather damage,430909.83,Closed,26/01/2024
+CLM-10800,2024,1,Valencia,Private Motor,Total loss,1239915.49,Open,15/02/2024
+CLM-10801,2024,1,Valencia,Private Motor,Weather damage,147562.22,Closed,12/03/2024
+CLM-10802,2024,1,Valencia,Private Motor,Collision,419841.96,Open,07/03/2024
+CLM-10803,2024,1,Valencia,Private Motor,Total loss,819777.01,Closed,13/01/2024
+CLM-10804,2024,1,Valencia,Private Motor,Collision,506599.13,Closed,11/03/2024
+CLM-10805,2024,1,Valencia,Private Motor,Theft,235786.31,Closed,02/02/2024
+CLM-10806,2024,1,Valencia,Private Motor,Windscreen,64807.73,Open,25/01/2024
+CLM-10807,2024,1,Valencia,Private Motor,Windscreen,33183.62,Open,08/03/2024
+CLM-10808,2024,1,Valencia,Private Motor,Weather damage,187507.54,Closed,03/03/2024
+CLM-10809,2024,1,Valencia,Private Motor,Third-party liability,937240.57,Closed,25/02/2024
+CLM-10810,2024,1,Valencia,Private Motor,Weather damage,394589.39,Open,02/03/2024
+CLM-10811,2024,1,Valencia,Private Motor,Windscreen,70791.78,Closed,21/02/2024
+CLM-10812,2024,2,Andalusia,Commercial Fleet,Theft,310248.27,Closed,23/05/2024
+CLM-10813,2024,2,Andalusia,Commercial Fleet,Theft,588832.58,Closed,02/04/2024
+CLM-10814,2024,2,Andalusia,Commercial Fleet,Collision,373850.3,Closed,04/05/2024
+CLM-10815,2024,2,Andalusia,Commercial Fleet,Collision,738624.88,Closed,09/04/2024
+CLM-10816,2024,2,Andalusia,Commercial Fleet,Collision,365168.26,Closed,19/06/2024
+CLM-10817,2024,2,Andalusia,Commercial Fleet,Theft,322629.32,Closed,02/04/2024
+CLM-10818,2024,2,Andalusia,Commercial Fleet,Collision,274890.97,Open,03/06/2024
+CLM-10819,2024,2,Andalusia,Commercial Fleet,Weather damage,90788.22,Closed,05/04/2024
+CLM-10820,2024,2,Andalusia,Commercial Fleet,Collision,196669.37,Closed,06/04/2024
+CLM-10821,2024,2,Andalusia,Commercial Fleet,Third-party liability,747501.16,Closed,23/05/2024
+CLM-10822,2024,2,Andalusia,Commercial Fleet,Third-party liability,627002.22,Closed,17/05/2024
+CLM-10823,2024,2,Andalusia,Private Motor,Windscreen,59465.61,Closed,21/05/2024
+CLM-10824,2024,2,Andalusia,Private Motor,Theft,392487.54,Closed,23/06/2024
+CLM-10825,2024,2,Andalusia,Private Motor,Collision,389298.84,Closed,02/04/2024
+CLM-10826,2024,2,Andalusia,Private Motor,Third-party liability,593179.77,Closed,23/06/2024
+CLM-10827,2024,2,Andalusia,Private Motor,Third-party liability,412263.36,Closed,03/04/2024
+CLM-10828,2024,2,Andalusia,Private Motor,Total loss,673919.21,Closed,18/04/2024
+CLM-10829,2024,2,Andalusia,Private Motor,Theft,505941.79,Closed,20/04/2024
+CLM-10830,2024,2,Andalusia,Private Motor,Total loss,919160.5,Closed,02/05/2024
+CLM-10831,2024,2,Andalusia,Private Motor,Third-party liability,414211.5,Closed,23/04/2024
+CLM-10832,2024,2,Andalusia,Private Motor,Third-party liability,1287056.97,Open,23/05/2024
+CLM-10833,2024,2,Andalusia,Private Motor,Collision,470687.97,Open,08/06/2024
+CLM-10834,2024,2,Andalusia,Private Motor,Theft,240832.92,Closed,01/05/2024
+CLM-10835,2024,2,Andalusia,Private Motor,Theft,175042.76,Closed,02/05/2024
+CLM-10836,2024,2,Andalusia,Private Motor,Third-party liability,627389.02,Closed,26/04/2024
+CLM-10837,2024,2,Andalusia,Private Motor,Theft,174176.08,Closed,02/06/2024
+CLM-10838,2024,2,Basque Country,Commercial Fleet,Total loss,1862497.73,Closed,03/06/2024
+CLM-10839,2024,2,Basque Country,Commercial Fleet,Windscreen,48567.68,Closed,18/06/2024
+CLM-10840,2024,2,Basque Country,Commercial Fleet,Theft,343283.35,Closed,25/04/2024
+CLM-10841,2024,2,Basque Country,Commercial Fleet,Weather damage,139376.05,Closed,25/06/2024
+CLM-10842,2024,2,Basque Country,Commercial Fleet,Total loss,263246.33,Open,29/05/2024
+CLM-10843,2024,2,Basque Country,Commercial Fleet,Third-party liability,1121649.86,Closed,25/05/2024
+CLM-10844,2024,2,Basque Country,Private Motor,Windscreen,52469.72,Closed,22/04/2024
+CLM-10845,2024,2,Basque Country,Private Motor,Collision,267574.89,Closed,08/06/2024
+CLM-10846,2024,2,Basque Country,Private Motor,Windscreen,41449.08,Closed,08/04/2024
+CLM-10847,2024,2,Catalonia,Commercial Fleet,Third-party liability,835947.33,Closed,09/04/2024
+CLM-10848,2024,2,Catalonia,Commercial Fleet,Collision,231537.64,Open,18/06/2024
+CLM-10849,2024,2,Catalonia,Commercial Fleet,Collision,200721.21,Closed,26/04/2024
+CLM-10850,2024,2,Catalonia,Commercial Fleet,Third-party liability,376530.19,Closed,25/04/2024
+CLM-10851,2024,2,Catalonia,Commercial Fleet,Third-party liability,445888.68,Open,14/06/2024
+CLM-10852,2024,2,Catalonia,Commercial Fleet,Third-party liability,1267837.95,Closed,05/05/2024
+CLM-10853,2024,2,Catalonia,Commercial Fleet,Theft,215685.38,Closed,04/06/2024
+CLM-10854,2024,2,Catalonia,Commercial Fleet,Third-party liability,589494.33,Closed,12/06/2024
+CLM-10855,2024,2,Catalonia,Motorcycle,Windscreen,55582.51,Closed,07/05/2024
+CLM-10856,2024,2,Catalonia,Motorcycle,Total loss,1446113.36,Closed,27/04/2024
+CLM-10857,2024,2,Catalonia,Motorcycle,Collision,357649.35,Open,09/06/2024
+CLM-10858,2024,2,Catalonia,Private Motor,Collision,466658.24,Closed,07/05/2024
+CLM-10859,2024,2,Catalonia,Private Motor,Total loss,1002981.72,Open,26/05/2024
+CLM-10860,2024,2,Catalonia,Private Motor,Collision,211652.21,Closed,16/05/2024
+CLM-10861,2024,2,Catalonia,Private Motor,Collision,309414.36,Open,14/05/2024
+CLM-10862,2024,2,Catalonia,Private Motor,Weather damage,318273.65,Closed,30/06/2024
+CLM-10863,2024,2,Catalonia,Private Motor,Windscreen,86349.44,Closed,27/04/2024
+CLM-10864,2024,2,Catalonia,Private Motor,Total loss,607430.18,Closed,28/04/2024
+CLM-10865,2024,2,Catalonia,Private Motor,Theft,573320.65,Closed,06/06/2024
+CLM-10866,2024,2,Catalonia,Private Motor,Windscreen,64253.74,Open,17/06/2024
+CLM-10867,2024,2,Catalonia,Private Motor,Total loss,899152.78,Closed,16/04/2024
+CLM-10868,2024,2,Catalonia,Private Motor,Third-party liability,722395.39,Closed,19/06/2024
+CLM-10869,2024,2,Catalonia,Private Motor,Third-party liability,409921.27,Closed,26/06/2024
+CLM-10870,2024,2,Catalonia,Private Motor,Windscreen,46615.94,Closed,16/05/2024
+CLM-10871,2024,2,Catalonia,Private Motor,Collision,233767.85,Open,11/04/2024
+CLM-10872,2024,2,Catalonia,Private Motor,Third-party liability,566384.56,Closed,03/04/2024
+CLM-10873,2024,2,Catalonia,Private Motor,Third-party liability,1170586.94,Closed,13/06/2024
+CLM-10874,2024,2,Catalonia,Private Motor,Third-party liability,771367.59,Closed,25/06/2024
+CLM-10875,2024,2,Catalonia,Private Motor,Third-party liability,531420.01,Open,10/04/2024
+CLM-10876,2024,2,Catalonia,Private Motor,Third-party liability,742866.51,Open,12/06/2024
+CLM-10877,2024,2,Catalonia,Private Motor,Collision,363609.47,Closed,03/05/2024
+CLM-10878,2024,2,Catalonia,Private Motor,Collision,371204.19,Open,11/05/2024
+CLM-10879,2024,2,Catalonia,Private Motor,Weather damage,452716.59,Closed,07/05/2024
+CLM-10880,2024,2,Catalonia,Private Motor,Collision,223138.36,Closed,06/05/2024
+CLM-10881,2024,2,Catalonia,Private Motor,Collision,577965.76,Closed,15/06/2024
+CLM-10882,2024,2,Catalonia,Private Motor,Windscreen,71255.07,Closed,24/04/2024
+CLM-10883,2024,2,Catalonia,Private Motor,Third-party liability,381301.62,Open,23/05/2024
+CLM-10884,2024,2,Catalonia,Private Motor,Collision,183515.85,Closed,21/05/2024
+CLM-10885,2024,2,Catalonia,Private Motor,Collision,224559.04,Open,14/05/2024
+CLM-10886,2024,2,Catalonia,Private Motor,Total loss,869773.65,Open,17/05/2024
+CLM-10887,2024,2,Catalonia,Private Motor,Theft,159853.84,Closed,20/04/2024
+CLM-10888,2024,2,Catalonia,Private Motor,Collision,161221.95,Closed,03/06/2024
+CLM-10889,2024,2,Catalonia,Private Motor,Theft,584411.86,Closed,19/04/2024
+CLM-10890,2024,2,Galicia,Commercial Fleet,Third-party liability,546264.98,Closed,22/05/2024
+CLM-10891,2024,2,Galicia,Commercial Fleet,Weather damage,660459.52,Open,13/04/2024
+CLM-10892,2024,2,Galicia,Commercial Fleet,Third-party liability,777042.33,Closed,12/06/2024
+CLM-10893,2024,2,Galicia,Private Motor,Windscreen,41607.14,Closed,02/04/2024
+CLM-10894,2024,2,Galicia,Private Motor,Third-party liability,519799.11,Closed,02/05/2024
+CLM-10895,2024,2,Galicia,Private Motor,Collision,417910.8,Closed,03/06/2024
+CLM-10896,2024,2,Madrid,Commercial Fleet,Collision,487555.98,Closed,22/04/2024
+CLM-10897,2024,2,Madrid,Commercial Fleet,Theft,544784.87,Open,23/05/2024
+CLM-10898,2024,2,Madrid,Commercial Fleet,Weather damage,293391.36,Open,15/05/2024
+CLM-10899,2024,2,Madrid,Commercial Fleet,Windscreen,48032.96,Closed,05/04/2024
+CLM-10900,2024,2,Madrid,Commercial Fleet,Theft,445581.86,Open,01/05/2024
+CLM-10901,2024,2,Madrid,Commercial Fleet,Third-party liability,644718.28,Closed,14/06/2024
+CLM-10902,2024,2,Madrid,Commercial Fleet,Windscreen,50521.46,Closed,23/05/2024
+CLM-10903,2024,2,Madrid,Commercial Fleet,Collision,528995.29,Closed,18/05/2024
+CLM-10904,2024,2,Madrid,Commercial Fleet,Theft,215384.29,Open,24/05/2024
+CLM-10905,2024,2,Madrid,Commercial Fleet,Collision,234529.91,Open,04/04/2024
+CLM-10906,2024,2,Madrid,Commercial Fleet,Windscreen,52136.76,Closed,06/04/2024
+CLM-10907,2024,2,Madrid,Commercial Fleet,Collision,319011.22,Closed,03/04/2024
+CLM-10908,2024,2,Madrid,Commercial Fleet,Collision,137009.98,Closed,12/04/2024
+CLM-10909,2024,2,Madrid,Commercial Fleet,Collision,221194.26,Closed,12/04/2024
+CLM-10910,2024,2,Madrid,Commercial Fleet,Collision,263320.51,Closed,12/05/2024
+CLM-10911,2024,2,Madrid,Commercial Fleet,Theft,402368.77,Closed,23/05/2024
+CLM-10912,2024,2,Madrid,Commercial Fleet,Collision,309779.15,Open,25/05/2024
+CLM-10913,2024,2,Madrid,Commercial Fleet,Third-party liability,677402.94,Open,16/04/2024
+CLM-10914,2024,2,Madrid,Motorcycle,Third-party liability,606504.16,Closed,27/04/2024
+CLM-10915,2024,2,Madrid,Private Motor,Weather damage,248756.6,Closed,13/05/2024
+CLM-10916,2024,2,Madrid,Private Motor,Collision,251312.88,Closed,02/05/2024
+CLM-10917,2024,2,Madrid,Private Motor,Collision,211540.45,Open,18/05/2024
+CLM-10918,2024,2,Madrid,Private Motor,Weather damage,340045.47,Closed,28/04/2024
+CLM-10919,2024,2,Madrid,Private Motor,Theft,816993.24,Closed,09/04/2024
+CLM-10920,2024,2,Madrid,Private Motor,Theft,361198.98,Closed,04/04/2024
+CLM-10921,2024,2,Madrid,Private Motor,Third-party liability,468397.46,Open,27/06/2024
+CLM-10922,2024,2,Madrid,Private Motor,Third-party liability,663812.66,Closed,29/04/2024
+CLM-10923,2024,2,Madrid,Private Motor,Third-party liability,357278.28,Closed,26/04/2024
+CLM-10924,2024,2,Madrid,Private Motor,Theft,553746.91,Closed,29/05/2024
+CLM-10925,2024,2,Madrid,Private Motor,Collision,368038.53,Closed,24/06/2024
+CLM-10926,2024,2,Madrid,Private Motor,Third-party liability,854409.76,Open,22/05/2024
+CLM-10927,2024,2,Madrid,Private Motor,Collision,478842.44,Open,31/05/2024
+CLM-10928,2024,2,Madrid,Private Motor,Windscreen,40680.01,Open,14/04/2024
+CLM-10929,2024,2,Madrid,Private Motor,Collision,204529.23,Closed,16/06/2024
+CLM-10930,2024,2,Madrid,Private Motor,Collision,383776.09,Closed,21/06/2024
+CLM-10931,2024,2,Madrid,Private Motor,Theft,302752.48,Closed,02/05/2024
+CLM-10932,2024,2,Madrid,Private Motor,Collision,396917.99,Closed,29/05/2024
+CLM-10933,2024,2,Madrid,Private Motor,Third-party liability,1020736.56,Open,29/05/2024
+CLM-10934,2024,2,Madrid,Private Motor,Windscreen,211600.59,Open,15/06/2024
+CLM-10935,2024,2,Madrid,Private Motor,Third-party liability,582713.89,Closed,12/04/2024
+CLM-10936,2024,2,Valencia,Commercial Fleet,Weather damage,88681.44,Closed,23/05/2024
+CLM-10937,2024,2,Valencia,Commercial Fleet,Collision,238942.62,Closed,26/06/2024
+CLM-10938,2024,2,Valencia,Commercial Fleet,Collision,310797.7,Closed,18/05/2024
+CLM-10939,2024,2,Valencia,Commercial Fleet,Theft,375238.36,Closed,22/05/2024
+CLM-10940,2024,2,Valencia,Commercial Fleet,Windscreen,71480.13,Closed,25/04/2024
+CLM-10941,2024,2,Valencia,Commercial Fleet,Weather damage,293320.3,Open,18/06/2024
+CLM-10942,2024,2,Valencia,Commercial Fleet,Total loss,758898.44,Closed,03/05/2024
+CLM-10943,2024,2,Valencia,Commercial Fleet,Collision,148026.86,Closed,29/04/2024
+CLM-10944,2024,2,Valencia,Commercial Fleet,Theft,455341.61,Closed,30/06/2024
+CLM-10945,2024,2,Valencia,Motorcycle,Collision,959471.65,Closed,21/05/2024
+CLM-10946,2024,2,Valencia,Motorcycle,Weather damage,283364.25,Open,31/05/2024
+CLM-10947,2024,2,Valencia,Motorcycle,Weather damage,435449.73,Open,29/06/2024
+CLM-10948,2024,2,Valencia,Motorcycle,Weather damage,542155.67,Open,14/06/2024
+CLM-10949,2024,2,Valencia,Private Motor,Collision,219138.45,Open,16/06/2024
+CLM-10950,2024,2,Valencia,Private Motor,Collision,344848.1,Closed,13/06/2024
+CLM-10951,2024,2,Valencia,Private Motor,Theft,573331.62,Closed,05/04/2024
+CLM-10952,2024,2,Valencia,Private Motor,Theft,519512.1,Closed,11/05/2024
+CLM-10953,2024,2,Valencia,Private Motor,Weather damage,139930.24,Closed,17/06/2024
+CLM-10954,2024,2,Valencia,Private Motor,Collision,385414.33,Closed,13/05/2024
+CLM-10955,2024,2,Valencia,Private Motor,Collision,263226.82,Closed,05/05/2024
+CLM-10956,2024,2,Valencia,Private Motor,Theft,767973.07,Open,02/04/2024
+CLM-10957,2024,2,Valencia,Private Motor,Third-party liability,774832.01,Closed,05/06/2024
+CLM-10958,2024,2,Valencia,Private Motor,Collision,317037.31,Closed,07/04/2024
+CLM-10959,2024,2,Valencia,Private Motor,Weather damage,402726.98,Closed,04/05/2024
+CLM-10960,2024,2,Valencia,Private Motor,Weather damage,292098.85,Closed,22/06/2024
+CLM-10961,2024,2,Valencia,Private Motor,Weather damage,134603.56,Closed,14/04/2024
+CLM-10962,2024,2,Valencia,Private Motor,Windscreen,44395.04,Open,25/05/2024
+CLM-10963,2024,2,Valencia,Private Motor,Weather damage,327271.97,Closed,18/04/2024
+CLM-10964,2024,2,Valencia,Private Motor,Total loss,590087.22,Closed,27/06/2024
+CLM-10965,2024,2,Valencia,Private Motor,Total loss,1359451.26,Closed,02/04/2024
+CLM-10966,2024,2,Valencia,Private Motor,Theft,481474.08,Closed,20/04/2024
+CLM-10967,2024,2,Valencia,Private Motor,Collision,294867.18,Closed,29/06/2024
+CLM-10968,2024,2,Valencia,Private Motor,Third-party liability,772112.18,Closed,05/05/2024
+CLM-10969,2024,3,Andalusia,Commercial Fleet,Theft,187346.55,Closed,04/08/2024
+CLM-10970,2024,3,Andalusia,Commercial Fleet,Collision,587224.33,Closed,28/08/2024
+CLM-10971,2024,3,Andalusia,Commercial Fleet,Third-party liability,650580.94,Open,09/08/2024
+CLM-10972,2024,3,Andalusia,Commercial Fleet,Third-party liability,625350.64,Closed,27/09/2024
+CLM-10973,2024,3,Andalusia,Commercial Fleet,Theft,478732.51,Closed,20/07/2024
+CLM-10974,2024,3,Andalusia,Commercial Fleet,Theft,325180.07,Closed,09/09/2024
+CLM-10975,2024,3,Andalusia,Commercial Fleet,Third-party liability,472401.28,Closed,28/08/2024
+CLM-10976,2024,3,Andalusia,Commercial Fleet,Collision,456319.96,Closed,19/08/2024
+CLM-10977,2024,3,Andalusia,Commercial Fleet,Third-party liability,949698.73,Closed,16/08/2024
+CLM-10978,2024,3,Andalusia,Commercial Fleet,Total loss,735006.2,Closed,17/09/2024
+CLM-10979,2024,3,Andalusia,Commercial Fleet,Windscreen,50373.27,Closed,01/08/2024
+CLM-10980,2024,3,Andalusia,Commercial Fleet,Total loss,902158.11,Closed,20/09/2024
+CLM-10981,2024,3,Andalusia,Commercial Fleet,Theft,507584.06,Open,15/08/2024
+CLM-10982,2024,3,Andalusia,Motorcycle,Total loss,1812116.42,Closed,13/07/2024
+CLM-10983,2024,3,Andalusia,Motorcycle,Theft,548380.85,Closed,30/07/2024
+CLM-10984,2024,3,Andalusia,Motorcycle,Weather damage,514297.29,Closed,10/08/2024
+CLM-10985,2024,3,Andalusia,Private Motor,Theft,414803.07,Closed,03/08/2024
+CLM-10986,2024,3,Andalusia,Private Motor,Collision,374538.12,Closed,11/07/2024
+CLM-10987,2024,3,Andalusia,Private Motor,Collision,364932.03,Closed,18/09/2024
+CLM-10988,2024,3,Andalusia,Private Motor,Total loss,692091.81,Closed,03/07/2024
+CLM-10989,2024,3,Andalusia,Private Motor,Third-party liability,406015.98,Closed,18/07/2024
+CLM-10990,2024,3,Andalusia,Private Motor,Total loss,1705139.71,Closed,21/07/2024
+CLM-10991,2024,3,Andalusia,Private Motor,Third-party liability,207794.28,Open,10/08/2024
+CLM-10992,2024,3,Andalusia,Private Motor,Third-party liability,645588.81,Closed,30/09/2024
+CLM-10993,2024,3,Andalusia,Private Motor,Windscreen,89644.17,Closed,20/08/2024
+CLM-10994,2024,3,Andalusia,Private Motor,Theft,329209.82,Closed,05/09/2024
+CLM-10995,2024,3,Andalusia,Private Motor,Theft,489492.46,Closed,19/07/2024
+CLM-10996,2024,3,Andalusia,Private Motor,Weather damage,151384.6,Open,30/09/2024
+CLM-10997,2024,3,Andalusia,Private Motor,Third-party liability,629633.5,Closed,19/08/2024
+CLM-10998,2024,3,Andalusia,Private Motor,Total loss,1030652.29,Closed,06/07/2024
+CLM-10999,2024,3,Andalusia,Private Motor,Collision,314413.11,Closed,02/09/2024
+CLM-11000,2024,3,Andalusia,Private Motor,Collision,478208.17,Closed,10/09/2024
+CLM-11001,2024,3,Andalusia,Private Motor,Collision,388859.53,Closed,06/09/2024
+CLM-11002,2024,3,Andalusia,Private Motor,Theft,504680.62,Closed,18/09/2024
+CLM-11003,2024,3,Andalusia,Private Motor,Collision,349612.36,Open,02/09/2024
+CLM-11004,2024,3,Andalusia,Private Motor,Third-party liability,605981.67,Closed,20/09/2024
+CLM-11005,2024,3,Andalusia,Private Motor,Theft,286183.39,Open,04/07/2024
+CLM-11006,2024,3,Andalusia,Private Motor,Collision,328174.29,Closed,10/09/2024
+CLM-11007,2024,3,Andalusia,Private Motor,Collision,283326.51,Closed,01/07/2024
+CLM-11008,2024,3,Andalusia,Private Motor,Third-party liability,624726.62,Closed,14/09/2024
+CLM-11009,2024,3,Andalusia,Private Motor,Collision,444072.04,Closed,08/08/2024
+CLM-11010,2024,3,Andalusia,Private Motor,Theft,374180.93,Closed,31/08/2024
+CLM-11011,2024,3,Basque Country,Commercial Fleet,Collision,262894.85,Closed,30/09/2024
+CLM-11012,2024,3,Basque Country,Commercial Fleet,Third-party liability,530220.1,Closed,26/08/2024
+CLM-11013,2024,3,Basque Country,Commercial Fleet,Collision,170263.36,Open,20/09/2024
+CLM-11014,2024,3,Basque Country,Commercial Fleet,Collision,269228.87,Closed,25/09/2024
+CLM-11015,2024,3,Basque Country,Commercial Fleet,Collision,170481.28,Closed,07/07/2024
+CLM-11016,2024,3,Basque Country,Commercial Fleet,Third-party liability,408379.83,Closed,30/09/2024
+CLM-11017,2024,3,Basque Country,Motorcycle,Theft,532716.89,Closed,12/09/2024
+CLM-11018,2024,3,Basque Country,Private Motor,Third-party liability,608600.53,Closed,23/08/2024
+CLM-11019,2024,3,Basque Country,Private Motor,Total loss,685941.82,Closed,15/09/2024
+CLM-11020,2024,3,Basque Country,Private Motor,Theft,310652.7,Closed,05/07/2024
+CLM-11021,2024,3,Basque Country,Private Motor,Theft,455712.75,Closed,14/08/2024
+CLM-11022,2024,3,Basque Country,Private Motor,Third-party liability,532538.01,Closed,25/08/2024
+CLM-11023,2024,3,Basque Country,Private Motor,Third-party liability,714242.05,Closed,25/07/2024
+CLM-11024,2024,3,Basque Country,Private Motor,Third-party liability,339078.01,Closed,26/09/2024
+CLM-11025,2024,3,Basque Country,Private Motor,Third-party liability,881022.36,Closed,16/07/2024
+CLM-11026,2024,3,Basque Country,Private Motor,Collision,387102.5,Closed,21/09/2024
+CLM-11027,2024,3,Basque Country,Private Motor,Total loss,1630871.52,Closed,11/08/2024
+CLM-11028,2024,3,Basque Country,Private Motor,Collision,1000895.72,Closed,14/07/2024
+CLM-11029,2024,3,Catalonia,Commercial Fleet,Third-party liability,429936.14,Closed,25/07/2024
+CLM-11030,2024,3,Catalonia,Commercial Fleet,Third-party liability,473436.26,Closed,11/08/2024
+CLM-11031,2024,3,Catalonia,Commercial Fleet,Total loss,597525.57,Closed,08/07/2024
+CLM-11032,2024,3,Catalonia,Commercial Fleet,Third-party liability,1038118.46,Closed,22/07/2024
+CLM-11033,2024,3,Catalonia,Commercial Fleet,Third-party liability,392681.17,Closed,28/07/2024
+CLM-11034,2024,3,Catalonia,Commercial Fleet,Windscreen,24812.41,Closed,01/08/2024
+CLM-11035,2024,3,Catalonia,Commercial Fleet,Collision,245726.43,Closed,28/08/2024
+CLM-11036,2024,3,Catalonia,Commercial Fleet,Collision,437430.29,Closed,07/08/2024
+CLM-11037,2024,3,Catalonia,Commercial Fleet,Third-party liability,414448.62,Closed,11/08/2024
+CLM-11038,2024,3,Catalonia,Motorcycle,Third-party liability,1009842.95,Closed,07/08/2024
+CLM-11039,2024,3,Catalonia,Motorcycle,Collision,474213.26,Closed,26/08/2024
+CLM-11040,2024,3,Catalonia,Motorcycle,Collision,436165.4,Closed,15/07/2024
+CLM-11041,2024,3,Catalonia,Private Motor,Theft,405073.66,Closed,24/08/2024
+CLM-11042,2024,3,Catalonia,Private Motor,Third-party liability,915642.49,Closed,02/09/2024
+CLM-11043,2024,3,Catalonia,Private Motor,Theft,696693.92,Closed,06/08/2024
+CLM-11044,2024,3,Catalonia,Private Motor,Collision,384539.96,Open,15/08/2024
+CLM-11045,2024,3,Catalonia,Private Motor,Windscreen,55702.86,Closed,15/07/2024
+CLM-11046,2024,3,Catalonia,Private Motor,Weather damage,130637.09,Open,18/07/2024
+CLM-11047,2024,3,Catalonia,Private Motor,Collision,145907.7,Closed,26/07/2024
+CLM-11048,2024,3,Catalonia,Private Motor,Theft,371375.16,Closed,17/09/2024
+CLM-11049,2024,3,Catalonia,Private Motor,Total loss,1491299.93,Closed,24/07/2024
+CLM-11050,2024,3,Catalonia,Private Motor,Theft,376593.58,Closed,26/08/2024
+CLM-11051,2024,3,Catalonia,Private Motor,Theft,532319.07,Closed,25/09/2024
+CLM-11052,2024,3,Catalonia,Private Motor,Collision,450249.8,Closed,12/09/2024
+CLM-11053,2024,3,Catalonia,Private Motor,Third-party liability,214019.15,Closed,08/08/2024
+CLM-11054,2024,3,Catalonia,Private Motor,Third-party liability,762300.43,Closed,30/08/2024
+CLM-11055,2024,3,Catalonia,Private Motor,Weather damage,169716.37,Closed,28/09/2024
+CLM-11056,2024,3,Catalonia,Private Motor,Third-party liability,645586.23,Closed,09/09/2024
+CLM-11057,2024,3,Catalonia,Private Motor,Collision,287712.21,Closed,21/09/2024
+CLM-11058,2024,3,Catalonia,Private Motor,Collision,199117.96,Closed,26/09/2024
+CLM-11059,2024,3,Galicia,Commercial Fleet,Weather damage,153832.14,Closed,16/07/2024
+CLM-11060,2024,3,Galicia,Private Motor,Third-party liability,463954.99,Closed,02/08/2024
+CLM-11061,2024,3,Galicia,Private Motor,Theft,441302.57,Closed,24/09/2024
+CLM-11062,2024,3,Galicia,Private Motor,Collision,466683.62,Closed,27/09/2024
+CLM-11063,2024,3,Galicia,Private Motor,Third-party liability,1463842.43,Open,09/09/2024
+CLM-11064,2024,3,Galicia,Private Motor,Collision,211826.95,Open,25/09/2024
+CLM-11065,2024,3,Galicia,Private Motor,Theft,355685.94,Open,16/09/2024
+CLM-11066,2024,3,Galicia,Private Motor,Windscreen,35585.67,Open,19/08/2024
+CLM-11067,2024,3,Galicia,Private Motor,Third-party liability,522637.05,Closed,03/07/2024
+CLM-11068,2024,3,Galicia,Private Motor,Collision,336230.66,Closed,29/09/2024
+CLM-11069,2024,3,Madrid,Commercial Fleet,Collision,272314.03,Closed,13/07/2024
+CLM-11070,2024,3,Madrid,Commercial Fleet,Collision,405872.77,Closed,20/07/2024
+CLM-11071,2024,3,Madrid,Commercial Fleet,Collision,390736.45,Closed,27/08/2024
+CLM-11072,2024,3,Madrid,Commercial Fleet,Total loss,1417157.53,Open,07/09/2024
+CLM-11073,2024,3,Madrid,Commercial Fleet,Collision,275361.64,Closed,06/07/2024
+CLM-11074,2024,3,Madrid,Commercial Fleet,Windscreen,37889.74,Closed,27/08/2024
+CLM-11075,2024,3,Madrid,Commercial Fleet,Collision,361943.7,Closed,18/09/2024
+CLM-11076,2024,3,Madrid,Commercial Fleet,Third-party liability,1658260.28,Closed,29/09/2024
+CLM-11077,2024,3,Madrid,Commercial Fleet,Total loss,1176687.35,Closed,13/09/2024
+CLM-11078,2024,3,Madrid,Commercial Fleet,Collision,275818.59,Open,27/07/2024
+CLM-11079,2024,3,Madrid,Motorcycle,Third-party liability,847865.16,Closed,22/08/2024
+CLM-11080,2024,3,Madrid,Motorcycle,Collision,164391.75,Closed,02/07/2024
+CLM-11081,2024,3,Madrid,Motorcycle,Collision,1046551.96,Closed,29/09/2024
+CLM-11082,2024,3,Madrid,Motorcycle,Collision,545632.64,Open,30/07/2024
+CLM-11083,2024,3,Madrid,Motorcycle,Total loss,699244.33,Closed,16/09/2024
+CLM-11084,2024,3,Madrid,Motorcycle,Collision,194637.72,Closed,16/09/2024
+CLM-11085,2024,3,Madrid,Private Motor,Theft,355588.19,Closed,26/08/2024
+CLM-11086,2024,3,Madrid,Private Motor,Theft,264660.29,Closed,02/07/2024
+CLM-11087,2024,3,Madrid,Private Motor,Collision,157016.42,Closed,22/09/2024
+CLM-11088,2024,3,Madrid,Private Motor,Third-party liability,745158.58,Closed,12/08/2024
+CLM-11089,2024,3,Madrid,Private Motor,Third-party liability,1120035.08,Closed,27/07/2024
+CLM-11090,2024,3,Madrid,Private Motor,Third-party liability,857781.79,Closed,23/07/2024
+CLM-11091,2024,3,Madrid,Private Motor,Weather damage,168706.32,Closed,27/09/2024
+CLM-11092,2024,3,Madrid,Private Motor,Third-party liability,546805.46,Open,13/09/2024
+CLM-11093,2024,3,Madrid,Private Motor,Collision,170317.53,Closed,09/07/2024
+CLM-11094,2024,3,Madrid,Private Motor,Theft,863994.97,Open,20/09/2024
+CLM-11095,2024,3,Madrid,Private Motor,Collision,354021.84,Closed,24/08/2024
+CLM-11096,2024,3,Madrid,Private Motor,Weather damage,211647.52,Closed,22/09/2024
+CLM-11097,2024,3,Madrid,Private Motor,Third-party liability,956913.36,Closed,27/07/2024
+CLM-11098,2024,3,Madrid,Private Motor,Theft,1100840.85,Closed,29/08/2024
+CLM-11099,2024,3,Madrid,Private Motor,Theft,475869.98,Closed,17/07/2024
+CLM-11100,2024,3,Madrid,Private Motor,Third-party liability,474113.95,Closed,11/08/2024
+CLM-11101,2024,3,Madrid,Private Motor,Total loss,634108.77,Closed,25/07/2024
+CLM-11102,2024,3,Madrid,Private Motor,Collision,261421.49,Closed,23/07/2024
+CLM-11103,2024,3,Madrid,Private Motor,Third-party liability,443288.64,Open,11/09/2024
+CLM-11104,2024,3,Madrid,Private Motor,Collision,298108.37,Closed,29/08/2024
+CLM-11105,2024,3,Madrid,Private Motor,Theft,714481.11,Closed,01/09/2024
+CLM-11106,2024,3,Madrid,Private Motor,Windscreen,35752.96,Closed,20/08/2024
+CLM-11107,2024,3,Madrid,Private Motor,Third-party liability,628115.85,Closed,25/09/2024
+CLM-11108,2024,3,Madrid,Private Motor,Theft,466526.83,Closed,14/07/2024
+CLM-11109,2024,3,Madrid,Private Motor,Collision,235999.54,Closed,05/08/2024
+CLM-11110,2024,3,Madrid,Private Motor,Windscreen,113506.48,Closed,06/08/2024
+CLM-11111,2024,3,Madrid,Private Motor,Third-party liability,356757.06,Open,16/09/2024
+CLM-11112,2024,3,Madrid,Private Motor,Third-party liability,884403.49,Closed,24/08/2024
+CLM-11113,2024,3,Madrid,Private Motor,Collision,286192.38,Open,20/07/2024
+CLM-11114,2024,3,Madrid,Private Motor,Third-party liability,649545.89,Closed,26/07/2024
+CLM-11115,2024,3,Madrid,Private Motor,Collision,306639.97,Open,22/08/2024
+CLM-11116,2024,3,Madrid,Private Motor,Total loss,1242767.38,Closed,20/09/2024
+CLM-11117,2024,3,Madrid,Private Motor,Collision,197493.17,Closed,21/07/2024
+CLM-11118,2024,3,Madrid,Private Motor,Collision,199940.65,Open,03/09/2024
+CLM-11119,2024,3,Valencia,Commercial Fleet,Third-party liability,541878.1,Closed,28/09/2024
+CLM-11120,2024,3,Valencia,Commercial Fleet,Total loss,997149.28,Closed,22/07/2024
+CLM-11121,2024,3,Valencia,Commercial Fleet,Collision,185045.85,Closed,15/07/2024
+CLM-11122,2024,3,Valencia,Commercial Fleet,Windscreen,93601.69,Open,06/07/2024
+CLM-11123,2024,3,Valencia,Commercial Fleet,Theft,428889.71,Closed,13/07/2024
+CLM-11124,2024,3,Valencia,Commercial Fleet,Theft,343925.66,Open,12/09/2024
+CLM-11125,2024,3,Valencia,Commercial Fleet,Collision,130078.24,Closed,12/07/2024
+CLM-11126,2024,3,Valencia,Commercial Fleet,Theft,893872.22,Closed,16/09/2024
+CLM-11127,2024,3,Valencia,Commercial Fleet,Third-party liability,744211.5,Closed,28/09/2024
+CLM-11128,2024,3,Valencia,Commercial Fleet,Theft,623787.78,Closed,29/07/2024
+CLM-11129,2024,3,Valencia,Motorcycle,Collision,1101943.46,Closed,12/09/2024
+CLM-11130,2024,3,Valencia,Motorcycle,Collision,1026444.84,Closed,19/07/2024
+CLM-11131,2024,3,Valencia,Private Motor,Third-party liability,1124724.05,Closed,26/08/2024
+CLM-11132,2024,3,Valencia,Private Motor,Collision,189928.25,Closed,04/09/2024
+CLM-11133,2024,3,Valencia,Private Motor,Third-party liability,1557076.53,Open,13/07/2024
+CLM-11134,2024,3,Valencia,Private Motor,Theft,1668954.55,Open,21/08/2024
+CLM-11135,2024,3,Valencia,Private Motor,Weather damage,322235.42,Open,27/07/2024
+CLM-11136,2024,3,Valencia,Private Motor,Weather damage,281181.46,Closed,20/09/2024
+CLM-11137,2024,3,Valencia,Private Motor,Weather damage,590306.82,Closed,21/08/2024
+CLM-11138,2024,3,Valencia,Private Motor,Weather damage,166368.0,Closed,24/07/2024
+CLM-11139,2024,3,Valencia,Private Motor,Weather damage,475837.86,Open,01/08/2024
+CLM-11140,2024,3,Valencia,Private Motor,Total loss,1869941.35,Open,12/07/2024
+CLM-11141,2024,4,Andalusia,Commercial Fleet,Theft,518186.6,Closed,07/11/2024
+CLM-11142,2024,4,Andalusia,Commercial Fleet,Windscreen,51171.03,Closed,25/11/2024
+CLM-11143,2024,4,Andalusia,Commercial Fleet,Theft,547113.82,Closed,19/10/2024
+CLM-11144,2024,4,Andalusia,Commercial Fleet,Collision,316512.57,Closed,25/12/2024
+CLM-11145,2024,4,Andalusia,Commercial Fleet,Collision,1041512.06,Closed,20/12/2024
+CLM-11146,2024,4,Andalusia,Commercial Fleet,Total loss,2035118.32,Closed,26/11/2024
+CLM-11147,2024,4,Andalusia,Commercial Fleet,Collision,282335.58,Closed,17/10/2024
+CLM-11148,2024,4,Andalusia,Commercial Fleet,Collision,171993.34,Closed,06/12/2024
+CLM-11149,2024,4,Andalusia,Commercial Fleet,Third-party liability,487701.81,Closed,11/11/2024
+CLM-11150,2024,4,Andalusia,Commercial Fleet,Third-party liability,228516.82,Closed,02/11/2024
+CLM-11151,2024,4,Andalusia,Motorcycle,Theft,699188.27,Closed,03/10/2024
+CLM-11152,2024,4,Andalusia,Motorcycle,Windscreen,150499.92,Closed,16/12/2024
+CLM-11153,2024,4,Andalusia,Motorcycle,Collision,887192.29,Closed,12/11/2024
+CLM-11154,2024,4,Andalusia,Motorcycle,Weather damage,283530.57,Closed,30/10/2024
+CLM-11155,2024,4,Andalusia,Private Motor,Theft,505969.24,Closed,07/12/2024
+CLM-11156,2024,4,Andalusia,Private Motor,Collision,433524.48,Closed,12/10/2024
+CLM-11157,2024,4,Andalusia,Private Motor,Total loss,951149.59,Open,02/12/2024
+CLM-11158,2024,4,Andalusia,Private Motor,Theft,506521.16,Closed,04/12/2024
+CLM-11159,2024,4,Andalusia,Private Motor,Collision,232967.22,Open,04/10/2024
+CLM-11160,2024,4,Andalusia,Private Motor,Theft,394645.62,Open,21/12/2024
+CLM-11161,2024,4,Andalusia,Private Motor,Windscreen,42990.99,Closed,27/10/2024
+CLM-11162,2024,4,Andalusia,Private Motor,Windscreen,64980.09,Closed,05/10/2024
+CLM-11163,2024,4,Andalusia,Private Motor,Total loss,606524.41,Closed,06/11/2024
+CLM-11164,2024,4,Andalusia,Private Motor,Third-party liability,611886.04,Closed,27/11/2024
+CLM-11165,2024,4,Andalusia,Private Motor,Weather damage,152418.76,Closed,27/10/2024
+CLM-11166,2024,4,Andalusia,Private Motor,Collision,357448.06,Closed,25/12/2024
+CLM-11167,2024,4,Andalusia,Private Motor,Weather damage,672775.23,Closed,09/10/2024
+CLM-11168,2024,4,Andalusia,Private Motor,Collision,142653.93,Open,07/12/2024
+CLM-11169,2024,4,Andalusia,Private Motor,Collision,645796.49,Closed,15/11/2024
+CLM-11170,2024,4,Andalusia,Private Motor,Third-party liability,542319.32,Closed,09/11/2024
+CLM-11171,2024,4,Andalusia,Private Motor,Collision,248935.39,Closed,09/11/2024
+CLM-11172,2024,4,Andalusia,Private Motor,Third-party liability,1787670.04,Closed,29/11/2024
+CLM-11173,2024,4,Basque Country,Commercial Fleet,Collision,396624.05,Closed,25/11/2024
+CLM-11174,2024,4,Basque Country,Commercial Fleet,Collision,250721.05,Closed,24/12/2024
+CLM-11175,2024,4,Basque Country,Motorcycle,Windscreen,95568.1,Closed,13/12/2024
+CLM-11176,2024,4,Basque Country,Private Motor,Collision,410615.21,Closed,05/11/2024
+CLM-11177,2024,4,Basque Country,Private Motor,Collision,259850.92,Closed,10/10/2024
+CLM-11178,2024,4,Basque Country,Private Motor,Third-party liability,700365.82,Closed,08/12/2024
+CLM-11179,2024,4,Basque Country,Private Motor,Collision,451639.2,Closed,20/10/2024
+CLM-11180,2024,4,Basque Country,Private Motor,Collision,166126.15,Closed,19/11/2024
+CLM-11181,2024,4,Basque Country,Private Motor,Total loss,733889.41,Open,27/12/2024
+CLM-11182,2024,4,Basque Country,Private Motor,Collision,292898.11,Open,18/12/2024
+CLM-11183,2024,4,Basque Country,Private Motor,Total loss,580571.96,Closed,21/12/2024
+CLM-11184,2024,4,Basque Country,Private Motor,Third-party liability,327538.71,Closed,13/12/2024
+CLM-11185,2024,4,Catalonia,Commercial Fleet,Collision,256055.04,Closed,15/11/2024
+CLM-11186,2024,4,Catalonia,Commercial Fleet,Collision,316172.1,Closed,13/11/2024
+CLM-11187,2024,4,Catalonia,Commercial Fleet,Total loss,558860.57,Closed,22/12/2024
+CLM-11188,2024,4,Catalonia,Commercial Fleet,Third-party liability,894493.58,Closed,05/10/2024
+CLM-11189,2024,4,Catalonia,Commercial Fleet,Total loss,953361.01,Closed,13/12/2024
+CLM-11190,2024,4,Catalonia,Commercial Fleet,Collision,166169.29,Closed,22/10/2024
+CLM-11191,2024,4,Catalonia,Commercial Fleet,Third-party liability,499772.81,Closed,11/10/2024
+CLM-11192,2024,4,Catalonia,Commercial Fleet,Collision,106334.79,Closed,23/11/2024
+CLM-11193,2024,4,Catalonia,Commercial Fleet,Third-party liability,343277.09,Closed,09/12/2024
+CLM-11194,2024,4,Catalonia,Commercial Fleet,Collision,253141.39,Closed,19/10/2024
+CLM-11195,2024,4,Catalonia,Commercial Fleet,Collision,252560.22,Open,29/10/2024
+CLM-11196,2024,4,Catalonia,Commercial Fleet,Third-party liability,509273.56,Open,29/12/2024
+CLM-11197,2024,4,Catalonia,Commercial Fleet,Collision,320468.98,Closed,20/12/2024
+CLM-11198,2024,4,Catalonia,Commercial Fleet,Weather damage,245103.09,Closed,26/12/2024
+CLM-11199,2024,4,Catalonia,Commercial Fleet,Theft,577287.76,Closed,09/10/2024
+CLM-11200,2024,4,Catalonia,Commercial Fleet,Collision,357614.61,Open,06/12/2024
+CLM-11201,2024,4,Catalonia,Commercial Fleet,Collision,215833.71,Closed,30/11/2024
+CLM-11202,2024,4,Catalonia,Motorcycle,Collision,486981.81,Closed,26/10/2024
+CLM-11203,2024,4,Catalonia,Private Motor,Weather damage,135103.33,Closed,23/11/2024
+CLM-11204,2024,4,Catalonia,Private Motor,Collision,463927.08,Open,27/12/2024
+CLM-11205,2024,4,Catalonia,Private Motor,Collision,195146.2,Closed,11/12/2024
+CLM-11206,2024,4,Catalonia,Private Motor,Theft,821904.29,Open,30/11/2024
+CLM-11207,2024,4,Catalonia,Private Motor,Total loss,654293.98,Closed,16/10/2024
+CLM-11208,2024,4,Catalonia,Private Motor,Theft,425909.86,Closed,15/12/2024
+CLM-11209,2024,4,Catalonia,Private Motor,Collision,697851.66,Closed,26/10/2024
+CLM-11210,2024,4,Catalonia,Private Motor,Third-party liability,645937.99,Closed,09/12/2024
+CLM-11211,2024,4,Catalonia,Private Motor,Total loss,471669.85,Closed,19/11/2024
+CLM-11212,2024,4,Catalonia,Private Motor,Third-party liability,539295.16,Open,21/11/2024
+CLM-11213,2024,4,Catalonia,Private Motor,Collision,302020.79,Closed,29/11/2024
+CLM-11214,2024,4,Catalonia,Private Motor,Windscreen,40185.07,Closed,24/11/2024
+CLM-11215,2024,4,Catalonia,Private Motor,Collision,299213.24,Closed,11/10/2024
+CLM-11216,2024,4,Catalonia,Private Motor,Collision,769106.34,Open,20/11/2024
+CLM-11217,2024,4,Catalonia,Private Motor,Windscreen,58957.97,Closed,07/12/2024
+CLM-11218,2024,4,Catalonia,Private Motor,Weather damage,183767.98,Open,12/11/2024
+CLM-11219,2024,4,Catalonia,Private Motor,Windscreen,134269.38,Closed,28/10/2024
+CLM-11220,2024,4,Catalonia,Private Motor,Total loss,613475.79,Closed,03/10/2024
+CLM-11221,2024,4,Catalonia,Private Motor,Windscreen,83864.07,Open,20/11/2024
+CLM-11222,2024,4,Catalonia,Private Motor,Weather damage,306761.19,Open,21/10/2024
+CLM-11223,2024,4,Catalonia,Private Motor,Third-party liability,594507.29,Closed,02/12/2024
+CLM-11224,2024,4,Catalonia,Private Motor,Theft,1084712.14,Open,13/10/2024
+CLM-11225,2024,4,Catalonia,Private Motor,Theft,574040.41,Closed,18/10/2024
+CLM-11226,2024,4,Catalonia,Private Motor,Total loss,2614429.47,Closed,27/12/2024
+CLM-11227,2024,4,Catalonia,Private Motor,Third-party liability,1829848.95,Closed,26/10/2024
+CLM-11228,2024,4,Catalonia,Private Motor,Weather damage,253444.0,Open,22/10/2024
+CLM-11229,2024,4,Catalonia,Private Motor,Collision,407912.9,Open,28/11/2024
+CLM-11230,2024,4,Catalonia,Private Motor,Third-party liability,490632.72,Closed,04/11/2024
+CLM-11231,2024,4,Catalonia,Private Motor,Collision,641678.89,Closed,03/11/2024
+CLM-11232,2024,4,Galicia,Commercial Fleet,Third-party liability,977803.63,Closed,01/10/2024
+CLM-11233,2024,4,Galicia,Commercial Fleet,Third-party liability,777055.67,Closed,26/12/2024
+CLM-11234,2024,4,Galicia,Commercial Fleet,Collision,246969.68,Open,14/10/2024
+CLM-11235,2024,4,Galicia,Commercial Fleet,Collision,493091.74,Closed,16/12/2024
+CLM-11236,2024,4,Galicia,Commercial Fleet,Collision,197661.84,Closed,12/12/2024
+CLM-11237,2024,4,Galicia,Commercial Fleet,Weather damage,416339.12,Closed,10/10/2024
+CLM-11238,2024,4,Galicia,Private Motor,Third-party liability,743154.24,Closed,20/11/2024
+CLM-11239,2024,4,Galicia,Private Motor,Third-party liability,1625624.45,Closed,17/12/2024
+CLM-11240,2024,4,Galicia,Private Motor,Third-party liability,460657.48,Closed,25/10/2024
+CLM-11241,2024,4,Galicia,Private Motor,Weather damage,314237.08,Closed,21/10/2024
+CLM-11242,2024,4,Galicia,Private Motor,Collision,293070.52,Closed,04/12/2024
+CLM-11243,2024,4,Galicia,Private Motor,Total loss,1895684.49,Closed,11/12/2024
+CLM-11244,2024,4,Madrid,Commercial Fleet,Total loss,1531747.8,Open,14/10/2024
+CLM-11245,2024,4,Madrid,Commercial Fleet,Collision,131000.56,Closed,16/11/2024
+CLM-11246,2024,4,Madrid,Commercial Fleet,Total loss,912676.63,Closed,26/11/2024
+CLM-11247,2024,4,Madrid,Commercial Fleet,Collision,186888.37,Closed,22/10/2024
+CLM-11248,2024,4,Madrid,Commercial Fleet,Theft,223587.7,Open,31/12/2024
+CLM-11249,2024,4,Madrid,Commercial Fleet,Weather damage,427703.32,Closed,29/12/2024
+CLM-11250,2024,4,Madrid,Commercial Fleet,Collision,646904.51,Closed,15/10/2024
+CLM-11251,2024,4,Madrid,Commercial Fleet,Collision,187340.87,Closed,13/12/2024
+CLM-11252,2024,4,Madrid,Commercial Fleet,Theft,517490.7,Closed,14/12/2024
+CLM-11253,2024,4,Madrid,Commercial Fleet,Collision,320876.2,Closed,06/11/2024
+CLM-11254,2024,4,Madrid,Commercial Fleet,Third-party liability,1051303.73,Open,30/11/2024
+CLM-11255,2024,4,Madrid,Commercial Fleet,Collision,250234.85,Closed,26/11/2024
+CLM-11256,2024,4,Madrid,Commercial Fleet,Third-party liability,713423.21,Closed,09/12/2024
+CLM-11257,2024,4,Madrid,Commercial Fleet,Total loss,1016025.09,Closed,24/10/2024
+CLM-11258,2024,4,Madrid,Commercial Fleet,Weather damage,245698.29,Open,23/12/2024
+CLM-11259,2024,4,Madrid,Commercial Fleet,Collision,417435.42,Closed,06/11/2024
+CLM-11260,2024,4,Madrid,Commercial Fleet,Third-party liability,402561.55,Open,27/12/2024
+CLM-11261,2024,4,Madrid,Motorcycle,Third-party liability,970964.86,Open,18/11/2024
+CLM-11262,2024,4,Madrid,Motorcycle,Collision,725427.17,Closed,12/12/2024
+CLM-11263,2024,4,Madrid,Motorcycle,Collision,634588.33,Open,01/10/2024
+CLM-11264,2024,4,Madrid,Private Motor,Third-party liability,1206357.06,Closed,05/11/2024
+CLM-11265,2024,4,Madrid,Private Motor,Windscreen,38196.82,Open,07/10/2024
+CLM-11266,2024,4,Madrid,Private Motor,Third-party liability,1041915.56,Closed,17/10/2024
+CLM-11267,2024,4,Madrid,Private Motor,Theft,329943.99,Closed,09/10/2024
+CLM-11268,2024,4,Madrid,Private Motor,Theft,274574.17,Closed,06/10/2024
+CLM-11269,2024,4,Madrid,Private Motor,Collision,255582.9,Closed,18/10/2024
+CLM-11270,2024,4,Madrid,Private Motor,Windscreen,45399.64,Closed,24/12/2024
+CLM-11271,2024,4,Madrid,Private Motor,Third-party liability,396145.96,Closed,11/11/2024
+CLM-11272,2024,4,Madrid,Private Motor,Third-party liability,591495.49,Closed,13/12/2024
+CLM-11273,2024,4,Madrid,Private Motor,Windscreen,44992.5,Closed,07/11/2024
+CLM-11274,2024,4,Madrid,Private Motor,Collision,344227.36,Closed,31/12/2024
+CLM-11275,2024,4,Madrid,Private Motor,Collision,500445.22,Closed,23/11/2024
+CLM-11276,2024,4,Madrid,Private Motor,Third-party liability,863112.63,Open,13/12/2024
+CLM-11277,2024,4,Madrid,Private Motor,Collision,527277.74,Closed,17/10/2024
+CLM-11278,2024,4,Madrid,Private Motor,Windscreen,80173.14,Closed,23/10/2024
+CLM-11279,2024,4,Madrid,Private Motor,Windscreen,34825.23,Closed,04/12/2024
+CLM-11280,2024,4,Madrid,Private Motor,Collision,773674.26,Open,17/11/2024
+CLM-11281,2024,4,Madrid,Private Motor,Collision,363740.58,Open,13/10/2024
+CLM-11282,2024,4,Madrid,Private Motor,Collision,407045.97,Open,20/11/2024
+CLM-11283,2024,4,Madrid,Private Motor,Total loss,2024268.17,Closed,12/12/2024
+CLM-11284,2024,4,Madrid,Private Motor,Total loss,1476562.88,Closed,28/12/2024
+CLM-11285,2024,4,Madrid,Private Motor,Collision,598806.67,Closed,25/12/2024
+CLM-11286,2024,4,Madrid,Private Motor,Third-party liability,1138788.15,Closed,16/11/2024
+CLM-11287,2024,4,Madrid,Private Motor,Windscreen,30394.78,Closed,08/11/2024
+CLM-11288,2024,4,Madrid,Private Motor,Collision,441521.66,Open,20/11/2024
+CLM-11289,2024,4,Valencia,Commercial Fleet,Third-party liability,1100796.28,Closed,01/11/2024
+CLM-11290,2024,4,Valencia,Commercial Fleet,Total loss,736368.28,Closed,01/12/2024
+CLM-11291,2024,4,Valencia,Commercial Fleet,Total loss,1398033.84,Closed,21/12/2024
+CLM-11292,2024,4,Valencia,Commercial Fleet,Collision,1018878.26,Closed,16/12/2024
+CLM-11293,2024,4,Valencia,Commercial Fleet,Theft,747783.7,Open,25/11/2024
+CLM-11294,2024,4,Valencia,Commercial Fleet,Collision,200653.86,Closed,18/11/2024
+CLM-11295,2024,4,Valencia,Commercial Fleet,Collision,154781.45,Closed,24/11/2024
+CLM-11296,2024,4,Valencia,Commercial Fleet,Windscreen,41510.38,Open,08/10/2024
+CLM-11297,2024,4,Valencia,Private Motor,Collision,474574.66,Closed,20/12/2024
+CLM-11298,2024,4,Valencia,Private Motor,Windscreen,46093.61,Closed,24/12/2024
+CLM-11299,2024,4,Valencia,Private Motor,Collision,391817.95,Closed,02/12/2024
+CLM-11300,2024,4,Valencia,Private Motor,Windscreen,39056.14,Closed,26/12/2024
+CLM-11301,2024,4,Valencia,Private Motor,Collision,267576.87,Closed,17/12/2024
+CLM-11302,2024,4,Valencia,Private Motor,Theft,422182.06,Closed,29/10/2024
+CLM-11303,2024,4,Valencia,Private Motor,Collision,193183.3,Open,15/12/2024
+CLM-11304,2024,4,Valencia,Private Motor,Third-party liability,814345.06,Closed,10/12/2024
+CLM-11305,2024,4,Valencia,Private Motor,Collision,213954.57,Closed,24/10/2024
+CLM-11306,2024,4,Valencia,Private Motor,Theft,487049.12,Open,06/12/2024
+CLM-11307,2024,4,Valencia,Private Motor,Weather damage,386867.1,Closed,09/11/2024
+CLM-11308,2024,4,Valencia,Private Motor,Theft,451225.94,Open,01/11/2024
+CLM-11309,2024,4,Valencia,Private Motor,Third-party liability,1273871.51,Closed,01/10/2024
+CLM-11310,2024,4,Valencia,Private Motor,Theft,513399.12,Closed,19/11/2024
+CLM-11311,2024,4,Valencia,Private Motor,Collision,439961.32,Closed,02/10/2024
+CLM-11312,2024,4,Valencia,Private Motor,Weather damage,123473.21,Closed,29/12/2024
+CLM-11313,2024,4,Valencia,Private Motor,Theft,537309.93,Closed,29/10/2024
+CLM-11314,2024,4,Valencia,Private Motor,Total loss,1303963.75,Closed,24/10/2024
+CLM-11315,2025,1,Andalusia,Commercial Fleet,Windscreen,55752.35,Open,12/03/2025
+CLM-11316,2025,1,Andalusia,Commercial Fleet,Collision,302886.53,Closed,07/03/2025
+CLM-11317,2025,1,Andalusia,Commercial Fleet,Third-party liability,575577.16,Open,04/02/2025
+CLM-11318,2025,1,Andalusia,Commercial Fleet,Collision,166801.82,Open,19/01/2025
+CLM-11319,2025,1,Andalusia,Commercial Fleet,Total loss,1163133.59,Closed,20/03/2025
+CLM-11320,2025,1,Andalusia,Commercial Fleet,Collision,338178.27,Closed,26/02/2025
+CLM-11321,2025,1,Andalusia,Commercial Fleet,Total loss,409377.56,Closed,25/03/2025
+CLM-11322,2025,1,Andalusia,Commercial Fleet,Total loss,1682875.28,Closed,09/03/2025
+CLM-11323,2025,1,Andalusia,Commercial Fleet,Theft,856631.69,Open,01/01/2025
+CLM-11324,2025,1,Andalusia,Commercial Fleet,Total loss,999615.92,Open,27/02/2025
+CLM-11325,2025,1,Andalusia,Commercial Fleet,Windscreen,63466.44,Closed,16/02/2025
+CLM-11326,2025,1,Andalusia,Motorcycle,Theft,805939.01,Open,18/03/2025
+CLM-11327,2025,1,Andalusia,Motorcycle,Collision,321564.14,Open,14/03/2025
+CLM-11328,2025,1,Andalusia,Motorcycle,Theft,748013.06,Open,09/03/2025
+CLM-11329,2025,1,Andalusia,Motorcycle,Collision,396811.53,Open,20/02/2025
+CLM-11330,2025,1,Andalusia,Motorcycle,Total loss,1448084.91,Closed,20/02/2025
+CLM-11331,2025,1,Andalusia,Motorcycle,Third-party liability,677358.85,Open,17/02/2025
+CLM-11332,2025,1,Andalusia,Private Motor,Collision,496768.55,Closed,06/02/2025
+CLM-11333,2025,1,Andalusia,Private Motor,Collision,436227.19,Closed,05/01/2025
+CLM-11334,2025,1,Andalusia,Private Motor,Collision,129721.81,Closed,22/03/2025
+CLM-11335,2025,1,Andalusia,Private Motor,Third-party liability,1047433.39,Closed,06/03/2025
+CLM-11336,2025,1,Andalusia,Private Motor,Collision,226370.11,Open,23/01/2025
+CLM-11337,2025,1,Andalusia,Private Motor,Weather damage,170706.84,Closed,29/03/2025
+CLM-11338,2025,1,Andalusia,Private Motor,Weather damage,415067.93,Open,17/02/2025
+CLM-11339,2025,1,Andalusia,Private Motor,Weather damage,153251.54,Closed,04/01/2025
+CLM-11340,2025,1,Andalusia,Private Motor,Collision,471306.9,Open,25/03/2025
+CLM-11341,2025,1,Andalusia,Private Motor,Theft,405783.96,Closed,23/02/2025
+CLM-11342,2025,1,Andalusia,Private Motor,Theft,426728.83,Closed,19/03/2025
+CLM-11343,2025,1,Andalusia,Private Motor,Total loss,1342623.15,Open,05/02/2025
+CLM-11344,2025,1,Andalusia,Private Motor,Collision,511590.12,Open,27/01/2025
+CLM-11345,2025,1,Andalusia,Private Motor,Theft,266489.53,Open,10/02/2025
+CLM-11346,2025,1,Andalusia,Private Motor,Theft,492685.72,Open,05/02/2025
+CLM-11347,2025,1,Andalusia,Private Motor,Windscreen,42405.71,Closed,05/03/2025
+CLM-11348,2025,1,Andalusia,Private Motor,Total loss,810927.34,Open,11/02/2025
+CLM-11349,2025,1,Andalusia,Private Motor,Collision,494880.02,Closed,01/03/2025
+CLM-11350,2025,1,Andalusia,Private Motor,Theft,539295.23,Open,25/01/2025
+CLM-11351,2025,1,Andalusia,Private Motor,Weather damage,383098.14,Open,30/03/2025
+CLM-11352,2025,1,Basque Country,Commercial Fleet,Collision,709657.91,Closed,17/01/2025
+CLM-11353,2025,1,Basque Country,Commercial Fleet,Theft,477794.4,Closed,05/02/2025
+CLM-11354,2025,1,Basque Country,Commercial Fleet,Third-party liability,1559091.4,Open,01/03/2025
+CLM-11355,2025,1,Basque Country,Commercial Fleet,Collision,259578.25,Open,05/01/2025
+CLM-11356,2025,1,Basque Country,Commercial Fleet,Theft,680165.83,Closed,27/01/2025
+CLM-11357,2025,1,Basque Country,Commercial Fleet,Collision,426873.46,Open,06/03/2025
+CLM-11358,2025,1,Basque Country,Commercial Fleet,Weather damage,239698.53,Open,03/02/2025
+CLM-11359,2025,1,Basque Country,Commercial Fleet,Collision,259863.74,Closed,01/02/2025
+CLM-11360,2025,1,Basque Country,Motorcycle,Collision,663278.25,Closed,15/02/2025
+CLM-11361,2025,1,Basque Country,Private Motor,Collision,425804.11,Open,22/02/2025
+CLM-11362,2025,1,Basque Country,Private Motor,Third-party liability,1222592.97,Closed,02/01/2025
+CLM-11363,2025,1,Basque Country,Private Motor,Weather damage,302432.56,Closed,25/03/2025
+CLM-11364,2025,1,Basque Country,Private Motor,Collision,393624.46,Closed,01/01/2025
+CLM-11365,2025,1,Basque Country,Private Motor,Weather damage,318830.69,Open,04/01/2025
+CLM-11366,2025,1,Catalonia,Commercial Fleet,Third-party liability,637273.5,Open,25/03/2025
+CLM-11367,2025,1,Catalonia,Commercial Fleet,Third-party liability,1534500.5,Open,23/01/2025
+CLM-11368,2025,1,Catalonia,Commercial Fleet,Theft,267288.1,Closed,10/01/2025
+CLM-11369,2025,1,Catalonia,Commercial Fleet,Theft,465898.74,Open,14/01/2025
+CLM-11370,2025,1,Catalonia,Commercial Fleet,Theft,436279.32,Closed,24/03/2025
+CLM-11371,2025,1,Catalonia,Commercial Fleet,Third-party liability,1773741.26,Open,10/01/2025
+CLM-11372,2025,1,Catalonia,Commercial Fleet,Total loss,1063160.97,Closed,12/03/2025
+CLM-11373,2025,1,Catalonia,Commercial Fleet,Third-party liability,657369.39,Open,20/03/2025
+CLM-11374,2025,1,Catalonia,Commercial Fleet,Theft,275838.21,Closed,30/01/2025
+CLM-11375,2025,1,Catalonia,Commercial Fleet,Total loss,615122.46,Open,14/02/2025
+CLM-11376,2025,1,Catalonia,Commercial Fleet,Collision,404304.03,Open,22/02/2025
+CLM-11377,2025,1,Catalonia,Commercial Fleet,Third-party liability,508540.99,Closed,08/03/2025
+CLM-11378,2025,1,Catalonia,Commercial Fleet,Collision,193732.39,Closed,09/02/2025
+CLM-11379,2025,1,Catalonia,Commercial Fleet,Windscreen,96650.65,Open,14/03/2025
+CLM-11380,2025,1,Catalonia,Commercial Fleet,Windscreen,84991.2,Closed,02/01/2025
+CLM-11381,2025,1,Catalonia,Commercial Fleet,Total loss,792628.75,Open,08/01/2025
+CLM-11382,2025,1,Catalonia,Commercial Fleet,Windscreen,24085.22,Open,21/03/2025
+CLM-11383,2025,1,Catalonia,Motorcycle,Collision,441620.65,Closed,14/01/2025
+CLM-11384,2025,1,Catalonia,Private Motor,Third-party liability,673776.2,Open,31/03/2025
+CLM-11385,2025,1,Catalonia,Private Motor,Third-party liability,1124270.71,Closed,16/01/2025
+CLM-11386,2025,1,Catalonia,Private Motor,Theft,329910.95,Open,29/01/2025
+CLM-11387,2025,1,Catalonia,Private Motor,Collision,514340.44,Open,13/03/2025
+CLM-11388,2025,1,Catalonia,Private Motor,Weather damage,338999.95,Open,24/01/2025
+CLM-11389,2025,1,Catalonia,Private Motor,Collision,173600.94,Closed,23/01/2025
+CLM-11390,2025,1,Catalonia,Private Motor,Third-party liability,991921.48,Closed,14/02/2025
+CLM-11391,2025,1,Catalonia,Private Motor,Third-party liability,549791.6,Open,07/02/2025
+CLM-11392,2025,1,Catalonia,Private Motor,Collision,247853.35,Open,01/03/2025
+CLM-11393,2025,1,Catalonia,Private Motor,Third-party liability,643510.11,Open,03/03/2025
+CLM-11394,2025,1,Catalonia,Private Motor,Weather damage,362595.41,Closed,04/02/2025
+CLM-11395,2025,1,Catalonia,Private Motor,Third-party liability,759654.58,Closed,02/03/2025
+CLM-11396,2025,1,Catalonia,Private Motor,Collision,468725.55,Open,23/03/2025
+CLM-11397,2025,1,Catalonia,Private Motor,Collision,400153.49,Closed,23/01/2025
+CLM-11398,2025,1,Catalonia,Private Motor,Windscreen,85789.83,Closed,01/01/2025
+CLM-11399,2025,1,Catalonia,Private Motor,Theft,764879.68,Open,19/03/2025
+CLM-11400,2025,1,Catalonia,Private Motor,Collision,336228.22,Closed,09/02/2025
+CLM-11401,2025,1,Catalonia,Private Motor,Weather damage,538862.59,Closed,04/02/2025
+CLM-11402,2025,1,Catalonia,Private Motor,Third-party liability,785855.64,Closed,26/02/2025
+CLM-11403,2025,1,Catalonia,Private Motor,Windscreen,46010.82,Closed,01/02/2025
+CLM-11404,2025,1,Catalonia,Private Motor,Collision,246303.84,Closed,25/01/2025
+CLM-11405,2025,1,Catalonia,Private Motor,Windscreen,45198.25,Closed,28/01/2025
+CLM-11406,2025,1,Catalonia,Private Motor,Collision,154918.73,Closed,18/01/2025
+CLM-11407,2025,1,Catalonia,Private Motor,Windscreen,100234.08,Open,01/01/2025
+CLM-11408,2025,1,Catalonia,Private Motor,Collision,256347.83,Closed,27/01/2025
+CLM-11409,2025,1,Catalonia,Private Motor,Windscreen,127666.36,Closed,17/01/2025
+CLM-11410,2025,1,Galicia,Commercial Fleet,Third-party liability,970508.03,Closed,28/01/2025
+CLM-11411,2025,1,Galicia,Commercial Fleet,Collision,360682.31,Closed,09/02/2025
+CLM-11412,2025,1,Galicia,Commercial Fleet,Collision,409231.04,Open,25/03/2025
+CLM-11413,2025,1,Galicia,Commercial Fleet,Theft,535636.89,Closed,15/01/2025
+CLM-11414,2025,1,Galicia,Motorcycle,Collision,689212.21,Closed,13/01/2025
+CLM-11415,2025,1,Galicia,Private Motor,Total loss,1535594.56,Open,02/02/2025
+CLM-11416,2025,1,Galicia,Private Motor,Third-party liability,1357980.96,Open,03/01/2025
+CLM-11417,2025,1,Galicia,Private Motor,Windscreen,79000.18,Open,15/03/2025
+CLM-11418,2025,1,Galicia,Private Motor,Third-party liability,851713.07,Closed,09/03/2025
+CLM-11419,2025,1,Galicia,Private Motor,Collision,241451.4,Open,21/03/2025
+CLM-11420,2025,1,Madrid,Commercial Fleet,Third-party liability,533072.91,Closed,04/01/2025
+CLM-11421,2025,1,Madrid,Commercial Fleet,Third-party liability,528648.63,Open,20/02/2025
+CLM-11422,2025,1,Madrid,Commercial Fleet,Collision,137926.27,Open,04/03/2025
+CLM-11423,2025,1,Madrid,Commercial Fleet,Third-party liability,945096.9,Closed,06/02/2025
+CLM-11424,2025,1,Madrid,Commercial Fleet,Collision,544043.47,Closed,30/03/2025
+CLM-11425,2025,1,Madrid,Commercial Fleet,Third-party liability,1011488.57,Open,28/01/2025
+CLM-11426,2025,1,Madrid,Commercial Fleet,Third-party liability,472422.76,Closed,06/03/2025
+CLM-11427,2025,1,Madrid,Commercial Fleet,Collision,568823.75,Closed,09/03/2025
+CLM-11428,2025,1,Madrid,Commercial Fleet,Theft,350879.8,Closed,29/01/2025
+CLM-11429,2025,1,Madrid,Commercial Fleet,Theft,538440.91,Open,09/03/2025
+CLM-11430,2025,1,Madrid,Commercial Fleet,Collision,334990.63,Open,16/03/2025
+CLM-11431,2025,1,Madrid,Commercial Fleet,Collision,656652.91,Open,09/01/2025
+CLM-11432,2025,1,Madrid,Commercial Fleet,Theft,384471.92,Open,03/03/2025
+CLM-11433,2025,1,Madrid,Commercial Fleet,Collision,375164.04,Closed,23/03/2025
+CLM-11434,2025,1,Madrid,Commercial Fleet,Windscreen,53650.24,Open,08/02/2025
+CLM-11435,2025,1,Madrid,Motorcycle,Theft,653378.21,Closed,29/03/2025
+CLM-11436,2025,1,Madrid,Motorcycle,Third-party liability,1256909.68,Closed,19/01/2025
+CLM-11437,2025,1,Madrid,Motorcycle,Total loss,1666257.08,Closed,26/02/2025
+CLM-11438,2025,1,Madrid,Motorcycle,Collision,243894.56,Closed,23/01/2025
+CLM-11439,2025,1,Madrid,Motorcycle,Third-party liability,862254.55,Open,04/03/2025
+CLM-11440,2025,1,Madrid,Private Motor,Collision,577994.5,Open,12/01/2025
+CLM-11441,2025,1,Madrid,Private Motor,Theft,362990.97,Closed,25/03/2025
+CLM-11442,2025,1,Madrid,Private Motor,Theft,251843.82,Closed,27/03/2025
+CLM-11443,2025,1,Madrid,Private Motor,Collision,603569.09,Closed,04/01/2025
+CLM-11444,2025,1,Madrid,Private Motor,Collision,207828.57,Closed,02/03/2025
+CLM-11445,2025,1,Madrid,Private Motor,Collision,238623.29,Closed,21/02/2025
+CLM-11446,2025,1,Madrid,Private Motor,Collision,203867.65,Open,12/03/2025
+CLM-11447,2025,1,Madrid,Private Motor,Total loss,1624910.3,Closed,29/03/2025
+CLM-11448,2025,1,Madrid,Private Motor,Third-party liability,571546.11,Open,23/03/2025
+CLM-11449,2025,1,Madrid,Private Motor,Third-party liability,472120.87,Closed,05/02/2025
+CLM-11450,2025,1,Madrid,Private Motor,Third-party liability,414524.15,Open,22/03/2025
+CLM-11451,2025,1,Madrid,Private Motor,Collision,356513.33,Open,30/03/2025
+CLM-11452,2025,1,Madrid,Private Motor,Theft,302658.93,Open,19/03/2025
+CLM-11453,2025,1,Madrid,Private Motor,Third-party liability,1554438.9,Open,05/03/2025
+CLM-11454,2025,1,Madrid,Private Motor,Collision,704968.8,Closed,13/02/2025
+CLM-11455,2025,1,Madrid,Private Motor,Collision,419725.54,Closed,05/02/2025
+CLM-11456,2025,1,Madrid,Private Motor,Collision,196870.71,Open,06/03/2025
+CLM-11457,2025,1,Madrid,Private Motor,Theft,471316.12,Closed,14/02/2025
+CLM-11458,2025,1,Madrid,Private Motor,Third-party liability,812004.45,Open,25/03/2025
+CLM-11459,2025,1,Madrid,Private Motor,Theft,335472.48,Closed,13/02/2025
+CLM-11460,2025,1,Madrid,Private Motor,Third-party liability,573756.61,Open,23/03/2025
+CLM-11461,2025,1,Madrid,Private Motor,Third-party liability,909037.66,Closed,26/02/2025
+CLM-11462,2025,1,Madrid,Private Motor,Collision,424303.59,Closed,13/01/2025
+CLM-11463,2025,1,Madrid,Private Motor,Third-party liability,759696.78,Open,27/01/2025
+CLM-11464,2025,1,Madrid,Private Motor,Windscreen,28816.1,Open,19/01/2025
+CLM-11465,2025,1,Valencia,Commercial Fleet,Third-party liability,466302.82,Closed,16/01/2025
+CLM-11466,2025,1,Valencia,Commercial Fleet,Total loss,928020.2,Closed,19/02/2025
+CLM-11467,2025,1,Valencia,Commercial Fleet,Theft,919360.85,Closed,22/03/2025
+CLM-11468,2025,1,Valencia,Commercial Fleet,Windscreen,39637.41,Open,01/02/2025
+CLM-11469,2025,1,Valencia,Commercial Fleet,Third-party liability,735703.36,Closed,11/02/2025
+CLM-11470,2025,1,Valencia,Commercial Fleet,Weather damage,93597.87,Open,04/03/2025
+CLM-11471,2025,1,Valencia,Commercial Fleet,Weather damage,185481.13,Open,25/01/2025
+CLM-11472,2025,1,Valencia,Commercial Fleet,Weather damage,435299.03,Closed,28/01/2025
+CLM-11473,2025,1,Valencia,Commercial Fleet,Weather damage,98076.73,Closed,27/01/2025
+CLM-11474,2025,1,Valencia,Motorcycle,Collision,375468.38,Closed,27/03/2025
+CLM-11475,2025,1,Valencia,Private Motor,Collision,483567.22,Closed,09/01/2025
+CLM-11476,2025,1,Valencia,Private Motor,Theft,725921.51,Closed,18/01/2025
+CLM-11477,2025,1,Valencia,Private Motor,Weather damage,379633.41,Closed,11/01/2025
+CLM-11478,2025,1,Valencia,Private Motor,Windscreen,47819.86,Open,11/03/2025
+CLM-11479,2025,1,Valencia,Private Motor,Third-party liability,359247.1,Closed,09/01/2025
+CLM-11480,2025,1,Valencia,Private Motor,Weather damage,139823.34,Closed,16/02/2025
+CLM-11481,2025,1,Valencia,Private Motor,Collision,359462.84,Closed,05/03/2025
+CLM-11482,2025,1,Valencia,Private Motor,Theft,1139711.47,Open,04/03/2025
+CLM-11483,2025,1,Valencia,Private Motor,Third-party liability,856944.47,Open,17/01/2025
+CLM-11484,2025,1,Valencia,Private Motor,Weather damage,278404.05,Open,07/03/2025
+CLM-11485,2025,1,Valencia,Private Motor,Weather damage,463270.74,Open,01/03/2025
+CLM-11486,2025,1,Valencia,Private Motor,Total loss,1018575.52,Open,26/02/2025
+CLM-11487,2025,1,Valencia,Private Motor,Collision,149276.03,Open,16/02/2025
+CLM-11488,2025,1,Valencia,Private Motor,Windscreen,87488.62,Open,30/01/2025
+CLM-11489,2025,1,Valencia,Private Motor,Theft,755161.34,Closed,10/03/2025
+CLM-11490,2025,2,Andalusia,Commercial Fleet,Collision,335981.13,Closed,17/06/2025
+CLM-11491,2025,2,Andalusia,Commercial Fleet,Collision,455370.26,Open,13/04/2025
+CLM-11492,2025,2,Andalusia,Commercial Fleet,Third-party liability,711706.06,Open,17/05/2025
+CLM-11493,2025,2,Andalusia,Commercial Fleet,Third-party liability,622477.61,Closed,14/06/2025
+CLM-11494,2025,2,Andalusia,Commercial Fleet,Weather damage,217108.21,Open,20/06/2025
+CLM-11495,2025,2,Andalusia,Commercial Fleet,Windscreen,31103.38,Closed,05/05/2025
+CLM-11496,2025,2,Andalusia,Commercial Fleet,Total loss,513964.95,Open,03/05/2025
+CLM-11497,2025,2,Andalusia,Commercial Fleet,Windscreen,43937.44,Closed,03/06/2025
+CLM-11498,2025,2,Andalusia,Commercial Fleet,Collision,373210.51,Open,24/04/2025
+CLM-11499,2025,2,Andalusia,Commercial Fleet,Collision,192637.54,Closed,17/06/2025
+CLM-11500,2025,2,Andalusia,Commercial Fleet,Windscreen,35069.22,Open,09/06/2025
+CLM-11501,2025,2,Andalusia,Commercial Fleet,Total loss,647903.86,Open,17/05/2025
+CLM-11502,2025,2,Andalusia,Commercial Fleet,Theft,298019.63,Open,23/05/2025
+CLM-11503,2025,2,Andalusia,Private Motor,Theft,357598.7,Closed,25/04/2025
+CLM-11504,2025,2,Andalusia,Private Motor,Windscreen,27113.45,Open,15/06/2025
+CLM-11505,2025,2,Andalusia,Private Motor,Windscreen,29483.54,Open,17/05/2025
+CLM-11506,2025,2,Andalusia,Private Motor,Theft,766919.2,Open,22/04/2025
+CLM-11507,2025,2,Andalusia,Private Motor,Theft,359920.11,Open,19/06/2025
+CLM-11508,2025,2,Andalusia,Private Motor,Collision,256838.12,Closed,09/04/2025
+CLM-11509,2025,2,Andalusia,Private Motor,Total loss,838872.15,Closed,06/05/2025
+CLM-11510,2025,2,Andalusia,Private Motor,Collision,220842.81,Closed,11/04/2025
+CLM-11511,2025,2,Andalusia,Private Motor,Weather damage,441239.35,Closed,26/06/2025
+CLM-11512,2025,2,Andalusia,Private Motor,Third-party liability,839408.94,Closed,14/06/2025
+CLM-11513,2025,2,Andalusia,Private Motor,Third-party liability,590801.19,Closed,09/06/2025
+CLM-11514,2025,2,Andalusia,Private Motor,Theft,981423.24,Open,07/05/2025
+CLM-11515,2025,2,Andalusia,Private Motor,Third-party liability,376528.06,Open,29/04/2025
+CLM-11516,2025,2,Andalusia,Private Motor,Theft,246659.73,Open,24/05/2025
+CLM-11517,2025,2,Andalusia,Private Motor,Total loss,636787.08,Closed,11/05/2025
+CLM-11518,2025,2,Andalusia,Private Motor,Total loss,619040.73,Closed,24/04/2025
+CLM-11519,2025,2,Andalusia,Private Motor,Theft,215259.87,Open,02/06/2025
+CLM-11520,2025,2,Andalusia,Private Motor,Collision,350071.53,Open,26/04/2025
+CLM-11521,2025,2,Andalusia,Private Motor,Third-party liability,551711.17,Open,20/06/2025
+CLM-11522,2025,2,Andalusia,Private Motor,Third-party liability,375489.02,Open,30/04/2025
+CLM-11523,2025,2,Andalusia,Private Motor,Collision,257801.5,Closed,09/05/2025
+CLM-11524,2025,2,Andalusia,Private Motor,Windscreen,43848.38,Closed,18/06/2025
+CLM-11525,2025,2,Andalusia,Private Motor,Third-party liability,639837.84,Open,02/06/2025
+CLM-11526,2025,2,Andalusia,Private Motor,Theft,525232.67,Open,08/05/2025
+CLM-11527,2025,2,Basque Country,Commercial Fleet,Windscreen,71579.57,Closed,10/06/2025
+CLM-11528,2025,2,Basque Country,Commercial Fleet,Theft,531798.61,Closed,26/05/2025
+CLM-11529,2025,2,Basque Country,Motorcycle,Collision,959814.76,Open,15/05/2025
+CLM-11530,2025,2,Basque Country,Private Motor,Third-party liability,498688.11,Open,29/06/2025
+CLM-11531,2025,2,Basque Country,Private Motor,Collision,404124.29,Closed,29/05/2025
+CLM-11532,2025,2,Basque Country,Private Motor,Collision,440752.3,Closed,26/05/2025
+CLM-11533,2025,2,Basque Country,Private Motor,Weather damage,342047.3,Open,12/05/2025
+CLM-11534,2025,2,Basque Country,Private Motor,Collision,538135.83,Closed,26/04/2025
+CLM-11535,2025,2,Basque Country,Private Motor,Windscreen,69085.37,Closed,23/05/2025
+CLM-11536,2025,2,Catalonia,Commercial Fleet,Third-party liability,763354.53,Open,08/05/2025
+CLM-11537,2025,2,Catalonia,Commercial Fleet,Total loss,860194.11,Open,29/06/2025
+CLM-11538,2025,2,Catalonia,Commercial Fleet,Theft,557600.56,Open,16/04/2025
+CLM-11539,2025,2,Catalonia,Commercial Fleet,Collision,647735.58,Closed,24/06/2025
+CLM-11540,2025,2,Catalonia,Commercial Fleet,Theft,1037804.77,Open,31/05/2025
+CLM-11541,2025,2,Catalonia,Commercial Fleet,Theft,307795.14,Closed,07/05/2025
+CLM-11542,2025,2,Catalonia,Commercial Fleet,Windscreen,20415.0,Closed,16/05/2025
+CLM-11543,2025,2,Catalonia,Commercial Fleet,Collision,360368.24,Open,29/04/2025
+CLM-11544,2025,2,Catalonia,Commercial Fleet,Third-party liability,620307.54,Closed,29/04/2025
+CLM-11545,2025,2,Catalonia,Commercial Fleet,Weather damage,207495.33,Closed,27/05/2025
+CLM-11546,2025,2,Catalonia,Commercial Fleet,Total loss,512919.8,Open,02/05/2025
+CLM-11547,2025,2,Catalonia,Commercial Fleet,Collision,314748.02,Open,05/05/2025
+CLM-11548,2025,2,Catalonia,Motorcycle,Theft,610192.66,Open,18/05/2025
+CLM-11549,2025,2,Catalonia,Motorcycle,Third-party liability,508340.99,Closed,04/04/2025
+CLM-11550,2025,2,Catalonia,Motorcycle,Collision,241001.84,Open,20/04/2025
+CLM-11551,2025,2,Catalonia,Motorcycle,Collision,616894.42,Open,02/05/2025
+CLM-11552,2025,2,Catalonia,Private Motor,Windscreen,103287.28,Closed,04/06/2025
+CLM-11553,2025,2,Catalonia,Private Motor,Third-party liability,1166259.87,Closed,16/04/2025
+CLM-11554,2025,2,Catalonia,Private Motor,Total loss,1604296.59,Open,01/06/2025
+CLM-11555,2025,2,Catalonia,Private Motor,Collision,246311.1,Closed,22/04/2025
+CLM-11556,2025,2,Catalonia,Private Motor,Weather damage,375411.22,Open,21/05/2025
+CLM-11557,2025,2,Catalonia,Private Motor,Theft,429039.65,Closed,29/04/2025
+CLM-11558,2025,2,Catalonia,Private Motor,Third-party liability,587930.13,Open,21/04/2025
+CLM-11559,2025,2,Catalonia,Private Motor,Collision,147863.65,Open,05/05/2025
+CLM-11560,2025,2,Catalonia,Private Motor,Theft,573250.83,Open,29/04/2025
+CLM-11561,2025,2,Catalonia,Private Motor,Total loss,2211586.3,Open,13/06/2025
+CLM-11562,2025,2,Catalonia,Private Motor,Windscreen,80744.08,Closed,23/05/2025
+CLM-11563,2025,2,Catalonia,Private Motor,Collision,221216.47,Closed,03/06/2025
+CLM-11564,2025,2,Catalonia,Private Motor,Collision,552707.4,Open,18/05/2025
+CLM-11565,2025,2,Catalonia,Private Motor,Third-party liability,761395.0,Closed,18/04/2025
+CLM-11566,2025,2,Catalonia,Private Motor,Collision,1467106.39,Open,25/05/2025
+CLM-11567,2025,2,Catalonia,Private Motor,Collision,434062.27,Open,09/06/2025
+CLM-11568,2025,2,Catalonia,Private Motor,Weather damage,139194.91,Closed,25/06/2025
+CLM-11569,2025,2,Catalonia,Private Motor,Collision,481304.14,Open,20/05/2025
+CLM-11570,2025,2,Catalonia,Private Motor,Third-party liability,1622507.89,Open,19/05/2025
+CLM-11571,2025,2,Catalonia,Private Motor,Collision,350985.45,Closed,17/05/2025
+CLM-11572,2025,2,Catalonia,Private Motor,Theft,578681.2,Closed,02/05/2025
+CLM-11573,2025,2,Catalonia,Private Motor,Theft,353402.39,Open,30/04/2025
+CLM-11574,2025,2,Catalonia,Private Motor,Total loss,968812.05,Open,26/06/2025
+CLM-11575,2025,2,Catalonia,Private Motor,Theft,477560.6,Closed,15/06/2025
+CLM-11576,2025,2,Galicia,Commercial Fleet,Weather damage,222297.3,Open,04/06/2025
+CLM-11577,2025,2,Galicia,Commercial Fleet,Theft,767011.18,Closed,21/06/2025
+CLM-11578,2025,2,Galicia,Motorcycle,Collision,514497.36,Open,29/05/2025
+CLM-11579,2025,2,Galicia,Motorcycle,Collision,786308.64,Closed,10/04/2025
+CLM-11580,2025,2,Galicia,Private Motor,Theft,484007.21,Open,28/06/2025
+CLM-11581,2025,2,Galicia,Private Motor,Collision,263776.95,Open,30/05/2025
+CLM-11582,2025,2,Galicia,Private Motor,Windscreen,31545.97,Closed,24/05/2025
+CLM-11583,2025,2,Galicia,Private Motor,Windscreen,109897.21,Open,12/06/2025
+CLM-11584,2025,2,Galicia,Private Motor,Windscreen,95809.97,Open,05/06/2025
+CLM-11585,2025,2,Madrid,Commercial Fleet,Theft,217533.44,Closed,21/04/2025
+CLM-11586,2025,2,Madrid,Commercial Fleet,Theft,330486.73,Open,14/06/2025
+CLM-11587,2025,2,Madrid,Commercial Fleet,Collision,212781.61,Open,02/05/2025
+CLM-11588,2025,2,Madrid,Commercial Fleet,Windscreen,39236.77,Open,28/05/2025
+CLM-11589,2025,2,Madrid,Commercial Fleet,Weather damage,298475.23,Open,21/04/2025
+CLM-11590,2025,2,Madrid,Commercial Fleet,Theft,246812.09,Closed,31/05/2025
+CLM-11591,2025,2,Madrid,Commercial Fleet,Third-party liability,1140050.05,Closed,23/04/2025
+CLM-11592,2025,2,Madrid,Commercial Fleet,Theft,289971.26,Closed,08/06/2025
+CLM-11593,2025,2,Madrid,Commercial Fleet,Collision,352124.54,Closed,24/04/2025
+CLM-11594,2025,2,Madrid,Commercial Fleet,Windscreen,37210.48,Closed,07/06/2025
+CLM-11595,2025,2,Madrid,Commercial Fleet,Theft,529144.63,Closed,06/05/2025
+CLM-11596,2025,2,Madrid,Commercial Fleet,Third-party liability,314790.26,Closed,18/05/2025
+CLM-11597,2025,2,Madrid,Commercial Fleet,Third-party liability,651403.56,Closed,10/04/2025
+CLM-11598,2025,2,Madrid,Commercial Fleet,Weather damage,188260.76,Open,13/05/2025
+CLM-11599,2025,2,Madrid,Motorcycle,Theft,370883.78,Closed,02/04/2025
+CLM-11600,2025,2,Madrid,Motorcycle,Collision,793461.24,Open,11/05/2025
+CLM-11601,2025,2,Madrid,Private Motor,Collision,242981.81,Closed,01/04/2025
+CLM-11602,2025,2,Madrid,Private Motor,Total loss,359414.82,Closed,31/05/2025
+CLM-11603,2025,2,Madrid,Private Motor,Total loss,898978.9,Closed,05/04/2025
+CLM-11604,2025,2,Madrid,Private Motor,Windscreen,122152.44,Open,24/05/2025
+CLM-11605,2025,2,Madrid,Private Motor,Weather damage,160367.21,Closed,10/05/2025
+CLM-11606,2025,2,Madrid,Private Motor,Theft,642668.89,Closed,09/06/2025
+CLM-11607,2025,2,Madrid,Private Motor,Collision,394352.06,Closed,13/06/2025
+CLM-11608,2025,2,Madrid,Private Motor,Weather damage,86373.17,Closed,10/06/2025
+CLM-11609,2025,2,Madrid,Private Motor,Collision,129820.24,Open,04/04/2025
+CLM-11610,2025,2,Madrid,Private Motor,Collision,606722.04,Closed,26/04/2025
+CLM-11611,2025,2,Madrid,Private Motor,Collision,377989.22,Open,21/04/2025
+CLM-11612,2025,2,Madrid,Private Motor,Weather damage,226630.0,Open,08/04/2025
+CLM-11613,2025,2,Madrid,Private Motor,Weather damage,124283.58,Open,03/05/2025
+CLM-11614,2025,2,Madrid,Private Motor,Collision,357055.02,Closed,02/04/2025
+CLM-11615,2025,2,Madrid,Private Motor,Collision,368185.49,Closed,06/06/2025
+CLM-11616,2025,2,Madrid,Private Motor,Theft,1066755.38,Closed,04/04/2025
+CLM-11617,2025,2,Madrid,Private Motor,Collision,349284.24,Open,23/05/2025
+CLM-11618,2025,2,Madrid,Private Motor,Total loss,398334.06,Open,29/06/2025
+CLM-11619,2025,2,Madrid,Private Motor,Weather damage,225994.95,Open,17/05/2025
+CLM-11620,2025,2,Madrid,Private Motor,Third-party liability,977821.3,Closed,29/06/2025
+CLM-11621,2025,2,Madrid,Private Motor,Collision,100978.23,Closed,27/05/2025
+CLM-11622,2025,2,Madrid,Private Motor,Total loss,1633517.06,Open,30/06/2025
+CLM-11623,2025,2,Madrid,Private Motor,Collision,237198.24,Open,29/06/2025
+CLM-11624,2025,2,Madrid,Private Motor,Third-party liability,551521.37,Open,29/06/2025
+CLM-11625,2025,2,Madrid,Private Motor,Collision,194134.18,Closed,12/04/2025
+CLM-11626,2025,2,Madrid,Private Motor,Total loss,904267.6,Open,04/04/2025
+CLM-11627,2025,2,Madrid,Private Motor,Third-party liability,676303.6,Open,15/04/2025
+CLM-11628,2025,2,Madrid,Private Motor,Collision,296267.15,Open,01/06/2025
+CLM-11629,2025,2,Madrid,Private Motor,Collision,321273.21,Closed,07/04/2025
+CLM-11630,2025,2,Valencia,Commercial Fleet,Windscreen,43864.17,Open,24/06/2025
+CLM-11631,2025,2,Valencia,Commercial Fleet,Weather damage,196281.97,Closed,22/06/2025
+CLM-11632,2025,2,Valencia,Commercial Fleet,Theft,256797.64,Open,15/04/2025
+CLM-11633,2025,2,Valencia,Commercial Fleet,Collision,217461.67,Closed,12/06/2025
+CLM-11634,2025,2,Valencia,Commercial Fleet,Third-party liability,776483.62,Closed,24/05/2025
+CLM-11635,2025,2,Valencia,Commercial Fleet,Third-party liability,1316080.39,Closed,25/06/2025
+CLM-11636,2025,2,Valencia,Commercial Fleet,Weather damage,349829.69,Closed,23/05/2025
+CLM-11637,2025,2,Valencia,Commercial Fleet,Third-party liability,902259.64,Open,02/05/2025
+CLM-11638,2025,2,Valencia,Private Motor,Third-party liability,648045.93,Closed,20/05/2025
+CLM-11639,2025,2,Valencia,Private Motor,Theft,565608.99,Open,28/05/2025
+CLM-11640,2025,2,Valencia,Private Motor,Collision,478253.02,Closed,15/06/2025
+CLM-11641,2025,2,Valencia,Private Motor,Third-party liability,900633.63,Open,15/05/2025
+CLM-11642,2025,2,Valencia,Private Motor,Third-party liability,559301.88,Closed,25/06/2025
+CLM-11643,2025,2,Valencia,Private Motor,Total loss,664274.81,Closed,08/05/2025
+CLM-11644,2025,2,Valencia,Private Motor,Third-party liability,779439.37,Open,10/05/2025
+CLM-11645,2025,2,Valencia,Private Motor,Third-party liability,434094.63,Open,12/05/2025
+CLM-11646,2025,2,Valencia,Private Motor,Weather damage,458373.0,Open,25/04/2025
+CLM-11647,2025,2,Valencia,Private Motor,Theft,542062.72,Closed,19/05/2025
+CLM-11648,2025,2,Valencia,Private Motor,Third-party liability,469281.19,Closed,19/04/2025
+CLM-11649,2025,2,Valencia,Private Motor,Windscreen,114860.02,Closed,12/06/2025
+CLM-11650,2025,2,Valencia,Private Motor,Third-party liability,1429219.77,Closed,09/04/2025
+CLM-11651,2025,2,Valencia,Private Motor,Theft,398661.96,Closed,09/06/2025
+CLM-11652,2025,2,Valencia,Private Motor,Total loss,721799.91,Open,21/06/2025
+CLM-11653,2025,2,Valencia,Private Motor,Collision,245507.02,Open,11/04/2025
+CLM-11654,2025,2,Valencia,Private Motor,Windscreen,74324.16,Closed,20/05/2025
+CLM-11655,2025,3,Andalusia,Commercial Fleet,Collision,262189.46,Closed,10/07/2025
+CLM-11656,2025,3,Andalusia,Commercial Fleet,Collision,113746.39,Closed,17/08/2025
+CLM-11657,2025,3,Andalusia,Commercial Fleet,Third-party liability,713323.62,Open,18/08/2025
+CLM-11658,2025,3,Andalusia,Commercial Fleet,Collision,238177.27,Closed,21/08/2025
+CLM-11659,2025,3,Andalusia,Commercial Fleet,Third-party liability,1393145.87,Closed,18/08/2025
+CLM-11660,2025,3,Andalusia,Commercial Fleet,Total loss,1024147.67,Closed,26/07/2025
+CLM-11661,2025,3,Andalusia,Commercial Fleet,Third-party liability,361979.23,Closed,23/08/2025
+CLM-11662,2025,3,Andalusia,Commercial Fleet,Total loss,1224883.15,Closed,15/07/2025
+CLM-11663,2025,3,Andalusia,Commercial Fleet,Collision,154059.54,Open,18/09/2025
+CLM-11664,2025,3,Andalusia,Commercial Fleet,Windscreen,45824.91,Closed,05/08/2025
+CLM-11665,2025,3,Andalusia,Commercial Fleet,Third-party liability,948853.76,Closed,07/09/2025
+CLM-11666,2025,3,Andalusia,Commercial Fleet,Third-party liability,837808.07,Closed,23/08/2025
+CLM-11667,2025,3,Andalusia,Commercial Fleet,Collision,315341.48,Open,28/09/2025
+CLM-11668,2025,3,Andalusia,Private Motor,Theft,367152.33,Closed,12/08/2025
+CLM-11669,2025,3,Andalusia,Private Motor,Theft,231852.63,Closed,29/08/2025
+CLM-11670,2025,3,Andalusia,Private Motor,Third-party liability,1143951.02,Closed,03/08/2025
+CLM-11671,2025,3,Andalusia,Private Motor,Theft,370389.87,Open,21/07/2025
+CLM-11672,2025,3,Andalusia,Private Motor,Collision,559239.8,Open,22/07/2025
+CLM-11673,2025,3,Andalusia,Private Motor,Collision,224028.71,Closed,02/07/2025
+CLM-11674,2025,3,Andalusia,Private Motor,Total loss,826242.83,Closed,21/07/2025
+CLM-11675,2025,3,Andalusia,Private Motor,Total loss,1451761.23,Closed,20/09/2025
+CLM-11676,2025,3,Andalusia,Private Motor,Collision,510641.62,Closed,10/08/2025
+CLM-11677,2025,3,Andalusia,Private Motor,Third-party liability,673959.88,Open,11/07/2025
+CLM-11678,2025,3,Andalusia,Private Motor,Third-party liability,821516.95,Closed,14/07/2025
+CLM-11679,2025,3,Andalusia,Private Motor,Theft,235181.57,Closed,05/07/2025
+CLM-11680,2025,3,Andalusia,Private Motor,Theft,441405.27,Closed,02/09/2025
+CLM-11681,2025,3,Andalusia,Private Motor,Theft,696815.33,Open,10/08/2025
+CLM-11682,2025,3,Andalusia,Private Motor,Theft,302060.63,Open,21/09/2025
+CLM-11683,2025,3,Andalusia,Private Motor,Total loss,1789550.54,Closed,21/09/2025
+CLM-11684,2025,3,Andalusia,Private Motor,Collision,617817.08,Open,16/07/2025
+CLM-11685,2025,3,Andalusia,Private Motor,Third-party liability,899600.5,Open,18/07/2025
+CLM-11686,2025,3,Andalusia,Private Motor,Collision,250907.92,Open,22/08/2025
+CLM-11687,2025,3,Andalusia,Private Motor,Theft,587297.26,Open,27/07/2025
+CLM-11688,2025,3,Andalusia,Private Motor,Collision,293976.29,Open,29/08/2025
+CLM-11689,2025,3,Basque Country,Commercial Fleet,Collision,219487.45,Closed,06/09/2025
+CLM-11690,2025,3,Basque Country,Commercial Fleet,Theft,265104.14,Closed,07/07/2025
+CLM-11691,2025,3,Basque Country,Commercial Fleet,Third-party liability,814231.33,Closed,22/07/2025
+CLM-11692,2025,3,Basque Country,Motorcycle,Collision,546853.3,Open,19/07/2025
+CLM-11693,2025,3,Basque Country,Private Motor,Weather damage,262396.58,Closed,05/08/2025
+CLM-11694,2025,3,Basque Country,Private Motor,Collision,418299.56,Open,25/08/2025
+CLM-11695,2025,3,Basque Country,Private Motor,Windscreen,74820.73,Open,12/07/2025
+CLM-11696,2025,3,Basque Country,Private Motor,Third-party liability,476705.1,Closed,24/08/2025
+CLM-11697,2025,3,Basque Country,Private Motor,Collision,469214.79,Open,18/08/2025
+CLM-11698,2025,3,Basque Country,Private Motor,Windscreen,37311.04,Open,03/09/2025
+CLM-11699,2025,3,Basque Country,Private Motor,Weather damage,344897.05,Open,11/09/2025
+CLM-11700,2025,3,Basque Country,Private Motor,Collision,554130.71,Open,29/08/2025
+CLM-11701,2025,3,Basque Country,Private Motor,Third-party liability,1532762.22,Closed,08/07/2025
+CLM-11702,2025,3,Basque Country,Private Motor,Third-party liability,891062.57,Closed,05/09/2025
+CLM-11703,2025,3,Basque Country,Private Motor,Windscreen,71759.98,Closed,20/07/2025
+CLM-11704,2025,3,Basque Country,Private Motor,Theft,706061.4,Open,23/09/2025
+CLM-11705,2025,3,Catalonia,Commercial Fleet,Total loss,408190.5,Open,14/08/2025
+CLM-11706,2025,3,Catalonia,Commercial Fleet,Collision,412060.71,Closed,03/08/2025
+CLM-11707,2025,3,Catalonia,Commercial Fleet,Collision,509656.31,Closed,21/08/2025
+CLM-11708,2025,3,Catalonia,Commercial Fleet,Collision,375662.23,Open,02/09/2025
+CLM-11709,2025,3,Catalonia,Commercial Fleet,Theft,905183.8,Open,17/07/2025
+CLM-11710,2025,3,Catalonia,Commercial Fleet,Collision,202623.51,Closed,12/08/2025
+CLM-11711,2025,3,Catalonia,Commercial Fleet,Third-party liability,873763.74,Open,03/08/2025
+CLM-11712,2025,3,Catalonia,Commercial Fleet,Collision,389690.9,Open,18/08/2025
+CLM-11713,2025,3,Catalonia,Commercial Fleet,Weather damage,180559.38,Closed,10/07/2025
+CLM-11714,2025,3,Catalonia,Commercial Fleet,Total loss,916057.71,Closed,05/09/2025
+CLM-11715,2025,3,Catalonia,Motorcycle,Collision,494762.09,Open,26/08/2025
+CLM-11716,2025,3,Catalonia,Motorcycle,Collision,511031.63,Open,03/08/2025
+CLM-11717,2025,3,Catalonia,Motorcycle,Windscreen,60820.93,Open,30/08/2025
+CLM-11718,2025,3,Catalonia,Motorcycle,Collision,662661.54,Open,04/09/2025
+CLM-11719,2025,3,Catalonia,Motorcycle,Third-party liability,1563744.59,Open,23/09/2025
+CLM-11720,2025,3,Catalonia,Motorcycle,Theft,393222.44,Open,09/09/2025
+CLM-11721,2025,3,Catalonia,Motorcycle,Third-party liability,1626206.47,Closed,05/09/2025
+CLM-11722,2025,3,Catalonia,Private Motor,Third-party liability,1661041.94,Closed,06/07/2025
+CLM-11723,2025,3,Catalonia,Private Motor,Weather damage,316864.15,Closed,18/08/2025
+CLM-11724,2025,3,Catalonia,Private Motor,Collision,598364.24,Closed,24/08/2025
+CLM-11725,2025,3,Catalonia,Private Motor,Collision,372281.86,Open,04/09/2025
+CLM-11726,2025,3,Catalonia,Private Motor,Third-party liability,1004283.94,Closed,07/08/2025
+CLM-11727,2025,3,Catalonia,Private Motor,Windscreen,50756.84,Closed,22/07/2025
+CLM-11728,2025,3,Catalonia,Private Motor,Windscreen,71930.98,Open,03/07/2025
+CLM-11729,2025,3,Catalonia,Private Motor,Collision,585730.75,Closed,05/09/2025
+CLM-11730,2025,3,Catalonia,Private Motor,Collision,373853.23,Closed,03/07/2025
+CLM-11731,2025,3,Catalonia,Private Motor,Windscreen,71734.76,Closed,20/08/2025
+CLM-11732,2025,3,Catalonia,Private Motor,Third-party liability,631461.02,Closed,03/07/2025
+CLM-11733,2025,3,Catalonia,Private Motor,Third-party liability,680764.46,Closed,01/08/2025
+CLM-11734,2025,3,Catalonia,Private Motor,Theft,375701.9,Closed,21/09/2025
+CLM-11735,2025,3,Catalonia,Private Motor,Collision,412224.14,Open,27/07/2025
+CLM-11736,2025,3,Catalonia,Private Motor,Third-party liability,624928.4,Closed,30/08/2025
+CLM-11737,2025,3,Catalonia,Private Motor,Collision,248297.3,Open,22/08/2025
+CLM-11738,2025,3,Catalonia,Private Motor,Third-party liability,487845.84,Open,11/07/2025
+CLM-11739,2025,3,Catalonia,Private Motor,Theft,501485.6,Closed,21/08/2025
+CLM-11740,2025,3,Catalonia,Private Motor,Total loss,908791.54,Closed,07/09/2025
+CLM-11741,2025,3,Catalonia,Private Motor,Total loss,3010551.9,Open,01/09/2025
+CLM-11742,2025,3,Catalonia,Private Motor,Collision,363199.25,Closed,02/08/2025
+CLM-11743,2025,3,Catalonia,Private Motor,Collision,391346.51,Open,30/08/2025
+CLM-11744,2025,3,Catalonia,Private Motor,Windscreen,38463.06,Closed,10/08/2025
+CLM-11745,2025,3,Catalonia,Private Motor,Collision,332749.36,Open,23/08/2025
+CLM-11746,2025,3,Catalonia,Private Motor,Third-party liability,1001287.34,Closed,01/07/2025
+CLM-11747,2025,3,Catalonia,Private Motor,Theft,648442.97,Open,03/07/2025
+CLM-11748,2025,3,Catalonia,Private Motor,Windscreen,87017.1,Open,03/09/2025
+CLM-11749,2025,3,Catalonia,Private Motor,Third-party liability,714248.29,Closed,13/07/2025
+CLM-11750,2025,3,Catalonia,Private Motor,Collision,343832.13,Open,30/08/2025
+CLM-11751,2025,3,Galicia,Commercial Fleet,Weather damage,286182.97,Closed,14/07/2025
+CLM-11752,2025,3,Galicia,Commercial Fleet,Weather damage,209241.0,Closed,28/08/2025
+CLM-11753,2025,3,Galicia,Commercial Fleet,Third-party liability,824789.66,Closed,17/08/2025
+CLM-11754,2025,3,Galicia,Commercial Fleet,Collision,168484.35,Closed,23/07/2025
+CLM-11755,2025,3,Galicia,Private Motor,Collision,132594.39,Closed,05/08/2025
+CLM-11756,2025,3,Galicia,Private Motor,Collision,513350.15,Open,28/08/2025
+CLM-11757,2025,3,Galicia,Private Motor,Theft,251055.41,Open,24/09/2025
+CLM-11758,2025,3,Galicia,Private Motor,Total loss,1479759.2,Closed,20/08/2025
+CLM-11759,2025,3,Galicia,Private Motor,Third-party liability,881364.26,Open,11/07/2025
+CLM-11760,2025,3,Madrid,Commercial Fleet,Third-party liability,882332.52,Open,30/08/2025
+CLM-11761,2025,3,Madrid,Commercial Fleet,Collision,301588.03,Open,16/07/2025
+CLM-11762,2025,3,Madrid,Commercial Fleet,Collision,181843.66,Closed,05/09/2025
+CLM-11763,2025,3,Madrid,Commercial Fleet,Third-party liability,624504.8,Closed,12/08/2025
+CLM-11764,2025,3,Madrid,Commercial Fleet,Collision,159630.42,Open,22/09/2025
+CLM-11765,2025,3,Madrid,Commercial Fleet,Third-party liability,453402.95,Closed,13/09/2025
+CLM-11766,2025,3,Madrid,Commercial Fleet,Weather damage,341036.11,Open,14/09/2025
+CLM-11767,2025,3,Madrid,Commercial Fleet,Third-party liability,1057669.05,Closed,11/08/2025
+CLM-11768,2025,3,Madrid,Commercial Fleet,Windscreen,50258.62,Closed,10/08/2025
+CLM-11769,2025,3,Madrid,Commercial Fleet,Theft,378033.16,Open,28/07/2025
+CLM-11770,2025,3,Madrid,Commercial Fleet,Third-party liability,648691.28,Closed,23/09/2025
+CLM-11771,2025,3,Madrid,Commercial Fleet,Total loss,603684.71,Closed,28/07/2025
+CLM-11772,2025,3,Madrid,Commercial Fleet,Theft,443648.86,Closed,29/09/2025
+CLM-11773,2025,3,Madrid,Commercial Fleet,Collision,601173.92,Open,05/07/2025
+CLM-11774,2025,3,Madrid,Motorcycle,Collision,292727.59,Closed,22/09/2025
+CLM-11775,2025,3,Madrid,Motorcycle,Theft,445552.57,Closed,11/08/2025
+CLM-11776,2025,3,Madrid,Private Motor,Weather damage,181459.48,Closed,21/07/2025
+CLM-11777,2025,3,Madrid,Private Motor,Third-party liability,876393.89,Closed,12/09/2025
+CLM-11778,2025,3,Madrid,Private Motor,Third-party liability,491886.3,Closed,08/08/2025
+CLM-11779,2025,3,Madrid,Private Motor,Total loss,1158939.88,Open,04/08/2025
+CLM-11780,2025,3,Madrid,Private Motor,Collision,251651.66,Open,05/07/2025
+CLM-11781,2025,3,Madrid,Private Motor,Collision,242463.39,Open,11/07/2025
+CLM-11782,2025,3,Madrid,Private Motor,Collision,397277.88,Open,20/07/2025
+CLM-11783,2025,3,Madrid,Private Motor,Third-party liability,300946.37,Open,27/09/2025
+CLM-11784,2025,3,Madrid,Private Motor,Theft,646699.83,Closed,27/07/2025
+CLM-11785,2025,3,Madrid,Private Motor,Collision,229901.85,Closed,17/09/2025
+CLM-11786,2025,3,Madrid,Private Motor,Windscreen,35797.69,Closed,24/09/2025
+CLM-11787,2025,3,Madrid,Private Motor,Total loss,1445685.15,Closed,11/09/2025
+CLM-11788,2025,3,Madrid,Private Motor,Theft,722181.38,Open,14/09/2025
+CLM-11789,2025,3,Madrid,Private Motor,Third-party liability,787459.77,Open,20/08/2025
+CLM-11790,2025,3,Madrid,Private Motor,Collision,248138.88,Closed,18/08/2025
+CLM-11791,2025,3,Madrid,Private Motor,Total loss,757894.65,Open,03/09/2025
+CLM-11792,2025,3,Madrid,Private Motor,Theft,648188.86,Closed,11/07/2025
+CLM-11793,2025,3,Madrid,Private Motor,Collision,469333.71,Closed,11/09/2025
+CLM-11794,2025,3,Madrid,Private Motor,Collision,307848.86,Open,19/08/2025
+CLM-11795,2025,3,Madrid,Private Motor,Third-party liability,461093.77,Open,09/09/2025
+CLM-11796,2025,3,Madrid,Private Motor,Collision,362361.05,Closed,25/07/2025
+CLM-11797,2025,3,Madrid,Private Motor,Weather damage,106917.11,Closed,13/07/2025
+CLM-11798,2025,3,Madrid,Private Motor,Windscreen,27828.3,Open,11/08/2025
+CLM-11799,2025,3,Madrid,Private Motor,Collision,601931.92,Closed,06/07/2025
+CLM-11800,2025,3,Madrid,Private Motor,Weather damage,295482.34,Open,23/08/2025
+CLM-11801,2025,3,Valencia,Commercial Fleet,Theft,725228.56,Closed,27/09/2025
+CLM-11802,2025,3,Valencia,Commercial Fleet,Weather damage,338609.66,Open,26/08/2025
+CLM-11803,2025,3,Valencia,Commercial Fleet,Third-party liability,1271225.21,Open,25/07/2025
+CLM-11804,2025,3,Valencia,Commercial Fleet,Weather damage,183816.27,Open,19/08/2025
+CLM-11805,2025,3,Valencia,Commercial Fleet,Theft,391435.39,Closed,27/08/2025
+CLM-11806,2025,3,Valencia,Commercial Fleet,Windscreen,28722.29,Open,20/07/2025
+CLM-11807,2025,3,Valencia,Motorcycle,Collision,150925.03,Closed,27/08/2025
+CLM-11808,2025,3,Valencia,Motorcycle,Weather damage,309124.33,Closed,20/07/2025
+CLM-11809,2025,3,Valencia,Motorcycle,Collision,828104.06,Closed,19/09/2025
+CLM-11810,2025,3,Valencia,Motorcycle,Third-party liability,949864.27,Open,16/08/2025
+CLM-11811,2025,3,Valencia,Private Motor,Total loss,920247.08,Closed,28/09/2025
+CLM-11812,2025,3,Valencia,Private Motor,Third-party liability,742715.82,Closed,23/09/2025
+CLM-11813,2025,3,Valencia,Private Motor,Collision,446874.07,Closed,15/07/2025
+CLM-11814,2025,3,Valencia,Private Motor,Weather damage,315184.42,Open,28/08/2025
+CLM-11815,2025,3,Valencia,Private Motor,Windscreen,89825.68,Closed,30/08/2025
+CLM-11816,2025,3,Valencia,Private Motor,Windscreen,148770.6,Closed,10/08/2025
+CLM-11817,2025,3,Valencia,Private Motor,Weather damage,219781.73,Closed,22/08/2025
+CLM-11818,2025,3,Valencia,Private Motor,Weather damage,329197.87,Closed,24/07/2025
+CLM-11819,2025,3,Valencia,Private Motor,Theft,356229.37,Closed,15/09/2025
+CLM-11820,2025,3,Valencia,Private Motor,Weather damage,531284.04,Closed,17/09/2025
+CLM-11821,2025,3,Valencia,Private Motor,Theft,350235.33,Open,29/08/2025
+CLM-11822,2025,3,Valencia,Private Motor,Collision,235592.23,Closed,11/08/2025
+CLM-11823,2025,3,Valencia,Private Motor,Windscreen,76611.09,Open,15/09/2025
+CLM-11824,2025,3,Valencia,Private Motor,Collision,290763.99,Closed,28/08/2025
+CLM-11825,2025,3,Valencia,Private Motor,Weather damage,314179.18,Closed,20/08/2025
+CLM-11826,2025,3,Valencia,Private Motor,Third-party liability,1630430.61,Open,12/07/2025
+CLM-11827,2025,3,Valencia,Private Motor,Third-party liability,614908.56,Closed,10/09/2025
+CLM-11828,2025,3,Valencia,Private Motor,Collision,554273.59,Closed,28/09/2025
+CLM-11829,2025,4,Andalusia,Commercial Fleet,Weather damage,99497.09,Open,23/12/2025
+CLM-11830,2025,4,Andalusia,Commercial Fleet,Collision,252354.36,Closed,19/12/2025
+CLM-11831,2025,4,Andalusia,Commercial Fleet,Total loss,437768.82,Open,04/12/2025
+CLM-11832,2025,4,Andalusia,Commercial Fleet,Collision,366931.72,Closed,20/10/2025
+CLM-11833,2025,4,Andalusia,Commercial Fleet,Collision,351433.52,Closed,16/12/2025
+CLM-11834,2025,4,Andalusia,Commercial Fleet,Total loss,461063.96,Closed,18/10/2025
+CLM-11835,2025,4,Andalusia,Commercial Fleet,Collision,402675.5,Open,08/10/2025
+CLM-11836,2025,4,Andalusia,Motorcycle,Collision,324756.26,Closed,28/12/2025
+CLM-11837,2025,4,Andalusia,Motorcycle,Third-party liability,1461860.74,Closed,13/12/2025
+CLM-11838,2025,4,Andalusia,Motorcycle,Third-party liability,710928.25,Closed,06/12/2025
+CLM-11839,2025,4,Andalusia,Motorcycle,Windscreen,84837.25,Closed,29/11/2025
+CLM-11840,2025,4,Andalusia,Private Motor,Collision,312768.8,Closed,01/12/2025
+CLM-11841,2025,4,Andalusia,Private Motor,Total loss,1046427.67,Closed,17/12/2025
+CLM-11842,2025,4,Andalusia,Private Motor,Collision,359645.29,Open,19/10/2025
+CLM-11843,2025,4,Andalusia,Private Motor,Theft,600472.87,Open,16/10/2025
+CLM-11844,2025,4,Andalusia,Private Motor,Collision,152283.12,Closed,17/11/2025
+CLM-11845,2025,4,Andalusia,Private Motor,Theft,304705.7,Open,06/10/2025
+CLM-11846,2025,4,Andalusia,Private Motor,Third-party liability,800709.97,Closed,02/10/2025
+CLM-11847,2025,4,Andalusia,Private Motor,Collision,236459.7,Closed,29/10/2025
+CLM-11848,2025,4,Andalusia,Private Motor,Third-party liability,374958.9,Closed,18/11/2025
+CLM-11849,2025,4,Andalusia,Private Motor,Collision,503875.89,Closed,08/11/2025
+CLM-11850,2025,4,Andalusia,Private Motor,Theft,875608.18,Open,11/12/2025
+CLM-11851,2025,4,Andalusia,Private Motor,Third-party liability,714866.85,Closed,10/11/2025
+CLM-11852,2025,4,Andalusia,Private Motor,Theft,334624.4,Open,16/10/2025
+CLM-11853,2025,4,Andalusia,Private Motor,Third-party liability,1069242.93,Closed,29/11/2025
+CLM-11854,2025,4,Andalusia,Private Motor,Total loss,1665599.62,Closed,13/12/2025
+CLM-11855,2025,4,Andalusia,Private Motor,Theft,420962.74,Open,20/12/2025
+CLM-11856,2025,4,Andalusia,Private Motor,Collision,306437.33,Open,18/11/2025
+CLM-11857,2025,4,Andalusia,Private Motor,Collision,298713.02,Open,15/10/2025
+CLM-11858,2025,4,Andalusia,Private Motor,Third-party liability,572733.37,Open,24/11/2025
+CLM-11859,2025,4,Andalusia,Private Motor,Weather damage,109977.13,Closed,06/10/2025
+CLM-11860,2025,4,Andalusia,Private Motor,Total loss,585453.64,Closed,18/10/2025
+CLM-11861,2025,4,Andalusia,Private Motor,Collision,378483.04,Closed,10/10/2025
+CLM-11862,2025,4,Basque Country,Commercial Fleet,Theft,259367.36,Closed,25/10/2025
+CLM-11863,2025,4,Basque Country,Commercial Fleet,Collision,334061.67,Open,29/12/2025
+CLM-11864,2025,4,Basque Country,Private Motor,Collision,425624.21,Closed,16/12/2025
+CLM-11865,2025,4,Basque Country,Private Motor,Collision,516256.35,Closed,21/12/2025
+CLM-11866,2025,4,Basque Country,Private Motor,Collision,506665.36,Closed,07/12/2025
+CLM-11867,2025,4,Basque Country,Private Motor,Third-party liability,839076.96,Open,19/12/2025
+CLM-11868,2025,4,Basque Country,Private Motor,Collision,560805.81,Closed,07/11/2025
+CLM-11869,2025,4,Basque Country,Private Motor,Theft,656167.1,Closed,24/12/2025
+CLM-11870,2025,4,Catalonia,Commercial Fleet,Collision,193571.13,Closed,19/12/2025
+CLM-11871,2025,4,Catalonia,Commercial Fleet,Weather damage,199562.9,Closed,28/11/2025
+CLM-11872,2025,4,Catalonia,Commercial Fleet,Windscreen,47093.14,Open,12/10/2025
+CLM-11873,2025,4,Catalonia,Commercial Fleet,Third-party liability,741351.85,Closed,01/10/2025
+CLM-11874,2025,4,Catalonia,Commercial Fleet,Collision,297589.18,Open,18/10/2025
+CLM-11875,2025,4,Catalonia,Commercial Fleet,Weather damage,337881.82,Closed,04/12/2025
+CLM-11876,2025,4,Catalonia,Commercial Fleet,Collision,275559.36,Closed,08/10/2025
+CLM-11877,2025,4,Catalonia,Commercial Fleet,Third-party liability,1053292.86,Open,14/11/2025
+CLM-11878,2025,4,Catalonia,Commercial Fleet,Theft,152769.81,Open,03/10/2025
+CLM-11879,2025,4,Catalonia,Commercial Fleet,Windscreen,54753.88,Closed,29/12/2025
+CLM-11880,2025,4,Catalonia,Commercial Fleet,Collision,226661.38,Open,08/12/2025
+CLM-11881,2025,4,Catalonia,Commercial Fleet,Collision,236441.17,Closed,01/11/2025
+CLM-11882,2025,4,Catalonia,Commercial Fleet,Windscreen,36756.94,Closed,19/10/2025
+CLM-11883,2025,4,Catalonia,Commercial Fleet,Collision,244489.95,Closed,03/10/2025
+CLM-11884,2025,4,Catalonia,Commercial Fleet,Collision,225057.71,Closed,11/10/2025
+CLM-11885,2025,4,Catalonia,Commercial Fleet,Windscreen,70531.15,Open,03/11/2025
+CLM-11886,2025,4,Catalonia,Commercial Fleet,Third-party liability,850932.57,Open,25/11/2025
+CLM-11887,2025,4,Catalonia,Commercial Fleet,Windscreen,89239.98,Closed,26/12/2025
+CLM-11888,2025,4,Catalonia,Commercial Fleet,Collision,588768.46,Closed,26/11/2025
+CLM-11889,2025,4,Catalonia,Motorcycle,Total loss,928320.28,Closed,28/12/2025
+CLM-11890,2025,4,Catalonia,Private Motor,Theft,513406.98,Open,30/10/2025
+CLM-11891,2025,4,Catalonia,Private Motor,Windscreen,34879.45,Open,22/11/2025
+CLM-11892,2025,4,Catalonia,Private Motor,Theft,818365.4,Closed,28/11/2025
+CLM-11893,2025,4,Catalonia,Private Motor,Collision,245185.33,Closed,13/10/2025
+CLM-11894,2025,4,Catalonia,Private Motor,Collision,311472.95,Closed,17/10/2025
+CLM-11895,2025,4,Catalonia,Private Motor,Windscreen,99313.88,Closed,05/12/2025
+CLM-11896,2025,4,Catalonia,Private Motor,Collision,468947.72,Closed,30/10/2025
+CLM-11897,2025,4,Catalonia,Private Motor,Theft,484280.66,Closed,10/11/2025
+CLM-11898,2025,4,Catalonia,Private Motor,Weather damage,199226.59,Closed,22/10/2025
+CLM-11899,2025,4,Catalonia,Private Motor,Weather damage,611136.01,Closed,01/10/2025
+CLM-11900,2025,4,Catalonia,Private Motor,Windscreen,56672.2,Open,24/11/2025
+CLM-11901,2025,4,Catalonia,Private Motor,Collision,162201.28,Open,05/10/2025
+CLM-11902,2025,4,Catalonia,Private Motor,Windscreen,67941.36,Closed,06/10/2025
+CLM-11903,2025,4,Catalonia,Private Motor,Windscreen,55710.52,Open,04/11/2025
+CLM-11904,2025,4,Catalonia,Private Motor,Theft,362452.09,Closed,15/10/2025
+CLM-11905,2025,4,Catalonia,Private Motor,Collision,220943.48,Closed,31/12/2025
+CLM-11906,2025,4,Catalonia,Private Motor,Collision,643865.95,Open,12/11/2025
+CLM-11907,2025,4,Catalonia,Private Motor,Weather damage,455189.02,Closed,27/10/2025
+CLM-11908,2025,4,Catalonia,Private Motor,Collision,426222.96,Open,29/11/2025
+CLM-11909,2025,4,Catalonia,Private Motor,Collision,317063.24,Closed,25/10/2025
+CLM-11910,2025,4,Catalonia,Private Motor,Third-party liability,771399.95,Open,09/12/2025
+CLM-11911,2025,4,Catalonia,Private Motor,Collision,133918.69,Closed,17/10/2025
+CLM-11912,2025,4,Catalonia,Private Motor,Third-party liability,855708.26,Open,10/11/2025
+CLM-11913,2025,4,Catalonia,Private Motor,Third-party liability,450117.23,Open,12/10/2025
+CLM-11914,2025,4,Catalonia,Private Motor,Third-party liability,704248.25,Open,05/10/2025
+CLM-11915,2025,4,Catalonia,Private Motor,Third-party liability,422484.86,Closed,25/11/2025
+CLM-11916,2025,4,Catalonia,Private Motor,Collision,426748.77,Open,11/11/2025
+CLM-11917,2025,4,Catalonia,Private Motor,Theft,293684.55,Open,26/11/2025
+CLM-11918,2025,4,Catalonia,Private Motor,Weather damage,285185.17,Closed,13/12/2025
+CLM-11919,2025,4,Catalonia,Private Motor,Collision,417156.69,Open,29/12/2025
+CLM-11920,2025,4,Catalonia,Private Motor,Collision,240726.68,Closed,12/10/2025
+CLM-11921,2025,4,Catalonia,Private Motor,Windscreen,35767.83,Closed,01/10/2025
+CLM-11922,2025,4,Galicia,Commercial Fleet,Collision,471998.73,Closed,02/10/2025
+CLM-11923,2025,4,Galicia,Commercial Fleet,Weather damage,579252.92,Closed,31/12/2025
+CLM-11924,2025,4,Galicia,Commercial Fleet,Third-party liability,523784.42,Open,08/12/2025
+CLM-11925,2025,4,Galicia,Private Motor,Collision,507902.66,Closed,13/10/2025
+CLM-11926,2025,4,Galicia,Private Motor,Windscreen,80129.91,Open,28/12/2025
+CLM-11927,2025,4,Galicia,Private Motor,Collision,522891.35,Closed,26/12/2025
+CLM-11928,2025,4,Galicia,Private Motor,Third-party liability,638138.29,Closed,02/10/2025
+CLM-11929,2025,4,Galicia,Private Motor,Collision,501831.59,Closed,03/12/2025
+CLM-11930,2025,4,Galicia,Private Motor,Third-party liability,863185.59,Open,06/11/2025
+CLM-11931,2025,4,Galicia,Private Motor,Third-party liability,384229.59,Closed,13/10/2025
+CLM-11932,2025,4,Galicia,Private Motor,Collision,245098.08,Open,21/11/2025
+CLM-11933,2025,4,Galicia,Private Motor,Theft,697337.39,Open,21/10/2025
+CLM-11934,2025,4,Galicia,Private Motor,Weather damage,189056.41,Closed,23/10/2025
+CLM-11935,2025,4,Madrid,Commercial Fleet,Theft,282681.07,Open,23/10/2025
+CLM-11936,2025,4,Madrid,Commercial Fleet,Third-party liability,385464.93,Open,20/12/2025
+CLM-11937,2025,4,Madrid,Commercial Fleet,Collision,152112.38,Closed,23/12/2025
+CLM-11938,2025,4,Madrid,Commercial Fleet,Collision,339406.94,Open,27/11/2025
+CLM-11939,2025,4,Madrid,Commercial Fleet,Collision,403256.48,Open,04/11/2025
+CLM-11940,2025,4,Madrid,Commercial Fleet,Third-party liability,472145.72,Open,25/10/2025
+CLM-11941,2025,4,Madrid,Commercial Fleet,Windscreen,64188.32,Open,30/11/2025
+CLM-11942,2025,4,Madrid,Commercial Fleet,Windscreen,77987.95,Open,30/11/2025
+CLM-11943,2025,4,Madrid,Commercial Fleet,Theft,403187.89,Closed,21/11/2025
+CLM-11944,2025,4,Madrid,Commercial Fleet,Third-party liability,994073.33,Closed,30/12/2025
+CLM-11945,2025,4,Madrid,Commercial Fleet,Third-party liability,872402.32,Open,31/12/2025
+CLM-11946,2025,4,Madrid,Commercial Fleet,Third-party liability,843544.32,Open,07/10/2025
+CLM-11947,2025,4,Madrid,Commercial Fleet,Third-party liability,1105965.06,Open,12/10/2025
+CLM-11948,2025,4,Madrid,Motorcycle,Collision,446036.12,Open,25/11/2025
+CLM-11949,2025,4,Madrid,Motorcycle,Third-party liability,644912.08,Open,30/10/2025
+CLM-11950,2025,4,Madrid,Motorcycle,Collision,352336.12,Closed,26/11/2025
+CLM-11951,2025,4,Madrid,Private Motor,Theft,734976.1,Closed,21/12/2025
+CLM-11952,2025,4,Madrid,Private Motor,Windscreen,86992.24,Closed,02/10/2025
+CLM-11953,2025,4,Madrid,Private Motor,Weather damage,423671.09,Open,28/11/2025
+CLM-11954,2025,4,Madrid,Private Motor,Third-party liability,422696.27,Closed,13/11/2025
+CLM-11955,2025,4,Madrid,Private Motor,Total loss,1446839.96,Open,23/11/2025
+CLM-11956,2025,4,Madrid,Private Motor,Theft,451736.0,Open,18/12/2025
+CLM-11957,2025,4,Madrid,Private Motor,Windscreen,83985.19,Closed,22/12/2025
+CLM-11958,2025,4,Madrid,Private Motor,Collision,254041.69,Open,18/11/2025
+CLM-11959,2025,4,Madrid,Private Motor,Third-party liability,913608.78,Closed,14/11/2025
+CLM-11960,2025,4,Madrid,Private Motor,Collision,400394.59,Open,10/12/2025
+CLM-11961,2025,4,Madrid,Private Motor,Collision,424606.75,Closed,30/10/2025
+CLM-11962,2025,4,Madrid,Private Motor,Collision,364508.99,Open,26/11/2025
+CLM-11963,2025,4,Madrid,Private Motor,Third-party liability,476371.71,Closed,31/10/2025
+CLM-11964,2025,4,Madrid,Private Motor,Third-party liability,377814.6,Open,05/11/2025
+CLM-11965,2025,4,Madrid,Private Motor,Collision,464300.05,Open,19/10/2025
+CLM-11966,2025,4,Madrid,Private Motor,Total loss,1441028.32,Open,07/10/2025
+CLM-11967,2025,4,Madrid,Private Motor,Theft,495753.94,Closed,07/12/2025
+CLM-11968,2025,4,Madrid,Private Motor,Collision,215654.42,Open,20/10/2025
+CLM-11969,2025,4,Madrid,Private Motor,Collision,600145.32,Open,09/11/2025
+CLM-11970,2025,4,Madrid,Private Motor,Collision,239261.42,Closed,02/12/2025
+CLM-11971,2025,4,Madrid,Private Motor,Theft,114315.77,Open,24/12/2025
+CLM-11972,2025,4,Madrid,Private Motor,Third-party liability,882167.17,Closed,22/12/2025
+CLM-11973,2025,4,Madrid,Private Motor,Collision,285882.48,Closed,24/11/2025
+CLM-11974,2025,4,Madrid,Private Motor,Collision,249218.58,Open,07/10/2025
+CLM-11975,2025,4,Madrid,Private Motor,Third-party liability,573689.95,Closed,05/12/2025
+CLM-11976,2025,4,Madrid,Private Motor,Third-party liability,360836.16,Open,15/10/2025
+CLM-11977,2025,4,Madrid,Private Motor,Collision,102545.8,Open,23/10/2025
+CLM-11978,2025,4,Madrid,Private Motor,Third-party liability,1029201.72,Closed,09/11/2025
+CLM-11979,2025,4,Valencia,Commercial Fleet,Theft,634186.56,Open,02/11/2025
+CLM-11980,2025,4,Valencia,Commercial Fleet,Collision,227512.96,Closed,09/10/2025
+CLM-11981,2025,4,Valencia,Commercial Fleet,Weather damage,192704.2,Closed,26/10/2025
+CLM-11982,2025,4,Valencia,Commercial Fleet,Theft,656849.68,Open,05/10/2025
+CLM-11983,2025,4,Valencia,Commercial Fleet,Collision,1175745.96,Closed,22/12/2025
+CLM-11984,2025,4,Valencia,Commercial Fleet,Theft,913411.92,Closed,20/10/2025
+CLM-11985,2025,4,Valencia,Commercial Fleet,Weather damage,223378.34,Closed,19/10/2025
+CLM-11986,2025,4,Valencia,Commercial Fleet,Collision,527437.77,Closed,18/12/2025
+CLM-11987,2025,4,Valencia,Commercial Fleet,Windscreen,49581.63,Closed,15/11/2025
+CLM-11988,2025,4,Valencia,Motorcycle,Total loss,871357.23,Open,18/10/2025
+CLM-11989,2025,4,Valencia,Motorcycle,Third-party liability,1609442.6,Closed,17/11/2025
+CLM-11990,2025,4,Valencia,Private Motor,Windscreen,30136.98,Open,15/11/2025
+CLM-11991,2025,4,Valencia,Private Motor,Weather damage,262240.76,Closed,25/10/2025
+CLM-11992,2025,4,Valencia,Private Motor,Collision,387410.13,Closed,19/12/2025
+CLM-11993,2025,4,Valencia,Private Motor,Windscreen,82113.02,Closed,24/11/2025
+CLM-11994,2025,4,Valencia,Private Motor,Total loss,922607.96,Closed,27/11/2025
+CLM-11995,2025,4,Valencia,Private Motor,Weather damage,130826.9,Open,16/11/2025
+CLM-11996,2025,4,Valencia,Private Motor,Weather damage,274656.18,Closed,10/11/2025
+CLM-11997,2025,4,Valencia,Private Motor,Third-party liability,1546869.27,Closed,27/11/2025
+CLM-11998,2025,4,Valencia,Private Motor,Theft,1284833.59,Open,17/11/2025
+CLM-11999,2025,4,Valencia,Private Motor,Total loss,2544153.14,Open,30/11/2025
+CLM-12000,2025,4,Valencia,Private Motor,Windscreen,81465.62,Open,02/12/2025

@@ -1,0 +1,217 @@
+year,quarter,region,segment,earned_premium_eur
+2023,1,Catalonia,Private Motor,19505824.32
+2023,1,Catalonia,Commercial Fleet,8487029.64
+2023,1,Catalonia,Motorcycle,3077885.49
+2023,1,Madrid,Private Motor,17559459.06
+2023,1,Madrid,Commercial Fleet,8178414.23
+2023,1,Madrid,Motorcycle,2910533.67
+2023,1,Andalusia,Private Motor,11422603.44
+2023,1,Andalusia,Commercial Fleet,4915090.3
+2023,1,Andalusia,Motorcycle,1791567.56
+2023,1,Valencia,Private Motor,8676121.77
+2023,1,Valencia,Commercial Fleet,3963932.9
+2023,1,Valencia,Motorcycle,1440462.7
+2023,1,Basque Country,Private Motor,5493770.7
+2023,1,Basque Country,Commercial Fleet,2507457.11
+2023,1,Basque Country,Motorcycle,920201.68
+2023,1,Galicia,Private Motor,4774439.6
+2023,1,Galicia,Commercial Fleet,2114330.13
+2023,1,Galicia,Motorcycle,772113.36
+2023,2,Catalonia,Private Motor,21345065.48
+2023,2,Catalonia,Commercial Fleet,9183770.26
+2023,2,Catalonia,Motorcycle,3442020.14
+2023,2,Madrid,Private Motor,19573968.51
+2023,2,Madrid,Commercial Fleet,8652265.71
+2023,2,Madrid,Motorcycle,3055505.76
+2023,2,Andalusia,Private Motor,12421662.36
+2023,2,Andalusia,Commercial Fleet,5406468.37
+2023,2,Andalusia,Motorcycle,1902351.26
+2023,2,Valencia,Private Motor,9437966.45
+2023,2,Valencia,Commercial Fleet,4459071.32
+2023,2,Valencia,Motorcycle,1569708.76
+2023,2,Basque Country,Private Motor,6238480.7
+2023,2,Basque Country,Commercial Fleet,2804531.8
+2023,2,Basque Country,Motorcycle,990147.6
+2023,2,Galicia,Private Motor,5304831.22
+2023,2,Galicia,Commercial Fleet,2312622.02
+2023,2,Galicia,Motorcycle,834597.87
+2023,3,Catalonia,Private Motor,20548250.24
+2023,3,Catalonia,Commercial Fleet,9164711.78
+2023,3,Catalonia,Motorcycle,3320532.85
+2023,3,Madrid,Private Motor,18686324.99
+2023,3,Madrid,Commercial Fleet,8503104.21
+2023,3,Madrid,Motorcycle,2918248.39
+2023,3,Andalusia,Private Motor,11435209.05
+2023,3,Andalusia,Commercial Fleet,5183657.21
+2023,3,Andalusia,Motorcycle,1827726.6
+2023,3,Valencia,Private Motor,9150897.31
+2023,3,Valencia,Commercial Fleet,4099452.36
+2023,3,Valencia,Motorcycle,1480017.62
+2023,3,Basque Country,Private Motor,5937950.88
+2023,3,Basque Country,Commercial Fleet,2638427.22
+2023,3,Basque Country,Motorcycle,942600.32
+2023,3,Galicia,Private Motor,4873549.29
+2023,3,Galicia,Commercial Fleet,2208681.82
+2023,3,Galicia,Motorcycle,820959.42
+2023,4,Catalonia,Private Motor,20328974.78
+2023,4,Catalonia,Commercial Fleet,9159585.53
+2023,4,Catalonia,Motorcycle,3185872.04
+2023,4,Madrid,Private Motor,18855705.51
+2023,4,Madrid,Commercial Fleet,8230354.86
+2023,4,Madrid,Motorcycle,2978301.98
+2023,4,Andalusia,Private Motor,11966442.54
+2023,4,Andalusia,Commercial Fleet,5294099.92
+2023,4,Andalusia,Motorcycle,1881406.85
+2023,4,Valencia,Private Motor,9403014.75
+2023,4,Valencia,Commercial Fleet,4286398.68
+2023,4,Valencia,Motorcycle,1524839.99
+2023,4,Basque Country,Private Motor,5794245.59
+2023,4,Basque Country,Commercial Fleet,2585323.2
+2023,4,Basque Country,Motorcycle,939480.82
+2023,4,Galicia,Private Motor,4890879.68
+2023,4,Galicia,Commercial Fleet,2201156.09
+2023,4,Galicia,Motorcycle,821259.67
+2024,1,Catalonia,Private Motor,20572060.41
+2024,1,Catalonia,Commercial Fleet,8984416.02
+2024,1,Catalonia,Motorcycle,3275062.04
+2024,1,Madrid,Private Motor,18453951.56
+2024,1,Madrid,Commercial Fleet,8595157.69
+2024,1,Madrid,Motorcycle,2987805.18
+2024,1,Andalusia,Private Motor,11442666.31
+2024,1,Andalusia,Commercial Fleet,5161915.36
+2024,1,Andalusia,Motorcycle,1878892.87
+2024,1,Valencia,Private Motor,9152941.64
+2024,1,Valencia,Commercial Fleet,4214561.56
+2024,1,Valencia,Motorcycle,1533346.77
+2024,1,Basque Country,Private Motor,5845081.02
+2024,1,Basque Country,Commercial Fleet,2611019.27
+2024,1,Basque Country,Motorcycle,976794.27
+2024,1,Galicia,Private Motor,4954894.49
+2024,1,Galicia,Commercial Fleet,2181522.2
+2024,1,Galicia,Motorcycle,777016.37
+2024,2,Catalonia,Private Motor,21283795.97
+2024,2,Catalonia,Commercial Fleet,9917823.72
+2024,2,Catalonia,Motorcycle,3576803.04
+2024,2,Madrid,Private Motor,20023801.97
+2024,2,Madrid,Commercial Fleet,8847507.43
+2024,2,Madrid,Motorcycle,3221752.7
+2024,2,Andalusia,Private Motor,12947881.91
+2024,2,Andalusia,Commercial Fleet,5688319.37
+2024,2,Andalusia,Motorcycle,2085320.82
+2024,2,Valencia,Private Motor,10276622.38
+2024,2,Valencia,Commercial Fleet,4409567.7
+2024,2,Valencia,Motorcycle,1643885.94
+2024,2,Basque Country,Private Motor,6440080.51
+2024,2,Basque Country,Commercial Fleet,2883437.94
+2024,2,Basque Country,Motorcycle,1013144.49
+2024,2,Galicia,Private Motor,5410109.37
+2024,2,Galicia,Commercial Fleet,2366316.49
+2024,2,Galicia,Motorcycle,861893.22
+2024,3,Catalonia,Private Motor,20897814.04
+2024,3,Catalonia,Commercial Fleet,9721694.84
+2024,3,Catalonia,Motorcycle,3456222.98
+2024,3,Madrid,Private Motor,19069379.87
+2024,3,Madrid,Commercial Fleet,8736307.22
+2024,3,Madrid,Motorcycle,3059843.63
+2024,3,Andalusia,Private Motor,12389320.23
+2024,3,Andalusia,Commercial Fleet,5581381.88
+2024,3,Andalusia,Motorcycle,1926418.04
+2024,3,Valencia,Private Motor,9752635.17
+2024,3,Valencia,Commercial Fleet,4396558.91
+2024,3,Valencia,Motorcycle,1527505.76
+2024,3,Basque Country,Private Motor,6222082.17
+2024,3,Basque Country,Commercial Fleet,2772936.29
+2024,3,Basque Country,Motorcycle,1004516.98
+2024,3,Galicia,Private Motor,5167794.58
+2024,3,Galicia,Commercial Fleet,2259791.94
+2024,3,Galicia,Motorcycle,823221.87
+2024,4,Catalonia,Private Motor,20351809.28
+2024,4,Catalonia,Commercial Fleet,9707659.36
+2024,4,Catalonia,Motorcycle,3456804.8
+2024,4,Madrid,Private Motor,19728944.28
+2024,4,Madrid,Commercial Fleet,8635106.6
+2024,4,Madrid,Motorcycle,3037243.59
+2024,4,Andalusia,Private Motor,12364208.16
+2024,4,Andalusia,Commercial Fleet,5606420.64
+2024,4,Andalusia,Motorcycle,1901521.45
+2024,4,Valencia,Private Motor,9663869.99
+2024,4,Valencia,Commercial Fleet,4255099.22
+2024,4,Valencia,Motorcycle,1584392.36
+2024,4,Basque Country,Private Motor,6223303.72
+2024,4,Basque Country,Commercial Fleet,2704718.93
+2024,4,Basque Country,Motorcycle,986534.74
+2024,4,Galicia,Private Motor,5173814.41
+2024,4,Galicia,Commercial Fleet,2296760.56
+2024,4,Galicia,Motorcycle,850591.86
+2025,1,Catalonia,Private Motor,20602626.18
+2025,1,Catalonia,Commercial Fleet,9185881.68
+2025,1,Catalonia,Motorcycle,3346271.16
+2025,1,Madrid,Private Motor,19369502.68
+2025,1,Madrid,Commercial Fleet,8473763.28
+2025,1,Madrid,Motorcycle,3046787.1
+2025,1,Andalusia,Private Motor,12295960.65
+2025,1,Andalusia,Commercial Fleet,5441295.74
+2025,1,Andalusia,Motorcycle,1918846.85
+2025,1,Valencia,Private Motor,9563034.08
+2025,1,Valencia,Commercial Fleet,4216135.27
+2025,1,Valencia,Motorcycle,1515348.82
+2025,1,Basque Country,Private Motor,5991431.04
+2025,1,Basque Country,Commercial Fleet,2746829.43
+2025,1,Basque Country,Motorcycle,960038.11
+2025,1,Galicia,Private Motor,5009383.93
+2025,1,Galicia,Commercial Fleet,2241701.16
+2025,1,Galicia,Motorcycle,828224.11
+2025,2,Catalonia,Private Motor,22058245.0
+2025,2,Catalonia,Commercial Fleet,10372808.66
+2025,2,Catalonia,Motorcycle,3694639.44
+2025,2,Madrid,Private Motor,20165134.27
+2025,2,Madrid,Commercial Fleet,9200579.58
+2025,2,Madrid,Motorcycle,3372246.92
+2025,2,Andalusia,Private Motor,12714496.9
+2025,2,Andalusia,Commercial Fleet,5713313.54
+2025,2,Andalusia,Motorcycle,2141022.03
+2025,2,Valencia,Private Motor,10393153.67
+2025,2,Valencia,Commercial Fleet,4666096.26
+2025,2,Valencia,Motorcycle,1697705.2
+2025,2,Basque Country,Private Motor,6675319.35
+2025,2,Basque Country,Commercial Fleet,2905063.91
+2025,2,Basque Country,Motorcycle,1031593.48
+2025,2,Galicia,Private Motor,5496654.27
+2025,2,Galicia,Commercial Fleet,2481242.39
+2025,2,Galicia,Motorcycle,888478.64
+2025,3,Catalonia,Private Motor,21856839.39
+2025,3,Catalonia,Commercial Fleet,9838283.04
+2025,3,Catalonia,Motorcycle,3578521.07
+2025,3,Madrid,Private Motor,19422462.75
+2025,3,Madrid,Commercial Fleet,8935485.61
+2025,3,Madrid,Motorcycle,3179049.68
+2025,3,Andalusia,Private Motor,12708675.26
+2025,3,Andalusia,Commercial Fleet,5532784.62
+2025,3,Andalusia,Motorcycle,1968958.9
+2025,3,Valencia,Private Motor,9920319.2
+2025,3,Valencia,Commercial Fleet,4472936.17
+2025,3,Valencia,Motorcycle,1583673.9
+2025,3,Basque Country,Private Motor,6207692.31
+2025,3,Basque Country,Commercial Fleet,2918481.91
+2025,3,Basque Country,Motorcycle,1013031.54
+2025,3,Galicia,Private Motor,5422265.12
+2025,3,Galicia,Commercial Fleet,2404037.18
+2025,3,Galicia,Motorcycle,832918.22
+2025,4,Catalonia,Private Motor,22206386.78
+2025,4,Catalonia,Commercial Fleet,9933314.04
+2025,4,Catalonia,Motorcycle,3575356.07
+2025,4,Madrid,Private Motor,20411133.34
+2025,4,Madrid,Commercial Fleet,9176044.64
+2025,4,Madrid,Motorcycle,3145731.52
+2025,4,Andalusia,Private Motor,12428033.61
+2025,4,Andalusia,Commercial Fleet,5521018.53
+2025,4,Andalusia,Motorcycle,1994337.73
+2025,4,Valencia,Private Motor,9687478.85
+2025,4,Valencia,Commercial Fleet,4461366.31
+2025,4,Valencia,Motorcycle,1651735.24
+2025,4,Basque Country,Private Motor,6213514.35
+2025,4,Basque Country,Commercial Fleet,2894711.3
+2025,4,Basque Country,Motorcycle,1013755.96
+2025,4,Galicia,Private Motor,5282683.12
+2025,4,Galicia,Commercial Fleet,2462565.94
+2025,4,Galicia,Motorcycle,881444.91

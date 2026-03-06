@@ -1,0 +1,565 @@
+---
+title: "Module 2.3: Market Entry Assessment"
+description: "Use OpenAI Codex web search to build a market entry assessment for Portugal expansion."
+---
+
+# Module 2.3: Market Entry Assessment with OpenAI Codex
+
+> **Time:** 30 minutes | **Prerequisites:** [Module 2.2: Loss Ratio Analysis](../2.2-loss-ratio-analysis/README.md)
+
+## The Scenario
+
+MIG completed its acquisition of **LusoProtect**, a small Portuguese insurer based in Lisbon, in late 2025. The CEO has asked you to prepare a **market entry assessment for expanding MIG's product lines into Portugal** using LusoProtect as the platform.
+
+Your task: assess the Portuguese insurance market, identify where MIG can win, and produce a strategy brief for the executive committee.
+
+This module introduces a powerful capability: **OpenAI Codex can search the web** for up-to-date market data, regulatory information, and competitive intelligence.
+
+---
+
+## What You Will Do
+
+1. Gather market data using OpenAI Codex's web search
+2. Analyze the competitive landscape
+3. Identify gaps and opportunities
+4. Build a market entry scorecard
+5. Generate a strategy brief for the executive committee
+
+---
+
+## Step 1: Gather Market Data
+
+OpenAI Codex can search the web for current information. Use this to build a foundation of market intelligence.
+
+### Sample prompt:
+
+```text
+I need to build a market assessment for the Portuguese insurance market.
+MIG has acquired LusoProtect and wants to expand its product lines in
+Portugal.
+
+Search the web and compile the following market data:
+
+1. MARKET SIZE: Total Portuguese insurance market GWP (life and non-life
+   separately). Growth rate over the last 3 years.
+
+2. KEY PLAYERS: Top 10 insurers in Portugal by market share (non-life).
+   Include Fidelidade, Ageas Portugal, Allianz Portugal, Tranquilidade,
+   and others.
+
+3. REGULATORY ENVIRONMENT: Who is the regulator (ASF)? Any recent
+   regulatory changes or upcoming ones that affect market entry?
+
+4. LINE OF BUSINESS BREAKDOWN: How is the non-life market split across
+   motor, property, health, liability, and other lines?
+
+5. DISTRIBUTION: How is insurance distributed in Portugal? (brokers,
+   agents, bancassurance, direct/digital)
+
+Present this as a structured market overview. Cite your sources for every
+data point, and flag when data is estimated vs. confirmed. Please provide
+the exact URLs for all sources.
+
+Save this as portugal-market-overview.md
+```
+
+> **Tip:** When presenting market data to stakeholders, exact URLs let them verify your numbers independently. Always ask Codex to include source URLs in research output.
+
+> **Important:** Web data may not always be perfectly current. Codex will do its best to find recent figures and will flag when data is from an older source. Always verify critical numbers independently before including them in a client deliverable.
+
+### Follow up for more depth:
+
+```text
+Now search for more specific information:
+
+1. What is the motor insurance penetration rate in Portugal vs. Spain
+   and the EU average?
+2. Are there any underserved segments in the Portuguese market? (SME
+   commercial, cyber, specialty lines?)
+3. What is the digital insurance adoption rate in Portugal? Any
+   notable insurtech players?
+4. What are the current market trends -- is the market hardening or
+   softening? Any lines with particularly poor profitability?
+
+Add this to the market overview document.
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+> **Note:** Market data sourced from web search in February 2026. Figures may have changed since this example was generated.
+
+**Market Size and Growth**
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| Total insurance GWP (2024) | ~EUR 14,3 billion (estimated) | [Statista](https://www.statista.com/topics/13197/insurance-industry-in-portugal/) |
+| Non-life GWP (2023) | EUR 6,6 billion | [GlobalData via Insurance Edge](https://insurance-edge.net/2024/01/01/portugals-gi-market-is-set-to-grow/) |
+| Non-life GWP (2028, projected) | EUR 9,2 billion | [GlobalData](https://www.globaldata.com/media/insurance/portugal-general-insurance-industry-surpass-9-billion-2028-says-globaldata/) |
+| Non-life CAGR (2023-2028) | 6,9% | GlobalData |
+| Insurance penetration (% of GDP) | 5,6% | Internal context data |
+
+**Top Insurers -- Market Share (Q3 2024)**
+
+| Rank | Insurer | Market Share | Parent/Owner |
+|------|---------|-------------|--------------|
+| 1 | Fidelidade | ~29,5% | Fosun International (China) |
+| 2 | Ageas Portugal | ~18,1% | Ageas Group (Belgium) |
+| 3 | Generali / Tranquilidade | ~10,7% | Generali Group (Italy) |
+| 4 | Allianz Portugal | ~8,5% | Allianz SE (Germany) |
+| 5 | Zurich Portugal | ~5-6% (estimated) | Zurich Insurance (Switzerland) |
+
+Sources: [Statista -- Leading insurers by GWP](https://www.statista.com/statistics/901333/largest-insurance-groups-in-portugal-by-gross-written-premiums/), [ECO -- Ranking seguros 2023](https://eco.sapo.pt/2024/01/24/ranking-seguros-2023-fidelidade-mantem-lideranca-tranquilidade-ganha-mercado/)
+
+> The top 3 insurers control approximately 59,2% of the market. The top 10 control approximately 88,6%.
+
+**Line of Business Breakdown (Non-Life, 2023)**
+
+| Line of Business | Share of Non-Life GWP | Estimated GWP (EUR M) | CAGR (2023-2028) |
+|------------------|-----------------------|-----------------------|-------------------|
+| Personal Accident &amp; Health | 36,6% | ~2.416 | 8,0% |
+| Motor | 26,5% | ~1.749 | 4,7% |
+| Liability (incl. workers' comp) | 17,7% | ~1.168 | 7,8% |
+| Property (fire and other damage) | ~10% (estimated) | ~660 | ~6% (estimated) |
+| Marine, aviation and transit | ~3% (estimated) | ~198 | ~4% (estimated) |
+| Financial lines and misc. | ~6,2% (estimated) | ~409 | ~7% (estimated) |
+
+Source: [GlobalData via Insurance Edge](https://insurance-edge.net/2024/01/01/portugals-gi-market-is-set-to-grow/)
+
+> **Flag:** The breakdown for health, motor, and liability is confirmed published data. Property, marine, and financial lines percentages are estimates derived from the reported "remaining 19,2%" category.
+
+**Distribution Channels (2024 Estimated)**
+
+| Channel | Estimated Share | Trend |
+|---------|----------------|-------|
+| Agents (tied and independent) | ~40% | Stable |
+| Bancassurance | ~25-30% | Stable |
+| Brokers | ~15-18% | Growing |
+| Direct digital | ~8-10% | Growing fast |
+| Other (embedded, affinity) | ~3-5% | Emerging |
+
+Sources: [Chambers -- Insurance &amp; Reinsurance 2026 Portugal](https://practiceguides.chambers.com/practice-guides/insurance-reinsurance-2026/portugal/trends-and-developments), [Grand View Research](https://www.grandviewresearch.com/industry-analysis/portugal-accident-insurance-market-report)
+
+</details>
+
+---
+
+## Step 2: Analyze the Competitive Landscape
+
+Ask Codex to synthesize the market data into a competitive analysis.
+
+### Sample prompt:
+
+```text
+Based on the market data you gathered, create a competitive landscape
+analysis:
+
+1. MARKET STRUCTURE: Is the Portuguese non-life market concentrated or
+   fragmented? How much share do the top 5 players control?
+
+2. COMPETITOR PROFILES: For the top 5 competitors, summarize:
+   - Market position and strengths
+   - Key product lines
+   - Distribution strategy
+   - Any known weaknesses or gaps
+
+3. COMPETITIVE DYNAMICS: What is the basis of competition? (price,
+   service, distribution reach, digital capability, product innovation?)
+
+4. BARRIERS TO ENTRY: What makes it hard for a new entrant (even one
+   with a local acquisition)? Consider:
+   - Regulatory hurdles
+   - Distribution lock-in (bancassurance exclusivity deals)
+   - Customer switching costs
+   - Brand recognition
+
+5. MIG'S POSITION: Given that we now own LusoProtect (small player,
+   approximately 1-2% market share, primarily motor and basic property),
+   where do we start? What is our realistic beachhead?
+
+Present this as a structured analysis, not a wall of text. Use tables
+where appropriate.
+
+Save as portugal-competitive-analysis.md
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+> **Note:** Market data sourced from web search in February 2026. Figures may have changed since this example was generated.
+
+**Market Concentration**
+
+The Portuguese non-life market is **highly concentrated** -- an oligopoly with a dominant leader. The top 3 players control approximately 59,2% of premiums. The top 10 control approximately 88,6%.
+
+**Top 5 Competitor Profiles**
+
+| Dimension | Fidelidade (~30%) | Ageas (~16%) | Generali/Tranq. (~11%) | Allianz (~9%) | Zurich (~6%) |
+|-----------|------------------|-------------|----------------------|--------------|-------------|
+| Key strength | Scale, brand, full product range | Bancassurance (Millennium BCP) | Health segment, rising share | Commercial lines expertise | Specialty/corporate focus |
+| Distribution | Multi-channel (agents, bancassurance via CGD, digital app with 1,6M+ users) | Heavily dependent on BCP partnership | Agents, brokers, growing digital | Broker-focused (commercial), agents (personal) | Broker channel only |
+| Digital capability | High | Low | Medium | Medium | Low |
+| Weakness | Bureaucratic; slow in niche segments | Over-reliance on single channel | Complex group structure | Perceived as expensive | Very limited retail presence |
+
+**Competitive Intensity by Segment**
+
+| Segment | Intensity | Dominant Players | Opportunity for MIG |
+|---------|-----------|------------------|---------------------|
+| Motor (personal) | Very high | Fidelidade, Ageas | Limited |
+| Motor (fleet) | Medium-high | Fidelidade, Allianz | Medium |
+| Health (individual) | High | Fidelidade, Tranquilidade | Medium |
+| Commercial property (SME) | Medium-low | Allianz, Zurich | **High** |
+| Specialty / niche | Low | Limited local competition | **High** |
+| Cyber | Very low | Minimal competition | **Very high** |
+
+**Key Barriers to Entry**
+
+| Barrier | Severity | Mitigation via LusoProtect |
+|---------|----------|---------------------------|
+| Bancassurance lock-in | High | Partial -- LusoProtect has limited BPI partnership |
+| Brand recognition | High | Partial -- LusoProtect known in motor; MIG brand unknown |
+| Agent network density | Medium-high | Good -- existing ~180 agents in Lisbon/Porto |
+| Regulatory requirements | Medium | Good -- already licensed and ASF-compliant |
+| Scale economics | Medium | Good -- MIG group-level scale (EUR 1,8B GWP) |
+
+</details>
+
+---
+
+## Step 3: Identify Gaps and Opportunities
+
+Now shift from description to insight. Ask Codex to think strategically.
+
+### Sample prompt:
+
+```text
+Based on the market overview and competitive analysis, identify the top
+opportunities for MIG in Portugal. Think about this from three angles:
+
+ANGLE 1 -- PRODUCT GAPS
+Where is the Portuguese market underserved? Consider:
+- Lines where few competitors offer strong products (SME commercial,
+  specialty, cyber)
+- Segments where MIG has existing expertise from Spain that could
+  transfer (marine cargo from Barcelona, commercial property)
+- Emerging needs (climate risk products, gig economy cover, ESG-linked
+  insurance)
+
+ANGLE 2 -- DISTRIBUTION OPPORTUNITIES
+Where could MIG/LusoProtect gain distribution advantage?
+- Digital-first channels (if the market is still broker/agent heavy)
+- Bancassurance partnerships (are any banks looking for new partners?)
+- Broker relationships that MIG has in Spain with cross-border presence
+
+ANGLE 3 -- OPERATIONAL SYNERGIES
+What can MIG bring from its existing operations?
+- Technology platform (if MIG has a modern policy admin system)
+- Reinsurance purchasing power (combined portfolio gets better terms)
+- Claims management expertise
+- Product development capabilities
+
+For each opportunity, rate it: HIGH / MEDIUM / LOW on both
+attractiveness and feasibility. Explain your reasoning.
+
+Present as a table with narrative commentary.
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+> **Note:** Market data sourced from web search in February 2026. Figures may have changed since this example was generated.
+
+**Opportunity Matrix**
+
+| Opportunity | Attractiveness | Feasibility | Rationale |
+|-------------|---------------|-------------|-----------|
+| **PRODUCT GAPS** | | | |
+| SME commercial property | HIGH | HIGH | Portuguese SMEs are significantly underinsured (32% penetration in rural areas). MIG has proven EUR 216M commercial book in Spain. Few dedicated competitors in this segment. |
+| Cyber insurance for SMEs | HIGH | LOW | Fast-growing segment (12,8% CAGR projected) with minimal existing competition. However, MIG lacks cyber underwriting capability and the market is nascent -- requires investment before returns. |
+| Climate risk products | MEDIUM | MEDIUM | Growing awareness of wildfire and flood risk in Portugal. MIG has Mediterranean climate modelling expertise. But market awareness is still developing and pricing data is limited. |
+| Residential property (renters) | MEDIUM | HIGH | Very low penetration among renters in Lisbon and Porto. MIG has renter products in Spain. Easy to launch via digital channel targeting young urban demographic. |
+| Marine cargo | MEDIUM | MEDIUM | Niche opportunity leveraging MIG Barcelona's port expertise. Portugal's trade flows (Port of Sines, Leixoes) provide addressable market, but segment is small. |
+| **DISTRIBUTION** | | | |
+| Digital-first motor and home | HIGH | MEDIUM | Portuguese market is ~10% digital vs. ~20% EU average. Gap represents opportunity. Requires technology investment (SiGeSeg migration) before full digital capability. |
+| Broker partnerships (commercial) | HIGH | HIGH | Brokers control commercial distribution. MIG can offer competitive products and faster turnaround vs. incumbents. No exclusive lock-in barrier (unlike bancassurance). |
+| Cross-border Spanish-Portuguese business | MEDIUM | HIGH | Unique MIG capability -- no other insurer can seamlessly serve businesses operating in both markets. Small but high-value niche (~5.000 companies). |
+| **OPERATIONAL SYNERGIES** | | | |
+| Reinsurance purchasing power | HIGH | HIGH | Combining MIG+LusoProtect portfolios (EUR 1,8B+ GWP) delivers immediate reinsurance cost savings. Estimated EUR 3-4M annual benefit. Already partially realised. |
+| Claims automation | HIGH | MEDIUM | Deploying MIG's Guidewire ClaimCenter to Portugal could reduce motor claims time from 14,3 to &lt;11 days. Requires SiGeSeg migration investment. |
+| Earnix pricing deployment | HIGH | HIGH | Migrating LusoProtect motor to MIG's Earnix platform enables sophisticated GLM-based pricing. Direct competitive advantage vs. Portuguese peers using simpler models. |
+
+</details>
+
+---
+
+## Step 4: Build a Market Entry Scorecard
+
+Structure the analysis into a decision-making framework.
+
+### Sample prompt:
+
+```text
+Create a market entry scorecard that evaluates each potential product
+line for Portugal expansion. Score each line from 1 (low) to 5 (high)
+on these criteria:
+
+CRITERIA:
+- Market size and growth potential
+- Competitive intensity (inverse -- less competition = higher score)
+- MIG capability to compete (existing expertise, products, systems)
+- LusoProtect platform readiness (can we launch quickly or need
+  significant investment?)
+- Regulatory complexity (inverse -- less complexity = higher score)
+- Synergy with existing MIG operations
+
+PRODUCT LINES TO EVALUATE:
+- Motor (expand LusoProtect's existing book)
+- Residential Property
+- Commercial Property (SME focus)
+- General Liability
+- Marine Cargo
+- Health / Group Health
+- Cyber Insurance
+- Specialty / Niche (e.g., construction, renewable energy)
+
+Calculate a weighted total score for each line. Weight "market size"
+and "MIG capability" at 2x, everything else at 1x.
+
+Present as a scorecard table with a clear ranking. Add a one-paragraph
+rationale for each of the top 3 recommended lines.
+
+Save as portugal-entry-scorecard.md
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+> **Note:** Market data sourced from web search in February 2026. Figures may have changed since this example was generated.
+
+**Market Entry Scorecard** -- Scores 1-5 per criterion. Market Size and MIG Capability weighted at 2x. Maximum possible score: 40.
+
+| Product Line | Mkt Size (2x) | Comp. Intensity* (1x) | MIG Capability (2x) | Platform Readiness (1x) | Reg. Simplicity* (1x) | Synergy (1x) | **TOTAL (/40)** |
+|---|---|---|---|---|---|---|---|
+| **Commercial Property (SME)** | 6 | 4 | 10 | 3 | 3 | 5 | **31** |
+| **Motor (expand existing)** | 8 | 2 | 8 | 5 | 4 | 4 | **31** |
+| **Residential Property** | 6 | 3 | 8 | 4 | 4 | 4 | **29** |
+| Health / Group Health | 10 | 2 | 6 | 2 | 2 | 3 | **25** |
+| Marine Cargo | 4 | 4 | 8 | 2 | 3 | 4 | **25** |
+| General Liability | 6 | 2 | 6 | 3 | 3 | 3 | **23** |
+| Specialty / Niche | 4 | 4 | 6 | 1 | 2 | 3 | **20** |
+| Cyber Insurance | 4 | 5 | 4 | 1 | 2 | 3 | **19** |
+
+*Competitive intensity and regulatory complexity are scored inversely: 5 = least competitive / simplest; 1 = most competitive / most complex.*
+
+**Ranking Summary**
+
+| Rank | Product Line | Score | Priority | Year |
+|------|-------------|-------|----------|------|
+| 1 | Commercial Property (SME) | 31 | **Primary** | Year 1 |
+| 2 | Motor (expand) | 31 | **Primary** | Year 1 |
+| 3 | Residential Property | 29 | **Primary** | Year 1-2 |
+| 4 | Health / Group Health | 25 | Secondary | Year 2 |
+| 5 | Marine Cargo | 25 | Secondary | Year 2-3 |
+| 6 | General Liability | 23 | Evaluate | Year 2-3 |
+| 7 | Specialty / Niche | 20 | Monitor | Year 3+ |
+| 8 | Cyber Insurance | 19 | Monitor | Year 3+ |
+
+</details>
+
+### Expected output format:
+
+```text
+MARKET ENTRY SCORECARD -- MIG PORTUGAL EXPANSION
+===================================================
+
+| Product Line      | Mkt Size (2x) | Comp (1x) | MIG Cap (2x) | Platform (1x) | Reg (1x) | Synergy (1x) | TOTAL |
+|-------------------|---------------|-----------|--------------|---------------|----------|-------------|-------|
+| Commercial Prop.  | 8             | 4         | 10           | 3             | 3        | 4            | 32    |
+| Motor (expand)    | 10            | 2         | 8            | 5             | 3        | 4            | 32    |
+| Marine Cargo      | 4             | 5         | 10           | 2             | 3        | 5            | 29    |
+| ...               | ...           | ...       | ...          | ...           | ...      | ...          | ...   |
+```
+
+---
+
+## Step 5: Generate the Strategy Brief
+
+Pull everything together into an executive document.
+
+### Sample prompt:
+
+```text
+Write a strategy brief for MIG's executive committee on the Portugal
+expansion opportunity. Save as portugal-strategy-brief.md
+
+Structure:
+
+1. EXECUTIVE SUMMARY (half page max)
+   - Why Portugal, why now
+   - Top 3 opportunities
+   - Recommended sequencing
+   - Key risks
+
+2. MARKET CONTEXT (1 page)
+   - Market size, growth, structure
+   - Key players and dynamics
+   - Regulatory landscape
+
+3. STRATEGIC RATIONALE (1 page)
+   - How Portugal fits MIG's growth strategy
+   - LusoProtect as a platform: strengths and gaps
+   - Synergies and cost savings potential
+
+4. RECOMMENDED PRODUCT STRATEGY (1 page)
+   - Priority product lines (from the scorecard)
+   - Sequencing: what to launch in Year 1, Year 2, Year 3
+   - Go-to-market approach for each priority line
+
+5. COMPETITIVE POSITIONING
+   - How MIG/LusoProtect should differentiate
+   - Target customer segments
+   - Distribution strategy
+
+6. FINANCIAL PROJECTIONS (high-level)
+   - Estimated GWP targets by year (Year 1, 2, 3)
+   - Investment required
+   - Expected breakeven timeline
+   - Key assumptions (flag these clearly)
+
+7. KEY RISKS AND MITIGATIONS
+   - Top 5 risks with mitigation strategies
+
+8. NEXT STEPS AND DECISION POINTS
+   - What the executive committee needs to decide
+   - Timeline for key milestones
+
+Tone: strategic, evidence-based, confident but honest about uncertainties.
+This is a board-level document. Avoid jargon where possible, define
+acronyms on first use.
+```
+
+<details>
+<summary>Example output from this step</summary>
+
+> **Note:** Market data sourced from web search in February 2026. Figures may have changed since this example was generated.
+
+**Executive Summary (excerpt)**
+
+Mediterranean Insurance Group has a unique window of opportunity in Portugal. The 2024 acquisition of LusoProtect gives MIG an operational platform in the fastest-growing insurance market in its footprint (6,9% CAGR vs. 4,2% in Spain). The Portuguese non-life market is projected to grow from EUR 6,6 billion to EUR 9,2 billion by 2028, and MIG is positioned to capture a disproportionate share of that growth.
+
+Our top three opportunities are: (1) SME commercial property -- an underserved segment where MIG's existing Spanish expertise transfers directly; (2) Motor expansion -- improving LusoProtect's 6,7% market share through pricing modernisation and fleet products; (3) Residential property cross-sell -- leveraging the motor customer base and low Portuguese home insurance penetration.
+
+Financial target: grow Portugal gross written premium (GWP) from EUR 95M (FY 2025) to EUR 175-200M by FY 2028, achieving a combined ratio below 97% by Year 3.
+
+**Recommended Product Strategy (excerpt)**
+
+| Priority | Product Line | Year 1 (2026) | Year 2 (2027) | Year 3 (2028) |
+|----------|-------------|---------------|---------------|---------------|
+| **Primary** | Motor (expand) | Deploy Earnix pricing; launch fleet product; mobile claims FNOL | Scale fleet; UBI pilot | Full digital motor offering |
+| **Primary** | Commercial Property (SME) | Launch standardised SME package | Expand to mid-market (EUR 5-25M turnover) | Specialty sub-segments |
+| **Primary** | Residential Property | Develop product; recruit underwriters | Launch homeowner + renter; cross-sell from motor | Scale; launch landlord product |
+| Secondary | Health / Group Health | Market research; provider network assessment | Launch group health (25+ lives) | Individual health (if profitable) |
+| Secondary | Marine Cargo | Feasibility study | Pilot with importers/exporters | Scale if profitable |
+
+**Financial Projections (excerpt)**
+
+> **Caveat:** These projections are indicative estimates. Key assumptions are flagged below.
+
+| Metric | FY 2025 (Actual) | Year 1 (2026) | Year 2 (2027) | Year 3 (2028) |
+|--------|------------------|---------------|---------------|---------------|
+| Total Portugal GWP | EUR 95M | EUR 113M | EUR 153M | EUR 198M |
+| Combined Ratio | 98,5% | 99,2% | 97,8% | 96,5% |
+| Total Investment Required | -- | EUR 9,5M | EUR 10M | EUR 6M |
+| **Cumulative Investment** | -- | EUR 9,5M | EUR 19,5M | EUR 25,5M |
+
+Key assumptions: motor retention above 87%; commercial property loss ratio of 62-64% (consistent with MIG Spain); SiGeSeg migration completed by Q4 2027; no major nat-cat events exceeding 1-in-50-year severity; Portuguese GDP growth above 1,5% annually.
+
+</details>
+
+---
+
+## Refining the Strategy
+
+Use these follow-up prompts to strengthen the brief:
+
+### Challenge the assumptions:
+
+```text
+Play devil's advocate. What are the three strongest arguments AGAINST
+expanding in Portugal? What could go wrong with this strategy? Be honest.
+```
+
+### Prepare for board questions:
+
+```text
+The CEO will likely ask: "Why not just grow organically in Spain instead
+of investing in Portugal?" Give me a compelling answer with supporting
+data points.
+```
+
+### Add a competitor response scenario:
+
+```text
+If Fidelidade (the market leader) responds aggressively to our entry
+with price cuts in the segments we target, what is our contingency plan?
+Write a one-paragraph response strategy.
+```
+
+### Create an investment summary:
+
+```text
+Create a simple investment summary table showing:
+- Year 1-3 projected GWP, claims, expense ratio, combined ratio
+- Cumulative investment required
+- Breakeven point
+- Use conservative, base, and optimistic scenarios
+
+This is a rough estimate -- flag it as indicative. But make the
+assumptions transparent.
+```
+
+---
+
+## Key Techniques Introduced in This Module
+
+| Technique | What It Enables |
+|-----------|----------------|
+| Web search integration | Access current market data, regulations, competitor info without leaving OpenAI Codex |
+| Multi-step strategic analysis | Build from data gathering through to recommendations in a single session |
+| Scoring frameworks | Structured, comparable evaluation of options |
+| Devil's advocate prompting | Stress-test your strategy before presenting it |
+| Audience-aware formatting | Same content structured differently for CUO, board, or working team |
+
+---
+
+## A Note on Data Quality
+
+When Codex searches the web for market data, keep these points in mind:
+
+1. **Verify critical numbers.** Web search gives you a strong starting point, but always cross-check key figures (market size, competitor shares) against authoritative sources like ASF annual reports or Swiss Re sigma studies.
+
+2. **Check the dates.** Market data can be 1-2 years old. Codex will try to flag this, but always confirm you are working with the most recent available data.
+
+3. **Distinguish fact from estimate.** Codex will sometimes need to estimate (e.g., market share for smaller players). It should flag these, but review critically.
+
+4. **Regulatory details require expert review.** Use Codex's research as a starting point, but have your legal or compliance team validate any regulatory conclusions before acting on them.
+
+---
+
+## Summary
+
+In this module you learned to:
+
+- Use OpenAI Codex's web search to gather market intelligence
+- Build a structured competitive analysis from multiple data sources
+- Create evaluation frameworks (scorecards) for strategic decisions
+- Generate board-ready strategy documents
+- Stress-test strategies with devil's advocate prompting
+
+The key takeaway: **OpenAI Codex is not just a writing tool -- it is a research and strategy partner.** The combination of web search, data structuring, and iterative analysis lets you produce in 30 minutes what would normally take several days of desk research and writing.
+
+---
+
+## Next Step
+
+Proceed to [Module 3: Building an Insurance App with Vibe Coding](../../3-vibe-coding/README.md) to learn how non-technical users can build working applications with OpenAI Codex.

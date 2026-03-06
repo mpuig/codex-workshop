@@ -1,0 +1,118 @@
+---
+title: "Data Security, Privacy & Compliance"
+description: What data is safe to use with OpenAI Codex, how to generate synthetic data, and how to anonymize real data for insurance workflows.
+---
+
+# Data Security, Privacy & Compliance
+
+> **Type:** Reference | **Prerequisites:** None
+
+## What NOT to Input
+
+OpenAI Codex processes data through the OpenAI API. Before sending any data, ask yourself: **"Would I paste this into an external web form?"** If the answer is no, do not send it to OpenAI Codex either.
+
+**Never input:**
+
+- Live customer databases or production data extracts
+- Un-anonymized claims with policyholder names, addresses, or policy numbers
+- Proprietary pricing models, underwriting algorithms, or rating tables
+- Protected Health Information (PHI) -- medical records, diagnoses, treatment details
+- Credentials, API keys, passwords, or access tokens
+- Internal audit findings or regulatory correspondence marked as confidential
+
+---
+
+## Insurance-Specific Examples
+
+| Data type | Safe to use | Not safe to use |
+|-----------|-------------|-----------------|
+| Claims data | Synthetic claims with fake names and random IDs | Real claims with policyholder details |
+| Loss ratios | Published market statistics, aggregated ratios | Internal portfolio-level ratios tied to specific accounts |
+| Pricing | General market rate ranges from public sources | Your company's proprietary rating factors |
+| Medical | Generic condition categories (e.g., "chronic condition") | Specific diagnoses, treatment plans, or medical reports |
+| Financials | Publicly available annual report figures | Unpublished quarterly results or board papers |
+| Reinsurance | General treaty structures for training purposes | Actual treaty terms, cession rates, or cedant details |
+
+---
+
+## How to Generate Synthetic Data with Codex
+
+Instead of using real data, ask Codex to create realistic synthetic data for your task:
+
+```
+Create a CSV file with 200 synthetic motor claims for training purposes.
+Include these columns: claim_id, claim_date, region, vehicle_type,
+incident_type, estimated_amount_eur, status, injury_reported.
+
+Use realistic Southern European patterns:
+- Regions: Catalonia, Madrid, Andalusia, Lisbon, Porto, Milan, Rome
+- Mix of collision, theft, glass damage, vandalism
+- Amounts ranging from EUR 500 to EUR 150.000
+- About 15% with injuries reported
+```
+
+> **Tip:** The exercise data files in this training course are all synthetic. They were generated using exactly this approach.
+
+---
+
+## How to Anonymize Real Data Locally
+
+If you need to work with patterns from real data, use a two-step approach where Codex **never sees the original data**:
+
+**Step 1:** Ask Codex to write an anonymization script:
+
+```
+Write a Python script that reads a CSV file and:
+- Replaces all names with random generated names
+- Replaces policy numbers with sequential IDs (POL-0001, POL-0002, ...)
+- Rounds all amounts to the nearest EUR 100
+- Replaces addresses with just the city/region
+- Removes any free-text fields that might contain PII
+- Saves the result as a new file with "-anonymized" suffix
+```
+
+**Step 2:** Run the script yourself on your local machine. Only then share the anonymized output with Codex.
+
+This way, the raw data never leaves your machine. Codex only sees the anonymized version.
+
+---
+
+## API Data Retention Policies
+
+Understanding what happens to your data after you send it:
+
+| Policy | Details |
+|--------|---------|
+| **Training data** | API inputs are **not** used to train Codex models |
+| **Safety retention** | Data may be retained for up to 30 days for safety and abuse monitoring |
+| **Zero-retention option** | Available for enterprise customers -- data is not retained at all |
+| **Enterprise agreements** | Custom data processing agreements (DPAs) available |
+| **Compliance** | OpenAI maintains SOC 2 Type II certification |
+
+> **Note:** These policies apply to the API. The consumer product (chatgpt.com) may have different terms. Always verify the current policies on [OpenAI's privacy page](https://www.openai.com/privacy).
+
+---
+
+## Checklist Before Using Real Data
+
+Before sending any data to OpenAI Codex, verify:
+
+- The data contains no PII (names, addresses, policy numbers, national IDs)
+- The data contains no PHI (medical records, diagnoses, treatment details)
+- The data is not marked as confidential, restricted, or board-only
+- Your organization's data governance policy permits use of external AI tools
+- You have an appropriate data processing agreement if required by your regulator
+- You have considered whether synthetic data would serve the same purpose
+
+**When in doubt, use synthetic data.** OpenAI Codex can generate highly realistic insurance data that mirrors the patterns in your real data without any compliance risk.
+
+---
+
+## Key Takeaways
+
+- API inputs are not used for model training, but a 30-day safety retention applies
+- Never send PII, PHI, proprietary pricing, or credentials to OpenAI Codex
+- Generate synthetic data that mirrors real patterns -- OpenAI Codex is excellent at this
+- Use the two-step anonymization approach: OpenAI Codex writes the script, you run it locally
+- Enterprise agreements with zero-retention options are available
+- When in doubt, use synthetic data -- it is always the safest choice

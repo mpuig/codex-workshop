@@ -1,0 +1,137 @@
+claim_id,claim_date,settlement_date,product_line,sub_product,region_code,region_name,country,claim_type,claim_status,reported_amount_eur,paid_amount_eur,reserved_amount_eur,policyholder_segment,fraud_flag,adjuster_id,resolution_days
+CLM-2025-Q3120,2025-07-19,2025-08-22,Commercial,Commercial-Property,PT-ALG,Algarve,Portugal,Property Damage,Paid,23500,10300,0,SME,N,ADJ-020,34
+CLM-2025-Q3136,2025-09-05,2025-10-04,Life,Critical-Illness,PT-ALG,Algarve,Portugal,Disability,Paid,21000,9850,0,Corporate,N,ADJ-005,29
+CLM-2025-Q3114,2025-09-29,,Commercial,Commercial-Property,FR-IDF,Ile-de-France,France,Liability,Reserved,40800,0,35400,SME,N,ADJ-011,
+CLM-2025-Q3016,2025-09-15,2025-10-13,Motor,Auto-ThirdParty,FR-OCC,Occitanie,France,Glass Damage,Paid,4700,2350,0,Individual,N,ADJ-005,28
+CLM-2025-Q3068,2025-07-02,2025-08-17,Home,Landlord,PT-ALG,Algarve,Portugal,Fire,Paid,26700,14950,0,Corporate,N,ADJ-021,46
+CLM-2025-Q3029,2025-08-04,2025-09-15,Motor,Auto-Comprehensive,FR-OCC,Occitanie,France,Liability,Paid,11950,9200,0,SME,N,ADJ-022,42
+CLM-2025-Q3115,2025-09-07,,Commercial,Commercial-Property,IT-VEN,Veneto,Italy,Liability,Open,14750,0,11950,SME,N,ADJ-017,
+CLM-2025-Q3078,2025-08-18,,Health,Health-Group,PT-LIS,Lisbon,Portugal,Medical,Under Investigation,6750,0,3800,Individual,N,ADJ-011,
+CLM-2025-Q3043,2025-07-10,2025-09-02,Home,Landlord,PT-ALG,Algarve,Portugal,Theft,Paid,19450,18500,0,Individual,N,ADJ-020,54
+CLM-2025-Q3082,2025-08-19,2025-09-24,Health,Health-Group,ES-MAD,Madrid,Spain,Dental,Paid,3300,2600,0,Individual,Suspected,ADJ-018,36
+CLM-2025-Q3111,2025-09-20,2025-10-22,Commercial,Professional-Indemnity,IT-LAZ,Lazio,Italy,Liability,Paid,34850,14700,0,SME,N,ADJ-021,32
+CLM-2025-Q3118,2025-07-13,,Commercial,Commercial-Property,PT-POR,Porto,Portugal,Property Damage,Open,403300,0,307600,SME,N,ADJ-023,
+CLM-2025-Q3066,2025-07-25,2025-09-05,Home,Home-Contents,ES-VAL,Valencia,Spain,Subsidence,Paid,17100,12000,0,Individual,N,ADJ-007,42
+CLM-2025-Q3037,2025-08-30,,Motor,Auto-Collision,FR-IDF,Ile-de-France,France,Theft,Open,3400,0,2800,SME,N,ADJ-014,
+CLM-2025-Q3097,2025-07-11,2025-08-26,Health,Health-Group,IT-LOM,Lombardy,Italy,Medical,Denied,2750,0,0,Individual,N,ADJ-019,46
+CLM-2025-Q3077,2025-08-21,2025-08-27,Health,Health-Family,IT-LAZ,Lazio,Italy,Surgical,Paid,10400,7900,0,Individual,N,ADJ-001,6
+CLM-2025-Q3003,2025-07-06,2025-08-19,Motor,Fleet,PT-ALG,Algarve,Portugal,Theft,Paid,8650,6100,0,Individual,N,ADJ-018,44
+CLM-2025-Q3106,2025-08-08,,Health,Health-Group,FR-OCC,Occitanie,France,Physiotherapy,Reserved,5350,0,4700,Individual,N,ADJ-013,
+CLM-2025-Q3063,2025-09-19,,Home,Home-Combined,FR-OCC,Occitanie,France,Storm Damage,Open,500,0,450,Individual,N,ADJ-015,
+CLM-2025-Q3086,2025-07-08,,Health,Health-Group,PT-POR,Porto,Portugal,Surgical,Open,500,0,200,Individual,N,ADJ-001,
+CLM-2025-Q3090,2025-08-30,2025-09-16,Health,Health-Group,IT-LOM,Lombardy,Italy,Surgical,Paid,6250,4650,0,Individual,N,ADJ-003,17
+CLM-2025-Q3058,2025-09-13,2025-11-11,Home,Home-Buildings,FR-OCC,Occitanie,France,Storm Damage,Paid,11650,8200,0,Individual,N,ADJ-005,59
+CLM-2025-Q3100,2025-09-05,2025-10-04,Health,Health-Individual,ES-AND,Andalusia,Spain,Physiotherapy,Paid,1550,1450,0,Corporate,N,ADJ-006,29
+CLM-2025-Q3104,2025-08-24,2025-09-07,Health,Health-Group,FR-ARA,Auvergne-Rhone-Alpes,France,Optical,Paid,9900,6600,0,SME,N,ADJ-008,14
+CLM-2025-Q3061,2025-09-25,2025-10-05,Home,Home-Contents,ES-VAL,Valencia,Spain,Fire,Denied,2400,0,0,Individual,N,ADJ-007,10
+CLM-2025-Q3038,2025-09-08,,Home,Home-Contents,ES-MAD,Madrid,Spain,Theft,Open,15550,0,10150,Individual,N,ADJ-004,
+CLM-2025-Q3031,2025-07-12,,Motor,Auto-Collision,ES-CAT,Catalonia,Spain,Glass Damage,Under Investigation,3250,0,2650,Individual,N,ADJ-001,
+CLM-2025-Q3052,2025-08-16,,Home,Home-Contents,PT-ALG,Algarve,Portugal,Subsidence,Reserved,35650,0,30450,Individual,N,ADJ-003,
+CLM-2025-Q3050,2025-07-17,2025-07-20,Home,Home-Combined,IT-VEN,Veneto,Italy,Liability,Paid,5950,3800,0,Individual,N,ADJ-010,3
+CLM-2025-Q3123,2025-09-17,,Commercial,Professional-Indemnity,FR-PAC,Provence-Alpes-Cote d'Azur,France,Property Damage,Reserved,500,0,250,SME,N,ADJ-007,
+CLM-2025-Q3105,2025-07-21,,Health,Health-Individual,FR-ARA,Auvergne-Rhone-Alpes,France,Physiotherapy,Under Investigation,500,0,250,SME,N,ADJ-010,
+CLM-2025-Q3067,2025-09-03,2025-09-04,Home,Home-Contents,FR-PAC,Provence-Alpes-Cote d'Azur,France,Water Damage,Denied,500,0,0,Individual,Suspected,ADJ-001,1
+CLM-2025-Q3040,2025-08-10,,Home,Home-Contents,IT-CAM,Campania,Italy,Water Damage,Reserved,500,0,250,Individual,N,ADJ-009,
+CLM-2025-Q3048,2025-07-22,,Home,Home-Combined,ES-MAD,Madrid,Spain,Subsidence,Open,21750,0,13050,Individual,N,ADJ-002,
+CLM-2025-Q3109,2025-07-09,,Health,Dental,PT-LIS,Lisbon,Portugal,Surgical,Under Investigation,4750,0,2500,Individual,N,ADJ-023,
+CLM-2025-Q3073,2025-08-05,,Home,Landlord,IT-CAM,Campania,Italy,Storm Damage,Open,18250,0,12850,SME,N,ADJ-011,
+CLM-2025-Q3079,2025-08-09,2025-09-08,Health,Health-Family,ES-MAD,Madrid,Spain,Optical,Paid,3550,2500,0,SME,N,ADJ-021,30
+CLM-2025-Q3022,2025-08-22,,Motor,Auto-Collision,ES-VAL,Valencia,Spain,Liability,Reserved,4550,0,3750,Individual,N,ADJ-003,
+CLM-2025-Q3071,2025-08-16,,Home,Home-Combined,ES-VAL,Valencia,Spain,Subsidence,Reserved,15900,0,11450,Individual,N,ADJ-009,
+CLM-2025-Q3098,2025-09-14,2025-10-13,Health,Health-Family,FR-OCC,Occitanie,France,Physiotherapy,Paid,500,350,0,SME,N,ADJ-013,29
+CLM-2025-Q3026,2025-09-25,2025-10-17,Motor,Fleet,ES-AND,Andalusia,Spain,Vandalism,Denied,7300,0,0,Individual,N,ADJ-021,22
+CLM-2025-Q3130,2025-07-11,2025-08-15,Life,Income-Protection,ES-CAT,Catalonia,Spain,Disability,Denied,53300,0,0,Individual,N,ADJ-002,35
+CLM-2025-Q3005,2025-07-14,2025-08-29,Motor,Auto-Comprehensive,PT-POR,Porto,Portugal,Liability,Paid,12200,7700,0,SME,N,ADJ-012,46
+CLM-2025-Q3131,2025-08-06,2025-08-12,Life,Term-Life,ES-AND,Andalusia,Spain,Income Protection,Denied,50650,0,0,Individual,N,ADJ-017,6
+CLM-2025-Q3128,2025-07-11,2025-08-05,Life,Critical-Illness,IT-LAZ,Lazio,Italy,Disability,Paid,24750,5650,0,Individual,N,ADJ-022,25
+CLM-2025-Q3049,2025-09-25,2025-10-30,Home,Home-Buildings,PT-LIS,Lisbon,Portugal,Theft,Denied,1900,0,0,Individual,N,ADJ-021,35
+CLM-2025-Q3008,2025-07-16,2025-08-06,Motor,Auto-ThirdParty,IT-CAM,Campania,Italy,Theft,Denied,13600,0,0,Individual,N,ADJ-004,21
+CLM-2025-Q3085,2025-07-27,2025-09-02,Health,Dental,IT-LOM,Lombardy,Italy,Dental,Paid,900,400,0,Individual,N,ADJ-004,37
+CLM-2025-Q3101,2025-09-21,2025-11-22,Health,Health-Family,ES-AND,Andalusia,Spain,Optical,Paid,500,400,0,Individual,Suspected,ADJ-001,62
+CLM-2025-Q3091,2025-08-14,2025-09-26,Health,Health-Family,ES-VAL,Valencia,Spain,Optical,Paid,8650,4450,0,Individual,N,ADJ-007,43
+CLM-2025-Q3025,2025-07-11,,Motor,Auto-Comprehensive,IT-LAZ,Lazio,Italy,Theft,Open,12150,0,5500,Individual,N,ADJ-021,
+CLM-2025-Q3125,2025-09-05,2025-10-14,Commercial,Business-Interruption,IT-CAM,Campania,Italy,Equipment Breakdown,Paid,26150,19300,0,SME,Suspected,ADJ-014,39
+CLM-2025-Q3070,2025-09-27,2025-11-24,Home,Home-Contents,PT-LIS,Lisbon,Portugal,Theft,Paid,25850,7150,0,Individual,N,ADJ-012,58
+CLM-2025-Q3074,2025-07-29,,Home,Home-Contents,IT-LAZ,Lazio,Italy,Theft,Open,16550,0,8100,Individual,N,ADJ-010,
+CLM-2025-Q3089,2025-09-20,2025-09-24,Health,Health-Group,FR-ARA,Auvergne-Rhone-Alpes,France,Surgical,Paid,900,700,0,Individual,N,ADJ-020,4
+CLM-2025-Q3060,2025-07-18,2025-08-30,Home,Home-Combined,IT-LOM,Lombardy,Italy,Liability,Paid,6500,3850,0,Individual,N,ADJ-008,43
+CLM-2025-Q3059,2025-08-09,2025-08-10,Home,Landlord,ES-VAL,Valencia,Spain,Fire,Paid,15700,6950,0,Individual,N,ADJ-002,1
+CLM-2025-Q3055,2025-07-07,2025-08-31,Home,Landlord,FR-PAC,Provence-Alpes-Cote d'Azur,France,Theft,Paid,12200,6200,0,SME,N,ADJ-005,55
+CLM-2025-Q3014,2025-08-13,2025-10-06,Motor,Auto-ThirdParty,IT-VEN,Veneto,Italy,Glass Damage,Paid,11850,6800,0,Individual,N,ADJ-020,54
+CLM-2025-Q3045,2025-09-01,2025-10-10,Home,Home-Buildings,FR-PAC,Provence-Alpes-Cote d'Azur,France,Theft,Paid,131200,66550,0,Individual,N,ADJ-003,39
+CLM-2025-Q3054,2025-07-17,,Home,Home-Contents,FR-IDF,Ile-de-France,France,Fire,Open,7350,0,3750,Individual,N,ADJ-022,
+CLM-2025-Q3024,2025-08-07,,Motor,Fleet,ES-VAL,Valencia,Spain,Theft,Open,7700,0,5200,SME,N,ADJ-020,
+CLM-2025-Q3053,2025-08-12,,Home,Home-Buildings,ES-MAD,Madrid,Spain,Liability,Under Investigation,19950,0,17850,Corporate,N,ADJ-013,
+CLM-2025-Q3117,2025-07-15,2025-08-19,Commercial,Business-Interruption,PT-LIS,Lisbon,Portugal,Liability,Denied,43800,0,0,SME,N,ADJ-011,35
+CLM-2025-Q3102,2025-07-16,2025-08-19,Health,Health-Family,FR-ARA,Auvergne-Rhone-Alpes,France,Physiotherapy,Paid,10300,6050,0,Corporate,N,ADJ-020,34
+CLM-2025-Q3057,2025-07-15,2025-09-18,Home,Home-Combined,IT-VEN,Veneto,Italy,Theft,Paid,25650,15500,0,Individual,N,ADJ-017,65
+CLM-2025-Q3092,2025-08-26,2025-10-25,Health,Health-Individual,ES-MAD,Madrid,Spain,Optical,Paid,500,150,0,Individual,N,ADJ-010,60
+CLM-2025-Q3084,2025-07-13,,Health,Dental,FR-ARA,Auvergne-Rhone-Alpes,France,Dental,Under Investigation,5950,0,3050,Individual,N,ADJ-010,
+CLM-2025-Q3017,2025-08-03,,Motor,Auto-ThirdParty,FR-OCC,Occitanie,France,Liability,Open,16150,0,7150,Individual,N,ADJ-008,
+CLM-2025-Q3124,2025-09-03,2025-10-04,Commercial,Professional-Indemnity,PT-LIS,Lisbon,Portugal,Liability,Paid,21000,9600,0,SME,N,ADJ-023,31
+CLM-2025-Q3018,2025-07-03,,Motor,Auto-Comprehensive,IT-VEN,Veneto,Italy,Theft,Open,3750,0,2800,Individual,N,ADJ-017,
+CLM-2025-Q3072,2025-08-22,,Home,Landlord,ES-VAL,Valencia,Spain,Storm Damage,Reserved,4600,0,3050,Individual,N,ADJ-018,
+CLM-2025-Q3081,2025-07-14,,Health,Health-Family,FR-OCC,Occitanie,France,Optical,Open,5800,0,3600,Individual,N,ADJ-012,
+CLM-2025-Q3135,2025-08-13,2025-09-28,Life,Critical-Illness,FR-PAC,Provence-Alpes-Cote d'Azur,France,Income Protection,Paid,14900,7900,0,SME,N,ADJ-025,46
+CLM-2025-Q3051,2025-09-17,2025-11-09,Home,Home-Buildings,IT-VEN,Veneto,Italy,Liability,Paid,23700,16050,0,Individual,N,ADJ-009,53
+CLM-2025-Q3126,2025-07-12,2025-08-26,Commercial,Commercial-Liability,FR-OCC,Occitanie,France,Equipment Breakdown,Paid,28000,21350,0,Individual,N,ADJ-003,45
+CLM-2025-Q3004,2025-09-07,2025-09-30,Motor,Auto-Comprehensive,IT-CAM,Campania,Italy,Vandalism,Paid,6900,3500,0,SME,N,ADJ-007,23
+CLM-2025-Q3009,2025-07-29,2025-08-25,Motor,Fleet,FR-OCC,Occitanie,France,Glass Damage,Paid,7300,4750,0,Individual,N,ADJ-023,27
+CLM-2025-Q3076,2025-09-04,2025-10-20,Health,Health-Family,IT-LOM,Lombardy,Italy,Dental,Paid,3000,2150,0,SME,N,ADJ-024,46
+CLM-2025-Q3010,2025-08-07,,Motor,Auto-Collision,IT-CAM,Campania,Italy,Vandalism,Reserved,7900,0,4800,Individual,N,ADJ-025,
+CLM-2025-Q3121,2025-08-04,2025-09-07,Commercial,Commercial-Liability,IT-CAM,Campania,Italy,Property Damage,Paid,34450,16000,0,Corporate,N,ADJ-022,34
+CLM-2025-Q3127,2025-07-26,2025-08-16,Life,Critical-Illness,ES-VAL,Valencia,Spain,Critical Illness,Paid,11700,5400,0,Individual,N,ADJ-024,21
+CLM-2025-Q3046,2025-07-01,,Home,Landlord,ES-VAL,Valencia,Spain,Water Damage,Reserved,11150,0,8700,Individual,N,ADJ-009,
+CLM-2025-Q3113,2025-07-30,2025-09-17,Commercial,Commercial-Property,PT-ALG,Algarve,Portugal,Property Damage,Paid,31350,9950,0,Corporate,N,ADJ-007,49
+CLM-2025-Q3034,2025-09-28,2025-10-24,Motor,Auto-Comprehensive,ES-MAD,Madrid,Spain,Glass Damage,Paid,5550,2650,0,Individual,N,ADJ-014,26
+CLM-2025-Q3103,2025-08-28,,Health,Health-Group,FR-PAC,Provence-Alpes-Cote d'Azur,France,Optical,Open,500,0,300,Individual,Confirmed,ADJ-010,
+CLM-2025-Q3080,2025-09-11,2025-10-21,Health,Health-Family,FR-IDF,Ile-de-France,France,Optical,Denied,9100,0,0,Individual,N,ADJ-019,40
+CLM-2025-Q3093,2025-07-25,2025-08-03,Health,Health-Group,IT-CAM,Campania,Italy,Dental,Denied,12500,0,0,Individual,N,ADJ-022,9
+CLM-2025-Q3012,2025-08-11,2025-08-21,Motor,Fleet,ES-MAD,Madrid,Spain,Liability,Paid,8550,5100,0,Individual,N,ADJ-003,10
+CLM-2025-Q3011,2025-07-29,2025-08-27,Motor,Auto-ThirdParty,FR-PAC,Provence-Alpes-Cote d'Azur,France,Collision,Paid,16450,12250,0,Corporate,N,ADJ-003,29
+CLM-2025-Q3047,2025-08-25,,Home,Home-Buildings,PT-POR,Porto,Portugal,Storm Damage,Under Investigation,27700,0,21550,SME,N,ADJ-024,
+CLM-2025-Q3069,2025-07-16,2025-08-15,Home,Home-Contents,FR-OCC,Occitanie,France,Liability,Paid,9300,5100,0,Corporate,N,ADJ-019,30
+CLM-2025-Q3032,2025-08-23,2025-10-06,Motor,Auto-Collision,FR-ARA,Auvergne-Rhone-Alpes,France,Vandalism,Paid,6100,4900,0,SME,N,ADJ-005,44
+CLM-2025-Q3021,2025-08-04,,Motor,Auto-Collision,FR-ARA,Auvergne-Rhone-Alpes,France,Liability,Open,12550,0,6400,Individual,N,ADJ-012,
+CLM-2025-Q3094,2025-07-29,2025-09-05,Health,Health-Individual,FR-OCC,Occitanie,France,Surgical,Denied,11200,0,0,SME,N,ADJ-013,38
+CLM-2025-Q3134,2025-09-12,2025-09-22,Life,Term-Life,ES-MAD,Madrid,Spain,Death Benefit,Denied,33050,0,0,SME,N,ADJ-015,10
+CLM-2025-Q3020,2025-09-29,2025-11-12,Motor,Auto-ThirdParty,FR-ARA,Auvergne-Rhone-Alpes,France,Vandalism,Paid,9000,7050,0,Individual,N,ADJ-024,44
+CLM-2025-Q3036,2025-08-03,2025-09-13,Motor,Auto-Collision,FR-ARA,Auvergne-Rhone-Alpes,France,Collision,Denied,9850,0,0,Individual,N,ADJ-006,41
+CLM-2025-Q3116,2025-08-16,2025-10-19,Commercial,Professional-Indemnity,IT-LOM,Lombardy,Italy,Business Interruption,Paid,50800,22200,0,SME,N,ADJ-005,64
+CLM-2025-Q3027,2025-08-26,2025-10-04,Motor,Fleet,IT-LOM,Lombardy,Italy,Theft,Paid,9450,5000,0,Corporate,N,ADJ-001,39
+CLM-2025-Q3096,2025-08-31,2025-10-21,Health,Health-Group,ES-VAL,Valencia,Spain,Dental,Paid,9050,6850,0,Individual,N,ADJ-019,51
+CLM-2025-Q3099,2025-08-09,2025-09-05,Health,Health-Individual,IT-CAM,Campania,Italy,Dental,Denied,18400,0,0,Individual,N,ADJ-025,27
+CLM-2025-Q3023,2025-08-12,2025-09-27,Motor,Auto-Collision,ES-VAL,Valencia,Spain,Theft,Paid,16150,13000,0,SME,Confirmed,ADJ-012,46
+CLM-2025-Q3041,2025-07-24,,Home,Home-Contents,PT-ALG,Algarve,Portugal,Water Damage,Open,1050,0,800,Individual,N,ADJ-001,
+CLM-2025-Q3075,2025-07-28,2025-08-15,Health,Health-Family,ES-CAT,Catalonia,Spain,Medical,Paid,8050,5700,0,Individual,N,ADJ-022,18
+CLM-2025-Q3039,2025-09-22,,Home,Home-Combined,FR-ARA,Auvergne-Rhone-Alpes,France,Liability,Open,23150,0,11250,Individual,N,ADJ-013,
+CLM-2025-Q3044,2025-09-29,2025-10-29,Home,Landlord,IT-VEN,Veneto,Italy,Subsidence,Paid,4100,1650,0,Individual,N,ADJ-006,30
+CLM-2025-Q3129,2025-09-25,,Life,Term-Life,FR-ARA,Auvergne-Rhone-Alpes,France,Critical Illness,Open,48250,0,28700,Individual,N,ADJ-008,
+CLM-2025-Q3087,2025-08-28,,Health,Health-Group,PT-POR,Porto,Portugal,Dental,Under Investigation,5400,0,4300,SME,N,ADJ-003,
+CLM-2025-Q3119,2025-08-20,2025-11-06,Commercial,Commercial-Liability,IT-LOM,Lombardy,Italy,Cyber,Paid,13300,3800,0,SME,N,ADJ-007,78
+CLM-2025-Q3133,2025-07-18,,Life,Term-Life,IT-VEN,Veneto,Italy,Disability,Under Investigation,71900,0,62800,Corporate,N,ADJ-014,
+CLM-2025-Q3112,2025-08-08,,Commercial,Commercial-Liability,FR-PAC,Provence-Alpes-Cote d'Azur,France,Business Interruption,Reserved,45400,0,22000,Corporate,N,ADJ-009,
+CLM-2025-Q3007,2025-07-14,2025-09-08,Motor,Auto-Collision,PT-POR,Porto,Portugal,Glass Damage,Paid,8350,4650,0,Individual,N,ADJ-010,56
+CLM-2025-Q3062,2025-08-07,2025-09-03,Home,Home-Buildings,ES-VAL,Valencia,Spain,Subsidence,Paid,6750,2550,0,Individual,N,ADJ-009,27
+CLM-2025-Q3110,2025-08-15,2025-09-15,Commercial,Business-Interruption,FR-OCC,Occitanie,France,Liability,Paid,14100,3950,0,Corporate,N,ADJ-009,31
+CLM-2025-Q3013,2025-07-21,2025-09-07,Motor,Auto-Collision,ES-VAL,Valencia,Spain,Collision,Paid,10800,7050,0,Individual,N,ADJ-004,48
+CLM-2025-Q3083,2025-08-01,,Health,Health-Family,IT-CAM,Campania,Italy,Optical,Open,10950,0,4600,SME,N,ADJ-001,
+CLM-2025-Q3095,2025-08-17,2025-10-05,Health,Dental,PT-ALG,Algarve,Portugal,Physiotherapy,Paid,23900,20300,0,Individual,N,ADJ-008,49
+CLM-2025-Q3132,2025-08-25,,Life,Whole-Life,ES-CAT,Catalonia,Spain,Critical Illness,Reserved,29250,0,24350,Corporate,N,ADJ-002,
+CLM-2025-Q3001,2025-09-28,2025-11-05,Motor,Auto-Comprehensive,FR-PAC,Provence-Alpes-Cote d'Azur,France,Glass Damage,Paid,11200,8600,0,Individual,N,ADJ-016,38
+CLM-2025-Q3107,2025-07-19,2025-09-05,Health,Health-Family,FR-ARA,Auvergne-Rhone-Alpes,France,Physiotherapy,Paid,3550,3000,0,SME,N,ADJ-022,48
+CLM-2025-Q3088,2025-08-23,,Health,Health-Individual,IT-CAM,Campania,Italy,Dental,Open,3750,0,2550,Individual,N,ADJ-022,
+CLM-2025-Q3108,2025-07-20,,Health,Dental,ES-CAT,Catalonia,Spain,Physiotherapy,Reserved,1050,0,850,Individual,N,ADJ-023,
+CLM-2025-Q3064,2025-07-21,,Home,Home-Buildings,FR-IDF,Ile-de-France,France,Subsidence,Reserved,11450,0,5050,Individual,N,ADJ-013,
+CLM-2025-Q3030,2025-07-11,,Motor,Auto-Comprehensive,ES-AND,Andalusia,Spain,Liability,Reserved,16950,0,14750,Individual,N,ADJ-019,
+CLM-2025-Q3015,2025-09-01,,Motor,Auto-Comprehensive,ES-VAL,Valencia,Spain,Liability,Reserved,9950,0,4950,SME,N,ADJ-004,
+CLM-2025-Q3065,2025-07-16,,Home,Home-Buildings,PT-ALG,Algarve,Portugal,Subsidence,Under Investigation,12200,0,7450,Individual,N,ADJ-006,
+CLM-2025-Q3033,2025-08-14,,Motor,Auto-Collision,FR-OCC,Occitanie,France,Glass Damage,Reserved,5250,0,4550,Individual,N,ADJ-008,
+CLM-2025-Q3006,2025-07-29,,Motor,Auto-Comprehensive,IT-LOM,Lombardy,Italy,Glass Damage,Open,11100,0,5150,Corporate,N,ADJ-020,
+CLM-2025-Q3042,2025-07-20,2025-09-04,Home,Home-Combined,ES-AND,Andalusia,Spain,Theft,Paid,16750,8100,0,Individual,N,ADJ-020,46
+CLM-2025-Q3028,2025-07-09,,Motor,Auto-Collision,PT-POR,Porto,Portugal,Theft,Open,6550,0,3800,Individual,N,ADJ-013,
+CLM-2025-Q3122,2025-07-07,2025-08-23,Commercial,Professional-Indemnity,PT-POR,Porto,Portugal,Business Interruption,Paid,2550,1500,0,SME,N,ADJ-008,47
+CLM-2025-Q3002,2025-07-03,2025-07-29,Motor,Auto-Comprehensive,ES-VAL,Valencia,Spain,Vandalism,Paid,8900,3950,0,Individual,N,ADJ-025,26
+CLM-2025-Q3035,2025-08-31,2025-10-06,Motor,Auto-Collision,ES-MAD,Madrid,Spain,Glass Damage,Paid,15250,11000,0,SME,N,ADJ-014,36
+CLM-2025-Q3056,2025-09-12,,Home,Home-Contents,IT-VEN,Veneto,Italy,Water Damage,Reserved,500,0,200,Individual,N,ADJ-019,
+CLM-2025-Q3019,2025-09-14,,Motor,Auto-ThirdParty,FR-IDF,Ile-de-France,France,Liability,Open,6150,0,4050,Individual,N,ADJ-018,
