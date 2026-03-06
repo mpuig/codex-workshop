@@ -24,9 +24,26 @@ You can have:
 - **Project-level AGENTS.md** -- lives in your project folder, applies to that project only
 - **Global AGENTS.md** -- lives in your home directory (`~/.codex/AGENTS.md`), applies to every session everywhere
 
-![AGENTS.md hierarchy across repositories and users](./images/agents-md-hierarchy.png)
+```mermaid
+flowchart TB
+  G["~/.codex/AGENTS.md<br/>Global defaults (all projects)"]
+  P["/project/AGENTS.md<br/>Project rules"]
+  S["/project/submodule/AGENTS.md<br/>Optional nested overrides"]
+  C["Codex session in /project/submodule"]
 
-_AGENTS.md supports a hierarchical structure -- from monorepo-level overviews to submodule-specific instructions, plus personal user preferences._
+  G --> C
+  P --> C
+  S --> C
+```
+
+_AGENTS.md supports a hierarchy. On conflicts, the closest file to the working directory takes precedence: submodule > project > global._
+
+Reference: [agents.md](https://agents.md/)
+
+Examples:
+- If you run Codex in `/repo`, Codex applies `~/.codex/AGENTS.md` + `/repo/AGENTS.md` (project rules override global defaults on conflicts).
+- If you run Codex in `/repo/apps/api`, and `/repo/apps/api/AGENTS.md` exists, that file overrides conflicting rules from `/repo/AGENTS.md`.
+- If only `~/.codex/AGENTS.md` exists, those global defaults are used everywhere.
 
 Most people use project-level files. Use a global file for preferences that apply to all your work (language, formatting style, etc.).
 

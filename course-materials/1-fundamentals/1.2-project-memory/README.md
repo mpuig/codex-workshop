@@ -21,7 +21,14 @@ You can have:
 
 ![AGENTS.md hierarchy across repositories and users](images/agents-md-hierarchy.png)
 
-_AGENTS.md supports a hierarchical structure -- from monorepo-level overviews to submodule-specific instructions, plus personal user preferences._
+_AGENTS.md supports a hierarchy. On conflicts, the closest file to the working directory takes precedence: submodule > project > global._
+
+Reference: [agents.md](https://agents.md/)
+
+Examples:
+- If you run Codex in `/repo`, Codex applies `~/.codex/AGENTS.md` + `/repo/AGENTS.md` (project rules override global defaults on conflicts).
+- If you run Codex in `/repo/apps/api`, and `/repo/apps/api/AGENTS.md` exists, that file overrides conflicting rules from `/repo/AGENTS.md`.
+- If only `~/.codex/AGENTS.md` exists, those global defaults are used everywhere.
 
 Most people use project-level files. Use a global file for preferences that apply to all your work (language, formatting style, etc.).
 
