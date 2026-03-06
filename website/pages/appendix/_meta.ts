@@ -1,5 +1,6 @@
 export default {
-  'hooks': 'A: Hooks',
-  'mcp': 'B: MCP',
-  'sub-agents': 'C: Sub-agents',
+  'codex-app': 'A: Codex App',
+  'hooks': 'B: Hooks',
+  'mcp': 'C: MCP',
+  'sub-agents': 'D: Sub-agents',
 }
