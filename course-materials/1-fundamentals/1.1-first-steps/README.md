@@ -13,7 +13,7 @@
 
 ## How to Give Instructions
 
-OpenAI Codex works like talking to a very capable colleague. You type what you need in plain language, and Codex figures out how to do it.
+OpenAI Codex works like talking to a capable colleague. You type what you need in plain language, and Codex figures out how to do it.
 
 **Good instructions are:**
 

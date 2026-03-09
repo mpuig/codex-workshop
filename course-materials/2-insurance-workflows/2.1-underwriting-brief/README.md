@@ -391,7 +391,7 @@ MIG's property treaty has an excess point of EUR 5.000.000. The following scenar
 
 ## Using Codex as a Thinking Partner
 
-The real power of OpenAI Codex is not just document generation -- it is structured thinking. Try prompts like these:
+The most useful part of OpenAI Codex here is structured thinking, not document generation. Try prompts like these:
 
 | Prompt | Purpose |
 |--------|---------|
@@ -413,7 +413,7 @@ In this module you learned to:
 - Iterate on drafts with targeted feedback
 - Use Codex as a thinking partner, not just a writer
 
-The key takeaway: **give Codex the data, tell it what structure you want, and then challenge the output.** The best results come from two or three rounds of refinement.
+Give Codex the data, tell it what structure you want, and then challenge the output. The best results come from two or three rounds of refinement.
 
 ---
 

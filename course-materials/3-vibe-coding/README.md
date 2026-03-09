@@ -4,7 +4,7 @@
 
 ## What Is Vibe Coding?
 
-Vibe coding is building software by describing what you want in natural language. You are the product owner. Codex is the developer. You do not write a single line of code -- you describe features, review results, and iterate.
+Vibe coding is building software by describing what you want in natural language. You are the product owner. Codex is the developer. You do not write a single line of code. You describe features, review results, and iterate.
 
 This is not a gimmick. Non-technical professionals are building real, functional applications this way. In this module, you will build a **Claims Dashboard** for MIG -- a web application that visualizes claims data with charts, filters, and summaries.
 
@@ -290,7 +290,7 @@ simpler approach this time.
 
 ## What You Can Build Next
 
-Once you are comfortable with vibe coding, the possibilities expand significantly:
+Once you are comfortable with vibe coding, you can take on more ambitious projects:
 
 | Project Idea | Complexity | Time Estimate |
 |-------------|-----------|---------------|
@@ -316,7 +316,7 @@ In this module you learned to:
 - Handle errors and breakages without technical knowledge
 - Optionally save and deploy your application
 
-The key takeaway: **You do not need to be a developer to build useful tools.** With OpenAI Codex, the skill that matters is clearly describing what you need -- which is exactly what you do as a consultant every day. The ability to quickly prototype dashboards, calculators, and workflow tools is a genuine superpower for non-technical professionals.
+You do not need to be a developer to build useful tools. With OpenAI Codex, the skill that matters is clearly describing what you need -- which is exactly what you do as a consultant every day. The ability to quickly prototype dashboards, calculators, and workflow tools changes what non-technical professionals can deliver.
 
 ---
 

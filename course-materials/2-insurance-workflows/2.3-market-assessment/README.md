@@ -551,7 +551,7 @@ In this module you learned to:
 - Generate board-ready strategy documents
 - Stress-test strategies with devil's advocate prompting
 
-The key takeaway: **OpenAI Codex is not just a writing tool -- it is a research and strategy partner.** The combination of web search, data structuring, and iterative analysis lets you produce in 30 minutes what would normally take several days of desk research and writing.
+OpenAI Codex doubles as a research and strategy partner. The combination of web search, data structuring, and iterative analysis lets you produce in 30 minutes what would normally take several days of desk research and writing.
 
 ---
 
