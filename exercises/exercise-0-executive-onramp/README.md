@@ -5,13 +5,24 @@
 
 ---
 
+## Files
+
+Use the shared MIG context files:
+
+- `company-context/COMPANY.md`
+- `company-context/MARKET.md`
+- `company-context/PERSONAS.md`
+- `company-context/PRODUCTS.md`
+
+---
+
 ## Objective
 
 Get from zero to practical value with OpenAI Codex in one session.
 
 This exercise is designed for senior consulting profiles who are:
 
-- Interested in generative AI and tools like OpenAI Codex or Codex
+- Interested in generative AI and tools like OpenAI Codex
 - Strong in business judgment but not hands-on with coding
 - Looking for immediate, client-ready outcomes
 
@@ -300,9 +311,9 @@ Constraints:
 
 ---
 
-## Scoring (Simple Executive Rubric)
+## Self-Check Rubric
 
-Score each participant on 4 dimensions, each from 0 to 10 (total score: 40):
+Use this rubric to assess the quality of your prompts and outputs. Score each dimension from 0 to 10 (total score: 40):
 
 | Dimension | What "10" Looks Like |
 |---|---|
@@ -338,20 +349,9 @@ Suggested interpretation:
 
 ---
 
-## Facilitator Notes (Optional)
+## Suggested Outputs to Save
 
-For workshop delivery:
-
-- Run Block A in plenary (fast momentum, shared confidence)
-- Run Block B in pairs (peer critique improves prompt quality)
-- End with 5-minute playback per participant:  
-  "Best prompt I wrote" and "biggest improvement I made"
-
----
-
-## Deliverables to Keep
-
-By the end, each participant should save:
+If you want a reusable starter pack for future executive work, save these outputs:
 
 1. `executive_brief.md`
 2. `three_slide_storyline.md`
@@ -365,6 +365,6 @@ By the end, each participant should save:
 
 After Exercise 0, continue with:
 
-- `exercises/exercise-1-data-insight-tool/` for structured data analysis
-- `exercises/exercise-2-claims-triage/` for rule-driven process automation
-- `exercises/exercise-3-automated-reporting/` for full reporting automation
+- [Exercise 1: Data Insight Tool](../exercise-1-data-insight-tool/README.md) for structured data analysis
+- [Exercise 2: Claims Triage](../exercise-2-claims-triage/README.md) for rule-driven process automation
+- [Exercise 3: Automated Reporting](../exercise-3-automated-reporting/README.md) for full reporting automation

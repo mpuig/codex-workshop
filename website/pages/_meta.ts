@@ -7,18 +7,18 @@ export default {
   'getting-started': 'Module 0: Getting Started',
   fundamentals: 'Module 1: Fundamentals',
   'insurance-workflows': 'Module 2: Guided Workflows',
-  'vibe-coding': 'Module 3: Vibe Coding',
+  exercises: 'Module 3: Practice Exercises',
+  'vibe-coding': 'Module 4: Vibe Coding',
   'wrap-up': 'Course Wrap-Up',
   'sep-reference': {
     type: 'separator',
     title: 'Reference',
   },
+  'company-context': 'MIG Context',
+  'exercises-data-catalog': {
+    title: 'Data Catalog',
+    href: '/exercises/data-catalog',
+  },
   'advanced-tips': 'Advanced Tips',
   appendix: 'Appendix',
-  'sep-resources': {
-    type: 'separator',
-    title: 'Resources',
-  },
-  exercises: 'Practice Exercises',
-  'company-context': 'MIG Context',
 }

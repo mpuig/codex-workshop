@@ -1,8 +1,15 @@
-# Exercise 2: Claims Triage Prototype
+# Exercise 2: Claims Triage
 
-**Duration:** ~45 minutes
+**Duration:** ~45 minutes  
 **Difficulty:** Intermediate
-**Company:** Mediterranean Insurance Group (MIG)
+
+---
+
+## Files
+
+- `data/incoming_claims.csv`
+- `data/historical_outcomes.csv`
+- `data/business_rules.json`
 
 ---
 
@@ -30,25 +37,13 @@ Your job is to use OpenAI Codex to build this prototype step by step.
 
 ---
 
-## Data Files
-
-All data files are in the `data/` folder:
-
-| File | Description | Records |
-|------|-------------|---------|
-| `incoming_claims.csv` | New claims awaiting triage | 220 claims |
-| `business_rules.json` | Triage rules for classification, priority, routing, and fraud detection | -- |
-| `historical_outcomes.csv` | Past claims with known outcomes and adjuster notes | 160 claims |
-
----
-
 ## Step-by-Step Instructions
 
 ### Step 1: Understand the Data (~5 minutes)
 
 Start by asking OpenAI Codex to explore and summarize all the data files. This gives you a foundation before building anything.
 
-**Open your terminal in the exercise folder, then type:**
+**Open your terminal in this exercise folder, then type:**
 
 ```bash
 codex
@@ -432,7 +427,7 @@ By completing this exercise, you will practice:
 ## Troubleshooting Tips
 
 **OpenAI Codex does not find the data files**
-Make sure you launched OpenAI Codex from the exercise folder (`exercises/exercise-2-claims-triage/`), or provide the full path in your prompt: "Read all files in exercises/exercise-2-claims-triage/data/".
+Make sure you launched OpenAI Codex from this exercise folder, or provide the full path to the `data/` directory in your prompt.
 
 **The generated CSV has formatting issues**
 Ask OpenAI Codex to fix it: "The triaged_claims.csv has [describe issue]. Please regenerate it." OpenAI Codex handles CSV quoting, encoding, and special characters well, but descriptions with commas can sometimes cause issues.

@@ -1,6 +1,19 @@
-# Exercise 3: Automated Reporting Solution
+# Exercise 3: Automated Reporting
+
+**Duration:** ~55 minutes  
+**Difficulty:** Intermediate
 
 ## Mediterranean Insurance Group (MIG) - Quarterly Claims Report Automation
+
+---
+
+## Files
+
+- `data/claims_q1_2025.csv`
+- `data/claims_q2_2025.csv`
+- `data/claims_q3_2025.csv`
+- `data/claims_q4_2025.csv`
+- `data/report_template.md`
 
 ---
 
@@ -16,10 +29,6 @@ By the end of this exercise you will have:
 4. Created an HTML companion with interactive charts.
 5. Simulated a new quarter arriving and regenerated the report effortlessly.
 6. Built a Python automation script Pierre can run every quarter.
-
-**Estimated total time: 55 minutes**
-
----
 
 ## Background
 
@@ -38,7 +47,7 @@ Pierre wants to automate this end-to-end. When new quarterly data lands in the `
 ## Prerequisites
 
 - OpenAI Codex CLI installed and configured.
-- A terminal open in this exercise folder (`exercise-3-automated-reporting/`).
+- A terminal open in this exercise folder.
 - Python 3.9+ available (for the final automation script).
 
 ---
@@ -517,7 +526,7 @@ By completing this exercise, you will have practiced:
 ## Troubleshooting Tips
 
 ### "Codex says it cannot read the files"
-Make sure you launched OpenAI Codex from the `exercise-3-automated-reporting/` directory (or its parent). OpenAI Codex needs the files to be within its working context. You can also provide absolute paths in your prompt.
+Make sure you launched OpenAI Codex from this exercise directory (or its parent). OpenAI Codex needs the files to be within its working context. You can also provide absolute paths in your prompt.
 
 ### "The KPI numbers do not match when I spot-check"
 This can happen if Codex misinterprets which column to use. Clarify in your prompt:

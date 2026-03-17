@@ -361,20 +361,6 @@ Save as portugal-entry-scorecard.md
 
 </details>
 
-### Expected output format:
-
-```text
-MARKET ENTRY SCORECARD -- MIG PORTUGAL EXPANSION
-===================================================
-
-| Product Line      | Mkt Size (2x) | Comp (1x) | MIG Cap (2x) | Platform (1x) | Reg (1x) | Synergy (1x) | TOTAL |
-|-------------------|---------------|-----------|--------------|---------------|----------|-------------|-------|
-| Commercial Prop.  | 8             | 4         | 10           | 3             | 3        | 4            | 32    |
-| Motor (expand)    | 10            | 2         | 8            | 5             | 3        | 4            | 32    |
-| Marine Cargo      | 4             | 5         | 10           | 2             | 3        | 5            | 29    |
-| ...               | ...           | ...       | ...          | ...           | ...      | ...          | ...   |
-```
-
 ---
 
 ## Step 5: Generate the Strategy Brief
@@ -557,4 +543,4 @@ OpenAI Codex doubles as a research and strategy partner. The combination of web 
 
 ## Next Step
 
-Proceed to [Module 3: Building an Insurance App with Vibe Coding](../../3-vibe-coding/README.md) to learn how non-technical users can build working applications with OpenAI Codex.
+Proceed to [Exercise 0: Executive Onramp](../../../exercises/exercise-0-executive-onramp/README.md), the first page in Module 3: Practice Exercises, to apply these workflows independently before moving on to custom app building.

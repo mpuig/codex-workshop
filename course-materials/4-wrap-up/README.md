@@ -9,7 +9,8 @@ You have completed the core modules of the OpenAI Codex training course:
 - **Module 2.1:** Underwriting brief generation
 - **Module 2.2:** Loss ratio analysis and visualization
 - **Module 2.3:** Market entry assessment with web research
-- **Module 3:** Building applications with vibe coding
+- **Module 3:** Practice exercises with independent problem-solving
+- **Module 4:** Building applications with vibe coding
 
 **What to do next:**
 1. Use OpenAI Codex on a real task this week -- the sooner you apply it, the faster you build fluency

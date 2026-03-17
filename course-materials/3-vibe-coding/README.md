@@ -1,6 +1,6 @@
-# Module 3: Building an Insurance App with Vibe Coding
+# Module 4: Building an Insurance App with Vibe Coding
 
-> **Time:** 45 minutes | **Prerequisites:** Completion of Modules 1 and 2
+> **Time:** 45 minutes | **Prerequisites:** Completion of Modules 1 to 3 recommended
 
 ## What Is Vibe Coding?
 

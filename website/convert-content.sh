@@ -81,14 +81,14 @@ add_frontmatter_and_copy \
   "Module 2.3: Market Entry Assessment" \
   "Use OpenAI Codex web search to build a market entry assessment for Portugal expansion."
 
-# Module 3: Vibe Coding
+# Module 4: Vibe Coding
 add_frontmatter_and_copy \
   "$REPO_ROOT/course-materials/3-vibe-coding/README.md" \
   "$PAGES_DIR/vibe-coding/index.mdx" \
-  "Module 3: Building an Insurance App with Vibe Coding" \
+  "Module 4: Building an Insurance App with Vibe Coding" \
   "Build a Claims Dashboard app using natural language -- no coding experience required."
 
-# Exercise 1
+# Exercise 0
 add_frontmatter_and_copy \
   "$REPO_ROOT/exercises/exercise-0-executive-onramp/README.md" \
   "$PAGES_DIR/exercises/executive-onramp.mdx" \
@@ -99,21 +99,21 @@ add_frontmatter_and_copy \
 add_frontmatter_and_copy \
   "$REPO_ROOT/exercises/exercise-1-data-insight-tool/README.md" \
   "$PAGES_DIR/exercises/data-insight-tool.mdx" \
-  "Exercise 1: Data-Driven Insight Tool" \
+  "Exercise 1: Data Insight Tool" \
   "Build an end-to-end analytical workflow to identify white space expansion opportunities."
 
 # Exercise 2
 add_frontmatter_and_copy \
   "$REPO_ROOT/exercises/exercise-2-claims-triage/README.md" \
   "$PAGES_DIR/exercises/claims-triage.mdx" \
-  "Exercise 2: Claims Triage Prototype" \
+  "Exercise 2: Claims Triage" \
   "Build a claims triage system that classifies, prioritizes, and routes 220 incoming claims."
 
 # Exercise 3
 add_frontmatter_and_copy \
   "$REPO_ROOT/exercises/exercise-3-automated-reporting/README.md" \
   "$PAGES_DIR/exercises/automated-reporting.mdx" \
-  "Exercise 3: Automated Reporting Solution" \
+  "Exercise 3: Automated Reporting" \
   "Automate quarterly claims report generation with data analysis and visualizations."
 
 # Company Context
