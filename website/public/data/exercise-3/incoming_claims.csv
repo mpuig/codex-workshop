@@ -1,0 +1,221 @@
+claim_id,policy_number,policyholder_name,claim_date,incident_date,product_line,incident_type,incident_description,estimated_amount_eur,injury_reported,police_report_filed,region_code,region_name,adjuster_assigned,status
+CLM-2025-30001,MIG-MOT-364742,Pau Ortega Herrera,2025-05-07,2025-05-06,Motor,hit_and_run,Vehicle struck by unknown driver in parking lot; no witnesses.,13900,No,Yes,POR-N,Portugal Norte,,New
+CLM-2025-30002,MIG-HOM-725084,Bruno Ramos Ricci,2025-06-12,2025-06-05,Home,fire,Kitchen fire from unattended cooking; smoke damage throughout flat.,90300,No,Yes,CAT,Catalunya,,New
+CLM-2025-30003,MIG-HOM-185131,Rafael Gallego Ortiz,2025-02-14,2025-02-06,Home,water_damage,Blocked drainage caused water backup into basement storage.,17400,No,No,MAD,Madrid,,New
+CLM-2025-30004,MIG-MOT-377405,Paula Sanchez Rodriguez,2025-06-14,2025-06-08,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,10700,Yes,Yes,CAT,Catalunya,,New
+CLM-2025-30005,MIG-HOM-402630,Luis Santos Suarez,2025-04-27,2025-04-21,Home,storm_damage,Mediterranean storm flooded ground-floor garage and storage.,10400,No,No,CAT,Catalunya,,New
+CLM-2025-30006,MIG-MOT-807053,Aina Romero Rodriguez,2025-06-01,2025-05-28,Motor,collision,Low-speed collision in underground parking garage.,34500,Yes,Yes,MAD,Madrid,,New
+CLM-2025-30007,MIG-HOM-195674,Andreu Costa Gil,2025-05-05,2025-05-04,Home,storm_damage,High winds damaged shutters and broke terrace glass panels.,7130,No,No,POR-N,Portugal Norte,Pau Soler,Under Review
+CLM-2025-30008,MIG-MOT-523808,Lucia Blanco Gomez,2025-05-16,2025-05-10,Motor,hit_and_run,Vehicle struck by unknown driver in parking lot; no witnesses.,20000,No,Yes,MAD,Madrid,,New
+CLM-2025-30009,MIG-MOT-832168,Alba Sanchez Hernandez,2025-05-09,2025-03-19,Motor,collision,Side impact at roundabout; other driver failed to yield.,11400,Yes,Yes,AND,Andalucia,,New
+CLM-2025-30010,MIG-HOM-972565,Raquel Calvo Santos,2025-02-13,2025-02-09,Home,water_damage,Hot water heater failure flooded utility room and hallway.,12300,No,No,CAT,Catalunya,,New
+CLM-2025-30011,MIG-HLT-173201,Lorenzo Hernandez Torres,2025-03-16,2025-03-12,Health,medical_emergency,Acute asthma attack requiring emergency nebulizer treatment.,15600,No,No,AND,Andalucia,,New
+CLM-2025-30012,MIG-HOM-448588,Raquel Navarro Marin,2025-05-26,2025-05-23,Home,fire,Fire started from faulty space heater; bedroom heavily damaged.,39600,No,No,MAD,Madrid,,New
+CLM-2025-30013,MIG-HOM-960616,Laia Silva Herrera,2025-06-20,2025-05-27,Home,theft,Apartment burgled during daytime; door lock picked.,10600,No,Yes,CAT,Catalunya,Jordi Puig,Under Review
+CLM-2025-30014,MIG-COM-919488,Patricia Vega Marin,2025-03-13,2025-03-12,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,68500,Yes,No,MAD,Madrid,,New
+CLM-2025-30015,MIG-HOM-817644,Ana Ricci Campos,2025-03-19,2025-03-18,Home,water_damage,Burst pipe in bathroom caused flooding to ground floor.,17700,No,No,MAD,Madrid,Isabel Fernandez,Under Review
+CLM-2025-30016,MIG-HOM-656968,Sara Reyes Calvo,2025-04-20,2025-04-18,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,25000,No,No,ARA,Aragon,,New
+CLM-2025-30017,MIG-MOT-109853,Luca Vila Blanco,2025-05-04,2025-04-27,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,44500,No,No,VAL,Valencia,,New
+CLM-2025-30018,MIG-COM-211834,Alvaro Fernandez Moreno,2025-03-06,2025-03-02,Commercial,flood,Sewer backup flooded restaurant basement; health inspection required.,25000,No,No,VAL,Valencia,,New
+CLM-2025-30019,MIG-HLT-400096,Bruno Costa Gomez,2025-03-04,2025-03-01,Health,dental,Dental crown replacement after fracture.,2740,No,No,VAL,Valencia,,New
+CLM-2025-30020,MIG-HOM-562236,Valentina Bianchi Calvo,2025-01-13,2025-01-09,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,10700,No,No,BAL,Illes Balears,,New
+CLM-2025-30021,MIG-HLT-964749,Alejandro Soler Ricci,2025-05-08,2025-05-07,Health,hospitalization,Post-surgical hospitalization for knee replacement recovery.,10600,No,No,CAT,Catalunya,,New
+CLM-2025-30022,MIG-MOT-377304,Chiara Delgado Morales,2025-05-22,2025-05-18,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,37200,No,Yes,CAT,Catalunya,,New
+CLM-2025-30023,MIG-COM-166287,Eva Rossi Martinez,2025-06-16,2025-06-10,Commercial,product_liability,Defective equipment caused minor burns to end user.,10200,Yes,No,CAT,Catalunya,,New
+CLM-2025-30024,MIG-HOM-830316,Paula Sanchez Rodriguez,2025-05-23,2025-05-17,Home,vandalism,Front door and mailbox vandalized; graffiti on facade.,6750,No,No,VAL,Valencia,,New
+CLM-2025-30025,MIG-MOT-670913,Xavier Munoz Rodrigues,2025-06-19,2025-06-18,Motor,vandalism,Vehicle keyed along both sides while parked on street.,4160,No,Yes,VAL,Valencia,Andreu Ferrer,Under Review
+CLM-2025-30026,MIG-MOT-681128,Sara Jimenez Hernandez,2025-02-27,2025-02-22,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,978.08,No,No,POR-S,Portugal Sul,,New
+CLM-2025-30027,MIG-HLT-115582,Matteo Martinez Alvarez,2025-04-06,2025-03-21,Health,medical_emergency,Severe abdominal pain requiring emergency surgery consultation.,25000,No,No,GAL,Galicia,,New
+CLM-2025-30028,MIG-MOT-744986,Miguel Costa Rodrigues,2025-01-16,2025-01-16,Motor,theft,Vehicle stolen and recovered with significant damage.,50000,No,Yes,CAT,Catalunya,,New
+CLM-2025-30029,MIG-MOT-232321,Sergio Mas Ortega,2025-03-16,2025-03-11,Motor,collision,Sideswipe accident while changing lanes on M-30 ring road.,27200,No,Yes,MAD,Madrid,Patricia Flores,New
+CLM-2025-30030,MIG-HOM-455395,Carlos Soler Ferrer,2025-05-01,2025-04-10,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,6740,No,No,AND,Andalucia,,New
+CLM-2025-30031,MIG-HLT-236435,Alejandro Herrera Castillo,2025-05-27,2025-05-22,Health,outpatient_treatment,Outpatient blood tests and endocrinology consultation.,1290,No,No,POR-N,Portugal Norte,,New
+CLM-2025-30032,MIG-HOM-705991,Laura Reyes Costa,2025-05-14,2025-05-13,Home,water_damage,Slow leak behind kitchen wall discovered during renovation; mold found.,14100,No,No,CAT,Catalunya,,New
+CLM-2025-30033,MIG-HOM-127529,Giuseppe Calvo Campos,2025-06-09,2025-06-07,Home,theft,Break-in through ground floor window; laptop and cash stolen.,23100,No,Yes,CAT,Catalunya,,New
+CLM-2025-30034,MIG-HLT-196214,Aina Vega Perez,2025-05-20,2025-05-18,Health,physiotherapy,Physiotherapy sessions for chronic lower back pain.,1860,No,No,AND,Andalucia,,New
+CLM-2025-30035,MIG-MOT-564637,Valentina Vazquez Bianchi,2025-06-23,2025-06-19,Motor,collision,Rear-ended on Gran Via during morning rush hour traffic.,23400,No,Yes,VAL,Valencia,,New
+CLM-2025-30036,MIG-MOT-157443,Marina Pereira Molina,2025-01-06,2025-01-04,Motor,hit_and_run,Hit while crossing intersection; other driver fled the scene.,6140,Yes,Yes,MAD,Madrid,,New
+CLM-2025-30037,MIG-HOM-471371,Ramon Gallego Romano,2025-01-23,2025-01-15,Home,theft,Storage unit in communal basement broken into; personal items stolen.,3260,No,Yes,MAD,Madrid,,New
+CLM-2025-30038,MIG-COM-748151,Jordi Garcia Ramos,2025-05-02,2025-04-29,Commercial,slip_and_fall,Visitor fell on uneven pavement outside office building.,33200,Yes,No,GAL,Galicia,,New
+CLM-2025-30039,MIG-HOM-303322,Lorenzo Hernandez Torres,2025-04-04,2025-04-02,Home,theft,Storage unit in communal basement broken into; personal items stolen.,5250,No,Yes,GAL,Galicia,Clara Medina,Under Review
+CLM-2025-30040,MIG-HOM-691912,Marco Alvarez Ortega,2025-06-18,2025-06-13,Home,electrical_damage,Power surge during storm destroyed multiple household appliances.,825.8,No,No,MAD,Madrid,,New
+CLM-2025-30041,MIG-HOM-972097,Oscar Molina Almeida,2025-03-19,2025-03-18,Home,water_damage,Burst pipe in bathroom caused flooding to ground floor.,12900,No,No,PVA,Pais Vasco,,New
+CLM-2025-30042,MIG-MOT-625721,Teresa Hernandez Vega,2025-02-12,2025-02-07,Motor,theft,"Vehicle broken into; GPS, laptop, and personal items taken.",5700,No,Yes,VAL,Valencia,,New
+CLM-2025-30043,MIG-HOM-528625,Chiara Delgado Morales,2025-04-01,2025-03-27,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,2000,No,No,MAD,Madrid,,New
+CLM-2025-30044,MIG-COM-787923,Aina Vega Perez,2025-06-23,2025-06-22,Commercial,product_liability,Customer alleges allergic reaction to product sold in store.,48300,No,No,VAL,Valencia,,New
+CLM-2025-30045,MIG-MOT-324597,Xavier Munoz Rodrigues,2025-04-02,2025-03-31,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,2000,No,Yes,GAL,Galicia,Andreu Ferrer,New
+CLM-2025-30046,MIG-MOT-826501,Leonor Serra Gallego,2025-06-13,2025-05-25,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,11300,No,Yes,GAL,Galicia,,New
+CLM-2025-30047,MIG-COM-811256,Elena Rossi Delgado,2025-05-31,2025-05-25,Commercial,slip_and_fall,Employee tripped on loose carpet in restaurant; wrist fracture.,34700,Yes,Yes,VAL,Valencia,Clara Medina,Under Review
+CLM-2025-30048,MIG-HLT-230734,Blanca Rossi Gomez,2025-03-18,2025-03-16,Health,outpatient_treatment,Allergy testing and immunotherapy initiation.,365.97,No,No,PVA,Pais Vasco,,New
+CLM-2025-30049,MIG-HOM-185569,Ines Bianchi Herrera,2025-04-10,2025-02-09,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,18000,No,No,CAT,Catalunya,,New
+CLM-2025-30050,MIG-HOM-183074,Elena Rossi Delgado,2025-01-09,2025-01-03,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,7560,No,No,MAD,Madrid,Clara Medina,New
+CLM-2025-30051,MIG-HOM-250551,Ramon Diaz Gallego,2025-03-20,2025-02-06,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,10700,No,No,POR-S,Portugal Sul,,New
+CLM-2025-30052,MIG-HOM-592972,Marc Vega Calvo,2025-01-16,2025-01-16,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,2160,No,No,CAT,Catalunya,Nuria Gallego,New
+CLM-2025-30053,MIG-MOT-587192,Joao Prieto Santos,2025-05-07,2025-04-30,Motor,glass_damage,"Side window cracked; cause unknown, found on morning inspection.",10000,No,No,CAT,Catalunya,,New
+CLM-2025-30054,MIG-HOM-778324,Sofia Campos Sanchez,2025-02-22,2025-02-17,Home,water_damage,Slow leak behind kitchen wall discovered during renovation; mold found.,20100,No,No,MAD,Madrid,,New
+CLM-2025-30055,MIG-HOM-644500,Rafael Soler Martinez,2025-03-14,2025-02-15,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,1690,No,No,MAD,Madrid,,New
+CLM-2025-30056,MIG-MOT-568849,Rui Serrano Soler,2025-01-15,2025-01-15,Motor,theft,Vehicle stolen from street parking overnight in Eixample district.,25000,No,Yes,VAL,Valencia,Eva Cabrera,New
+CLM-2025-30057,MIG-MOT-776502,Jorge Oliveira Silva,2025-04-08,2025-04-06,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,42700,No,No,AND,Andalucia,,New
+CLM-2025-30058,MIG-MOT-871411,Sergio Moreno Ruiz,2025-02-21,2025-02-20,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,12300,No,No,MAD,Madrid,,New
+CLM-2025-30059,MIG-HOM-566732,Isabel Castro Gonzalez,2025-01-27,2025-01-23,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,6860,No,No,VAL,Valencia,,New
+CLM-2025-30060,MIG-HLT-618019,Alvaro Santos Munoz,2025-01-11,2025-01-09,Health,hospitalization,Post-surgical hospitalization for knee replacement recovery.,11500,No,No,POR-S,Portugal Sul,,New
+CLM-2025-30061,MIG-MOT-773540,Teresa Lopez Vazquez,2025-01-23,2025-01-21,Motor,hit_and_run,Parked vehicle hit overnight; paint transfer found on bumper.,15700,No,Yes,POR-S,Portugal Sul,,New
+CLM-2025-30062,MIG-HOM-269834,Alvaro Prieto Aguilar,2025-03-28,2025-03-24,Home,water_damage,Blocked drainage caused water backup into basement storage.,6640,No,No,CAT,Catalunya,,New
+CLM-2025-30063,MIG-MOT-261684,Joao Prieto Santos,2025-02-17,2025-02-12,Motor,hit_and_run,Side panel damaged by passing vehicle on narrow street; driver did not stop.,11500,No,Yes,CAT,Catalunya,,New
+CLM-2025-30064,MIG-HOM-757629,Marta Soler Aguilar,2025-05-24,2025-05-21,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,17300,No,No,CAT,Catalunya,,New
+CLM-2025-30065,MIG-HOM-853258,Cristina Reyes Munoz,2025-03-27,2025-03-22,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,3100,No,No,MAD,Madrid,Sofia Blanco,Under Review
+CLM-2025-30066,MIG-MOT-267457,Diogo Vila Carvalho,2025-03-29,2025-03-27,Motor,glass_damage,Windshield chip from gravel on construction zone.,690.46,No,No,CAT,Catalunya,,New
+CLM-2025-30067,MIG-HOM-395023,Lorenzo Martinez Diaz,2025-05-11,2025-05-04,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,700.35,No,No,MAD,Madrid,,New
+CLM-2025-30068,MIG-MOT-480133,Sergio Molina Jimenez,2025-05-26,2025-05-22,Motor,theft,Motorbike stolen from communal garage; lock cut.,22900,No,Yes,CAT,Catalunya,,New
+CLM-2025-30069,MIG-HLT-633853,Chiara Delgado Morales,2025-04-17,2025-03-16,Health,hospitalization,Hospitalization for complications from diabetes management.,30000,No,No,AND,Andalucia,,New
+CLM-2025-30070,MIG-MOT-746447,Beatriz Martinez Sousa,2025-03-22,2025-03-15,Motor,collision,Vehicle struck while legally parked on Carrer de Balmes.,14100,No,Yes,VAL,Valencia,,New
+CLM-2025-30071,MIG-HOM-378428,Elena Molina Puig,2025-06-21,2025-06-14,Home,theft,Storage unit in communal basement broken into; personal items stolen.,19200,No,Yes,CAT,Catalunya,,New
+CLM-2025-30072,MIG-MOT-428930,Eva Puig Navarro,2025-04-22,2025-04-15,Motor,collision,Collision with motorcycle at intersection; disputed liability.,33300,Yes,Yes,CAT,Catalunya,,New
+CLM-2025-30073,MIG-MOT-659024,Leonor Serra Gallego,2025-04-02,2025-03-29,Motor,collision,Low-speed collision in underground parking garage.,9300,Yes,Yes,CAT,Catalunya,,New
+CLM-2025-30074,MIG-HLT-465746,Elena Molina Puig,2025-05-28,2025-05-22,Health,surgery,Hernia repair surgery at private clinic.,25500,No,No,GAL,Galicia,,New
+CLM-2025-30075,MIG-MOT-368900,Sergio Mas Ortega,2025-05-07,2025-05-03,Motor,theft,Entire vehicle stolen from airport long-term parking.,22700,No,Yes,VAL,Valencia,,New
+CLM-2025-30076,MIG-HOM-205428,Antonio Alvarez Vazquez,2025-06-28,2025-05-11,Home,storm_damage,Hailstorm damaged terrace awning and outdoor furniture.,3830,No,No,AND,Andalucia,,New
+CLM-2025-30077,MIG-HOM-193806,Laura Reyes Costa,2025-06-20,2025-06-20,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,1650,No,No,ARA,Aragon,,New
+CLM-2025-30078,MIG-COM-695551,Hugo Soler Cabrera,2025-06-08,2025-06-01,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,44400,Yes,No,BAL,Illes Balears,,New
+CLM-2025-30079,MIG-MOT-369761,Xavier Vazquez Gonzalez,2025-02-21,2025-02-18,Motor,theft,Vehicle stolen from street parking overnight in Eixample district.,30400,No,Yes,AND,Andalucia,,New
+CLM-2025-30080,MIG-HOM-107161,Patricia Lopez Alvarez,2025-03-12,2025-03-07,Home,vandalism,Front door and mailbox vandalized; graffiti on facade.,5920,No,Yes,VAL,Valencia,,New
+CLM-2025-30081,MIG-HOM-837733,Giulia Ortega Morales,2025-03-25,2025-03-20,Home,fire,Small fire in garage spread to storage area; vehicles undamaged.,36800,No,Yes,GAL,Galicia,,New
+CLM-2025-30082,MIG-HLT-965708,Elena Rossi Delgado,2025-03-01,2025-02-28,Health,dental,Root canal treatment on molar tooth.,2150,No,No,ARA,Aragon,Patricia Flores,New
+CLM-2025-30083,MIG-MOT-645617,Jordi Bianchi Medina,2025-04-28,2025-04-21,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,23400,No,Yes,AND,Andalucia,,New
+CLM-2025-30084,MIG-HLT-515182,Andre Calvo Costa,2025-03-11,2025-03-11,Health,dental,Root canal treatment on molar tooth.,2830,No,No,CAT,Catalunya,,New
+CLM-2025-30085,MIG-HOM-903028,Laura Reyes Costa,2025-06-18,2025-06-12,Home,storm_damage,High winds damaged shutters and broke terrace glass panels.,18400,No,No,POR-S,Portugal Sul,Nuria Gallego,Under Review
+CLM-2025-30086,MIG-HOM-333507,Jordi Bianchi Medina,2025-01-05,2024-12-30,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,20700,No,No,MAD,Madrid,Ana Morales,New
+CLM-2025-30087,MIG-MOT-722795,Esther Sousa Delgado,2025-01-13,2025-01-13,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,2760,No,Yes,GAL,Galicia,Sofia Blanco,Under Review
+CLM-2025-30088,MIG-MOT-805200,Teresa Lopez Vazquez,2025-03-28,2025-03-25,Motor,theft,Catalytic converter stolen from parked vehicle in suburban area.,11800,No,Yes,GAL,Galicia,,New
+CLM-2025-30089,MIG-MOT-774565,Chiara Colombo Prieto,2025-06-25,2025-06-19,Motor,collision,Multi-vehicle pileup on AP-7 motorway during heavy rain.,14100,Yes,Yes,CAT,Catalunya,,New
+CLM-2025-30090,MIG-COM-536740,Oscar Molina Almeida,2025-05-27,2025-05-24,Commercial,property_damage,Roof collapse at commercial warehouse after heavy snowfall.,4870,No,No,AND,Andalucia,Pedro Castillo,New
+CLM-2025-30091,MIG-COM-898696,Rui Hernandez Puig,2025-06-04,2025-05-30,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,72900,Yes,Yes,GAL,Galicia,,New
+CLM-2025-30092,MIG-HOM-437237,Fernando Campos Colombo,2025-03-18,2025-03-14,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,13100,No,No,POR-S,Portugal Sul,,New
+CLM-2025-30093,MIG-HOM-689849,Fernando Campos Colombo,2025-03-02,2025-01-13,Home,fire,Balcony fire from discarded cigarette; facade damage to building.,89000,No,Yes,MAD,Madrid,,New
+CLM-2025-30094,MIG-HLT-369826,Alba Sanchez Hernandez,2025-05-10,2025-05-05,Health,dental,Wisdom tooth extraction under local anesthesia.,2900,No,No,ARA,Aragon,,New
+CLM-2025-30095,MIG-MOT-957730,Alba Lopez Rodrigues,2025-06-25,2025-06-22,Motor,glass_damage,Windshield chip from gravel on construction zone.,5000,No,No,MAD,Madrid,,New
+CLM-2025-30096,MIG-MOT-388086,Elena Rossi Delgado,2025-05-22,2025-03-26,Motor,theft,Entire vehicle stolen from airport long-term parking.,16800,No,Yes,ARA,Aragon,David Torres,New
+CLM-2025-30097,MIG-MOT-491172,Carmen Serrano Serra,2025-04-18,2025-04-15,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,37400,Yes,No,VAL,Valencia,Pedro Castillo,Under Review
+CLM-2025-30098,MIG-HOM-186702,Oscar Pereira Ramos,2025-05-12,2025-05-11,Home,theft,Holiday home burglarized; furniture and appliances removed.,27700,No,Yes,VAL,Valencia,,New
+CLM-2025-30099,MIG-HLT-669408,Eva Colombo Ramos,2025-05-29,2025-03-30,Health,surgery,Carpal tunnel release surgery on both hands.,3890,No,No,CAT,Catalunya,,New
+CLM-2025-30100,MIG-MOT-508060,Sara Jimenez Hernandez,2025-06-27,2025-06-25,Motor,glass_damage,Windshield cracked by road debris on autopista.,873.78,No,No,MAD,Madrid,,New
+CLM-2025-30101,MIG-HOM-724540,Cristina Reyes Munoz,2025-04-16,2025-03-08,Home,theft,Break-in through ground floor window; laptop and cash stolen.,14100,No,Yes,MAD,Madrid,,New
+CLM-2025-30102,MIG-HLT-358421,Leonor Ricci Dominguez,2025-01-23,2025-01-21,Health,surgery,Laparoscopic gallbladder removal procedure.,21100,No,No,CAT,Catalunya,,New
+CLM-2025-30103,MIG-MOT-570646,Blanca Rossi Gomez,2025-05-27,2025-05-26,Motor,collision,Low-speed collision in underground parking garage.,4910,No,Yes,MAD,Madrid,,New
+CLM-2025-30104,MIG-COM-699743,Arnau Rodrigues Gallego,2025-05-18,2025-05-14,Commercial,equipment_breakdown,"Commercial oven exploded; kitchen staff evacuated, minor injuries.",20700,No,No,MAD,Madrid,,New
+CLM-2025-30105,MIG-HLT-746624,Silvia Ramos Perez,2025-02-24,2025-02-18,Health,outpatient_treatment,Allergy testing and immunotherapy initiation.,1900,No,No,MAD,Madrid,,New
+CLM-2025-30106,MIG-COM-436241,Teresa Hernandez Vega,2025-06-08,2025-06-02,Commercial,slip_and_fall,Visitor fell on uneven pavement outside office building.,24700,Yes,No,AND,Andalucia,,New
+CLM-2025-30107,MIG-HOM-309505,Enrique Bianchi Silva,2025-06-05,2025-06-05,Home,electrical_damage,Lightning strike damaged home electronics and smart home system.,3850,No,No,MAD,Madrid,Ana Morales,New
+CLM-2025-30108,MIG-MOT-261630,Montserrat Ortiz Rodrigues,2025-04-23,2025-04-16,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,24400,No,No,MAD,Madrid,,New
+CLM-2025-30109,MIG-HOM-214682,Jordi Bianchi Medina,2025-03-09,2025-03-09,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,5270,No,No,MAD,Madrid,Marta Ruiz,Under Review
+CLM-2025-30110,MIG-HOM-331768,Diogo Serra Ortiz,2025-04-29,2025-04-27,Home,theft,Home burgled while on vacation; electronics and jewelry taken.,1710,No,Yes,POR-S,Portugal Sul,,New
+CLM-2025-30111,MIG-MOT-316916,Montserrat Ramos Serrano,2025-05-18,2025-04-18,Motor,theft,Motorbike stolen from communal garage; lock cut.,5150,No,Yes,CAT,Catalunya,,New
+CLM-2025-30112,MIG-COM-641058,Francesca Romero Reyes,2025-02-18,2025-02-11,Commercial,fire,Electrical fire in commercial kitchen; restaurant closed for repairs.,211400,No,Yes,MAD,Madrid,,New
+CLM-2025-30113,MIG-HOM-838968,Montserrat Costa Delgado,2025-02-28,2025-02-27,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,20100,No,No,CAT,Catalunya,,New
+CLM-2025-30114,MIG-COM-507517,Joao Soler Almeida,2025-06-10,2025-06-03,Commercial,product_liability,Customer alleges allergic reaction to product sold in store.,98600,No,No,VAL,Valencia,,New
+CLM-2025-30115,MIG-MOT-827120,Luis Perez Mas,2025-02-10,2025-02-04,Motor,collision,Head-on collision on secondary road near Portugal Norte.,22300,No,No,POR-N,Portugal Norte,,New
+CLM-2025-30116,MIG-MOT-749498,Patricia Lopez Alvarez,2025-01-18,2025-01-15,Motor,glass_damage,Windshield chip from gravel on construction zone.,1160,No,No,VAL,Valencia,,New
+CLM-2025-30117,MIG-MOT-898025,Francesca Romero Reyes,2025-03-02,2025-01-23,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,8230,No,No,GAL,Galicia,,New
+CLM-2025-30118,MIG-HLT-484682,Cristina Mas Vega,2025-05-23,2025-05-20,Health,dental,Emergency dental visit for abscess drainage.,481.47,No,No,GAL,Galicia,,New
+CLM-2025-30119,MIG-MOT-560398,Francisco Rodriguez Sanchez,2025-02-04,2025-01-30,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,790.77,No,No,PVA,Pais Vasco,,New
+CLM-2025-30120,MIG-MOT-439375,Sara Campos Delgado,2025-03-20,2025-03-19,Motor,theft,Vehicle stolen and recovered with significant damage.,27000,No,Yes,MAD,Madrid,Jordi Puig,Under Review
+CLM-2025-30121,MIG-HLT-809083,Diana Prieto Ramos,2025-04-15,2025-04-09,Health,dental,Orthodontic adjustment and consultation.,376.02,No,No,GAL,Galicia,,New
+CLM-2025-30122,MIG-HOM-710224,Valentina Silva Costa,2025-01-05,2024-12-31,Home,fire,Balcony fire from discarded cigarette; facade damage to building.,120400,No,No,PVA,Pais Vasco,,New
+CLM-2025-30123,MIG-HOM-993829,Oriol Pereira Rodriguez,2025-05-09,2025-05-09,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,19700,No,No,BAL,Illes Balears,,New
+CLM-2025-30124,MIG-MOT-238320,Rui Serrano Soler,2025-06-20,2025-06-16,Motor,vandalism,Tires slashed on all four wheels in neighborhood dispute.,1930,No,No,CAT,Catalunya,,New
+CLM-2025-30125,MIG-HLT-101139,Rui Serrano Soler,2025-02-28,2025-02-21,Health,dental,Orthodontic adjustment and consultation.,20000,No,No,POR-S,Portugal Sul,,New
+CLM-2025-30126,MIG-HOM-207402,Carlos Almeida Prieto,2025-01-31,2025-01-25,Home,storm_damage,High winds damaged shutters and broke terrace glass panels.,15300,No,No,CAT,Catalunya,,New
+CLM-2025-30127,MIG-HOM-758589,Francesca Romero Reyes,2025-02-12,2025-02-09,Home,storm_damage,Mediterranean storm flooded ground-floor garage and storage.,2730,No,No,MAD,Madrid,,New
+CLM-2025-30128,MIG-HOM-730193,Rodrigo Ruiz Martinez,2025-06-07,2025-06-07,Home,water_damage,Slow leak behind kitchen wall discovered during renovation; mold found.,16600,No,No,AND,Andalucia,,New
+CLM-2025-30129,MIG-HOM-623850,Alessandro Sanchez Morales,2025-06-17,2025-06-17,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,23400,No,No,AND,Andalucia,,New
+CLM-2025-30130,MIG-COM-117500,Elena Rossi Delgado,2025-06-04,2025-04-28,Commercial,fire,Office fire started by faulty air conditioning unit; floor evacuated.,1000,No,Yes,MAD,Madrid,,New
+CLM-2025-30131,MIG-HOM-390946,Luca Vila Blanco,2025-01-26,2025-01-24,Home,theft,Home burgled while on vacation; electronics and jewelry taken.,12300,No,Yes,VAL,Valencia,,New
+CLM-2025-30132,MIG-MOT-555589,Luis Perez Mas,2025-02-03,2025-01-05,Motor,collision,Head-on collision on secondary road near Valencia.,33500,Yes,No,VAL,Valencia,,New
+CLM-2025-30133,MIG-HLT-275073,Diogo Serra Ortiz,2025-04-10,2025-04-09,Health,dental,Root canal treatment on molar tooth.,195.08,No,No,MAD,Madrid,,New
+CLM-2025-30134,MIG-MOT-477617,Valentina Bianchi Calvo,2025-01-19,2025-01-17,Motor,theft,Entire vehicle stolen from airport long-term parking.,6290,No,Yes,CAT,Catalunya,Carlos Vega,Under Review
+CLM-2025-30135,MIG-HOM-999138,Andrea Prieto Navarro,2025-01-14,2025-01-08,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,6580,No,No,PVA,Pais Vasco,Isabel Fernandez,Under Review
+CLM-2025-30136,MIG-COM-172274,Diogo Serra Ortiz,2025-05-04,2025-05-03,Commercial,equipment_breakdown,Server room cooling failure caused overheating and data loss.,2300,No,No,MAD,Madrid,,New
+CLM-2025-30137,MIG-COM-868043,Chiara Colombo Prieto,2025-05-24,2025-05-24,Commercial,fire,Electrical fire in commercial kitchen; restaurant closed for repairs.,183000,No,Yes,POR-N,Portugal Norte,,New
+CLM-2025-30138,MIG-MOT-349736,Luis Santos Suarez,2025-04-22,2025-04-20,Motor,theft,Vehicle stolen and recovered with significant damage.,5980,No,Yes,AND,Andalucia,,New
+CLM-2025-30139,MIG-HOM-768169,Leonor Ricci Dominguez,2025-04-15,2025-03-17,Home,fire,Fire started from faulty space heater; bedroom heavily damaged.,39300,No,Yes,PVA,Pais Vasco,,New
+CLM-2025-30140,MIG-COM-907557,Leonor Calvo Gomez,2025-06-03,2025-05-27,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,11400,Yes,No,AND,Andalucia,,New
+CLM-2025-30141,MIG-HLT-838936,Giulia Ortega Morales,2025-06-08,2025-06-06,Health,surgery,Laparoscopic gallbladder removal procedure.,17100,No,No,AND,Andalucia,,New
+CLM-2025-30142,MIG-COM-682959,Rodrigo Santos Munoz,2025-05-25,2025-05-23,Commercial,flood,River overflow affected warehouse; significant stock loss.,9630,No,No,CAT,Catalunya,,New
+CLM-2025-30143,MIG-MOT-952227,Enrique Gallego Martinez,2025-01-24,2025-01-17,Motor,theft,"Vehicle broken into; GPS, laptop, and personal items taken.",5940,No,Yes,CAT,Catalunya,Victor Delgado,Under Review
+CLM-2025-30144,MIG-HOM-547389,Ines Bianchi Herrera,2025-02-18,2025-02-14,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,4140,No,No,VAL,Valencia,,New
+CLM-2025-30145,MIG-MOT-539599,Luis Calvo Ruiz,2025-02-25,2025-02-25,Motor,collision,Rear-ended on Gran Via during morning rush hour traffic.,35400,No,Yes,AND,Andalucia,,New
+CLM-2025-30146,MIG-MOT-130726,Laia Medina Ortega,2025-03-17,2025-03-12,Motor,theft,Motorbike stolen from communal garage; lock cut.,35000,No,Yes,VAL,Valencia,,New
+CLM-2025-30147,MIG-HLT-703656,Oscar Pereira Ramos,2025-04-14,2025-04-12,Health,physiotherapy,Physiotherapy program for post-fracture mobility recovery.,1560,No,No,VAL,Valencia,Nuria Gallego,New
+CLM-2025-30148,MIG-COM-949767,Sara Jimenez Hernandez,2025-05-11,2025-05-10,Commercial,flood,Sewer backup flooded restaurant basement; health inspection required.,10000,No,No,MAD,Madrid,,New
+CLM-2025-30149,MIG-COM-439307,Javier Serra Ruiz,2025-01-20,2025-01-18,Commercial,flood,Sewer backup flooded restaurant basement; health inspection required.,68500,No,No,MAD,Madrid,,New
+CLM-2025-30150,MIG-MOT-867926,Eva Vazquez Calvo,2025-04-26,2025-04-24,Motor,hit_and_run,Hit while crossing intersection; other driver fled the scene.,11500,No,Yes,MAD,Madrid,,New
+CLM-2025-30151,MIG-MOT-836109,Matteo Soler Munoz,2025-05-31,2025-05-31,Motor,vandalism,Spray paint on vehicle exterior; suspected targeted act.,1730,No,No,CAT,Catalunya,Pau Soler,Under Review
+CLM-2025-30152,MIG-MOT-193035,Ana Garcia Serra,2025-06-25,2025-06-25,Motor,glass_damage,Windshield cracked by road debris on autopista.,412.02,No,No,CAT,Catalunya,Rafael Herrera,New
+CLM-2025-30153,MIG-COM-497108,Francesca Romero Reyes,2025-04-04,2025-04-01,Commercial,property_damage,Delivery truck reversed into warehouse loading bay; structural damage.,4610,No,Yes,MAD,Madrid,Elena Navarro,Under Review
+CLM-2025-30154,MIG-HOM-197627,Leonor Calvo Gomez,2025-04-01,2025-04-01,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,5330,No,No,CAT,Catalunya,,New
+CLM-2025-30155,MIG-HOM-666362,Sofia Gallego Rodriguez,2025-03-13,2025-02-21,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,6770,No,No,MAD,Madrid,,New
+CLM-2025-30156,MIG-MOT-279130,Ramon Romero Ricci,2025-06-17,2025-06-16,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,18400,No,Yes,CAT,Catalunya,,New
+CLM-2025-30157,MIG-HOM-376085,Laia Silva Herrera,2025-04-27,2025-04-27,Home,fire,Balcony fire from discarded cigarette; facade damage to building.,106000,Yes,Yes,PVA,Pais Vasco,,New
+CLM-2025-30158,MIG-MOT-647967,Sofia Ortiz Blanco,2025-04-22,2025-04-19,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,4290,No,No,AND,Andalucia,,New
+CLM-2025-30159,MIG-MOT-570852,Valentina Vazquez Bianchi,2025-02-18,2025-02-16,Motor,hit_and_run,Hit while crossing intersection; other driver fled the scene.,2000,No,Yes,POR-S,Portugal Sul,,New
+CLM-2025-30160,MIG-MOT-678870,Rui Calvo Delgado,2025-03-29,2025-03-29,Motor,theft,Catalytic converter stolen from parked vehicle in suburban area.,22900,No,Yes,MAD,Madrid,,New
+CLM-2025-30161,MIG-COM-205896,Antonio Alvarez Vazquez,2025-03-19,2025-03-15,Commercial,property_damage,Roof collapse at commercial warehouse after heavy snowfall.,24800,No,Yes,MAD,Madrid,,New
+CLM-2025-30162,MIG-MOT-447596,Sergio Molina Jimenez,2025-06-30,2025-05-15,Motor,glass_damage,"Side window cracked; cause unknown, found on morning inspection.",1090,No,No,MAD,Madrid,,New
+CLM-2025-30163,MIG-MOT-240913,Marco Gallego Cabrera,2025-03-22,2025-03-16,Motor,glass_damage,Windshield chip from gravel on construction zone.,243.75,No,No,MAD,Madrid,,New
+CLM-2025-30164,MIG-HOM-426236,Oscar Pereira Ramos,2025-05-14,2025-05-14,Home,water_damage,Burst pipe in bathroom caused flooding to ground floor.,21900,No,No,CAT,Catalunya,,New
+CLM-2025-30165,MIG-HOM-516224,Rodrigo Ruiz Martinez,2025-06-16,2025-06-09,Home,fire,Electrical fire in distribution panel; damage to living room wall.,30700,No,Yes,MAD,Madrid,,New
+CLM-2025-30166,MIG-MOT-152062,Elena Molina Puig,2025-02-15,2025-02-12,Motor,collision,Two-car collision on N-340 coastal road; poor visibility due to fog.,30800,No,Yes,CAT,Catalunya,Jordi Puig,New
+CLM-2025-30167,MIG-MOT-420297,Ana Sanchez Diaz,2025-06-18,2025-06-13,Motor,theft,Entire vehicle stolen from airport long-term parking.,9980,No,Yes,VAL,Valencia,Jorge Ramos,New
+CLM-2025-30168,MIG-HOM-396408,Nuria Delgado Sanchez,2025-03-22,2025-03-18,Home,theft,"Garage broken into; bicycles, tools, and sports equipment stolen.",26000,No,Yes,ARA,Aragon,,New
+CLM-2025-30169,MIG-COM-941339,Luis Perez Mas,2025-06-07,2025-06-07,Commercial,flood,Flash flooding damaged ground-floor commercial premises and inventory.,79800,No,No,MAD,Madrid,,New
+CLM-2025-30170,MIG-MOT-819656,Sara Molina Moreno,2025-05-21,2025-05-16,Motor,vandalism,Windshield smashed overnight; nothing stolen from vehicle.,4260,No,No,CAT,Catalunya,,New
+CLM-2025-30171,MIG-HLT-812730,Arnau Rodrigues Gallego,2025-03-31,2025-03-27,Health,hospitalization,Post-surgical hospitalization for knee replacement recovery.,71500,No,No,AND,Andalucia,,New
+CLM-2025-30172,MIG-HOM-174675,Montserrat Ortiz Rodrigues,2025-05-05,2025-04-29,Home,vandalism,Garden shed broken into and contents destroyed.,3600,No,Yes,POR-S,Portugal Sul,,New
+CLM-2025-30173,MIG-MOT-289117,Marco Ruiz Ricci,2025-01-25,2025-01-20,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,154.95,No,No,CAT,Catalunya,,New
+CLM-2025-30174,MIG-MOT-550268,Ramon Campos Prieto,2025-04-18,2025-04-18,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,33100,No,No,GAL,Galicia,,New
+CLM-2025-30175,MIG-HLT-461076,Valentina Bianchi Calvo,2025-03-25,2025-03-21,Health,hospitalization,Hospitalization for complications from diabetes management.,66800,No,No,MAD,Madrid,,New
+CLM-2025-30176,MIG-COM-613989,Marco Gallego Cabrera,2025-04-06,2025-03-31,Commercial,professional_negligence,Engineering firm accused of design defect in building renovation.,10000,No,No,GAL,Galicia,Isabel Fernandez,Under Review
+CLM-2025-30177,MIG-HLT-722774,Blanca Vega Carvalho,2025-01-17,2024-12-18,Health,outpatient_treatment,Follow-up consultations after minor procedure.,1390,No,No,MAD,Madrid,,New
+CLM-2025-30178,MIG-MOT-205885,Ramon Diaz Gallego,2025-06-23,2025-06-21,Motor,collision,Side impact at roundabout; other driver failed to yield.,40500,No,Yes,MAD,Madrid,,New
+CLM-2025-30179,MIG-HLT-475308,Sara Flores Mas,2025-04-19,2025-04-16,Health,physiotherapy,Physiotherapy sessions for chronic lower back pain.,1310,No,No,CAT,Catalunya,,New
+CLM-2025-30180,MIG-HOM-917392,Mariana Rossi Serra,2025-05-15,2025-05-11,Home,vandalism,Front door and mailbox vandalized; graffiti on facade.,3930,No,Yes,CAT,Catalunya,,New
+CLM-2025-30181,MIG-HLT-874415,Xavier Munoz Rodrigues,2025-02-03,2025-02-03,Health,surgery,Carpal tunnel release surgery on both hands.,40800,No,No,MAD,Madrid,,New
+CLM-2025-30182,MIG-HOM-219361,Giulia Carvalho Pereira,2025-04-17,2025-04-11,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,12200,No,No,CAT,Catalunya,,New
+CLM-2025-30183,MIG-MOT-606121,Blanca Rossi Gomez,2025-05-30,2025-05-25,Motor,hit_and_run,Parked vehicle hit overnight; paint transfer found on bumper.,17300,No,Yes,ARA,Aragon,,New
+CLM-2025-30184,MIG-HOM-786789,Raul Serra Mas,2025-03-26,2025-03-23,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,16900,No,No,VAL,Valencia,,New
+CLM-2025-30185,MIG-MOT-503572,Andre Cabrera Mas,2025-02-12,2025-02-12,Motor,vandalism,Spray paint on vehicle exterior; suspected targeted act.,953.25,No,No,CAT,Catalunya,,New
+CLM-2025-30186,MIG-MOT-774567,Sergio Moreno Ruiz,2025-04-11,2025-03-20,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,20600,No,Yes,CAT,Catalunya,,New
+CLM-2025-30187,MIG-HOM-100177,Elena Rossi Delgado,2025-01-28,2025-01-25,Home,theft,Apartment burgled during daytime; door lock picked.,14200,No,Yes,PVA,Pais Vasco,,New
+CLM-2025-30188,MIG-HOM-850689,Diana Reyes Munoz,2025-04-30,2025-04-30,Home,theft,Storage unit in communal basement broken into; personal items stolen.,25100,No,Yes,AND,Andalucia,Elena Navarro,Under Review
+CLM-2025-30189,MIG-MOT-296653,Raquel Morales Pereira,2025-02-04,2025-02-01,Motor,theft,Entire vehicle stolen from airport long-term parking.,6450,No,Yes,BAL,Illes Balears,Rafael Herrera,Under Review
+CLM-2025-30190,MIG-MOT-656127,Marc Vega Calvo,2025-01-17,2025-01-10,Motor,theft,Catalytic converter stolen from parked vehicle in suburban area.,28000,No,Yes,CAT,Catalunya,Eva Cabrera,New
+CLM-2025-30191,MIG-COM-738576,Marc Vega Calvo,2025-03-09,2025-03-05,Commercial,property_damage,Water pipe burst in office building; damage to server room equipment.,7540,No,No,GAL,Galicia,,New
+CLM-2025-30192,MIG-HLT-763311,Antonio Diaz Rossi,2025-03-01,2025-02-24,Health,physiotherapy,Post-surgical rehabilitation for shoulder injury.,505.14,No,No,POR-S,Portugal Sul,,New
+CLM-2025-30193,MIG-HLT-689593,Diana Prieto Ramos,2025-05-07,2025-05-01,Health,dental,Orthodontic adjustment and consultation.,3580,No,No,BAL,Illes Balears,,New
+CLM-2025-30194,MIG-HOM-159354,Beatriz Gallego Vazquez,2025-02-25,2025-02-21,Home,water_damage,Air conditioning unit condensation leak damaged parquet flooring.,4090,No,No,CAT,Catalunya,Rafael Herrera,Under Review
+CLM-2025-30195,MIG-HLT-878476,Andre Calvo Costa,2025-06-19,2025-06-15,Health,physiotherapy,Sports injury physiotherapy for ankle sprain.,308.05,No,No,MAD,Madrid,,New
+CLM-2025-30196,MIG-MOT-564586,Francisco Rodriguez Sanchez,2025-03-03,2025-02-28,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,1160,No,No,VAL,Valencia,,New
+CLM-2025-30197,MIG-HOM-683635,Bruno Ramos Ricci,2025-03-13,2025-03-13,Home,fire,Kitchen fire from unattended cooking; smoke damage throughout flat.,107900,No,Yes,MAD,Madrid,,New
+CLM-2025-30198,MIG-MOT-676884,Pedro Carvalho Reyes,2025-04-06,2025-04-03,Motor,glass_damage,Windshield chip from gravel on construction zone.,696.64,No,No,AND,Andalucia,Laura Serrano,Under Review
+CLM-2025-30199,MIG-HOM-889216,Xavier Vazquez Gonzalez,2025-06-12,2025-06-12,Home,water_damage,Hot water heater failure flooded utility room and hallway.,8980,No,No,ARA,Aragon,,New
+CLM-2025-30200,MIG-HOM-218881,Diana Prieto Ramos,2025-04-13,2025-04-08,Home,storm_damage,Storm brought down tree branch onto roof; structural damage to pergola.,10600,No,No,VAL,Valencia,,New
+CLM-2025-30201,MIG-COM-659106,Francesca Romero Reyes,2025-01-06,2025-01-03,Commercial,fire,Office fire started by faulty air conditioning unit; floor evacuated.,220700,Yes,Yes,VAL,Valencia,,New
+CLM-2025-30202,MIG-MOT-447828,Marco Gallego Cabrera,2025-01-14,2025-01-10,Motor,theft,Vehicle stolen and recovered with significant damage.,21400,No,Yes,MAD,Madrid,,New
+CLM-2025-30203,MIG-HLT-772580,Andreu Serrano Prieto,2025-06-12,2025-06-11,Health,outpatient_treatment,Specialist ENT consultation and audiometry.,1560,No,No,VAL,Valencia,Rafael Herrera,Under Review
+CLM-2025-30204,MIG-MOT-330545,Pedro Carvalho Reyes,2025-02-08,2025-02-04,Motor,collision,Sideswipe accident while changing lanes on M-30 ring road.,7170,No,No,PVA,Pais Vasco,,New
+CLM-2025-30205,MIG-HOM-229221,Ana Sanchez Diaz,2025-01-15,2025-01-14,Home,theft,Storage unit in communal basement broken into; personal items stolen.,22700,No,Yes,MAD,Madrid,,New
+CLM-2025-30206,MIG-MOT-303765,Clara Marin Reyes,2025-02-03,2025-02-03,Motor,glass_damage,"Side window cracked; cause unknown, found on morning inspection.",1130,No,No,AND,Andalucia,,New
+CLM-2025-30207,MIG-HLT-446922,Alvaro Fernandez Moreno,2025-04-06,2025-04-02,Health,outpatient_treatment,Specialist ENT consultation and audiometry.,2710,No,No,AND,Andalucia,,New
+CLM-2025-30208,MIG-HOM-431699,Pilar Prieto Cabrera,2025-04-24,2025-03-17,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,17900,No,No,MAD,Madrid,,New
+CLM-2025-30209,MIG-HLT-214119,Sara Reyes Calvo,2025-02-18,2025-02-16,Health,outpatient_treatment,Follow-up consultations after minor procedure.,669.65,No,No,VAL,Valencia,Carlos Vega,New
+CLM-2025-30210,MIG-HOM-323095,Marco Alvarez Ortega,2025-01-14,2025-01-07,Home,storm_damage,Storm brought down tree branch onto roof; structural damage to pergola.,3650,No,No,AND,Andalucia,Jorge Ramos,New
+CLM-2025-30211,MIG-HOM-989173,Chiara Delgado Morales,2025-06-11,2025-06-09,Home,theft,"Garage broken into; bicycles, tools, and sports equipment stolen.",28500,No,No,AND,Andalucia,Clara Medina,Under Review
+CLM-2025-30212,MIG-MOT-643042,Valentina Silva Costa,2025-04-07,2025-04-07,Motor,vandalism,Tires slashed on all four wheels in neighborhood dispute.,20000,No,No,MAD,Madrid,,New
+CLM-2025-30213,MIG-HLT-785073,Leonor Serra Gallego,2025-01-24,2025-01-21,Health,outpatient_treatment,Outpatient blood tests and endocrinology consultation.,1120,No,No,AND,Andalucia,,New
+CLM-2025-30214,MIG-HOM-639535,Blanca Rossi Gomez,2025-06-18,2025-06-13,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,20500,No,No,MAD,Madrid,,New
+CLM-2025-30215,MIG-HOM-530859,Rafael Gallego Ortiz,2025-01-10,2024-11-22,Home,theft,Break-in through ground floor window; laptop and cash stolen.,4910,No,Yes,CAT,Catalunya,,New
+CLM-2025-30216,MIG-HOM-119524,Bruno Garcia Flores,2025-06-23,2025-06-16,Home,theft,Break-in through ground floor window; laptop and cash stolen.,5950,No,Yes,PVA,Pais Vasco,,New
+CLM-2025-30217,MIG-HLT-575497,Francesca Romero Reyes,2025-06-06,2025-06-04,Health,surgery,Carpal tunnel release surgery on both hands.,14500,No,No,AND,Andalucia,,New
+CLM-2025-30218,MIG-HOM-140932,Javier Serra Ruiz,2025-05-21,2025-04-22,Home,theft,Storage unit in communal basement broken into; personal items stolen.,18500,No,Yes,GAL,Galicia,,New
+CLM-2025-30219,MIG-HLT-941272,Marina Pereira Molina,2025-05-08,2025-05-07,Health,outpatient_treatment,Series of specialist dermatology consultations.,838.1,No,No,ARA,Aragon,,New
+CLM-2025-30220,MIG-MOT-879769,Raquel Morales Pereira,2025-01-06,2024-12-31,Motor,collision,Two-car collision on N-340 coastal road; poor visibility due to fog.,31200,No,Yes,CAT,Catalunya,,New

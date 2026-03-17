@@ -1,8 +1,3 @@
----
-title: "Exercise 1: Executive Onramp"
-description: "Zero-to-one onboarding for executive users with copy/paste wins and progressive prompting challenge."
----
-
 # Exercise 1: Executive Onramp
 
 **Duration:** ~90 minutes  
@@ -12,7 +7,12 @@ description: "Zero-to-one onboarding for executive users with copy/paste wins an
 
 ## Files
 
-**Download:** <a href="../data/exercise-1/COMPANY.md" download>COMPANY.md</a> | <a href="../data/exercise-1/MARKET.md" download>MARKET.md</a> | <a href="../data/exercise-1/PERSONAS.md" download>PERSONAS.md</a> | <a href="../data/exercise-1/PRODUCTS.md" download>PRODUCTS.md</a>
+Use the shared MIG context files:
+
+- `company-context/COMPANY.md`
+- `company-context/MARKET.md`
+- `company-context/PERSONAS.md`
+- `company-context/PRODUCTS.md`
 
 ---
 
@@ -326,7 +326,7 @@ Suggested interpretation:
 
 - 32-40: Strong executive operator
 - 24-31: Good foundation, improve prompt precision
-- Below 24: Repeat Block B with tighter constraints
+- <24: Repeat Block B with tighter constraints
 
 ---
 
@@ -365,6 +365,6 @@ If you want a reusable starter pack for future executive work, save these output
 
 After Exercise 1, continue with:
 
-- [Exercise 2: Data Insight Tool](/exercises/data-insight-tool) for structured data analysis
-- [Exercise 3: Claims Triage](/exercises/claims-triage) for rule-driven process automation
-- [Exercise 4: Automated Reporting](/exercises/automated-reporting) for full reporting automation
+- [Exercise 2: Data Insight Tool](../exercise-2-data-insight-tool/README.md) for structured data analysis
+- [Exercise 3: Claims Triage](../exercise-3-claims-triage/README.md) for rule-driven process automation
+- [Exercise 4: Automated Reporting](../exercise-4-automated-reporting/README.md) for full reporting automation

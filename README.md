@@ -58,12 +58,12 @@ codex-workshop/
 │   └── 5-advanced-tips/               # Cost, security, diffs, context window
 │
 ├── exercises/                          # Hands-on exercises with data
-│   ├── exercise-0-executive-onramp/    # Zero-to-one executive onboarding
-│   ├── exercise-1-data-insight-tool/   # Market white space analysis
+│   ├── exercise-1-executive-onramp/    # Zero-to-one executive onboarding
+│   ├── exercise-2-data-insight-tool/   # Market white space analysis
 │   │   └── data/                       #   4 CSVs: penetration, demographics, accidents, products
-│   ├── exercise-2-claims-triage/       # Claims classification & routing prototype
+│   ├── exercise-3-claims-triage/       # Claims classification & routing prototype
 │   │   └── data/                       #   220 claims, business rules JSON, 160 historical outcomes
-│   └── exercise-3-automated-reporting/ # Quarterly claims report automation
+│   └── exercise-4-automated-reporting/ # Quarterly claims report automation
 │       └── data/                       #   4 quarters of claims data + report template
 │
 └── website/                            # Nextra documentation site
@@ -80,7 +80,7 @@ Choose the path that fits the time you have:
 
 - [Module 0 - Getting Started](course-materials/0-getting-started/)
 - [Module 1.1 - First Steps](course-materials/1-fundamentals/1.1-first-steps/)
-- [Exercise 0 - Executive Onramp](exercises/exercise-0-executive-onramp/)
+- [Exercise 1 - Executive Onramp](exercises/exercise-1-executive-onramp/)
 
 Best for: a short live introduction where learners need one concrete win quickly.
 
@@ -137,17 +137,17 @@ These are standalone exercises designed for the live session. Each includes step
 
 | Exercise | Duration | What You Build |
 |----------|----------|----------------|
-| [0 - Executive Onramp](exercises/exercise-0-executive-onramp/) | 90 min | Executive prompting fundamentals with progressive challenge |
-| [1 - Data Insight Tool](exercises/exercise-1-data-insight-tool/) | 40 min | Market white space analysis with interactive charts |
-| [2 - Claims Triage](exercises/exercise-2-claims-triage/) | 45 min | Claims classification, prioritization & routing prototype |
-| [3 - Automated Reporting](exercises/exercise-3-automated-reporting/) | 55 min | Quarterly claims report with auto-update capability |
+| [1 - Executive Onramp](exercises/exercise-1-executive-onramp/) | 90 min | Executive prompting fundamentals with progressive challenge |
+| [2 - Data Insight Tool](exercises/exercise-2-data-insight-tool/) | 40 min | Market white space analysis with interactive charts |
+| [3 - Claims Triage](exercises/exercise-3-claims-triage/) | 45 min | Claims classification, prioritization & routing prototype |
+| [4 - Automated Reporting](exercises/exercise-4-automated-reporting/) | 55 min | Quarterly claims report with auto-update capability |
 
 ## Reference Material
 
 Use these alongside the course when you need background, datasets, or deeper guidance:
 
 - [`company-context/`](company-context/) -- Shared company, market, product, and persona background used across Modules 2 to 4
-- [`website/public/data/`](website/public/data/) -- Website download files for the exercise datasets used in Exercises 0 to 3
+- [`website/public/data/`](website/public/data/) -- Website download files for the exercise datasets used in Exercises 1 to 4
 - [`course-materials/5-advanced-tips/`](course-materials/5-advanced-tips/) -- Practical guidance on cost, data security, diffs, and context-window management
 - [`course-materials/appendix-a-codex-app/`](course-materials/appendix-a-codex-app/) -- Optional deeper dives into the Codex App and related reference topics
 

@@ -543,4 +543,4 @@ OpenAI Codex doubles as a research and strategy partner. The combination of web 
 
 ## Next Step
 
-Proceed to [Exercise 0: Executive Onramp](../../../exercises/exercise-0-executive-onramp/README.md), the first page in Module 3: Practice Exercises, to apply these workflows independently before moving on to custom app building.
+Proceed to [Exercise 1: Executive Onramp](../../../exercises/exercise-1-executive-onramp/README.md), the first page in Module 3: Practice Exercises, to apply these workflows independently before moving on to custom app building.

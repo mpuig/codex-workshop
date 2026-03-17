@@ -1,8 +1,3 @@
----
-title: "Exercise 2: Data Insight Tool"
-description: "Build an end-to-end analytical workflow to identify white space expansion opportunities."
----
-
 # Exercise 2: Data Insight Tool
 
 **Duration:** ~40 minutes  
@@ -12,13 +7,16 @@ description: "Build an end-to-end analytical workflow to identify white space ex
 
 ## Files
 
-**Download:** [market_penetration.csv](../data/exercise-2/market_penetration.csv) | [demographics.csv](../data/exercise-2/demographics.csv) | [accident_frequency.csv](../data/exercise-2/accident_frequency.csv) | [product_lines.csv](../data/exercise-2/product_lines.csv)
+- `data/market_penetration.csv`
+- `data/demographics.csv`
+- `data/accident_frequency.csv`
+- `data/product_lines.csv`
 
 ---
 
 ## Objective
 
-Build an end-to-end analytical workflow using OpenAI Codex. You will retrieve and combine insurance market and demographic data, identify **white spaces** (regions with high risk exposure but low insurance penetration), and produce executive-ready output -- without writing any code.
+Build an end-to-end analytical workflow using OpenAI Codex that retrieves and combines insurance market and demographic data, structures it into a clean dataset, identifies **white spaces** (regions with high risk exposure but low insurance penetration), and produces executive-ready output -- all without writing any code yourself.
 
 By the end of this exercise, you will have gone from four raw CSV files to a ranked list of expansion opportunities, interactive visualizations, and a professional memo for a senior stakeholder.
 
@@ -215,7 +213,7 @@ from all three source files plus the two calculated metrics:
 - `risk_adjusted_penetration` = premiums per capita / composite accident frequency
 
 Spain dominates in absolute GWP (EUR 183,8M) and market share (avg ~6,7%),
-while Italy and France show much lower penetration (avg &lt;0,5%).
+while Italy and France show much lower penetration (avg below 0,5%).
 
 </details>
 
@@ -246,7 +244,7 @@ Analyze the combined dataset to find white spaces - regions where there is high 
 - Are the top regions plausible? (Expect large Italian regions like Lombardy, Lazio, Campania and French regions like Ile-de-France, Provence-Alpes-Cote d'Azur)
 - Does Codex explain its methodology, or does it just present numbers?
 
-> **Tip:** Push Codex to refine the analysis: *"Weight the opportunity score more heavily toward regions where MIG already has some presence (market share > 0.1%) -- pure greenfield markets may be too risky."*
+> **Tip:** Push Codex to refine the analysis: *"Weight the opportunity score more heavily toward regions where MIG already has some presence (market share > 0,1%) -- pure greenfield markets may be too risky."*
 
 <details>
 <summary>Example output from this step</summary>
@@ -373,7 +371,7 @@ the initial Chart.js CDN load.
 
 ### Example Final Result (Browser View)
 
-![Exercise 1 final browser result](./images/exercise-1-screenshot.jpg)
+![Exercise 1 final browser result](images/screenshot.jpg)
 
 _Example output of the generated interactive visualization page opened in a browser._
 
@@ -427,7 +425,7 @@ This analysis identifies the highest-priority regions for MIG's geographic
 expansion based on a systematic evaluation of 68 regions across Spain,
 Portugal, Italy, and France. [...] The top opportunities are concentrated
 in large Italian and French urban regions where MIG's market share is below
-0.3% despite strong demand indicators.
+0,3% despite strong demand indicators.
 
 ---
 
@@ -520,7 +518,7 @@ If you finish early or want to go deeper:
 
 4. **Risk Overlay:** *"Cross-reference the opportunity regions with the natural disaster risk score. Flag any high-opportunity regions that also have high climate risk (score >= 7)."*
 
-5. **Competitor Inference:** *"If MIG's market share in Lombardy is 0.3%, and the total market is implied by our GWP / market_share, what is the total addressable market in each of the top 10 opportunity regions?"*
+5. **Competitor Inference:** *"If MIG's market share in Lombardy is 0,3%, and the total market is implied by our GWP / market_share, what is the total addressable market in each of the top 10 opportunity regions?"*
 
 ---
 

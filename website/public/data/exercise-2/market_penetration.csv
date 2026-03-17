@@ -1,0 +1,577 @@
+region_code,region_name,country,product_line,gross_written_premium_eur,policies_in_force,market_share_pct,year
+ES-AN,Andalusia,Spain,Commercial,1202507,1307,5.66,2024
+ES-AN,Andalusia,Spain,Life,2160619,6914,3.77,2024
+ES-AN,Andalusia,Spain,Motor,4858386,15101,7.94,2024
+ES-AN,Andalusia,Spain,Home,2627253,15523,3.86,2024
+ES-AN,Andalusia,Spain,Health,5065020,9215,3.85,2024
+ES-AN,Andalusia,Spain,Commercial,1377419,1393,6.03,2025
+ES-AN,Andalusia,Spain,Life,1921865,6575,5.64,2025
+ES-AN,Andalusia,Spain,Motor,17954745,62862,8.28,2025
+ES-AN,Andalusia,Spain,Home,3021408,20665,4.32,2025
+ES-AN,Andalusia,Spain,Health,1230790,1954,7.88,2025
+ES-AR,Aragon,Spain,Motor,1724218,4748,6.49,2024
+ES-AR,Aragon,Spain,Life,172750,568,8.58,2024
+ES-AR,Aragon,Spain,Commercial,190426,149,6.09,2024
+ES-AR,Aragon,Spain,Motor,1476208,4386,9.22,2025
+ES-AR,Aragon,Spain,Life,122428,439,5.67,2025
+ES-AR,Aragon,Spain,Commercial,130662,149,8.58,2025
+ES-AS,Asturias,Spain,Health,2002848,3304,8.0,2024
+ES-AS,Asturias,Spain,Commercial,1237967,1242,6.07,2024
+ES-AS,Asturias,Spain,Life,1031184,3157,8.91,2024
+ES-AS,Asturias,Spain,Motor,3583927,11830,10.92,2024
+ES-AS,Asturias,Spain,Health,517297,860,8.45,2025
+ES-AS,Asturias,Spain,Commercial,513501,516,12.0,2025
+ES-AS,Asturias,Spain,Life,229925,730,7.52,2025
+ES-AS,Asturias,Spain,Motor,2011986,4903,8.22,2025
+ES-IB,Balearic Islands,Spain,Commercial,64660,58,6.19,2024
+ES-IB,Balearic Islands,Spain,Health,92645,160,4.43,2024
+ES-IB,Balearic Islands,Spain,Motor,1259003,2887,8.95,2024
+ES-IB,Balearic Islands,Spain,Home,255071,1577,9.3,2024
+ES-IB,Balearic Islands,Spain,Commercial,57203,56,9.08,2025
+ES-IB,Balearic Islands,Spain,Health,79943,155,4.58,2025
+ES-IB,Balearic Islands,Spain,Motor,457667,1132,9.2,2025
+ES-IB,Balearic Islands,Spain,Home,66639,378,10.17,2025
+ES-CN,Canary Islands,Spain,Commercial,400292,348,9.07,2024
+ES-CN,Canary Islands,Spain,Motor,951277,2426,7.99,2024
+ES-CN,Canary Islands,Spain,Life,230963,940,8.94,2024
+ES-CN,Canary Islands,Spain,Commercial,501354,445,10.88,2025
+ES-CN,Canary Islands,Spain,Motor,2439859,6314,11.55,2025
+ES-CN,Canary Islands,Spain,Life,148081,624,7.74,2025
+ES-CB,Cantabria,Spain,Life,1236939,3624,5.85,2024
+ES-CB,Cantabria,Spain,Commercial,715550,694,6.34,2024
+ES-CB,Cantabria,Spain,Health,2233072,3358,4.56,2024
+ES-CB,Cantabria,Spain,Motor,9708694,27733,4.75,2024
+ES-CB,Cantabria,Spain,Home,1640545,13114,6.17,2024
+ES-CB,Cantabria,Spain,Life,747632,1990,7.47,2025
+ES-CB,Cantabria,Spain,Commercial,2078512,2147,5.84,2025
+ES-CB,Cantabria,Spain,Health,1203301,2009,4.98,2025
+ES-CB,Cantabria,Spain,Motor,1810788,5237,6.68,2025
+ES-CB,Cantabria,Spain,Home,1091280,7219,5.51,2025
+ES-CL,Castile and Leon,Spain,Life,937276,2907,11.89,2024
+ES-CL,Castile and Leon,Spain,Health,1625509,3229,7.01,2024
+ES-CL,Castile and Leon,Spain,Home,1550826,9947,10.93,2024
+ES-CL,Castile and Leon,Spain,Motor,4069758,11609,6.91,2024
+ES-CL,Castile and Leon,Spain,Commercial,2018920,1749,9.54,2024
+ES-CL,Castile and Leon,Spain,Life,978355,2905,12.0,2025
+ES-CL,Castile and Leon,Spain,Health,2742445,5492,6.71,2025
+ES-CL,Castile and Leon,Spain,Home,537769,3494,12.0,2025
+ES-CL,Castile and Leon,Spain,Motor,8965428,26355,12.0,2025
+ES-CL,Castile and Leon,Spain,Commercial,567002,608,9.97,2025
+ES-CM,Castile-La Mancha,Spain,Motor,2729894,6665,9.13,2024
+ES-CM,Castile-La Mancha,Spain,Home,474667,3907,6.02,2024
+ES-CM,Castile-La Mancha,Spain,Commercial,183211,186,10.66,2024
+ES-CM,Castile-La Mancha,Spain,Motor,678523,1721,5.01,2025
+ES-CM,Castile-La Mancha,Spain,Home,221653,1365,10.04,2025
+ES-CM,Castile-La Mancha,Spain,Commercial,191534,208,6.64,2025
+ES-CT,Catalonia,Spain,Motor,8914837,19897,2.71,2024
+ES-CT,Catalonia,Spain,Home,3934906,19980,3.02,2024
+ES-CT,Catalonia,Spain,Health,2125828,2942,2.32,2024
+ES-CT,Catalonia,Spain,Commercial,658926,486,2.42,2024
+ES-CT,Catalonia,Spain,Life,3322354,7988,4.13,2024
+ES-CT,Catalonia,Spain,Motor,7302172,18099,4.45,2025
+ES-CT,Catalonia,Spain,Home,3493523,18068,2.0,2025
+ES-CT,Catalonia,Spain,Health,12560662,17806,4.24,2025
+ES-CT,Catalonia,Spain,Commercial,1468073,1096,2.85,2025
+ES-CT,Catalonia,Spain,Life,3673977,10204,3.92,2025
+ES-EX,Extremadura,Spain,Health,810751,1514,7.84,2024
+ES-EX,Extremadura,Spain,Home,630783,4174,8.64,2024
+ES-EX,Extremadura,Spain,Motor,2219123,5665,7.08,2024
+ES-EX,Extremadura,Spain,Health,174571,379,5.22,2025
+ES-EX,Extremadura,Spain,Home,172579,1104,4.17,2025
+ES-EX,Extremadura,Spain,Motor,1695921,4304,7.94,2025
+ES-GA,Galicia,Spain,Home,1137682,5997,12.0,2024
+ES-GA,Galicia,Spain,Health,420313,856,12.0,2024
+ES-GA,Galicia,Spain,Commercial,741240,665,8.69,2024
+ES-GA,Galicia,Spain,Life,252485,754,8.27,2024
+ES-GA,Galicia,Spain,Motor,2279482,7148,12.0,2024
+ES-GA,Galicia,Spain,Home,491823,2849,10.86,2025
+ES-GA,Galicia,Spain,Health,704005,1140,6.3,2025
+ES-GA,Galicia,Spain,Commercial,551559,494,12.0,2025
+ES-GA,Galicia,Spain,Life,177200,586,12.0,2025
+ES-GA,Galicia,Spain,Motor,2051144,6601,11.85,2025
+ES-MD,Madrid,Spain,Motor,26466799,53165,4.11,2024
+ES-MD,Madrid,Spain,Home,3006605,15576,5.07,2024
+ES-MD,Madrid,Spain,Health,2893687,3506,5.28,2024
+ES-MD,Madrid,Spain,Commercial,3796249,2824,2.99,2024
+ES-MD,Madrid,Spain,Life,5475880,12922,4.36,2024
+ES-MD,Madrid,Spain,Motor,21986106,41072,3.81,2025
+ES-MD,Madrid,Spain,Home,4745015,27600,3.74,2025
+ES-MD,Madrid,Spain,Health,3364650,4582,2.74,2025
+ES-MD,Madrid,Spain,Commercial,2116675,1260,5.01,2025
+ES-MD,Madrid,Spain,Life,1722224,4672,2.94,2025
+ES-MC,Murcia,Spain,Home,2181919,11818,8.82,2024
+ES-MC,Murcia,Spain,Life,461074,1579,6.44,2024
+ES-MC,Murcia,Spain,Motor,6459124,14840,7.09,2024
+ES-MC,Murcia,Spain,Commercial,978021,1080,5.79,2024
+ES-MC,Murcia,Spain,Home,1671048,9100,9.61,2025
+ES-MC,Murcia,Spain,Life,578288,2447,10.3,2025
+ES-MC,Murcia,Spain,Motor,9416162,21241,5.47,2025
+ES-MC,Murcia,Spain,Commercial,1455517,1538,5.83,2025
+ES-NC,Navarre,Spain,Health,542270,890,6.59,2024
+ES-NC,Navarre,Spain,Home,310376,1837,5.48,2024
+ES-NC,Navarre,Spain,Motor,619039,2059,7.7,2024
+ES-NC,Navarre,Spain,Commercial,790677,811,6.86,2024
+ES-NC,Navarre,Spain,Life,308921,1086,4.89,2024
+ES-NC,Navarre,Spain,Health,744306,1497,7.52,2025
+ES-NC,Navarre,Spain,Home,772289,4764,7.08,2025
+ES-NC,Navarre,Spain,Motor,2760826,7440,3.71,2025
+ES-NC,Navarre,Spain,Commercial,600757,556,3.53,2025
+ES-NC,Navarre,Spain,Life,455824,1154,3.69,2025
+ES-PV,Basque Country,Spain,Motor,4395275,8510,4.82,2024
+ES-PV,Basque Country,Spain,Home,938896,5304,3.53,2024
+ES-PV,Basque Country,Spain,Health,3328817,4016,3.5,2024
+ES-PV,Basque Country,Spain,Commercial,923122,639,4.39,2024
+ES-PV,Basque Country,Spain,Life,592040,1574,3.55,2024
+ES-PV,Basque Country,Spain,Motor,3205368,6703,5.51,2025
+ES-PV,Basque Country,Spain,Home,1285015,6060,5.2,2025
+ES-PV,Basque Country,Spain,Health,2486680,3265,2.51,2025
+ES-PV,Basque Country,Spain,Commercial,1765878,1097,4.86,2025
+ES-PV,Basque Country,Spain,Life,609656,1822,4.09,2025
+ES-RI,La Rioja,Spain,Motor,6648875,20177,11.32,2024
+ES-RI,La Rioja,Spain,Life,726247,2399,10.68,2024
+ES-RI,La Rioja,Spain,Home,838372,4561,7.7,2024
+ES-RI,La Rioja,Spain,Health,316126,537,5.9,2024
+ES-RI,La Rioja,Spain,Commercial,1092496,1050,10.8,2024
+ES-RI,La Rioja,Spain,Motor,4474133,11007,5.63,2025
+ES-RI,La Rioja,Spain,Life,572868,2007,9.21,2025
+ES-RI,La Rioja,Spain,Home,1635361,10268,5.1,2025
+ES-RI,La Rioja,Spain,Health,1911970,3076,8.13,2025
+ES-RI,La Rioja,Spain,Commercial,1757945,1414,6.79,2025
+ES-VC,Valencia,Spain,Motor,8429576,18207,3.89,2024
+ES-VC,Valencia,Spain,Home,4540277,22319,2.95,2024
+ES-VC,Valencia,Spain,Health,3055399,4219,2.61,2024
+ES-VC,Valencia,Spain,Commercial,848969,672,2.61,2024
+ES-VC,Valencia,Spain,Life,872581,1949,2.79,2024
+ES-VC,Valencia,Spain,Motor,11169718,22408,2.78,2025
+ES-VC,Valencia,Spain,Home,2006769,9969,2.08,2025
+ES-VC,Valencia,Spain,Health,4937552,5741,3.11,2025
+ES-VC,Valencia,Spain,Commercial,1210959,774,2.47,2025
+ES-VC,Valencia,Spain,Life,1805913,4204,3.79,2025
+PT-AV,Aveiro,Portugal,Life,23282,112,6.1,2024
+PT-AV,Aveiro,Portugal,Health,100382,206,3.56,2024
+PT-AV,Aveiro,Portugal,Motor,382150,1230,6.67,2024
+PT-AV,Aveiro,Portugal,Commercial,120671,153,5.43,2024
+PT-AV,Aveiro,Portugal,Life,20621,103,4.79,2025
+PT-AV,Aveiro,Portugal,Health,224804,487,5.84,2025
+PT-AV,Aveiro,Portugal,Motor,257231,1029,6.13,2025
+PT-AV,Aveiro,Portugal,Commercial,104211,115,3.79,2025
+PT-BJ,Beja,Portugal,Motor,587177,2038,7.47,2024
+PT-BJ,Beja,Portugal,Life,88105,405,5.38,2024
+PT-BJ,Beja,Portugal,Health,280993,654,6.6,2024
+PT-BJ,Beja,Portugal,Motor,653133,2758,4.33,2025
+PT-BJ,Beja,Portugal,Life,118137,487,5.14,2025
+PT-BJ,Beja,Portugal,Health,130756,288,7.01,2025
+PT-BR,Braga,Portugal,Health,314001,643,8.18,2024
+PT-BR,Braga,Portugal,Motor,978064,4078,5.43,2024
+PT-BR,Braga,Portugal,Home,198878,2130,9.09,2024
+PT-BR,Braga,Portugal,Health,115215,308,6.59,2025
+PT-BR,Braga,Portugal,Motor,1184513,3708,8.95,2025
+PT-BR,Braga,Portugal,Home,183344,1485,8.3,2025
+PT-BG,Braganca,Portugal,Home,235542,1623,4.83,2024
+PT-BG,Braganca,Portugal,Commercial,267356,354,5.46,2024
+PT-BG,Braganca,Portugal,Motor,1092544,4038,7.4,2024
+PT-BG,Braganca,Portugal,Home,204742,1624,5.32,2025
+PT-BG,Braganca,Portugal,Commercial,384174,515,5.68,2025
+PT-BG,Braganca,Portugal,Motor,1140591,4885,6.19,2025
+PT-CB,Castelo Branco,Portugal,Commercial,60842,101,3.33,2024
+PT-CB,Castelo Branco,Portugal,Health,95082,233,3.02,2024
+PT-CB,Castelo Branco,Portugal,Motor,227829,787,5.32,2024
+PT-CB,Castelo Branco,Portugal,Commercial,191633,209,5.37,2025
+PT-CB,Castelo Branco,Portugal,Health,153163,290,3.48,2025
+PT-CB,Castelo Branco,Portugal,Motor,799454,2611,4.5,2025
+PT-CO,Coimbra,Portugal,Health,79810,174,4.07,2024
+PT-CO,Coimbra,Portugal,Motor,305307,987,5.65,2024
+PT-CO,Coimbra,Portugal,Life,14480,62,5.29,2024
+PT-CO,Coimbra,Portugal,Commercial,73719,98,3.37,2024
+PT-CO,Coimbra,Portugal,Home,15606,157,5.33,2024
+PT-CO,Coimbra,Portugal,Health,41784,86,8.09,2025
+PT-CO,Coimbra,Portugal,Motor,173516,715,7.98,2025
+PT-CO,Coimbra,Portugal,Life,40880,193,7.98,2025
+PT-CO,Coimbra,Portugal,Commercial,60065,68,3.88,2025
+PT-CO,Coimbra,Portugal,Home,95749,689,5.34,2025
+PT-EV,Evora,Portugal,Motor,270639,918,7.47,2024
+PT-EV,Evora,Portugal,Home,33919,246,5.19,2024
+PT-EV,Evora,Portugal,Life,47723,224,5.15,2024
+PT-EV,Evora,Portugal,Motor,532945,2189,7.73,2025
+PT-EV,Evora,Portugal,Home,146908,1106,4.21,2025
+PT-EV,Evora,Portugal,Life,34896,147,5.86,2025
+PT-FA,Faro,Portugal,Commercial,77394,101,6.56,2024
+PT-FA,Faro,Portugal,Motor,418298,1881,6.15,2024
+PT-FA,Faro,Portugal,Home,80009,792,5.74,2024
+PT-FA,Faro,Portugal,Health,48704,132,5.65,2024
+PT-FA,Faro,Portugal,Life,40163,184,6.92,2024
+PT-FA,Faro,Portugal,Commercial,68168,103,7.28,2025
+PT-FA,Faro,Portugal,Motor,644139,2215,4.66,2025
+PT-FA,Faro,Portugal,Home,236828,1736,5.79,2025
+PT-FA,Faro,Portugal,Health,159994,421,5.59,2025
+PT-FA,Faro,Portugal,Life,124107,511,4.73,2025
+PT-GU,Guarda,Portugal,Home,98889,888,7.12,2024
+PT-GU,Guarda,Portugal,Motor,525549,1777,9.98,2024
+PT-GU,Guarda,Portugal,Life,55783,227,5.11,2024
+PT-GU,Guarda,Portugal,Health,314392,709,8.0,2024
+PT-GU,Guarda,Portugal,Commercial,87217,124,8.16,2024
+PT-GU,Guarda,Portugal,Home,204676,1686,8.4,2025
+PT-GU,Guarda,Portugal,Motor,790160,2938,7.03,2025
+PT-GU,Guarda,Portugal,Life,36722,175,10.05,2025
+PT-GU,Guarda,Portugal,Health,410429,1017,4.66,2025
+PT-GU,Guarda,Portugal,Commercial,150772,197,6.35,2025
+PT-LE,Leiria,Portugal,Health,56837,121,6.85,2024
+PT-LE,Leiria,Portugal,Motor,385534,1610,9.93,2024
+PT-LE,Leiria,Portugal,Life,66376,261,10.25,2024
+PT-LE,Leiria,Portugal,Health,118109,246,8.1,2025
+PT-LE,Leiria,Portugal,Motor,304392,983,5.55,2025
+PT-LE,Leiria,Portugal,Life,35653,168,10.47,2025
+PT-LX,Lisbon,Portugal,Motor,5225609,13753,3.07,2024
+PT-LX,Lisbon,Portugal,Home,583813,3213,2.21,2024
+PT-LX,Lisbon,Portugal,Health,499918,991,2.79,2024
+PT-LX,Lisbon,Portugal,Commercial,762489,700,3.16,2024
+PT-LX,Lisbon,Portugal,Life,473989,1647,1.86,2024
+PT-LX,Lisbon,Portugal,Motor,4934390,14091,1.99,2025
+PT-LX,Lisbon,Portugal,Home,636973,4302,2.24,2025
+PT-LX,Lisbon,Portugal,Health,1000577,1959,2.39,2025
+PT-LX,Lisbon,Portugal,Commercial,313881,310,3.16,2025
+PT-LX,Lisbon,Portugal,Life,1191877,4026,3.62,2025
+PT-PG,Portalegre,Portugal,Motor,359160,1554,5.28,2024
+PT-PG,Portalegre,Portugal,Health,488205,1042,6.36,2024
+PT-PG,Portalegre,Portugal,Life,73005,352,5.81,2024
+PT-PG,Portalegre,Portugal,Motor,1557999,5164,6.0,2025
+PT-PG,Portalegre,Portugal,Health,304562,693,6.26,2025
+PT-PG,Portalegre,Portugal,Life,239045,1037,7.92,2025
+PT-PT,Porto,Portugal,Motor,2598667,6872,2.07,2024
+PT-PT,Porto,Portugal,Home,653435,3485,2.14,2024
+PT-PT,Porto,Portugal,Health,844296,1327,3.57,2024
+PT-PT,Porto,Portugal,Commercial,178906,174,2.01,2024
+PT-PT,Porto,Portugal,Life,390755,1308,3.05,2024
+PT-PT,Porto,Portugal,Motor,6127408,16631,1.72,2025
+PT-PT,Porto,Portugal,Home,1178290,7005,2.24,2025
+PT-PT,Porto,Portugal,Health,1625641,2797,3.99,2025
+PT-PT,Porto,Portugal,Commercial,142291,139,2.99,2025
+PT-PT,Porto,Portugal,Life,622392,1966,2.0,2025
+PT-SA,Santarem,Portugal,Motor,472189,1926,4.64,2024
+PT-SA,Santarem,Portugal,Home,187074,1674,6.0,2024
+PT-SA,Santarem,Portugal,Commercial,325818,476,3.38,2024
+PT-SA,Santarem,Portugal,Motor,452780,1478,4.98,2025
+PT-SA,Santarem,Portugal,Home,174175,1472,2.83,2025
+PT-SA,Santarem,Portugal,Commercial,244223,308,5.77,2025
+PT-SE,Setubal,Portugal,Home,74946,667,3.3,2024
+PT-SE,Setubal,Portugal,Health,36134,95,3.79,2024
+PT-SE,Setubal,Portugal,Life,63547,300,4.23,2024
+PT-SE,Setubal,Portugal,Motor,147113,570,3.5,2024
+PT-SE,Setubal,Portugal,Commercial,59000,87,3.67,2024
+PT-SE,Setubal,Portugal,Home,120258,928,2.83,2025
+PT-SE,Setubal,Portugal,Health,147181,365,5.45,2025
+PT-SE,Setubal,Portugal,Life,50940,236,3.9,2025
+PT-SE,Setubal,Portugal,Motor,329703,1485,2.35,2025
+PT-SE,Setubal,Portugal,Commercial,114670,131,3.96,2025
+PT-VR,Vila Real,Portugal,Life,114214,477,7.03,2024
+PT-VR,Vila Real,Portugal,Motor,1068456,4503,7.35,2024
+PT-VR,Vila Real,Portugal,Health,608938,1610,7.32,2024
+PT-VR,Vila Real,Portugal,Home,260592,2069,4.13,2024
+PT-VR,Vila Real,Portugal,Life,44545,252,5.04,2025
+PT-VR,Vila Real,Portugal,Motor,739244,3006,7.56,2025
+PT-VR,Vila Real,Portugal,Health,642778,1594,8.22,2025
+PT-VR,Vila Real,Portugal,Home,276178,1868,7.08,2025
+PT-VS,Viseu,Portugal,Commercial,90001,112,4.8,2024
+PT-VS,Viseu,Portugal,Life,102675,417,3.4,2024
+PT-VS,Viseu,Portugal,Home,208380,1610,6.76,2024
+PT-VS,Viseu,Portugal,Motor,273270,1157,5.57,2024
+PT-VS,Viseu,Portugal,Commercial,112361,164,6.32,2025
+PT-VS,Viseu,Portugal,Life,33430,168,7.37,2025
+PT-VS,Viseu,Portugal,Home,54957,357,4.41,2025
+PT-VS,Viseu,Portugal,Motor,526982,1971,6.71,2025
+PT-VC,Viana do Castelo,Portugal,Motor,615908,2434,8.57,2024
+PT-VC,Viana do Castelo,Portugal,Commercial,86387,145,8.42,2024
+PT-VC,Viana do Castelo,Portugal,Health,436180,1178,6.81,2024
+PT-VC,Viana do Castelo,Portugal,Motor,416601,1757,4.81,2025
+PT-VC,Viana do Castelo,Portugal,Commercial,307027,499,10.38,2025
+PT-VC,Viana do Castelo,Portugal,Health,266730,757,8.1,2025
+IT-25,Lombardy,Italy,Motor,2747247,4331,0.24,2024
+IT-25,Lombardy,Italy,Home,1527136,7027,0.15,2024
+IT-25,Lombardy,Italy,Health,2315086,4019,0.29,2024
+IT-25,Lombardy,Italy,Commercial,1790122,1103,0.22,2024
+IT-25,Lombardy,Italy,Life,1052253,2505,0.33,2024
+IT-25,Lombardy,Italy,Motor,4294865,6968,0.24,2025
+IT-25,Lombardy,Italy,Home,1464142,5010,0.23,2025
+IT-25,Lombardy,Italy,Health,4229695,6750,0.09,2025
+IT-25,Lombardy,Italy,Commercial,1339922,912,0.21,2025
+IT-25,Lombardy,Italy,Life,1272163,3137,0.16,2025
+IT-21,Piedmont,Italy,Health,157336,345,0.21,2024
+IT-21,Piedmont,Italy,Commercial,91687,82,0.62,2024
+IT-21,Piedmont,Italy,Life,40293,105,0.26,2024
+IT-21,Piedmont,Italy,Motor,586037,1186,0.26,2024
+IT-21,Piedmont,Italy,Home,74470,446,0.64,2024
+IT-21,Piedmont,Italy,Health,69145,185,0.6,2025
+IT-21,Piedmont,Italy,Commercial,76853,63,0.39,2025
+IT-21,Piedmont,Italy,Life,47883,129,0.18,2025
+IT-21,Piedmont,Italy,Motor,199237,452,0.7,2025
+IT-21,Piedmont,Italy,Home,68577,351,0.61,2025
+IT-34,Veneto,Italy,Motor,1759489,3003,0.26,2024
+IT-34,Veneto,Italy,Home,326550,1264,0.23,2024
+IT-34,Veneto,Italy,Health,226570,399,0.17,2024
+IT-34,Veneto,Italy,Commercial,323576,208,0.16,2024
+IT-34,Veneto,Italy,Life,375827,725,0.1,2024
+IT-34,Veneto,Italy,Motor,1171665,2457,0.23,2025
+IT-34,Veneto,Italy,Home,733410,3226,0.07,2025
+IT-34,Veneto,Italy,Health,597338,882,0.07,2025
+IT-34,Veneto,Italy,Commercial,356689,199,0.07,2025
+IT-34,Veneto,Italy,Life,204014,409,0.25,2025
+IT-42,Liguria,Italy,Motor,167922,431,0.14,2024
+IT-42,Liguria,Italy,Life,20015,74,0.24,2024
+IT-42,Liguria,Italy,Home,62585,299,0.13,2024
+IT-42,Liguria,Italy,Commercial,65975,49,0.18,2024
+IT-42,Liguria,Italy,Motor,259143,516,0.25,2025
+IT-42,Liguria,Italy,Life,41640,98,0.32,2025
+IT-42,Liguria,Italy,Home,32010,225,0.4,2025
+IT-42,Liguria,Italy,Commercial,109691,97,0.33,2025
+IT-45,Emilia-Romagna,Italy,Motor,4949077,10598,0.39,2024
+IT-45,Emilia-Romagna,Italy,Home,931739,3923,0.42,2024
+IT-45,Emilia-Romagna,Italy,Health,1332133,2195,0.24,2024
+IT-45,Emilia-Romagna,Italy,Commercial,559155,365,0.14,2024
+IT-45,Emilia-Romagna,Italy,Life,874716,1847,0.41,2024
+IT-45,Emilia-Romagna,Italy,Motor,2249080,3955,0.32,2025
+IT-45,Emilia-Romagna,Italy,Home,404786,1513,0.35,2025
+IT-45,Emilia-Romagna,Italy,Health,898726,1478,0.1,2025
+IT-45,Emilia-Romagna,Italy,Commercial,634720,353,0.22,2025
+IT-45,Emilia-Romagna,Italy,Life,288044,667,0.37,2025
+IT-52,Tuscany,Italy,Commercial,492323,370,0.19,2024
+IT-52,Tuscany,Italy,Health,454699,897,0.3,2024
+IT-52,Tuscany,Italy,Motor,1468345,3192,0.51,2024
+IT-52,Tuscany,Italy,Life,55550,190,0.17,2024
+IT-52,Tuscany,Italy,Home,111345,521,0.81,2024
+IT-52,Tuscany,Italy,Commercial,98251,70,0.81,2025
+IT-52,Tuscany,Italy,Health,411867,716,0.45,2025
+IT-52,Tuscany,Italy,Motor,1065892,2706,0.84,2025
+IT-52,Tuscany,Italy,Life,362055,829,0.33,2025
+IT-52,Tuscany,Italy,Home,164202,894,0.83,2025
+IT-55,Umbria,Italy,Motor,795455,1923,0.24,2024
+IT-55,Umbria,Italy,Home,295917,1604,0.77,2024
+IT-55,Umbria,Italy,Health,290186,649,0.33,2024
+IT-55,Umbria,Italy,Commercial,386206,291,0.21,2024
+IT-55,Umbria,Italy,Life,89561,274,0.81,2024
+IT-55,Umbria,Italy,Motor,1604884,3733,0.59,2025
+IT-55,Umbria,Italy,Home,145044,914,0.37,2025
+IT-55,Umbria,Italy,Health,95671,167,0.88,2025
+IT-55,Umbria,Italy,Commercial,431605,297,0.61,2025
+IT-55,Umbria,Italy,Life,245854,749,0.84,2025
+IT-57,Marche,Italy,Motor,112559,301,0.13,2024
+IT-57,Marche,Italy,Commercial,84121,69,0.17,2024
+IT-57,Marche,Italy,Health,105907,234,0.4,2024
+IT-57,Marche,Italy,Motor,280067,663,0.24,2025
+IT-57,Marche,Italy,Commercial,26454,25,0.42,2025
+IT-57,Marche,Italy,Health,46258,82,0.25,2025
+IT-62,Lazio,Italy,Motor,3116855,5608,0.16,2024
+IT-62,Lazio,Italy,Home,259212,1076,0.15,2024
+IT-62,Lazio,Italy,Health,559729,993,0.17,2024
+IT-62,Lazio,Italy,Commercial,398306,250,0.06,2024
+IT-62,Lazio,Italy,Life,72456,186,0.13,2024
+IT-62,Lazio,Italy,Motor,1342289,2537,0.08,2025
+IT-62,Lazio,Italy,Home,498194,2010,0.1,2025
+IT-62,Lazio,Italy,Health,862314,1376,0.05,2025
+IT-62,Lazio,Italy,Commercial,91843,46,0.14,2025
+IT-62,Lazio,Italy,Life,311738,606,0.1,2025
+IT-65,Abruzzo,Italy,Commercial,296452,304,0.32,2024
+IT-65,Abruzzo,Italy,Motor,2869710,5947,0.5,2024
+IT-65,Abruzzo,Italy,Home,337676,1546,0.55,2024
+IT-65,Abruzzo,Italy,Health,631092,1570,0.37,2024
+IT-65,Abruzzo,Italy,Life,301382,771,0.33,2024
+IT-65,Abruzzo,Italy,Commercial,301692,278,0.35,2025
+IT-65,Abruzzo,Italy,Motor,2091182,5271,0.17,2025
+IT-65,Abruzzo,Italy,Home,299474,1710,0.35,2025
+IT-65,Abruzzo,Italy,Health,474927,992,0.39,2025
+IT-65,Abruzzo,Italy,Life,315106,927,0.15,2025
+IT-72,Campania,Italy,Motor,3914622,9975,0.75,2024
+IT-72,Campania,Italy,Life,273275,808,0.65,2024
+IT-72,Campania,Italy,Health,1457742,3314,0.59,2024
+IT-72,Campania,Italy,Motor,6438852,17196,0.29,2025
+IT-72,Campania,Italy,Life,271537,669,0.75,2025
+IT-72,Campania,Italy,Health,805907,1653,0.36,2025
+IT-75,Apulia,Italy,Health,293987,550,0.35,2024
+IT-75,Apulia,Italy,Home,319285,1743,0.25,2024
+IT-75,Apulia,Italy,Motor,490189,1233,0.16,2024
+IT-75,Apulia,Italy,Life,78397,202,0.43,2024
+IT-75,Apulia,Italy,Commercial,281768,209,0.42,2024
+IT-75,Apulia,Italy,Health,36111,86,0.39,2025
+IT-75,Apulia,Italy,Home,71299,389,0.37,2025
+IT-75,Apulia,Italy,Motor,420768,984,0.27,2025
+IT-75,Apulia,Italy,Life,85228,212,0.42,2025
+IT-75,Apulia,Italy,Commercial,110834,117,0.25,2025
+IT-77,Basilicata,Italy,Home,60235,358,0.24,2024
+IT-77,Basilicata,Italy,Motor,335735,755,0.47,2024
+IT-77,Basilicata,Italy,Life,53285,187,0.56,2024
+IT-77,Basilicata,Italy,Health,17474,40,0.12,2024
+IT-77,Basilicata,Italy,Home,65667,381,0.4,2025
+IT-77,Basilicata,Italy,Motor,193148,467,0.19,2025
+IT-77,Basilicata,Italy,Life,66120,204,0.52,2025
+IT-77,Basilicata,Italy,Health,50114,83,0.54,2025
+IT-78,Calabria,Italy,Home,176180,931,0.37,2024
+IT-78,Calabria,Italy,Motor,1282575,2940,0.18,2024
+IT-78,Calabria,Italy,Health,103011,277,0.41,2024
+IT-78,Calabria,Italy,Home,164003,1137,0.55,2025
+IT-78,Calabria,Italy,Motor,949038,2488,0.39,2025
+IT-78,Calabria,Italy,Health,221215,444,0.51,2025
+IT-82,Sicily,Italy,Commercial,1754057,1455,0.34,2024
+IT-82,Sicily,Italy,Health,171673,437,0.53,2024
+IT-82,Sicily,Italy,Motor,2522132,5107,0.82,2024
+IT-82,Sicily,Italy,Life,814389,2392,0.21,2024
+IT-82,Sicily,Italy,Commercial,2201300,1657,0.66,2025
+IT-82,Sicily,Italy,Health,556414,1154,0.63,2025
+IT-82,Sicily,Italy,Motor,4299253,9335,0.42,2025
+IT-82,Sicily,Italy,Life,979103,2762,0.47,2025
+IT-88,Sardinia,Italy,Motor,369278,838,0.18,2024
+IT-88,Sardinia,Italy,Home,190600,1170,0.12,2024
+IT-88,Sardinia,Italy,Life,36564,103,0.16,2024
+IT-88,Sardinia,Italy,Commercial,193293,165,0.25,2024
+IT-88,Sardinia,Italy,Health,238784,516,0.23,2024
+IT-88,Sardinia,Italy,Motor,418087,971,0.18,2025
+IT-88,Sardinia,Italy,Home,219889,1233,0.27,2025
+IT-88,Sardinia,Italy,Life,59639,145,0.15,2025
+IT-88,Sardinia,Italy,Commercial,120303,113,0.22,2025
+IT-88,Sardinia,Italy,Health,66887,127,0.27,2025
+IT-32,Trentino-Alto Adige,Italy,Motor,1703226,4219,0.55,2024
+IT-32,Trentino-Alto Adige,Italy,Health,532203,972,0.43,2024
+IT-32,Trentino-Alto Adige,Italy,Commercial,325089,276,0.46,2024
+IT-32,Trentino-Alto Adige,Italy,Motor,1489357,4053,0.4,2025
+IT-32,Trentino-Alto Adige,Italy,Health,674311,1185,0.33,2025
+IT-32,Trentino-Alto Adige,Italy,Commercial,364192,333,0.22,2025
+IT-36,Friuli Venezia Giulia,Italy,Life,23192,58,0.18,2024
+IT-36,Friuli Venezia Giulia,Italy,Motor,523398,1151,0.25,2024
+IT-36,Friuli Venezia Giulia,Italy,Home,38285,235,0.22,2024
+IT-36,Friuli Venezia Giulia,Italy,Health,81025,181,0.25,2024
+IT-36,Friuli Venezia Giulia,Italy,Commercial,40545,39,0.28,2024
+IT-36,Friuli Venezia Giulia,Italy,Life,57661,187,0.29,2025
+IT-36,Friuli Venezia Giulia,Italy,Motor,185057,439,0.25,2025
+IT-36,Friuli Venezia Giulia,Italy,Home,105610,713,0.21,2025
+IT-36,Friuli Venezia Giulia,Italy,Health,93413,166,0.25,2025
+IT-36,Friuli Venezia Giulia,Italy,Commercial,82251,73,0.09,2025
+IT-23,Aosta Valley,Italy,Motor,387010,1152,0.21,2024
+IT-23,Aosta Valley,Italy,Health,143450,312,0.22,2024
+IT-23,Aosta Valley,Italy,Commercial,131339,122,0.28,2024
+IT-23,Aosta Valley,Italy,Life,45430,128,0.18,2024
+IT-23,Aosta Valley,Italy,Motor,1046964,2605,0.27,2025
+IT-23,Aosta Valley,Italy,Health,98632,181,0.26,2025
+IT-23,Aosta Valley,Italy,Commercial,128041,98,0.19,2025
+IT-23,Aosta Valley,Italy,Life,59842,163,0.14,2025
+IT-67,Molise,Italy,Motor,2844262,5924,0.66,2024
+IT-67,Molise,Italy,Commercial,790137,601,0.52,2024
+IT-67,Molise,Italy,Life,461044,1463,0.5,2024
+IT-67,Molise,Italy,Motor,2241019,4903,0.39,2025
+IT-67,Molise,Italy,Commercial,802926,693,0.47,2025
+IT-67,Molise,Italy,Life,179354,497,0.58,2025
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Motor,1136810,1872,0.02,2024
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Home,162625,507,0.03,2024
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Health,238579,287,0.03,2024
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Commercial,105478,61,0.04,2024
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Life,114904,228,0.04,2024
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Motor,1185061,1694,0.04,2025
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Home,97386,363,0.01,2025
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Health,250355,300,0.03,2025
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Commercial,54451,35,0.04,2025
+FR-PAC,Provence-Alpes-Cote d'Azur,France,Life,169490,361,0.02,2025
+FR-OCC,Occitanie,France,Commercial,291308,221,0.21,2024
+FR-OCC,Occitanie,France,Life,270046,671,0.23,2024
+FR-OCC,Occitanie,France,Health,738205,1031,0.16,2024
+FR-OCC,Occitanie,France,Motor,515795,1123,0.16,2024
+FR-OCC,Occitanie,France,Commercial,694744,405,0.12,2025
+FR-OCC,Occitanie,France,Life,126184,313,0.09,2025
+FR-OCC,Occitanie,France,Health,1640144,2158,0.14,2025
+FR-OCC,Occitanie,France,Motor,1403408,3807,0.12,2025
+FR-NAQ,Nouvelle-Aquitaine,France,Motor,812118,2102,0.12,2024
+FR-NAQ,Nouvelle-Aquitaine,France,Home,164186,724,0.15,2024
+FR-NAQ,Nouvelle-Aquitaine,France,Commercial,157705,111,0.14,2024
+FR-NAQ,Nouvelle-Aquitaine,France,Health,170620,289,0.11,2024
+FR-NAQ,Nouvelle-Aquitaine,France,Life,46653,148,0.16,2024
+FR-NAQ,Nouvelle-Aquitaine,France,Motor,787682,1484,0.14,2025
+FR-NAQ,Nouvelle-Aquitaine,France,Home,291153,1242,0.07,2025
+FR-NAQ,Nouvelle-Aquitaine,France,Commercial,256390,170,0.1,2025
+FR-NAQ,Nouvelle-Aquitaine,France,Health,101344,164,0.09,2025
+FR-NAQ,Nouvelle-Aquitaine,France,Life,246613,530,0.06,2025
+FR-ARA,Auvergne-Rhone-Alpes,France,Motor,3846063,5389,0.03,2024
+FR-ARA,Auvergne-Rhone-Alpes,France,Home,491697,1691,0.1,2024
+FR-ARA,Auvergne-Rhone-Alpes,France,Health,1497685,1709,0.12,2024
+FR-ARA,Auvergne-Rhone-Alpes,France,Commercial,304586,172,0.1,2024
+FR-ARA,Auvergne-Rhone-Alpes,France,Life,814694,1650,0.07,2024
+FR-ARA,Auvergne-Rhone-Alpes,France,Motor,5341198,9449,0.05,2025
+FR-ARA,Auvergne-Rhone-Alpes,France,Home,909473,3165,0.12,2025
+FR-ARA,Auvergne-Rhone-Alpes,France,Health,845505,1125,0.04,2025
+FR-ARA,Auvergne-Rhone-Alpes,France,Commercial,630757,317,0.04,2025
+FR-ARA,Auvergne-Rhone-Alpes,France,Life,642611,1224,0.04,2025
+FR-COR,Corsica,France,Home,662847,3018,0.3,2024
+FR-COR,Corsica,France,Motor,3293569,7311,0.23,2024
+FR-COR,Corsica,France,Commercial,273706,207,0.1,2024
+FR-COR,Corsica,France,Life,394113,999,0.11,2024
+FR-COR,Corsica,France,Health,798283,1378,0.17,2024
+FR-COR,Corsica,France,Home,237982,1147,0.25,2025
+FR-COR,Corsica,France,Motor,2485904,5578,0.21,2025
+FR-COR,Corsica,France,Commercial,696088,519,0.31,2025
+FR-COR,Corsica,France,Life,453696,1231,0.31,2025
+FR-COR,Corsica,France,Health,1045923,1693,0.22,2025
+FR-IDF,Ile-de-France,France,Motor,5455624,8170,0.07,2024
+FR-IDF,Ile-de-France,France,Home,645197,2565,0.1,2024
+FR-IDF,Ile-de-France,France,Health,2044430,2674,0.05,2024
+FR-IDF,Ile-de-France,France,Commercial,763368,420,0.11,2024
+FR-IDF,Ile-de-France,France,Life,1513144,3020,0.11,2024
+FR-IDF,Ile-de-France,France,Motor,5529678,9037,0.16,2025
+FR-IDF,Ile-de-France,France,Home,1640770,6242,0.06,2025
+FR-IDF,Ile-de-France,France,Health,3143499,3897,0.11,2025
+FR-IDF,Ile-de-France,France,Commercial,1753083,879,0.1,2025
+FR-IDF,Ile-de-France,France,Life,1102737,2162,0.16,2025
+FR-HDF,Hauts-de-France,France,Motor,1122648,3059,0.09,2024
+FR-HDF,Hauts-de-France,France,Home,263340,1101,0.19,2024
+FR-HDF,Hauts-de-France,France,Health,326852,630,0.11,2024
+FR-HDF,Hauts-de-France,France,Commercial,177567,144,0.05,2024
+FR-HDF,Hauts-de-France,France,Life,186411,435,0.16,2024
+FR-HDF,Hauts-de-France,France,Motor,829738,1889,0.24,2025
+FR-HDF,Hauts-de-France,France,Home,108756,596,0.15,2025
+FR-HDF,Hauts-de-France,France,Health,152184,235,0.1,2025
+FR-HDF,Hauts-de-France,France,Commercial,114784,78,0.19,2025
+FR-HDF,Hauts-de-France,France,Life,69824,170,0.09,2025
+FR-GES,Grand Est,France,Life,62681,169,0.08,2024
+FR-GES,Grand Est,France,Motor,670344,1220,0.12,2024
+FR-GES,Grand Est,France,Health,424274,616,0.11,2024
+FR-GES,Grand Est,France,Home,163655,756,0.12,2024
+FR-GES,Grand Est,France,Life,36510,82,0.22,2025
+FR-GES,Grand Est,France,Motor,337962,705,0.21,2025
+FR-GES,Grand Est,France,Health,369273,487,0.27,2025
+FR-GES,Grand Est,France,Home,150807,677,0.19,2025
+FR-BFC,Bourgogne-Franche-Comte,France,Commercial,107646,76,0.2,2024
+FR-BFC,Bourgogne-Franche-Comte,France,Motor,1307433,3673,0.16,2024
+FR-BFC,Bourgogne-Franche-Comte,France,Health,406546,794,0.21,2024
+FR-BFC,Bourgogne-Franche-Comte,France,Commercial,375260,289,0.22,2025
+FR-BFC,Bourgogne-Franche-Comte,France,Motor,2483803,4691,0.25,2025
+FR-BFC,Bourgogne-Franche-Comte,France,Health,473117,816,0.21,2025
+FR-PDL,Pays de la Loire,France,Health,157294,258,0.22,2024
+FR-PDL,Pays de la Loire,France,Commercial,197737,143,0.24,2024
+FR-PDL,Pays de la Loire,France,Home,83744,370,0.33,2024
+FR-PDL,Pays de la Loire,France,Life,123281,269,0.13,2024
+FR-PDL,Pays de la Loire,France,Motor,1112442,2296,0.29,2024
+FR-PDL,Pays de la Loire,France,Health,201567,295,0.12,2025
+FR-PDL,Pays de la Loire,France,Commercial,338960,244,0.1,2025
+FR-PDL,Pays de la Loire,France,Home,146708,718,0.15,2025
+FR-PDL,Pays de la Loire,France,Life,243210,696,0.13,2025
+FR-PDL,Pays de la Loire,France,Motor,1617063,3725,0.12,2025
+FR-BRE,Brittany,France,Motor,1835802,4209,0.2,2024
+FR-BRE,Brittany,France,Life,247515,767,0.4,2024
+FR-BRE,Brittany,France,Home,825859,4831,0.27,2024
+FR-BRE,Brittany,France,Commercial,524538,334,0.45,2024
+FR-BRE,Brittany,France,Health,447430,685,0.32,2024
+FR-BRE,Brittany,France,Motor,2731919,6238,0.22,2025
+FR-BRE,Brittany,France,Life,200870,545,0.09,2025
+FR-BRE,Brittany,France,Home,240594,1059,0.44,2025
+FR-BRE,Brittany,France,Commercial,275787,228,0.23,2025
+FR-BRE,Brittany,France,Health,441352,782,0.23,2025
+FR-NOR,Normandy,France,Health,32222,66,0.13,2024
+FR-NOR,Normandy,France,Life,106976,295,0.08,2024
+FR-NOR,Normandy,France,Commercial,122826,81,0.07,2024
+FR-NOR,Normandy,France,Home,35476,189,0.09,2024
+FR-NOR,Normandy,France,Motor,699329,1671,0.18,2024
+FR-NOR,Normandy,France,Health,79480,170,0.1,2025
+FR-NOR,Normandy,France,Life,86848,251,0.05,2025
+FR-NOR,Normandy,France,Commercial,194800,128,0.08,2025
+FR-NOR,Normandy,France,Home,117413,485,0.22,2025
+FR-NOR,Normandy,France,Motor,364981,738,0.1,2025
+FR-CVL,Centre-Val de Loire,France,Motor,1252996,3493,0.15,2024
+FR-CVL,Centre-Val de Loire,France,Commercial,503298,306,0.12,2024
+FR-CVL,Centre-Val de Loire,France,Life,136477,314,0.18,2024
+FR-CVL,Centre-Val de Loire,France,Motor,722824,1386,0.12,2025
+FR-CVL,Centre-Val de Loire,France,Commercial,280918,194,0.18,2025
+FR-CVL,Centre-Val de Loire,France,Life,157436,505,0.09,2025

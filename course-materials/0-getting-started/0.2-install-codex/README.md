@@ -9,7 +9,7 @@ If you want a quick confidence boost before installing anything, do this 5-minut
 Use this file from the repository:
 
 ```text
-exercises/exercise-3-automated-reporting/data/claims_q4_2025.csv
+exercises/exercise-4-automated-reporting/data/claims_q4_2025.csv
 ```
 
 Upload the CSV to ChatGPT and try these prompts:
@@ -119,5 +119,5 @@ Codex behavior is controlled by CLI options and config:
 
 ## Next Step
 
-For non-technical executive users, start with [Exercise 0: Executive Onramp (Zero to One)](../../../exercises/exercise-0-executive-onramp/README.md).
+For non-technical executive users, start with [Exercise 1: Executive Onramp](../../../exercises/exercise-1-executive-onramp/README.md).
 Then proceed to [Module 1.1: First Steps with OpenAI Codex](../../1-fundamentals/1.1-first-steps/README.md) to learn how to give effective instructions and complete your first insurance tasks.

@@ -1,8 +1,3 @@
----
-title: "Exercise 3: Claims Triage"
-description: "Build a claims triage system that classifies, prioritizes, and routes 220 incoming claims."
----
-
 # Exercise 3: Claims Triage
 
 **Duration:** ~45 minutes  
@@ -12,7 +7,9 @@ description: "Build a claims triage system that classifies, prioritizes, and rou
 
 ## Files
 
-**Download:** [incoming_claims.csv](../data/exercise-3/incoming_claims.csv) | [historical_outcomes.csv](../data/exercise-3/historical_outcomes.csv) | [business_rules.json](../data/exercise-3/business_rules.json)
+- `data/incoming_claims.csv`
+- `data/historical_outcomes.csv`
+- `data/business_rules.json`
 
 ---
 
@@ -137,7 +134,7 @@ Document the rules clearly in a file so we can review and adjust them.
 **What to expect:**
 - A structured document (likely Markdown or a code file) that clearly maps out every triage decision
 - Rules that combine multiple data points: product line + incident type for category, amount thresholds + injury flags for priority, and category + priority + fraud signals for handling path
-- Alignment with the historical data -- e.g., if historical "fast-track" claims were mostly under 2,000 EUR, the rules should reflect that
+- Alignment with the historical data -- e.g., if historical "fast-track" claims were mostly under 2.000 EUR, the rules should reflect that
 
 **Why this matters:**
 This step forces clarity. Informal rules in a JSON file become explicit, reviewable logic. You can iterate on these rules later.
@@ -211,7 +208,7 @@ and a brief justification. Save the results as triaged_claims.csv
 **What to expect:**
 - A new CSV file (`triaged_claims.csv`) with all original columns plus 6 new ones
 - Every claim categorized, prioritized, and routed
-- Justifications like "Critical priority: estimated amount 90,300 EUR exceeds 50,000 threshold" or "Fraud investigation: theft claim filed without police report"
+- Justifications like "Critical priority: estimated amount 90.300 EUR exceeds 50.000 threshold" or "Fraud investigation: theft claim filed without police report"
 - Some claims flagged for fraud investigation (repeat claimants, delayed reporting, missing police reports for theft)
 
 **Why this matters:**
@@ -333,7 +330,7 @@ The dashboard is a single self-contained HTML file (~108 KB) with no external de
 
 ### Example Final Result (Browser View)
 
-![Exercise 2 final browser result](./images/exercise-2-screenshot.png)
+![Exercise 2 final browser result](images/screenshot.png)
 
 _Example output of the generated claims triage dashboard opened in a browser._
 
@@ -354,7 +351,7 @@ potential fraud indicators based on the claim patterns.
 **What to expect:**
 - Identification of specific claims that are borderline or potentially misclassified
 - Fraud flags: claimants with multiple recent claims, theft without police reports, claims with suspiciously round amounts, delayed incident reporting
-- Rule improvement suggestions: e.g., "Consider adding a rule for claims filed within 90 days of policy inception" or "Water damage claims over 15,000 EUR should be upgraded to High priority based on historical resolution complexity"
+- Rule improvement suggestions: e.g., "Consider adding a rule for claims filed within 90 days of policy inception" or "Water damage claims over 15.000 EUR should be upgraded to High priority based on historical resolution complexity"
 - Observations about how the rules compare to actual historical outcomes
 
 **Why this matters:**

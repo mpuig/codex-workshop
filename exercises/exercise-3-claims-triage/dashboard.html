@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIG Claims Triage Dashboard</title>
+    <style>
+        :root {
+            --critical: #DC2626;
+            --critical-bg: #FEF2F2;
+            --high: #F59E0B;
+            --high-bg: #FFFBEB;
+            --medium: #3B82F6;
+            --medium-bg: #EFF6FF;
+            --low: #10B981;
+            --low-bg: #ECFDF5;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text: #1E293B;
+            --text-light: #64748B;
+            --border: #E2E8F0;
+            --mig-primary: #1E3A5F;
+            --mig-accent: #2563EB;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--mig-primary), #2D5A8E);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 { font-size: 1.5rem; font-weight: 600; }
+        header .subtitle { font-size: 0.875rem; opacity: 0.85; margin-top: 0.25rem; }
+        header .date { font-size: 0.875rem; opacity: 0.7; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 1.5rem; }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border-left: 4px solid;
+        }
+
+        .card.critical { border-color: var(--critical); background: var(--critical-bg); }
+        .card.high { border-color: var(--high); background: var(--high-bg); }
+        .card.medium { border-color: var(--medium); background: var(--medium-bg); }
+        .card.low { border-color: var(--low); background: var(--low-bg); }
+
+        .card .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); font-weight: 600; }
+        .card .value { font-size: 2rem; font-weight: 700; margin: 0.25rem 0; }
+        .card .detail { font-size: 0.8rem; color: var(--text-light); }
+        .card.critical .value { color: var(--critical); }
+        .card.high .value { color: var(--high); }
+        .card.medium .value { color: var(--medium); }
+        .card.low .value { color: var(--low); }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+
+        .panel {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .panel h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .alert-panel {
+            background: var(--critical-bg);
+            border: 1px solid var(--critical);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .alert-panel h2 { color: var(--critical); border-color: var(--critical); font-size: 1rem; }
+
+        .alert-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(220,38,38,0.15);
+            font-size: 0.85rem;
+        }
+
+        .alert-item:last-child { border-bottom: none; }
+        .alert-item .claim-id { font-weight: 600; color: var(--critical); min-width: 130px; }
+        .alert-item .category { color: var(--text-light); min-width: 180px; }
+        .alert-item .amount { font-weight: 600; text-align: right; min-width: 120px; }
+        .alert-item .path { font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; background: rgba(220,38,38,0.1); color: var(--critical); }
+
+        .chart-container { margin-bottom: 0.75rem; }
+        .bar-row { display: flex; align-items: center; margin-bottom: 0.5rem; }
+        .bar-label { min-width: 140px; font-size: 0.8rem; }
+        .bar-track { flex: 1; height: 24px; background: #F1F5F9; border-radius: 4px; overflow: hidden; position: relative; }
+        .bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; display: flex; align-items: center; padding-left: 8px; }
+        .bar-fill span { font-size: 0.7rem; color: white; font-weight: 600; white-space: nowrap; }
+
+        .table-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+
+        .table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .table-header h2 { font-size: 1rem; margin: 0; border: none; padding: 0; }
+
+        .filter-controls { display: flex; gap: 0.5rem; align-items: center; }
+        .filter-controls select, .filter-controls input {
+            padding: 0.4rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            background: white;
+        }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+        th { text-align: left; padding: 0.6rem 0.75rem; background: #F8FAFC; border-bottom: 2px solid var(--border); font-weight: 600; cursor: pointer; user-select: none; white-space: nowrap; }
+        th:hover { background: #EDF2F7; }
+        td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+        tr:hover td { background: #F8FAFC; }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-critical { background: var(--critical-bg); color: var(--critical); border: 1px solid var(--critical); }
+        .badge-high { background: var(--high-bg); color: #B45309; border: 1px solid var(--high); }
+        .badge-medium { background: var(--medium-bg); color: var(--medium); border: 1px solid var(--medium); }
+        .badge-low { background: var(--low-bg); color: #059669; border: 1px solid var(--low); }
+
+        .path-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            background: #F1F5F9;
+            color: var(--text-light);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Mediterranean Insurance Group</h1>
+        <div class="subtitle">Claims Triage Dashboard &mdash; Iberian Peninsula Operations</div>
+    </div>
+    <div class="date">
+        Generated: <span id="genDate"></span><br>
+        Owner: Ana Martinez, Regional Claims Manager
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="summary-cards" id="summaryCards"></div>
+
+    <div class="alert-panel" id="alertPanel">
+        <h2>Critical Claims &mdash; Immediate Attention Required</h2>
+        <div id="alertList"></div>
+    </div>
+
+    <div class="grid-2">
+        <div class="panel">
+            <h2>Distribution by Category</h2>
+            <div id="categoryChart" class="chart-container"></div>
+        </div>
+        <div class="panel">
+            <h2>Distribution by Handling Path</h2>
+            <div id="pathChart" class="chart-container"></div>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="panel">
+            <h2>Team Workload</h2>
+            <div id="teamChart" class="chart-container"></div>
+        </div>
+        <div class="panel">
+            <h2>Total Estimated Exposure by Priority</h2>
+            <div id="exposureChart" class="chart-container"></div>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <div class="table-header">
+            <h2>All Triaged Claims (220)</h2>
+            <div class="filter-controls">
+                <select id="filterPriority">
+                    <option value="">All Priorities</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <select id="filterPath">
+                    <option value="">All Paths</option>
+                    <option value="fast-track">Fast-Track</option>
+                    <option value="standard">Standard</option>
+                    <option value="complex-review">Complex Review</option>
+                    <option value="fraud-investigation">Fraud Investigation</option>
+                    <option value="legal-referral">Legal Referral</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search claims...">
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th data-sort="claim_id">Claim ID</th>
+                    <th data-sort="policyholder_name">Policyholder</th>
+                    <th data-sort="product_line">Product</th>
+                    <th data-sort="incident_type">Incident</th>
+                    <th data-sort="estimated_amount_eur">Amount (EUR)</th>
+                    <th data-sort="assigned_category">Category</th>
+                    <th data-sort="priority_level">Priority</th>
+                    <th data-sort="handling_path">Handling Path</th>
+                    <th data-sort="assigned_team">Team</th>
+                    <th data-sort="estimated_resolution_days">Est. Days</th>
+                </tr>
+            </thead>
+            <tbody id="claimsTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    Mediterranean Insurance Group &mdash; Claims Triage Dashboard &mdash; Confidential
+</footer>
+
+<script>
+// Inline CSV data (generated by triage script)
+const csvData = `claim_id,policy_number,policyholder_name,claim_date,incident_date,product_line,incident_type,incident_description,estimated_amount_eur,injury_reported,police_report_filed,region_code,region_name,adjuster_assigned,status,assigned_category,priority_level,handling_path,assigned_team,estimated_resolution_days,justification
+CLM-2025-30001,MIG-MOT-364742,Pau Ortega Herrera,2025-05-07,2025-05-06,Motor,hit_and_run,Vehicle struck by unknown driver in parking lot; no witnesses.,13900,No,Yes,POR-N,Portugal Norte,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 13,900.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30002,MIG-HOM-725084,Bruno Ramos Ricci,2025-06-12,2025-06-05,Home,fire,Kitchen fire from unattended cooking; smoke damage throughout flat.,90300,No,Yes,CAT,Catalunya,,New,home-fire,Critical,complex-review,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 90,300.00 exceeds 50.000 threshold | Path: Critical priority claim requires senior review"
+CLM-2025-30003,MIG-HOM-185131,Rafael Gallego Ortiz,2025-02-14,2025-02-06,Home,water_damage,Blocked drainage caused water backup into basement storage.,17400,No,No,MAD,Madrid,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 17,400.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30004,MIG-MOT-377405,Paula Sanchez Rodriguez,2025-06-14,2025-06-08,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,10700,Yes,Yes,CAT,Catalunya,,New,auto-bodily-injury,Critical,complex-review,Motor Claims Unit (BCN-MOT),15,"Injury reported with estimated amount EUR 10,700.00 (>10.000) | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Critical priority claim requires senior review"
+CLM-2025-30005,MIG-HOM-402630,Luis Santos Suarez,2025-04-27,2025-04-21,Home,storm_damage,Mediterranean storm flooded ground-floor garage and storage.,10400,No,No,CAT,Catalunya,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 10,400.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30006,MIG-MOT-807053,Aina Romero Rodriguez,2025-06-01,2025-05-28,Motor,collision,Low-speed collision in underground parking garage.,34500,Yes,Yes,MAD,Madrid,,New,auto-bodily-injury,Critical,complex-review,Motor Claims Unit (BCN-MOT),15,"Injury reported with estimated amount EUR 34,500.00 (>10.000) | Path: Critical priority claim requires senior review"
+CLM-2025-30007,MIG-HOM-195674,Andreu Costa Gil,2025-05-05,2025-05-04,Home,storm_damage,High winds damaged shutters and broke terrace glass panels.,7130,No,No,POR-N,Portugal Norte,Pau Soler,Under Review,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 7,130.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30008,MIG-MOT-523808,Lucia Blanco Gomez,2025-05-16,2025-05-10,Motor,hit_and_run,Vehicle struck by unknown driver in parking lot; no witnesses.,20000,No,Yes,MAD,Madrid,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 20,000.00 in 5.000-20.000 range | Fraud flags: FI-008: Suspiciously round estimate: EUR 20,000 | Path: Standard processing path"
+CLM-2025-30009,MIG-MOT-832168,Alba Sanchez Hernandez,2025-05-09,2025-03-19,Motor,collision,Side impact at roundabout; other driver failed to yield.,11400,Yes,Yes,AND,Andalucia,,New,auto-bodily-injury,Critical,fraud-investigation,Special Investigations Unit (BCN-SIU),15,"Injury reported with estimated amount EUR 11,400.00 (>10.000) | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-004: Delayed reporting: 51 days between incident and claim | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30010,MIG-HOM-972565,Raquel Calvo Santos,2025-02-13,2025-02-09,Home,water_damage,Hot water heater failure flooded utility room and hallway.,12300,No,No,CAT,Catalunya,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 12,300.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30011,MIG-HLT-173201,Lorenzo Hernandez Torres,2025-03-16,2025-03-12,Health,medical_emergency,Acute asthma attack requiring emergency nebulizer treatment.,15600,No,No,AND,Andalucia,,New,health-emergency,Critical,complex-review,Health Claims Unit (BCN-HLT),15,"Medical emergency with amount EUR 15,600.00 (>15.000) | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Critical priority claim requires senior review"
+CLM-2025-30012,MIG-HOM-448588,Raquel Navarro Marin,2025-05-26,2025-05-23,Home,fire,Fire started from faulty space heater; bedroom heavily damaged.,39600,No,No,MAD,Madrid,,New,home-fire,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 39,600.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30013,MIG-HOM-960616,Laia Silva Herrera,2025-06-20,2025-05-27,Home,theft,Apartment burgled during daytime; door lock picked.,10600,No,Yes,CAT,Catalunya,Jordi Puig,Under Review,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Theft claim with amount EUR 10,600.00 exceeds 10.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30014,MIG-COM-919488,Patricia Vega Marin,2025-03-13,2025-03-12,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,68500,Yes,No,MAD,Madrid,,New,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Estimated amount EUR 68,500.00 exceeds 50.000 threshold | Path: Commercial liability with injury requires legal review"
+CLM-2025-30015,MIG-HOM-817644,Ana Ricci Campos,2025-03-19,2025-03-18,Home,water_damage,Burst pipe in bathroom caused flooding to ground floor.,17700,No,No,MAD,Madrid,Isabel Fernandez,Under Review,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 17,700.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30016,MIG-HOM-656968,Sara Reyes Calvo,2025-04-20,2025-04-18,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,25000,No,No,ARA,Aragon,,New,home-water-damage,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 25,000.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-008: Suspiciously round estimate: EUR 25,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30017,MIG-MOT-109853,Luca Vila Blanco,2025-05-04,2025-04-27,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,44500,No,No,VAL,Valencia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 44,500.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30018,MIG-COM-211834,Alvaro Fernandez Moreno,2025-03-06,2025-03-02,Commercial,flood,Sewer backup flooded restaurant basement; health inspection required.,25000,No,No,VAL,Valencia,,New,commercial-property,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 25,000.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-008: Suspiciously round estimate: EUR 25,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30019,MIG-HLT-400096,Bruno Costa Gomez,2025-03-04,2025-03-01,Health,dental,Dental crown replacement after fracture.,2740,No,No,VAL,Valencia,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 2,740.00 below 5.000 threshold | Path: Routine dental under EUR 3.000"
+CLM-2025-30020,MIG-HOM-562236,Valentina Bianchi Calvo,2025-01-13,2025-01-09,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,10700,No,No,BAL,Illes Balears,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 10,700.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30021,MIG-HLT-964749,Alejandro Soler Ricci,2025-05-08,2025-05-07,Health,hospitalization,Post-surgical hospitalization for knee replacement recovery.,10600,No,No,CAT,Catalunya,,New,health-emergency,Critical,complex-review,Health Claims Unit (BCN-HLT),15,Hospitalization claim requires immediate attention | Path: Critical priority claim requires senior review
+CLM-2025-30022,MIG-MOT-377304,Chiara Delgado Morales,2025-05-22,2025-05-18,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,37200,No,Yes,CAT,Catalunya,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 37,200.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30023,MIG-COM-166287,Eva Rossi Martinez,2025-06-16,2025-06-10,Commercial,product_liability,Defective equipment caused minor burns to end user.,10200,Yes,No,CAT,Catalunya,,New,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Injury reported with estimated amount EUR 10,200.00 (>10.000) | Path: Commercial liability with injury requires legal review"
+CLM-2025-30024,MIG-HOM-830316,Paula Sanchez Rodriguez,2025-05-23,2025-05-17,Home,vandalism,Front door and mailbox vandalized; graffiti on facade.,6750,No,No,VAL,Valencia,,New,home-theft,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 6,750.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-005: No police report filed for vandalism claim | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30025,MIG-MOT-670913,Xavier Munoz Rodrigues,2025-06-19,2025-06-18,Motor,vandalism,Vehicle keyed along both sides while parked on street.,4160,No,Yes,VAL,Valencia,Andreu Ferrer,Under Review,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,Police report filed; assigned Medium priority | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path
+CLM-2025-30026,MIG-MOT-681128,Sara Jimenez Hernandez,2025-02-27,2025-02-22,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,978.08,No,No,POR-S,Portugal Sul,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 978.08 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 978.08 under 2.000 threshold"
+CLM-2025-30027,MIG-HLT-115582,Matteo Martinez Alvarez,2025-04-06,2025-03-21,Health,medical_emergency,Severe abdominal pain requiring emergency surgery consultation.,25000,No,No,GAL,Galicia,,New,health-emergency,Critical,complex-review,Health Claims Unit (BCN-HLT),15,"Medical emergency with amount EUR 25,000.00 (>15.000) | Fraud flags: FI-008: Suspiciously round estimate: EUR 25,000 | Path: Critical priority claim requires senior review"
+CLM-2025-30028,MIG-MOT-744986,Miguel Costa Rodrigues,2025-01-16,2025-01-16,Motor,theft,Vehicle stolen and recovered with significant damage.,50000,No,Yes,CAT,Catalunya,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 50,000.00 exceeds 20.000 threshold | Fraud flags: FI-008: Suspiciously round estimate: EUR 50,000 | Path: High priority claim requires senior review"
+CLM-2025-30029,MIG-MOT-232321,Sergio Mas Ortega,2025-03-16,2025-03-11,Motor,collision,Sideswipe accident while changing lanes on M-30 ring road.,27200,No,Yes,MAD,Madrid,Patricia Flores,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 27,200.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30030,MIG-HOM-455395,Carlos Soler Ferrer,2025-05-01,2025-04-10,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,6740,No,No,AND,Andalucia,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 6,740.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30031,MIG-HLT-236435,Alejandro Herrera Castillo,2025-05-27,2025-05-22,Health,outpatient_treatment,Outpatient blood tests and endocrinology consultation.,1290,No,No,POR-N,Portugal Norte,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,290.00 below 5.000 threshold | Path: Low priority, amount EUR 1,290.00 under 2.000 threshold"
+CLM-2025-30032,MIG-HOM-705991,Laura Reyes Costa,2025-05-14,2025-05-13,Home,water_damage,Slow leak behind kitchen wall discovered during renovation; mold found.,14100,No,No,CAT,Catalunya,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 14,100.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30033,MIG-HOM-127529,Giuseppe Calvo Campos,2025-06-09,2025-06-07,Home,theft,Break-in through ground floor window; laptop and cash stolen.,23100,No,Yes,CAT,Catalunya,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 23,100.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30034,MIG-HLT-196214,Aina Vega Perez,2025-05-20,2025-05-18,Health,physiotherapy,Physiotherapy sessions for chronic lower back pain.,1860,No,No,AND,Andalucia,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,860.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 1,860.00 under 2.000 threshold"
+CLM-2025-30035,MIG-MOT-564637,Valentina Vazquez Bianchi,2025-06-23,2025-06-19,Motor,collision,Rear-ended on Gran Via during morning rush hour traffic.,23400,No,Yes,VAL,Valencia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 23,400.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30036,MIG-MOT-157443,Marina Pereira Molina,2025-01-06,2025-01-04,Motor,hit_and_run,Hit while crossing intersection; other driver fled the scene.,6140,Yes,Yes,MAD,Madrid,,New,auto-bodily-injury,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Injury reported (amount EUR 6,140.00) | Path: High priority claim requires senior review"
+CLM-2025-30037,MIG-HOM-471371,Ramon Gallego Romano,2025-01-23,2025-01-15,Home,theft,Storage unit in communal basement broken into; personal items stolen.,3260,No,Yes,MAD,Madrid,,New,home-theft,Medium,standard,Property Claims Unit (BCN-PROP),15,Police report filed; assigned Medium priority | Path: Standard processing path
+CLM-2025-30038,MIG-COM-748151,Jordi Garcia Ramos,2025-05-02,2025-04-29,Commercial,slip_and_fall,Visitor fell on uneven pavement outside office building.,33200,Yes,No,GAL,Galicia,,New,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Injury reported with estimated amount EUR 33,200.00 (>10.000) | Path: Commercial liability with injury requires legal review"
+CLM-2025-30039,MIG-HOM-303322,Lorenzo Hernandez Torres,2025-04-04,2025-04-02,Home,theft,Storage unit in communal basement broken into; personal items stolen.,5250,No,Yes,GAL,Galicia,Clara Medina,Under Review,home-theft,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 5,250.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30040,MIG-HOM-691912,Marco Alvarez Ortega,2025-06-18,2025-06-13,Home,electrical_damage,Power surge during storm destroyed multiple household appliances.,825.8,No,No,MAD,Madrid,,New,home-fire,Low,fast-track,Property Claims Unit (BCN-PROP),7,"Estimated amount EUR 825.80 below 5.000 threshold | Path: Low priority, amount EUR 825.80 under 2.000 threshold"
+CLM-2025-30041,MIG-HOM-972097,Oscar Molina Almeida,2025-03-19,2025-03-18,Home,water_damage,Burst pipe in bathroom caused flooding to ground floor.,12900,No,No,PVA,Pais Vasco,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 12,900.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30042,MIG-MOT-625721,Teresa Hernandez Vega,2025-02-12,2025-02-07,Motor,theft,"Vehicle broken into; GPS, laptop, and personal items taken.",5700,No,Yes,VAL,Valencia,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 5,700.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30043,MIG-HOM-528625,Chiara Delgado Morales,2025-04-01,2025-03-27,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,2000,No,No,MAD,Madrid,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,Water Damage claim assigned Medium priority | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days | Path: Standard processing path
+CLM-2025-30044,MIG-COM-787923,Aina Vega Perez,2025-06-23,2025-06-22,Commercial,product_liability,Customer alleges allergic reaction to product sold in store.,48300,No,No,VAL,Valencia,,New,commercial-liability,High,complex-review,Commercial Lines Unit (BCN-COM),30,"Estimated amount EUR 48,300.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30045,MIG-MOT-324597,Xavier Munoz Rodrigues,2025-04-02,2025-03-31,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,2000,No,Yes,GAL,Galicia,Andreu Ferrer,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,Police report filed; assigned Medium priority | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path
+CLM-2025-30046,MIG-MOT-826501,Leonor Serra Gallego,2025-06-13,2025-05-25,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,11300,No,Yes,GAL,Galicia,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 11,300.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30047,MIG-COM-811256,Elena Rossi Delgado,2025-05-31,2025-05-25,Commercial,slip_and_fall,Employee tripped on loose carpet in restaurant; wrist fracture.,34700,Yes,Yes,VAL,Valencia,Clara Medina,Under Review,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Injury reported with estimated amount EUR 34,700.00 (>10.000) | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Commercial liability with injury requires legal review"
+CLM-2025-30048,MIG-HLT-230734,Blanca Rossi Gomez,2025-03-18,2025-03-16,Health,outpatient_treatment,Allergy testing and immunotherapy initiation.,365.97,No,No,PVA,Pais Vasco,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 365.97 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Low priority, amount EUR 365.97 under 2.000 threshold"
+CLM-2025-30049,MIG-HOM-185569,Ines Bianchi Herrera,2025-04-10,2025-02-09,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,18000,No,No,CAT,Catalunya,,New,home-water-damage,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 18,000.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-004: Delayed reporting: 60 days between incident and claim; FI-008: Suspiciously round estimate: EUR 18,000 | Path: SIU referral: 3 fraud indicators triggered"
+CLM-2025-30050,MIG-HOM-183074,Elena Rossi Delgado,2025-01-09,2025-01-03,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,7560,No,No,MAD,Madrid,Clara Medina,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 7,560.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30051,MIG-HOM-250551,Ramon Diaz Gallego,2025-03-20,2025-02-06,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,10700,No,No,POR-S,Portugal Sul,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 10,700.00 in 5.000-20.000 range | Fraud flags: FI-004: Delayed reporting: 42 days between incident and claim | Path: Standard processing path"
+CLM-2025-30052,MIG-HOM-592972,Marc Vega Calvo,2025-01-16,2025-01-16,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,2160,No,No,CAT,Catalunya,Nuria Gallego,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,Water Damage claim assigned Medium priority | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path
+CLM-2025-30053,MIG-MOT-587192,Joao Prieto Santos,2025-05-07,2025-04-30,Motor,glass_damage,"Side window cracked; cause unknown, found on morning inspection.",10000,No,No,CAT,Catalunya,,New,auto-property,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 10,000.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-008: Suspiciously round estimate: EUR 10,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30054,MIG-HOM-778324,Sofia Campos Sanchez,2025-02-22,2025-02-17,Home,water_damage,Slow leak behind kitchen wall discovered during renovation; mold found.,20100,No,No,MAD,Madrid,,New,home-water-damage,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 20,100.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30055,MIG-HOM-644500,Rafael Soler Martinez,2025-03-14,2025-02-15,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,1690,No,No,MAD,Madrid,,New,home-fire,Low,fast-track,Property Claims Unit (BCN-PROP),7,"Estimated amount EUR 1,690.00 below 5.000 threshold | Path: Low priority, amount EUR 1,690.00 under 2.000 threshold"
+CLM-2025-30056,MIG-MOT-568849,Rui Serrano Soler,2025-01-15,2025-01-15,Motor,theft,Vehicle stolen from street parking overnight in Eixample district.,25000,No,Yes,VAL,Valencia,Eva Cabrera,New,auto-property,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 25,000.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-008: Suspiciously round estimate: EUR 25,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30057,MIG-MOT-776502,Jorge Oliveira Silva,2025-04-08,2025-04-06,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,42700,No,No,AND,Andalucia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 42,700.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30058,MIG-MOT-871411,Sergio Moreno Ruiz,2025-02-21,2025-02-20,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,12300,No,No,MAD,Madrid,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 12,300.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30059,MIG-HOM-566732,Isabel Castro Gonzalez,2025-01-27,2025-01-23,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,6860,No,No,VAL,Valencia,,New,home-fire,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 6,860.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30060,MIG-HLT-618019,Alvaro Santos Munoz,2025-01-11,2025-01-09,Health,hospitalization,Post-surgical hospitalization for knee replacement recovery.,11500,No,No,POR-S,Portugal Sul,,New,health-emergency,Critical,complex-review,Health Claims Unit (BCN-HLT),15,Hospitalization claim requires immediate attention | Path: Critical priority claim requires senior review
+CLM-2025-30061,MIG-MOT-773540,Teresa Lopez Vazquez,2025-01-23,2025-01-21,Motor,hit_and_run,Parked vehicle hit overnight; paint transfer found on bumper.,15700,No,Yes,POR-S,Portugal Sul,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 15,700.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30062,MIG-HOM-269834,Alvaro Prieto Aguilar,2025-03-28,2025-03-24,Home,water_damage,Blocked drainage caused water backup into basement storage.,6640,No,No,CAT,Catalunya,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 6,640.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30063,MIG-MOT-261684,Joao Prieto Santos,2025-02-17,2025-02-12,Motor,hit_and_run,Side panel damaged by passing vehicle on narrow street; driver did not stop.,11500,No,Yes,CAT,Catalunya,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 11,500.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30064,MIG-HOM-757629,Marta Soler Aguilar,2025-05-24,2025-05-21,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,17300,No,No,CAT,Catalunya,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 17,300.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30065,MIG-HOM-853258,Cristina Reyes Munoz,2025-03-27,2025-03-22,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,3100,No,No,MAD,Madrid,Sofia Blanco,Under Review,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,Water Damage claim assigned Medium priority | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path
+CLM-2025-30066,MIG-MOT-267457,Diogo Vila Carvalho,2025-03-29,2025-03-27,Motor,glass_damage,Windshield chip from gravel on construction zone.,690.46,No,No,CAT,Catalunya,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 690.46 below 5.000 threshold | Path: Low priority, amount EUR 690.46 under 2.000 threshold"
+CLM-2025-30067,MIG-HOM-395023,Lorenzo Martinez Diaz,2025-05-11,2025-05-04,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,700.35,No,No,MAD,Madrid,,New,home-water-damage,Medium,fast-track,Property Claims Unit (BCN-PROP),5,Water Damage claim assigned Medium priority | Path: Water damage under EUR 5.000 with no fraud indicators
+CLM-2025-30068,MIG-MOT-480133,Sergio Molina Jimenez,2025-05-26,2025-05-22,Motor,theft,Motorbike stolen from communal garage; lock cut.,22900,No,Yes,CAT,Catalunya,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 22,900.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30069,MIG-HLT-633853,Chiara Delgado Morales,2025-04-17,2025-03-16,Health,hospitalization,Hospitalization for complications from diabetes management.,30000,No,No,AND,Andalucia,,New,health-emergency,Critical,fraud-investigation,Special Investigations Unit (BCN-SIU),15,"Hospitalization claim requires immediate attention | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days; FI-004: Delayed reporting: 32 days between incident and claim; FI-008: Suspiciously round estimate: EUR 30,000 | Path: SIU referral: 3 fraud indicators triggered"
+CLM-2025-30070,MIG-MOT-746447,Beatriz Martinez Sousa,2025-03-22,2025-03-15,Motor,collision,Vehicle struck while legally parked on Carrer de Balmes.,14100,No,Yes,VAL,Valencia,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 14,100.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30071,MIG-HOM-378428,Elena Molina Puig,2025-06-21,2025-06-14,Home,theft,Storage unit in communal basement broken into; personal items stolen.,19200,No,Yes,CAT,Catalunya,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Theft claim with amount EUR 19,200.00 exceeds 10.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30072,MIG-MOT-428930,Eva Puig Navarro,2025-04-22,2025-04-15,Motor,collision,Collision with motorcycle at intersection; disputed liability.,33300,Yes,Yes,CAT,Catalunya,,New,auto-bodily-injury,Critical,complex-review,Motor Claims Unit (BCN-MOT),15,"Injury reported with estimated amount EUR 33,300.00 (>10.000) | Path: Critical priority claim requires senior review"
+CLM-2025-30073,MIG-MOT-659024,Leonor Serra Gallego,2025-04-02,2025-03-29,Motor,collision,Low-speed collision in underground parking garage.,9300,Yes,Yes,CAT,Catalunya,,New,auto-bodily-injury,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Injury reported (amount EUR 9,300.00) | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30074,MIG-HLT-465746,Elena Molina Puig,2025-05-28,2025-05-22,Health,surgery,Hernia repair surgery at private clinic.,25500,No,No,GAL,Galicia,,New,health-emergency,High,complex-review,Health Claims Unit (BCN-HLT),30,"Estimated amount EUR 25,500.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30075,MIG-MOT-368900,Sergio Mas Ortega,2025-05-07,2025-05-03,Motor,theft,Entire vehicle stolen from airport long-term parking.,22700,No,Yes,VAL,Valencia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 22,700.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30076,MIG-HOM-205428,Antonio Alvarez Vazquez,2025-06-28,2025-05-11,Home,storm_damage,Hailstorm damaged terrace awning and outdoor furniture.,3830,No,No,AND,Andalucia,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,Storm Damage claim assigned Medium priority | Fraud flags: FI-004: Delayed reporting: 48 days between incident and claim | Path: Standard processing path
+CLM-2025-30077,MIG-HOM-193806,Laura Reyes Costa,2025-06-20,2025-06-20,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,1650,No,No,ARA,Aragon,,New,home-fire,Low,fast-track,Property Claims Unit (BCN-PROP),7,"Estimated amount EUR 1,650.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Low priority, amount EUR 1,650.00 under 2.000 threshold"
+CLM-2025-30078,MIG-COM-695551,Hugo Soler Cabrera,2025-06-08,2025-06-01,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,44400,Yes,No,BAL,Illes Balears,,New,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Injury reported with estimated amount EUR 44,400.00 (>10.000) | Path: Commercial liability with injury requires legal review"
+CLM-2025-30079,MIG-MOT-369761,Xavier Vazquez Gonzalez,2025-02-21,2025-02-18,Motor,theft,Vehicle stolen from street parking overnight in Eixample district.,30400,No,Yes,AND,Andalucia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 30,400.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30080,MIG-HOM-107161,Patricia Lopez Alvarez,2025-03-12,2025-03-07,Home,vandalism,Front door and mailbox vandalized; graffiti on facade.,5920,No,Yes,VAL,Valencia,,New,home-theft,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 5,920.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30081,MIG-HOM-837733,Giulia Ortega Morales,2025-03-25,2025-03-20,Home,fire,Small fire in garage spread to storage area; vehicles undamaged.,36800,No,Yes,GAL,Galicia,,New,home-fire,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 36,800.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30082,MIG-HLT-965708,Elena Rossi Delgado,2025-03-01,2025-02-28,Health,dental,Root canal treatment on molar tooth.,2150,No,No,ARA,Aragon,Patricia Flores,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 2,150.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days | Path: Routine dental under EUR 3.000"
+CLM-2025-30083,MIG-MOT-645617,Jordi Bianchi Medina,2025-04-28,2025-04-21,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,23400,No,Yes,AND,Andalucia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 23,400.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30084,MIG-HLT-515182,Andre Calvo Costa,2025-03-11,2025-03-11,Health,dental,Root canal treatment on molar tooth.,2830,No,No,CAT,Catalunya,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 2,830.00 below 5.000 threshold | Path: Routine dental under EUR 3.000"
+CLM-2025-30085,MIG-HOM-903028,Laura Reyes Costa,2025-06-18,2025-06-12,Home,storm_damage,High winds damaged shutters and broke terrace glass panels.,18400,No,No,POR-S,Portugal Sul,Nuria Gallego,Under Review,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 18,400.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30086,MIG-HOM-333507,Jordi Bianchi Medina,2025-01-05,2024-12-30,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,20700,No,No,MAD,Madrid,Ana Morales,New,home-water-damage,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 20,700.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30087,MIG-MOT-722795,Esther Sousa Delgado,2025-01-13,2025-01-13,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,2760,No,Yes,GAL,Galicia,Sofia Blanco,Under Review,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,Police report filed; assigned Medium priority | Path: Standard processing path
+CLM-2025-30088,MIG-MOT-805200,Teresa Lopez Vazquez,2025-03-28,2025-03-25,Motor,theft,Catalytic converter stolen from parked vehicle in suburban area.,11800,No,Yes,GAL,Galicia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Theft claim with amount EUR 11,800.00 exceeds 10.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30089,MIG-MOT-774565,Chiara Colombo Prieto,2025-06-25,2025-06-19,Motor,collision,Multi-vehicle pileup on AP-7 motorway during heavy rain.,14100,Yes,Yes,CAT,Catalunya,,New,auto-bodily-injury,Critical,complex-review,Motor Claims Unit (BCN-MOT),15,"Injury reported with estimated amount EUR 14,100.00 (>10.000) | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Critical priority claim requires senior review"
+CLM-2025-30090,MIG-COM-536740,Oscar Molina Almeida,2025-05-27,2025-05-24,Commercial,property_damage,Roof collapse at commercial warehouse after heavy snowfall.,4870,No,No,AND,Andalucia,Pedro Castillo,New,commercial-property,Low,standard,Commercial Lines Unit (BCN-COM),15,"Estimated amount EUR 4,870.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30091,MIG-COM-898696,Rui Hernandez Puig,2025-06-04,2025-05-30,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,72900,Yes,Yes,GAL,Galicia,,New,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Estimated amount EUR 72,900.00 exceeds 50.000 threshold | Path: Commercial liability with injury requires legal review"
+CLM-2025-30092,MIG-HOM-437237,Fernando Campos Colombo,2025-03-18,2025-03-14,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,13100,No,No,POR-S,Portugal Sul,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 13,100.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30093,MIG-HOM-689849,Fernando Campos Colombo,2025-03-02,2025-01-13,Home,fire,Balcony fire from discarded cigarette; facade damage to building.,89000,No,Yes,MAD,Madrid,,New,home-fire,Critical,fraud-investigation,Special Investigations Unit (BCN-SIU),15,"Estimated amount EUR 89,000.00 exceeds 50.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-004: Delayed reporting: 48 days between incident and claim; FI-008: Suspiciously round estimate: EUR 89,000 | Path: SIU referral: 3 fraud indicators triggered"
+CLM-2025-30094,MIG-HLT-369826,Alba Sanchez Hernandez,2025-05-10,2025-05-05,Health,dental,Wisdom tooth extraction under local anesthesia.,2900,No,No,ARA,Aragon,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 2,900.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Routine dental under EUR 3.000"
+CLM-2025-30095,MIG-MOT-957730,Alba Lopez Rodrigues,2025-06-25,2025-06-22,Motor,glass_damage,Windshield chip from gravel on construction zone.,5000,No,No,MAD,Madrid,,New,auto-property,Medium,fast-track,Motor Claims Unit (BCN-MOT),5,"Estimated amount EUR 5,000.00 in 5.000-20.000 range | Fraud flags: FI-008: Suspiciously round estimate: EUR 5,000 | Path: Glass damage claim eligible for fast-track"
+CLM-2025-30096,MIG-MOT-388086,Elena Rossi Delgado,2025-05-22,2025-03-26,Motor,theft,Entire vehicle stolen from airport long-term parking.,16800,No,Yes,ARA,Aragon,David Torres,New,auto-property,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Theft claim with amount EUR 16,800.00 exceeds 10.000 threshold | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days; FI-004: Delayed reporting: 57 days between incident and claim | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30097,MIG-MOT-491172,Carmen Serrano Serra,2025-04-18,2025-04-15,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,37400,Yes,No,VAL,Valencia,Pedro Castillo,Under Review,auto-bodily-injury,Critical,complex-review,Motor Claims Unit (BCN-MOT),15,"Injury reported with estimated amount EUR 37,400.00 (>10.000) | Path: Critical priority claim requires senior review"
+CLM-2025-30098,MIG-HOM-186702,Oscar Pereira Ramos,2025-05-12,2025-05-11,Home,theft,Holiday home burglarized; furniture and appliances removed.,27700,No,Yes,VAL,Valencia,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 27,700.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30099,MIG-HLT-669408,Eva Colombo Ramos,2025-05-29,2025-03-30,Health,surgery,Carpal tunnel release surgery on both hands.,3890,No,No,CAT,Catalunya,,New,health-emergency,Low,standard,Health Claims Unit (BCN-HLT),15,"Estimated amount EUR 3,890.00 below 5.000 threshold | Fraud flags: FI-004: Delayed reporting: 60 days between incident and claim | Path: Standard processing path"
+CLM-2025-30100,MIG-MOT-508060,Sara Jimenez Hernandez,2025-06-27,2025-06-25,Motor,glass_damage,Windshield cracked by road debris on autopista.,873.78,No,No,MAD,Madrid,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 873.78 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 873.78 under 2.000 threshold"
+CLM-2025-30101,MIG-HOM-724540,Cristina Reyes Munoz,2025-04-16,2025-03-08,Home,theft,Break-in through ground floor window; laptop and cash stolen.,14100,No,Yes,MAD,Madrid,,New,home-theft,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Theft claim with amount EUR 14,100.00 exceeds 10.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-004: Delayed reporting: 39 days between incident and claim | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30102,MIG-HLT-358421,Leonor Ricci Dominguez,2025-01-23,2025-01-21,Health,surgery,Laparoscopic gallbladder removal procedure.,21100,No,No,CAT,Catalunya,,New,health-emergency,High,complex-review,Health Claims Unit (BCN-HLT),30,"Estimated amount EUR 21,100.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30103,MIG-MOT-570646,Blanca Rossi Gomez,2025-05-27,2025-05-26,Motor,collision,Low-speed collision in underground parking garage.,4910,No,Yes,MAD,Madrid,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,Police report filed; assigned Medium priority | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days | Path: Standard processing path
+CLM-2025-30104,MIG-COM-699743,Arnau Rodrigues Gallego,2025-05-18,2025-05-14,Commercial,equipment_breakdown,"Commercial oven exploded; kitchen staff evacuated, minor injuries.",20700,No,No,MAD,Madrid,,New,commercial-property,High,complex-review,Commercial Lines Unit (BCN-COM),30,"Estimated amount EUR 20,700.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30105,MIG-HLT-746624,Silvia Ramos Perez,2025-02-24,2025-02-18,Health,outpatient_treatment,Allergy testing and immunotherapy initiation.,1900,No,No,MAD,Madrid,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,900.00 below 5.000 threshold | Path: Low priority, amount EUR 1,900.00 under 2.000 threshold"
+CLM-2025-30106,MIG-COM-436241,Teresa Hernandez Vega,2025-06-08,2025-06-02,Commercial,slip_and_fall,Visitor fell on uneven pavement outside office building.,24700,Yes,No,AND,Andalucia,,New,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Injury reported with estimated amount EUR 24,700.00 (>10.000) | Path: Commercial liability with injury requires legal review"
+CLM-2025-30107,MIG-HOM-309505,Enrique Bianchi Silva,2025-06-05,2025-06-05,Home,electrical_damage,Lightning strike damaged home electronics and smart home system.,3850,No,No,MAD,Madrid,Ana Morales,New,home-fire,Low,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 3,850.00 below 5.000 threshold | Path: Standard processing path"
+CLM-2025-30108,MIG-MOT-261630,Montserrat Ortiz Rodrigues,2025-04-23,2025-04-16,Motor,collision,Rear-end collision at traffic light on Avinguda Diagonal.,24400,No,No,MAD,Madrid,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 24,400.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30109,MIG-HOM-214682,Jordi Bianchi Medina,2025-03-09,2025-03-09,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,5270,No,No,MAD,Madrid,Marta Ruiz,Under Review,home-fire,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 5,270.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30110,MIG-HOM-331768,Diogo Serra Ortiz,2025-04-29,2025-04-27,Home,theft,Home burgled while on vacation; electronics and jewelry taken.,1710,No,Yes,POR-S,Portugal Sul,,New,home-theft,Medium,standard,Property Claims Unit (BCN-PROP),15,Police report filed; assigned Medium priority | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path
+CLM-2025-30111,MIG-MOT-316916,Montserrat Ramos Serrano,2025-05-18,2025-04-18,Motor,theft,Motorbike stolen from communal garage; lock cut.,5150,No,Yes,CAT,Catalunya,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 5,150.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30112,MIG-COM-641058,Francesca Romero Reyes,2025-02-18,2025-02-11,Commercial,fire,Electrical fire in commercial kitchen; restaurant closed for repairs.,211400,No,Yes,MAD,Madrid,,New,commercial-property,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Estimated amount EUR 211,400.00 exceeds 50.000 threshold | Fraud flags: FI-001: Multiple claims: 5 claims within 90 days | Path: Amount EUR 211,400.00 exceeds 100.000; legal review required"
+CLM-2025-30113,MIG-HOM-838968,Montserrat Costa Delgado,2025-02-28,2025-02-27,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,20100,No,No,CAT,Catalunya,,New,home-water-damage,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 20,100.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30114,MIG-COM-507517,Joao Soler Almeida,2025-06-10,2025-06-03,Commercial,product_liability,Customer alleges allergic reaction to product sold in store.,98600,No,No,VAL,Valencia,,New,commercial-liability,Critical,complex-review,Commercial Lines Unit (BCN-COM),15,"Estimated amount EUR 98,600.00 exceeds 50.000 threshold | Path: Critical priority claim requires senior review"
+CLM-2025-30115,MIG-MOT-827120,Luis Perez Mas,2025-02-10,2025-02-04,Motor,collision,Head-on collision on secondary road near Portugal Norte.,22300,No,No,POR-N,Portugal Norte,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 22,300.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30116,MIG-MOT-749498,Patricia Lopez Alvarez,2025-01-18,2025-01-15,Motor,glass_damage,Windshield chip from gravel on construction zone.,1160,No,No,VAL,Valencia,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 1,160.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 1,160.00 under 2.000 threshold"
+CLM-2025-30117,MIG-MOT-898025,Francesca Romero Reyes,2025-03-02,2025-01-23,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,8230,No,No,GAL,Galicia,,New,auto-property,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 8,230.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 5 claims within 90 days; FI-004: Delayed reporting: 38 days between incident and claim | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30118,MIG-HLT-484682,Cristina Mas Vega,2025-05-23,2025-05-20,Health,dental,Emergency dental visit for abscess drainage.,481.47,No,No,GAL,Galicia,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 481.47 below 5.000 threshold | Path: Low priority, amount EUR 481.47 under 2.000 threshold"
+CLM-2025-30119,MIG-MOT-560398,Francisco Rodriguez Sanchez,2025-02-04,2025-01-30,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,790.77,No,No,PVA,Pais Vasco,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 790.77 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 790.77 under 2.000 threshold"
+CLM-2025-30120,MIG-MOT-439375,Sara Campos Delgado,2025-03-20,2025-03-19,Motor,theft,Vehicle stolen and recovered with significant damage.,27000,No,Yes,MAD,Madrid,Jordi Puig,Under Review,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 27,000.00 exceeds 20.000 threshold | Fraud flags: FI-008: Suspiciously round estimate: EUR 27,000 | Path: High priority claim requires senior review"
+CLM-2025-30121,MIG-HLT-809083,Diana Prieto Ramos,2025-04-15,2025-04-09,Health,dental,Orthodontic adjustment and consultation.,376.02,No,No,GAL,Galicia,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 376.02 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Low priority, amount EUR 376.02 under 2.000 threshold"
+CLM-2025-30122,MIG-HOM-710224,Valentina Silva Costa,2025-01-05,2024-12-31,Home,fire,Balcony fire from discarded cigarette; facade damage to building.,120400,No,No,PVA,Pais Vasco,,New,home-fire,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Estimated amount EUR 120,400.00 exceeds 50.000 threshold | Path: Amount EUR 120,400.00 exceeds 100.000; legal review required"
+CLM-2025-30123,MIG-HOM-993829,Oriol Pereira Rodriguez,2025-05-09,2025-05-09,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,19700,No,No,BAL,Illes Balears,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 19,700.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30124,MIG-MOT-238320,Rui Serrano Soler,2025-06-20,2025-06-16,Motor,vandalism,Tires slashed on all four wheels in neighborhood dispute.,1930,No,No,CAT,Catalunya,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 1,930.00 below 5.000 threshold | Fraud flags: FI-005: No police report filed for vandalism claim | Path: Low priority, amount EUR 1,930.00 under 2.000 threshold"
+CLM-2025-30125,MIG-HLT-101139,Rui Serrano Soler,2025-02-28,2025-02-21,Health,dental,Orthodontic adjustment and consultation.,20000,No,No,POR-S,Portugal Sul,,New,health-routine,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 20,000.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-008: Suspiciously round estimate: EUR 20,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30126,MIG-HOM-207402,Carlos Almeida Prieto,2025-01-31,2025-01-25,Home,storm_damage,High winds damaged shutters and broke terrace glass panels.,15300,No,No,CAT,Catalunya,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 15,300.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30127,MIG-HOM-758589,Francesca Romero Reyes,2025-02-12,2025-02-09,Home,storm_damage,Mediterranean storm flooded ground-floor garage and storage.,2730,No,No,MAD,Madrid,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,Storm Damage claim assigned Medium priority | Fraud flags: FI-001: Multiple claims: 5 claims within 90 days | Path: Standard processing path
+CLM-2025-30128,MIG-HOM-730193,Rodrigo Ruiz Martinez,2025-06-07,2025-06-07,Home,water_damage,Slow leak behind kitchen wall discovered during renovation; mold found.,16600,No,No,AND,Andalucia,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 16,600.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30129,MIG-HOM-623850,Alessandro Sanchez Morales,2025-06-17,2025-06-17,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,23400,No,No,AND,Andalucia,,New,home-water-damage,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 23,400.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30130,MIG-COM-117500,Elena Rossi Delgado,2025-06-04,2025-04-28,Commercial,fire,Office fire started by faulty air conditioning unit; floor evacuated.,1000,No,Yes,MAD,Madrid,,New,commercial-property,Critical,fraud-investigation,Special Investigations Unit (BCN-SIU),15,Commercial fire claim requires immediate attention | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days; FI-004: Delayed reporting: 37 days between incident and claim | Path: SIU referral: 2 fraud indicators triggered
+CLM-2025-30131,MIG-HOM-390946,Luca Vila Blanco,2025-01-26,2025-01-24,Home,theft,Home burgled while on vacation; electronics and jewelry taken.,12300,No,Yes,VAL,Valencia,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Theft claim with amount EUR 12,300.00 exceeds 10.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30132,MIG-MOT-555589,Luis Perez Mas,2025-02-03,2025-01-05,Motor,collision,Head-on collision on secondary road near Valencia.,33500,Yes,No,VAL,Valencia,,New,auto-bodily-injury,Critical,complex-review,Motor Claims Unit (BCN-MOT),15,"Injury reported with estimated amount EUR 33,500.00 (>10.000) | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Critical priority claim requires senior review"
+CLM-2025-30133,MIG-HLT-275073,Diogo Serra Ortiz,2025-04-10,2025-04-09,Health,dental,Root canal treatment on molar tooth.,195.08,No,No,MAD,Madrid,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 195.08 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Low priority, amount EUR 195.08 under 2.000 threshold"
+CLM-2025-30134,MIG-MOT-477617,Valentina Bianchi Calvo,2025-01-19,2025-01-17,Motor,theft,Entire vehicle stolen from airport long-term parking.,6290,No,Yes,CAT,Catalunya,Carlos Vega,Under Review,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 6,290.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30135,MIG-HOM-999138,Andrea Prieto Navarro,2025-01-14,2025-01-08,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,6580,No,No,PVA,Pais Vasco,Isabel Fernandez,Under Review,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 6,580.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30136,MIG-COM-172274,Diogo Serra Ortiz,2025-05-04,2025-05-03,Commercial,equipment_breakdown,Server room cooling failure caused overheating and data loss.,2300,No,No,MAD,Madrid,,New,commercial-property,Low,standard,Commercial Lines Unit (BCN-COM),15,"Estimated amount EUR 2,300.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30137,MIG-COM-868043,Chiara Colombo Prieto,2025-05-24,2025-05-24,Commercial,fire,Electrical fire in commercial kitchen; restaurant closed for repairs.,183000,No,Yes,POR-N,Portugal Norte,,New,commercial-property,Critical,fraud-investigation,Special Investigations Unit (BCN-SIU),15,"Estimated amount EUR 183,000.00 exceeds 50.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-008: Suspiciously round estimate: EUR 183,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30138,MIG-MOT-349736,Luis Santos Suarez,2025-04-22,2025-04-20,Motor,theft,Vehicle stolen and recovered with significant damage.,5980,No,Yes,AND,Andalucia,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 5,980.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30139,MIG-HOM-768169,Leonor Ricci Dominguez,2025-04-15,2025-03-17,Home,fire,Fire started from faulty space heater; bedroom heavily damaged.,39300,No,Yes,PVA,Pais Vasco,,New,home-fire,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 39,300.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30140,MIG-COM-907557,Leonor Calvo Gomez,2025-06-03,2025-05-27,Commercial,slip_and_fall,Elderly customer fell on stairs in shopping center; back injury.,11400,Yes,No,AND,Andalucia,,New,commercial-liability,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Injury reported with estimated amount EUR 11,400.00 (>10.000) | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Commercial liability with injury requires legal review"
+CLM-2025-30141,MIG-HLT-838936,Giulia Ortega Morales,2025-06-08,2025-06-06,Health,surgery,Laparoscopic gallbladder removal procedure.,17100,No,No,AND,Andalucia,,New,health-emergency,Medium,standard,Health Claims Unit (BCN-HLT),15,"Estimated amount EUR 17,100.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30142,MIG-COM-682959,Rodrigo Santos Munoz,2025-05-25,2025-05-23,Commercial,flood,River overflow affected warehouse; significant stock loss.,9630,No,No,CAT,Catalunya,,New,commercial-property,Medium,standard,Commercial Lines Unit (BCN-COM),15,"Estimated amount EUR 9,630.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30143,MIG-MOT-952227,Enrique Gallego Martinez,2025-01-24,2025-01-17,Motor,theft,"Vehicle broken into; GPS, laptop, and personal items taken.",5940,No,Yes,CAT,Catalunya,Victor Delgado,Under Review,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 5,940.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30144,MIG-HOM-547389,Ines Bianchi Herrera,2025-02-18,2025-02-14,Home,water_damage,Toilet overflow caused damage to bathroom floor and room below.,4140,No,No,VAL,Valencia,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,Water Damage claim assigned Medium priority | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path
+CLM-2025-30145,MIG-MOT-539599,Luis Calvo Ruiz,2025-02-25,2025-02-25,Motor,collision,Rear-ended on Gran Via during morning rush hour traffic.,35400,No,Yes,AND,Andalucia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 35,400.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30146,MIG-MOT-130726,Laia Medina Ortega,2025-03-17,2025-03-12,Motor,theft,Motorbike stolen from communal garage; lock cut.,35000,No,Yes,VAL,Valencia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 35,000.00 exceeds 20.000 threshold | Fraud flags: FI-008: Suspiciously round estimate: EUR 35,000 | Path: High priority claim requires senior review"
+CLM-2025-30147,MIG-HLT-703656,Oscar Pereira Ramos,2025-04-14,2025-04-12,Health,physiotherapy,Physiotherapy program for post-fracture mobility recovery.,1560,No,No,VAL,Valencia,Nuria Gallego,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,560.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Low priority, amount EUR 1,560.00 under 2.000 threshold"
+CLM-2025-30148,MIG-COM-949767,Sara Jimenez Hernandez,2025-05-11,2025-05-10,Commercial,flood,Sewer backup flooded restaurant basement; health inspection required.,10000,No,No,MAD,Madrid,,New,commercial-property,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 10,000.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days; FI-008: Suspiciously round estimate: EUR 10,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30149,MIG-COM-439307,Javier Serra Ruiz,2025-01-20,2025-01-18,Commercial,flood,Sewer backup flooded restaurant basement; health inspection required.,68500,No,No,MAD,Madrid,,New,commercial-property,Critical,complex-review,Commercial Lines Unit (BCN-COM),15,"Estimated amount EUR 68,500.00 exceeds 50.000 threshold | Path: Critical priority claim requires senior review"
+CLM-2025-30150,MIG-MOT-867926,Eva Vazquez Calvo,2025-04-26,2025-04-24,Motor,hit_and_run,Hit while crossing intersection; other driver fled the scene.,11500,No,Yes,MAD,Madrid,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 11,500.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30151,MIG-MOT-836109,Matteo Soler Munoz,2025-05-31,2025-05-31,Motor,vandalism,Spray paint on vehicle exterior; suspected targeted act.,1730,No,No,CAT,Catalunya,Pau Soler,Under Review,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 1,730.00 below 5.000 threshold | Fraud flags: FI-005: No police report filed for vandalism claim | Path: Low priority, amount EUR 1,730.00 under 2.000 threshold"
+CLM-2025-30152,MIG-MOT-193035,Ana Garcia Serra,2025-06-25,2025-06-25,Motor,glass_damage,Windshield cracked by road debris on autopista.,412.02,No,No,CAT,Catalunya,Rafael Herrera,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 412.02 below 5.000 threshold | Path: Low priority, amount EUR 412.02 under 2.000 threshold"
+CLM-2025-30153,MIG-COM-497108,Francesca Romero Reyes,2025-04-04,2025-04-01,Commercial,property_damage,Delivery truck reversed into warehouse loading bay; structural damage.,4610,No,Yes,MAD,Madrid,Elena Navarro,Under Review,commercial-property,Medium,standard,Commercial Lines Unit (BCN-COM),15,Police report filed; assigned Medium priority | Fraud flags: FI-001: Multiple claims: 6 claims within 90 days | Path: Standard processing path
+CLM-2025-30154,MIG-HOM-197627,Leonor Calvo Gomez,2025-04-01,2025-04-01,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,5330,No,No,CAT,Catalunya,,New,home-fire,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 5,330.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30155,MIG-HOM-666362,Sofia Gallego Rodriguez,2025-03-13,2025-02-21,Home,electrical_damage,Faulty wiring caused short circuit; damage to electrical system.,6770,No,No,MAD,Madrid,,New,home-fire,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 6,770.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30156,MIG-MOT-279130,Ramon Romero Ricci,2025-06-17,2025-06-16,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,18400,No,Yes,CAT,Catalunya,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 18,400.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30157,MIG-HOM-376085,Laia Silva Herrera,2025-04-27,2025-04-27,Home,fire,Balcony fire from discarded cigarette; facade damage to building.,106000,Yes,Yes,PVA,Pais Vasco,,New,home-fire,Critical,fraud-investigation,Special Investigations Unit (BCN-SIU),15,"Estimated amount EUR 106,000.00 exceeds 50.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-008: Suspiciously round estimate: EUR 106,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30158,MIG-MOT-647967,Sofia Ortiz Blanco,2025-04-22,2025-04-19,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,4290,No,No,AND,Andalucia,,New,auto-property,Low,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 4,290.00 below 5.000 threshold | Path: Standard processing path"
+CLM-2025-30159,MIG-MOT-570852,Valentina Vazquez Bianchi,2025-02-18,2025-02-16,Motor,hit_and_run,Hit while crossing intersection; other driver fled the scene.,2000,No,Yes,POR-S,Portugal Sul,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,Police report filed; assigned Medium priority | Path: Standard processing path
+CLM-2025-30160,MIG-MOT-678870,Rui Calvo Delgado,2025-03-29,2025-03-29,Motor,theft,Catalytic converter stolen from parked vehicle in suburban area.,22900,No,Yes,MAD,Madrid,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 22,900.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30161,MIG-COM-205896,Antonio Alvarez Vazquez,2025-03-19,2025-03-15,Commercial,property_damage,Roof collapse at commercial warehouse after heavy snowfall.,24800,No,Yes,MAD,Madrid,,New,commercial-property,High,complex-review,Commercial Lines Unit (BCN-COM),30,"Estimated amount EUR 24,800.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30162,MIG-MOT-447596,Sergio Molina Jimenez,2025-06-30,2025-05-15,Motor,glass_damage,"Side window cracked; cause unknown, found on morning inspection.",1090,No,No,MAD,Madrid,,New,auto-property,Low,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 1,090.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-004: Delayed reporting: 46 days between incident and claim | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30163,MIG-MOT-240913,Marco Gallego Cabrera,2025-03-22,2025-03-16,Motor,glass_damage,Windshield chip from gravel on construction zone.,243.75,No,No,MAD,Madrid,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 243.75 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Low priority, amount EUR 243.75 under 2.000 threshold"
+CLM-2025-30164,MIG-HOM-426236,Oscar Pereira Ramos,2025-05-14,2025-05-14,Home,water_damage,Burst pipe in bathroom caused flooding to ground floor.,21900,No,No,CAT,Catalunya,,New,home-water-damage,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 21,900.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30165,MIG-HOM-516224,Rodrigo Ruiz Martinez,2025-06-16,2025-06-09,Home,fire,Electrical fire in distribution panel; damage to living room wall.,30700,No,Yes,MAD,Madrid,,New,home-fire,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 30,700.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30166,MIG-MOT-152062,Elena Molina Puig,2025-02-15,2025-02-12,Motor,collision,Two-car collision on N-340 coastal road; poor visibility due to fog.,30800,No,Yes,CAT,Catalunya,Jordi Puig,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 30,800.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30167,MIG-MOT-420297,Ana Sanchez Diaz,2025-06-18,2025-06-13,Motor,theft,Entire vehicle stolen from airport long-term parking.,9980,No,Yes,VAL,Valencia,Jorge Ramos,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 9,980.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30168,MIG-HOM-396408,Nuria Delgado Sanchez,2025-03-22,2025-03-18,Home,theft,"Garage broken into; bicycles, tools, and sports equipment stolen.",26000,No,Yes,ARA,Aragon,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 26,000.00 exceeds 20.000 threshold | Fraud flags: FI-008: Suspiciously round estimate: EUR 26,000 | Path: High priority claim requires senior review"
+CLM-2025-30169,MIG-COM-941339,Luis Perez Mas,2025-06-07,2025-06-07,Commercial,flood,Flash flooding damaged ground-floor commercial premises and inventory.,79800,No,No,MAD,Madrid,,New,commercial-property,Critical,complex-review,Commercial Lines Unit (BCN-COM),15,"Estimated amount EUR 79,800.00 exceeds 50.000 threshold | Path: Critical priority claim requires senior review"
+CLM-2025-30170,MIG-MOT-819656,Sara Molina Moreno,2025-05-21,2025-05-16,Motor,vandalism,Windshield smashed overnight; nothing stolen from vehicle.,4260,No,No,CAT,Catalunya,,New,auto-property,Low,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 4,260.00 below 5.000 threshold | Fraud flags: FI-005: No police report filed for vandalism claim | Path: Standard processing path"
+CLM-2025-30171,MIG-HLT-812730,Arnau Rodrigues Gallego,2025-03-31,2025-03-27,Health,hospitalization,Post-surgical hospitalization for knee replacement recovery.,71500,No,No,AND,Andalucia,,New,health-emergency,Critical,complex-review,Health Claims Unit (BCN-HLT),15,"Estimated amount EUR 71,500.00 exceeds 50.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Critical priority claim requires senior review"
+CLM-2025-30172,MIG-HOM-174675,Montserrat Ortiz Rodrigues,2025-05-05,2025-04-29,Home,vandalism,Garden shed broken into and contents destroyed.,3600,No,Yes,POR-S,Portugal Sul,,New,home-theft,Medium,standard,Property Claims Unit (BCN-PROP),15,Police report filed; assigned Medium priority | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path
+CLM-2025-30173,MIG-MOT-289117,Marco Ruiz Ricci,2025-01-25,2025-01-20,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,154.95,No,No,CAT,Catalunya,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 154.95 below 5.000 threshold | Path: Low priority, amount EUR 154.95 under 2.000 threshold"
+CLM-2025-30174,MIG-MOT-550268,Ramon Campos Prieto,2025-04-18,2025-04-18,Motor,collision,Collision avoiding a pedestrian; vehicle hit guardrail.,33100,No,No,GAL,Galicia,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 33,100.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30175,MIG-HLT-461076,Valentina Bianchi Calvo,2025-03-25,2025-03-21,Health,hospitalization,Hospitalization for complications from diabetes management.,66800,No,No,MAD,Madrid,,New,health-emergency,Critical,complex-review,Health Claims Unit (BCN-HLT),15,"Estimated amount EUR 66,800.00 exceeds 50.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Critical priority claim requires senior review"
+CLM-2025-30176,MIG-COM-613989,Marco Gallego Cabrera,2025-04-06,2025-03-31,Commercial,professional_negligence,Engineering firm accused of design defect in building renovation.,10000,No,No,GAL,Galicia,Isabel Fernandez,Under Review,commercial-liability,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Liability claim (professional_negligence) requires High priority | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days; FI-008: Suspiciously round estimate: EUR 10,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30177,MIG-HLT-722774,Blanca Vega Carvalho,2025-01-17,2024-12-18,Health,outpatient_treatment,Follow-up consultations after minor procedure.,1390,No,No,MAD,Madrid,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,390.00 below 5.000 threshold | Path: Low priority, amount EUR 1,390.00 under 2.000 threshold"
+CLM-2025-30178,MIG-MOT-205885,Ramon Diaz Gallego,2025-06-23,2025-06-21,Motor,collision,Side impact at roundabout; other driver failed to yield.,40500,No,Yes,MAD,Madrid,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 40,500.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30179,MIG-HLT-475308,Sara Flores Mas,2025-04-19,2025-04-16,Health,physiotherapy,Physiotherapy sessions for chronic lower back pain.,1310,No,No,CAT,Catalunya,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,310.00 below 5.000 threshold | Path: Low priority, amount EUR 1,310.00 under 2.000 threshold"
+CLM-2025-30180,MIG-HOM-917392,Mariana Rossi Serra,2025-05-15,2025-05-11,Home,vandalism,Front door and mailbox vandalized; graffiti on facade.,3930,No,Yes,CAT,Catalunya,,New,home-theft,Medium,standard,Property Claims Unit (BCN-PROP),15,Police report filed; assigned Medium priority | Path: Standard processing path
+CLM-2025-30181,MIG-HLT-874415,Xavier Munoz Rodrigues,2025-02-03,2025-02-03,Health,surgery,Carpal tunnel release surgery on both hands.,40800,No,No,MAD,Madrid,,New,health-emergency,High,complex-review,Health Claims Unit (BCN-HLT),30,"Estimated amount EUR 40,800.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30182,MIG-HOM-219361,Giulia Carvalho Pereira,2025-04-17,2025-04-11,Home,water_damage,Roof leak during heavy Mediterranean storms damaged bedroom.,12200,No,No,CAT,Catalunya,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 12,200.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30183,MIG-MOT-606121,Blanca Rossi Gomez,2025-05-30,2025-05-25,Motor,hit_and_run,Parked vehicle hit overnight; paint transfer found on bumper.,17300,No,Yes,ARA,Aragon,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 17,300.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days | Path: Standard processing path"
+CLM-2025-30184,MIG-HOM-786789,Raul Serra Mas,2025-03-26,2025-03-23,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,16900,No,No,VAL,Valencia,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 16,900.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30185,MIG-MOT-503572,Andre Cabrera Mas,2025-02-12,2025-02-12,Motor,vandalism,Spray paint on vehicle exterior; suspected targeted act.,953.25,No,No,CAT,Catalunya,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 953.25 below 5.000 threshold | Fraud flags: FI-005: No police report filed for vandalism claim | Path: Low priority, amount EUR 953.25 under 2.000 threshold"
+CLM-2025-30186,MIG-MOT-774567,Sergio Moreno Ruiz,2025-04-11,2025-03-20,Motor,collision,T-bone accident at uncontrolled intersection in residential area.,20600,No,Yes,CAT,Catalunya,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 20,600.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30187,MIG-HOM-100177,Elena Rossi Delgado,2025-01-28,2025-01-25,Home,theft,Apartment burgled during daytime; door lock picked.,14200,No,Yes,PVA,Pais Vasco,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Theft claim with amount EUR 14,200.00 exceeds 10.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30188,MIG-HOM-850689,Diana Reyes Munoz,2025-04-30,2025-04-30,Home,theft,Storage unit in communal basement broken into; personal items stolen.,25100,No,Yes,AND,Andalucia,Elena Navarro,Under Review,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 25,100.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30189,MIG-MOT-296653,Raquel Morales Pereira,2025-02-04,2025-02-01,Motor,theft,Entire vehicle stolen from airport long-term parking.,6450,No,Yes,BAL,Illes Balears,Rafael Herrera,Under Review,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 6,450.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30190,MIG-MOT-656127,Marc Vega Calvo,2025-01-17,2025-01-10,Motor,theft,Catalytic converter stolen from parked vehicle in suburban area.,28000,No,Yes,CAT,Catalunya,Eva Cabrera,New,auto-property,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 28,000.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days; FI-008: Suspiciously round estimate: EUR 28,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30191,MIG-COM-738576,Marc Vega Calvo,2025-03-09,2025-03-05,Commercial,property_damage,Water pipe burst in office building; damage to server room equipment.,7540,No,No,GAL,Galicia,,New,commercial-property,Medium,standard,Commercial Lines Unit (BCN-COM),15,"Estimated amount EUR 7,540.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30192,MIG-HLT-763311,Antonio Diaz Rossi,2025-03-01,2025-02-24,Health,physiotherapy,Post-surgical rehabilitation for shoulder injury.,505.14,No,No,POR-S,Portugal Sul,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 505.14 below 5.000 threshold | Path: Low priority, amount EUR 505.14 under 2.000 threshold"
+CLM-2025-30193,MIG-HLT-689593,Diana Prieto Ramos,2025-05-07,2025-05-01,Health,dental,Orthodontic adjustment and consultation.,3580,No,No,BAL,Illes Balears,,New,health-routine,Low,standard,Health Claims Unit (BCN-HLT),15,"Estimated amount EUR 3,580.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30194,MIG-HOM-159354,Beatriz Gallego Vazquez,2025-02-25,2025-02-21,Home,water_damage,Air conditioning unit condensation leak damaged parquet flooring.,4090,No,No,CAT,Catalunya,Rafael Herrera,Under Review,home-water-damage,Medium,fast-track,Property Claims Unit (BCN-PROP),5,Water Damage claim assigned Medium priority | Path: Water damage under EUR 5.000 with no fraud indicators
+CLM-2025-30195,MIG-HLT-878476,Andre Calvo Costa,2025-06-19,2025-06-15,Health,physiotherapy,Sports injury physiotherapy for ankle sprain.,308.05,No,No,MAD,Madrid,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 308.05 below 5.000 threshold | Path: Low priority, amount EUR 308.05 under 2.000 threshold"
+CLM-2025-30196,MIG-MOT-564586,Francisco Rodriguez Sanchez,2025-03-03,2025-02-28,Motor,glass_damage,Rear window shattered by stone kicked up by truck.,1160,No,No,VAL,Valencia,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 1,160.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 1,160.00 under 2.000 threshold"
+CLM-2025-30197,MIG-HOM-683635,Bruno Ramos Ricci,2025-03-13,2025-03-13,Home,fire,Kitchen fire from unattended cooking; smoke damage throughout flat.,107900,No,Yes,MAD,Madrid,,New,home-fire,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Estimated amount EUR 107,900.00 exceeds 50.000 threshold | Path: Amount EUR 107,900.00 exceeds 100.000; legal review required"
+CLM-2025-30198,MIG-MOT-676884,Pedro Carvalho Reyes,2025-04-06,2025-04-03,Motor,glass_damage,Windshield chip from gravel on construction zone.,696.64,No,No,AND,Andalucia,Laura Serrano,Under Review,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 696.64 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 696.64 under 2.000 threshold"
+CLM-2025-30199,MIG-HOM-889216,Xavier Vazquez Gonzalez,2025-06-12,2025-06-12,Home,water_damage,Hot water heater failure flooded utility room and hallway.,8980,No,No,ARA,Aragon,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 8,980.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30200,MIG-HOM-218881,Diana Prieto Ramos,2025-04-13,2025-04-08,Home,storm_damage,Storm brought down tree branch onto roof; structural damage to pergola.,10600,No,No,VAL,Valencia,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 10,600.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: Standard processing path"
+CLM-2025-30201,MIG-COM-659106,Francesca Romero Reyes,2025-01-06,2025-01-03,Commercial,fire,Office fire started by faulty air conditioning unit; floor evacuated.,220700,Yes,Yes,VAL,Valencia,,New,commercial-property,Critical,legal-referral,Legal & Compliance (BCN-LEG),15,"Estimated amount EUR 220,700.00 exceeds 50.000 threshold | Fraud flags: FI-001: Multiple claims: 5 claims within 90 days | Path: Amount EUR 220,700.00 exceeds 100.000; legal review required"
+CLM-2025-30202,MIG-MOT-447828,Marco Gallego Cabrera,2025-01-14,2025-01-10,Motor,theft,Vehicle stolen and recovered with significant damage.,21400,No,Yes,MAD,Madrid,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 21,400.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30203,MIG-HLT-772580,Andreu Serrano Prieto,2025-06-12,2025-06-11,Health,outpatient_treatment,Specialist ENT consultation and audiometry.,1560,No,No,VAL,Valencia,Rafael Herrera,Under Review,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,560.00 below 5.000 threshold | Path: Low priority, amount EUR 1,560.00 under 2.000 threshold"
+CLM-2025-30204,MIG-MOT-330545,Pedro Carvalho Reyes,2025-02-08,2025-02-04,Motor,collision,Sideswipe accident while changing lanes on M-30 ring road.,7170,No,No,PVA,Pais Vasco,,New,auto-property,Medium,standard,Motor Claims Unit (BCN-MOT),15,"Estimated amount EUR 7,170.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30205,MIG-HOM-229221,Ana Sanchez Diaz,2025-01-15,2025-01-14,Home,theft,Storage unit in communal basement broken into; personal items stolen.,22700,No,Yes,MAD,Madrid,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 22,700.00 exceeds 20.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30206,MIG-MOT-303765,Clara Marin Reyes,2025-02-03,2025-02-03,Motor,glass_damage,"Side window cracked; cause unknown, found on morning inspection.",1130,No,No,AND,Andalucia,,New,auto-property,Low,fast-track,Motor Claims Unit (BCN-MOT),7,"Estimated amount EUR 1,130.00 below 5.000 threshold | Path: Low priority, amount EUR 1,130.00 under 2.000 threshold"
+CLM-2025-30207,MIG-HLT-446922,Alvaro Fernandez Moreno,2025-04-06,2025-04-02,Health,outpatient_treatment,Specialist ENT consultation and audiometry.,2710,No,No,AND,Andalucia,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 2,710.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Routine outpatient treatment under EUR 3.000"
+CLM-2025-30208,MIG-HOM-431699,Pilar Prieto Cabrera,2025-04-24,2025-03-17,Home,water_damage,Frozen pipe burst after unusual cold snap; extensive floor damage.,17900,No,No,MAD,Madrid,,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 17,900.00 in 5.000-20.000 range | Fraud flags: FI-004: Delayed reporting: 38 days between incident and claim | Path: Standard processing path"
+CLM-2025-30209,MIG-HLT-214119,Sara Reyes Calvo,2025-02-18,2025-02-16,Health,outpatient_treatment,Follow-up consultations after minor procedure.,669.65,No,No,VAL,Valencia,Carlos Vega,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 669.65 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 669.65 under 2.000 threshold"
+CLM-2025-30210,MIG-HOM-323095,Marco Alvarez Ortega,2025-01-14,2025-01-07,Home,storm_damage,Storm brought down tree branch onto roof; structural damage to pergola.,3650,No,No,AND,Andalucia,Jorge Ramos,New,home-water-damage,Medium,standard,Property Claims Unit (BCN-PROP),15,Storm Damage claim assigned Medium priority | Path: Standard processing path
+CLM-2025-30211,MIG-HOM-989173,Chiara Delgado Morales,2025-06-11,2025-06-09,Home,theft,"Garage broken into; bicycles, tools, and sports equipment stolen.",28500,No,No,AND,Andalucia,Clara Medina,Under Review,home-theft,High,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 28,500.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 4 claims within 90 days; FI-005: No police report filed for theft claim | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30212,MIG-MOT-643042,Valentina Silva Costa,2025-04-07,2025-04-07,Motor,vandalism,Tires slashed on all four wheels in neighborhood dispute.,20000,No,No,MAD,Madrid,,New,auto-property,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,"Estimated amount EUR 20,000.00 in 5.000-20.000 range | Fraud flags: FI-005: No police report filed for vandalism claim; FI-008: Suspiciously round estimate: EUR 20,000 | Path: SIU referral: 2 fraud indicators triggered"
+CLM-2025-30213,MIG-HLT-785073,Leonor Serra Gallego,2025-01-24,2025-01-21,Health,outpatient_treatment,Outpatient blood tests and endocrinology consultation.,1120,No,No,AND,Andalucia,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 1,120.00 below 5.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Low priority, amount EUR 1,120.00 under 2.000 threshold"
+CLM-2025-30214,MIG-HOM-639535,Blanca Rossi Gomez,2025-06-18,2025-06-13,Home,water_damage,Upstairs neighbor's washing machine leak damaged ceiling and walls.,20500,No,No,MAD,Madrid,,New,home-water-damage,High,complex-review,Property Claims Unit (BCN-PROP),30,"Estimated amount EUR 20,500.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 3 claims within 90 days | Path: High priority claim requires senior review"
+CLM-2025-30215,MIG-HOM-530859,Rafael Gallego Ortiz,2025-01-10,2024-11-22,Home,theft,Break-in through ground floor window; laptop and cash stolen.,4910,No,Yes,CAT,Catalunya,,New,home-theft,Medium,fraud-investigation,Special Investigations Unit (BCN-SIU),45,Police report filed; assigned Medium priority | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days; FI-004: Delayed reporting: 49 days between incident and claim | Path: SIU referral: 2 fraud indicators triggered
+CLM-2025-30216,MIG-HOM-119524,Bruno Garcia Flores,2025-06-23,2025-06-16,Home,theft,Break-in through ground floor window; laptop and cash stolen.,5950,No,Yes,PVA,Pais Vasco,,New,home-theft,Medium,standard,Property Claims Unit (BCN-PROP),15,"Estimated amount EUR 5,950.00 in 5.000-20.000 range | Path: Standard processing path"
+CLM-2025-30217,MIG-HLT-575497,Francesca Romero Reyes,2025-06-06,2025-06-04,Health,surgery,Carpal tunnel release surgery on both hands.,14500,No,No,AND,Andalucia,,New,health-emergency,Medium,standard,Health Claims Unit (BCN-HLT),15,"Estimated amount EUR 14,500.00 in 5.000-20.000 range | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: Standard processing path"
+CLM-2025-30218,MIG-HOM-140932,Javier Serra Ruiz,2025-05-21,2025-04-22,Home,theft,Storage unit in communal basement broken into; personal items stolen.,18500,No,Yes,GAL,Galicia,,New,home-theft,High,complex-review,Property Claims Unit (BCN-PROP),30,"Theft claim with amount EUR 18,500.00 exceeds 10.000 threshold | Path: High priority claim requires senior review"
+CLM-2025-30219,MIG-HLT-941272,Marina Pereira Molina,2025-05-08,2025-05-07,Health,outpatient_treatment,Series of specialist dermatology consultations.,838.1,No,No,ARA,Aragon,,New,health-routine,Low,fast-track,Health Claims Unit (BCN-HLT),7,"Estimated amount EUR 838.10 below 5.000 threshold | Path: Low priority, amount EUR 838.10 under 2.000 threshold"
+CLM-2025-30220,MIG-MOT-879769,Raquel Morales Pereira,2025-01-06,2024-12-31,Motor,collision,Two-car collision on N-340 coastal road; poor visibility due to fog.,31200,No,Yes,CAT,Catalunya,,New,auto-property,High,complex-review,Motor Claims Unit (BCN-MOT),30,"Estimated amount EUR 31,200.00 exceeds 20.000 threshold | Fraud flags: FI-001: Multiple claims: 2 claims within 90 days | Path: High priority claim requires senior review"`;
+
+function parseCSV(csv) {
+    const lines = csv.trim().split('\n');
+    const headers = parseCSVLine(lines[0]);
+    return lines.slice(1).map(line => {
+        const values = parseCSVLine(line);
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = values[i] || '');
+        return obj;
+    });
+}
+
+function parseCSVLine(line) {
+    const result = [];
+    let current = '';
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+        if (line[i] === '"') {
+            if (inQuotes && line[i+1] === '"') { current += '"'; i++; }
+            else { inQuotes = !inQuotes; }
+        } else if (line[i] === ',' && !inQuotes) {
+            result.push(current.trim());
+            current = '';
+        } else {
+            current += line[i];
+        }
+    }
+    result.push(current.trim());
+    return result;
+}
+
+function formatEUR(amount) {
+    return new Intl.NumberFormat('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(amount);
+}
+
+let claims = [];
+let sortCol = 'priority_level';
+let sortDir = 1;
+const priorityOrder = { 'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3 };
+
+function init() {
+    document.getElementById('genDate').textContent = new Date().toLocaleDateString('en-GB');
+    claims = parseCSV(csvData);
+
+    renderSummaryCards();
+    renderAlerts();
+    renderCategoryChart();
+    renderPathChart();
+    renderTeamChart();
+    renderExposureChart();
+    renderTable();
+
+    document.getElementById('filterPriority').addEventListener('change', renderTable);
+    document.getElementById('filterPath').addEventListener('change', renderTable);
+    document.getElementById('searchInput').addEventListener('input', renderTable);
+    document.querySelectorAll('th[data-sort]').forEach(th => {
+        th.addEventListener('click', () => {
+            const col = th.dataset.sort;
+            if (sortCol === col) sortDir *= -1;
+            else { sortCol = col; sortDir = 1; }
+            renderTable();
+        });
+    });
+}
+
+function countBy(arr, key) {
+    const counts = {};
+    arr.forEach(item => { counts[item[key]] = (counts[item[key]] || 0) + 1; });
+    return counts;
+}
+
+function sumBy(arr, groupKey, valueKey) {
+    const sums = {};
+    arr.forEach(item => {
+        const g = item[groupKey];
+        sums[g] = (sums[g] || 0) + parseFloat(item[valueKey] || 0);
+    });
+    return sums;
+}
+
+function renderSummaryCards() {
+    const counts = countBy(claims, 'priority_level');
+    const priorities = [
+        { key: 'Critical', cls: 'critical', response: '4h response' },
+        { key: 'High', cls: 'high', response: '24h response' },
+        { key: 'Medium', cls: 'medium', response: '48h response' },
+        { key: 'Low', cls: 'low', response: '72h response' }
+    ];
+    const html = priorities.map(p => `
+        <div class="card ${p.cls}">
+            <div class="label">${p.key} Priority</div>
+            <div class="value">${counts[p.key] || 0}</div>
+            <div class="detail">${((counts[p.key] || 0) / claims.length * 100).toFixed(1)}% of total &bull; ${p.response}</div>
+        </div>
+    `).join('');
+    document.getElementById('summaryCards').innerHTML = html;
+}
+
+function renderAlerts() {
+    const critical = claims.filter(c => c.priority_level === 'Critical')
+        .sort((a, b) => parseFloat(b.estimated_amount_eur) - parseFloat(a.estimated_amount_eur));
+    const html = critical.map(c => `
+        <div class="alert-item">
+            <span class="claim-id">${c.claim_id}</span>
+            <span class="category">${c.assigned_category}</span>
+            <span class="path">${c.handling_path}</span>
+            <span class="amount">EUR ${formatEUR(parseFloat(c.estimated_amount_eur))}</span>
+        </div>
+    `).join('');
+    document.getElementById('alertList').innerHTML = html;
+}
+
+function renderBarChart(containerId, data, colors) {
+    const maxVal = Math.max(...Object.values(data));
+    const html = Object.entries(data)
+        .sort((a, b) => b[1] - a[1])
+        .map(([label, value]) => {
+            const pct = (value / maxVal * 100).toFixed(0);
+            const color = colors[label] || '#94A3B8';
+            return `
+                <div class="bar-row">
+                    <div class="bar-label">${label}</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: ${pct}%; background: ${color}">
+                            <span>${value}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    document.getElementById(containerId).innerHTML = html;
+}
+
+function renderCategoryChart() {
+    const data = countBy(claims, 'assigned_category');
+    const colors = {
+        'auto-property': '#3B82F6', 'auto-bodily-injury': '#DC2626',
+        'home-water-damage': '#06B6D4', 'home-fire': '#F97316', 'home-theft': '#8B5CF6',
+        'health-emergency': '#EF4444', 'health-routine': '#10B981',
+        'commercial-liability': '#F59E0B', 'commercial-property': '#6366F1'
+    };
+    renderBarChart('categoryChart', data, colors);
+}
+
+function renderPathChart() {
+    const data = countBy(claims, 'handling_path');
+    const colors = {
+        'fast-track': '#10B981', 'standard': '#3B82F6',
+        'complex-review': '#F59E0B', 'fraud-investigation': '#DC2626',
+        'legal-referral': '#8B5CF6'
+    };
+    renderBarChart('pathChart', data, colors);
+}
+
+function renderTeamChart() {
+    const data = countBy(claims, 'assigned_team');
+    const colors = {};
+    Object.keys(data).forEach((k, i) => {
+        const palette = ['#3B82F6', '#10B981', '#06B6D4', '#F59E0B', '#DC2626', '#8B5CF6'];
+        colors[k] = palette[i % palette.length];
+    });
+    renderBarChart('teamChart', data, colors);
+}
+
+function renderExposureChart() {
+    const sums = sumBy(claims, 'priority_level', 'estimated_amount_eur');
+    const maxVal = Math.max(...Object.values(sums));
+    const order = ['Critical', 'High', 'Medium', 'Low'];
+    const colors = { 'Critical': '#DC2626', 'High': '#F59E0B', 'Medium': '#3B82F6', 'Low': '#10B981' };
+    const html = order.map(p => {
+        const value = sums[p] || 0;
+        const pct = (value / maxVal * 100).toFixed(0);
+        return `
+            <div class="bar-row">
+                <div class="bar-label">${p}</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: ${pct}%; background: ${colors[p]}">
+                        <span>EUR ${formatEUR(value)}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+    document.getElementById('exposureChart').innerHTML = html;
+}
+
+function renderTable() {
+    const filterP = document.getElementById('filterPriority').value;
+    const filterH = document.getElementById('filterPath').value;
+    const search = document.getElementById('searchInput').value.toLowerCase();
+
+    let filtered = claims.filter(c => {
+        if (filterP && c.priority_level !== filterP) return false;
+        if (filterH && c.handling_path !== filterH) return false;
+        if (search) {
+            const text = Object.values(c).join(' ').toLowerCase();
+            if (!text.includes(search)) return false;
+        }
+        return true;
+    });
+
+    filtered.sort((a, b) => {
+        let va = a[sortCol], vb = b[sortCol];
+        if (sortCol === 'priority_level') {
+            va = priorityOrder[va] ?? 99;
+            vb = priorityOrder[vb] ?? 99;
+        } else if (sortCol === 'estimated_amount_eur' || sortCol === 'estimated_resolution_days') {
+            va = parseFloat(va) || 0;
+            vb = parseFloat(vb) || 0;
+        }
+        if (va < vb) return -1 * sortDir;
+        if (va > vb) return 1 * sortDir;
+        return 0;
+    });
+
+    const badgeCls = { 'Critical': 'badge-critical', 'High': 'badge-high', 'Medium': 'badge-medium', 'Low': 'badge-low' };
+
+    const html = filtered.map(c => `
+        <tr>
+            <td><strong>${c.claim_id}</strong></td>
+            <td>${c.policyholder_name}</td>
+            <td>${c.product_line}</td>
+            <td>${c.incident_type}</td>
+            <td style="text-align:right">EUR ${formatEUR(parseFloat(c.estimated_amount_eur))}</td>
+            <td>${c.assigned_category}</td>
+            <td><span class="badge ${badgeCls[c.priority_level]}">${c.priority_level}</span></td>
+            <td><span class="path-badge">${c.handling_path}</span></td>
+            <td style="font-size:0.75rem">${c.assigned_team}</td>
+            <td style="text-align:center">${c.estimated_resolution_days}</td>
+        </tr>
+    `).join('');
+
+    document.getElementById('claimsTable').innerHTML = html;
+    document.querySelector('.table-header h2').textContent = `All Triaged Claims (${filtered.length} of ${claims.length})`;
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+
+</body>
+</html>
