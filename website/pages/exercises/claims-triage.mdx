@@ -10,9 +10,24 @@ description: "Build a claims triage system that classifies, prioritizes, and rou
 
 ---
 
-## Files
+## Setup
 
-**Download:** [incoming_claims.csv](../data/exercise-3/incoming_claims.csv) | [historical_outcomes.csv](../data/exercise-3/historical_outcomes.csv) | [business_rules.json](../data/exercise-3/business_rules.json)
+1. Create a folder for this exercise (e.g. `claims-triage/`) and inside it create a subfolder called `data/`
+2. Download the three data files into the `data/` folder:
+   <ul>
+     <li><a href="../data/exercise-3/incoming_claims.csv" download>incoming_claims.csv</a></li>
+     <li><a href="../data/exercise-3/historical_outcomes.csv" download>historical_outcomes.csv</a></li>
+     <li><a href="../data/exercise-3/business_rules.json" download>business_rules.json</a></li>
+   </ul>
+3. Open your terminal in the `claims-triage/` folder and start OpenAI Codex
+
+```text
+claims-triage/
+└── data/
+    ├── incoming_claims.csv
+    ├── historical_outcomes.csv
+    └── business_rules.json
+```
 
 ---
 
@@ -40,17 +55,23 @@ Your job is to use OpenAI Codex to build this prototype step by step.
 
 ---
 
+## Data Files
+
+All data files are in the `data/` folder:
+
+| File | Description | Records |
+|------|-------------|---------|
+| `incoming_claims.csv` | New claims awaiting triage | 220 claims |
+| `business_rules.json` | Triage rules for classification, priority, routing, and fraud detection | -- |
+| `historical_outcomes.csv` | Past claims with known outcomes and adjuster notes | 160 claims |
+
+---
+
 ## Step-by-Step Instructions
 
 ### Step 1: Understand the Data (~5 minutes)
 
 Start by asking OpenAI Codex to explore and summarize all the data files. This gives you a foundation before building anything.
-
-**Open your terminal in this exercise folder, then type:**
-
-```bash
-codex
-```
 
 Once OpenAI Codex is running, enter this prompt:
 
@@ -333,7 +354,7 @@ The dashboard is a single self-contained HTML file (~108 KB) with no external de
 
 ### Example Final Result (Browser View)
 
-![Exercise 2 final browser result](./images/exercise-2-screenshot.png)
+![Exercise 3 final browser result](./images/exercise-2-screenshot.png)
 
 _Example output of the generated claims triage dashboard opened in a browser._
 

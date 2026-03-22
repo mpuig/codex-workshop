@@ -1,27 +1,19 @@
-# Module 4: Building an Insurance App with Vibe Coding
+# Exercise: MIG Claims Dashboard
 
-> **Time:** 45 minutes | **Prerequisites:** Completion of Modules 1 to 3 recommended
-
-## What Is Vibe Coding?
-
-Vibe coding is building software by describing what you want in natural language. You are the product owner. Codex is the developer. You do not write a single line of code. You describe features, review results, and iterate.
-
-This is not a gimmick. Non-technical professionals are building real, functional applications this way. In this module, you will build a **Claims Dashboard** for MIG -- a web application that visualizes claims data with charts, filters, and summaries.
-
-**You do not need to understand code.** You need to know what you want the app to do.
+> **Time:** 45 minutes | **Prerequisites:** Completion of Modules 2 and 3
 
 ---
 
-## The Project: MIG Claims Dashboard
+## The Project
 
-You will build a web application that:
+You will build a web application for Mediterranean Insurance Group that:
 
 - Displays a summary of MIG's claims (total count, total value, average claim size)
 - Shows charts: claims by type, claims by region, claims by status
 - Lets you filter by date range, region, and claim type
 - Has a clean, professional look suitable for internal use
 
-By the end of this module, you will have a working app running on your computer.
+By the end of this exercise, you will have a working app running on your computer.
 
 ---
 
@@ -79,22 +71,22 @@ best for a simple, self-contained dashboard that I can run locally.
 
 ---
 
-## Step 2: Let Codex Build It
+## Step 2: Let OpenAI Codex Build It
 
-After you submit your requirements, Codex will:
+After you submit your requirements, OpenAI Codex will:
 
 1. Choose an appropriate technology (likely a simple HTML/CSS/JavaScript app, or a Next.js project)
 2. Create the project files
 3. Generate the sample data
 4. Build the dashboard with charts and layout
 
-This may take a minute or two. Codex will explain what it is doing as it works.
+This may take a minute or two. OpenAI Codex will explain what it is doing as it works.
 
 ### What to expect:
 
-Codex will create several files and may ask you to confirm before proceeding, depending on your approval policy.
+OpenAI Codex will create several files and may ask you to confirm before proceeding, depending on your approval settings.
 
-When Codex finishes, it will tell you how to view the dashboard. Typically:
+When OpenAI Codex finishes, it will tell you how to view the dashboard. Typically:
 
 ```text
 Open the file dashboard.html in your browser, or run the following
@@ -202,7 +194,7 @@ never created a repository from the command line. Walk me through it
 step by step.
 ```
 
-Codex will guide you through:
+OpenAI Codex will guide you through:
 1. Initializing a git repository
 2. Creating a `.gitignore` file
 3. Making your first commit
@@ -213,7 +205,7 @@ Codex will guide you through:
 
 ## Step 6: Deploy (Optional)
 
-If you want your dashboard accessible via a URL (so colleagues can view it without installing anything), Codex can help you deploy it.
+If you want your dashboard accessible via a URL (so colleagues can view it without installing anything), OpenAI Codex can help you deploy it.
 
 ### Sample prompt:
 
@@ -223,27 +215,13 @@ installing anything. What is the simplest way to deploy this as a
 website they can access via a URL? I want free or very cheap hosting.
 ```
 
-Codex will likely suggest options like:
+OpenAI Codex will likely suggest options like:
 
 - **GitHub Pages** (free, good for static HTML dashboards)
 - **Vercel** (free tier, good for Next.js apps)
 - **Netlify** (free tier, simple drag-and-drop deployment)
 
 It will walk you through the deployment step by step.
-
----
-
-## Mindset Tips: Think Like a PM, Not a Coder
-
-| Do this | Not this |
-|---------|----------|
-| "I want a chart showing claims by region" | "Create a div with a canvas element and initialize Chart.js with..." |
-| "The colors don't match our brand" | "Change the hex values in the CSS file on line 47" |
-| "This is too slow when filtering" | "Optimize the JavaScript array filter function" |
-| "I want users to be able to drill down into a region" | "Add an onClick event handler to each bar element" |
-| "Something broke, the chart isn't showing" | (Panic) |
-
-**You describe the what. Codex handles the how.**
 
 ---
 
@@ -261,7 +239,7 @@ to "All". Can you fix it?
 
 ### Step 2: Let Codex diagnose and fix
 
-Codex will look at the code, identify the issue, and fix it. You do not need to understand what went wrong technically.
+OpenAI Codex will look at the code, identify the issue, and fix it. You do not need to understand what went wrong technically.
 
 ### Step 3: If it is still broken, give more context
 
@@ -272,9 +250,9 @@ region filter dropdown does show all 6 regions correctly. This
 started happening after you added the heat map in the last change.
 ```
 
-### Step 3,5: Start a fresh session if Codex is going in circles
+### Step 3.5: Clear the conversation if Codex is going in circles
 
-If Codex seems to be repeating the same fix, stop and start a new session in the same project folder. This gives Codex a fresh context while keeping your files unchanged on disk.
+If Codex seems to be repeating the same fix or going in circles, start a fresh session in the same folder. This gives Codex a clean read of the current files without the baggage of a long chat history. Your files on disk are not affected, and your AGENTS.md rules still apply.
 
 ### Step 4: If you are stuck, start a fresh section
 
@@ -284,31 +262,13 @@ the summary cards at the top, but rebuild the chart section. Use a
 simpler approach this time.
 ```
 
-### The golden rule: **Do not try to debug the code yourself.** Describe what you see, what you expected, and when it started. Let Codex handle the rest.
-
----
-
-## What You Can Build Next
-
-Once you are comfortable with vibe coding, you can take on more ambitious projects:
-
-| Project Idea | Complexity | Time Estimate |
-|-------------|-----------|---------------|
-| Policy renewal tracker | Simple | 30 min |
-| Risk assessment questionnaire (web form) | Simple | 30 min |
-| Portfolio exposure map (with geographic visualization) | Medium | 45 min |
-| Underwriting referral workflow tool | Medium | 1 hour |
-| Claims triage scoring tool | Medium | 1 hour |
-| Reinsurance treaty comparison calculator | Medium | 1 hour |
-| Client reporting portal | Advanced | 2 hours |
-
-For any of these, the approach is the same: describe what you want, let Codex build it, iterate until it is right. For medium and advanced projects, consider the [Plan First workflow](plan-first-workflow.md) to stay in control as complexity grows. If you find yourself repeating the same workflows, package them as [reusable skills](building-skills.md).
+**The golden rule: Do not try to debug the code yourself.** Describe what you see, what you expected, and when it started. Let OpenAI Codex handle the rest.
 
 ---
 
 ## Summary
 
-In this module you learned to:
+In this exercise you learned to:
 
 - Describe a software application in natural language
 - Let Codex handle all technical implementation
@@ -316,10 +276,4 @@ In this module you learned to:
 - Handle errors and breakages without technical knowledge
 - Optionally save and deploy your application
 
-You do not need to be a developer to build useful tools. With OpenAI Codex, the skill that matters is clearly describing what you need -- which is exactly what you do as a consultant every day. The ability to quickly prototype dashboards, calculators, and workflow tools changes what non-technical professionals can deliver.
-
----
-
-## Next Step
-
-Proceed to the [Course Wrap-Up](../4-wrap-up/README.md) for a summary of what you have learned and what to do next.
+The key takeaway: **You do not need to be a developer to build useful tools.** With OpenAI Codex, the skill that matters is clearly describing what you need -- which is exactly what you do as a professional every day.

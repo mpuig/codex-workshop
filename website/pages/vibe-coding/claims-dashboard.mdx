@@ -1,0 +1,336 @@
+---
+title: "Exercise: MIG Claims Dashboard"
+description: "Build a Claims Dashboard web application for Mediterranean Insurance Group using natural language -- no coding experience required."
+---
+
+import imgDashboard from './images/claims-dashboard-top.png'
+
+# Exercise: MIG Claims Dashboard
+
+> **Time:** 45 minutes | **Prerequisites:** Completion of Modules 2 and 3
+
+---
+
+## The Project
+
+You will build a web application for Mediterranean Insurance Group that:
+
+- Displays a summary of MIG's claims (total count, total value, average claim size)
+- Shows charts: claims by type, claims by region, claims by status
+- Lets you filter by date range, region, and claim type
+- Has a clean, professional look suitable for internal use
+
+By the end of this exercise, you will have a working app running on your computer.
+
+<a href="../data/claims-dashboard-example.html" target="_blank">
+<img src={imgDashboard.src} alt="Claims Dashboard example — cards, charts, and filters" style={{width: '100%', borderRadius: '8px', border: '1px solid #e0e0e0', marginTop: '1rem'}} />
+</a>
+
+_Click to preview the finished dashboard. Yours will look similar._
+
+---
+
+## Step 1: Define Requirements
+
+Start by telling OpenAI Codex exactly what you want. Think like a product owner writing a brief.
+
+### Sample prompt:
+
+```text
+I want to build a Claims Dashboard web application for Mediterranean
+Insurance Group. I have zero coding experience, so you will handle all
+the technical work. I will describe what I want, and you will build it.
+
+Here are my requirements:
+
+OVERVIEW:
+- A web-based dashboard that displays MIG's claims data
+- Should work in a browser (Chrome, Safari, Firefox)
+- Professional design with MIG branding (use navy blue #1B365D and
+  white as primary colors, with amber #F2A900 for highlights)
+
+DATA:
+- Create realistic sample data: 200 claims for MIG across 2024-2025
+- Fields: claim_id, date_of_loss, date_reported, region (Catalonia,
+  Madrid, Andalusia, Valencia, Basque Country, Galicia), product_line
+  (Motor, Property, Liability, Marine, Health), claim_type, status
+  (Open, Under Review, Settled, Denied, Reopened), incurred_amount_eur,
+  reserve_amount_eur, claimant_name
+- Make the data realistic: motor should have the most claims, some
+  regions should be worse than others
+
+DASHBOARD LAYOUT:
+- Top row: 4 summary cards (Total Claims, Total Incurred, Average Claim
+  Size, Open Claims %)
+- Middle row: 2 charts side by side
+  - Left: bar chart of claims count by region
+  - Right: donut chart of claims by status
+- Bottom row: 2 charts side by side
+  - Left: bar chart of total incurred by product line
+  - Right: line chart showing monthly claims trend over time
+- Below the charts: a filterable data table showing all claims
+
+FILTERS:
+- Dropdown to filter by region
+- Dropdown to filter by product line
+- Date range picker for date of loss
+- All charts and the table should update when filters are applied
+
+Start by setting up the project. Use whatever technology you think is
+best for a simple, self-contained dashboard that I can run locally.
+```
+
+> **Tip:** Be thorough in your initial requirements. The more specific you are, the better the first version will be. But do not worry about getting everything perfect -- you will iterate.
+
+<details>
+<summary>What OpenAI Codex will do</summary>
+
+OpenAI Codex will typically:
+
+1. **Create a single HTML file** (e.g. `dashboard.html`) with embedded CSS and JavaScript
+2. **Generate 200 realistic claims** as a JavaScript array inside the file, with realistic distributions (more Motor claims, Andalusia with higher incurred amounts, etc.)
+3. **Add Chart.js** from a CDN for the charts
+4. **Build the layout** with summary cards at the top, two rows of charts, filter dropdowns, and a data table at the bottom
+
+When it finishes, it will say something like:
+
+> I've created `dashboard.html` with the MIG Claims Dashboard. Open it in your browser to see the dashboard. The file is self-contained — no server or installation needed.
+
+Open the file by double-clicking it or dragging it into your browser.
+
+</details>
+
+---
+
+## Step 2: Let OpenAI Codex Build It
+
+After you submit your requirements, OpenAI Codex will:
+
+1. Choose an appropriate technology (likely a simple HTML/CSS/JavaScript app, or a Next.js project)
+2. Create the project files
+3. Generate the sample data
+4. Build the dashboard with charts and layout
+
+This may take a minute or two. OpenAI Codex will explain what it is doing as it works.
+
+### What to expect:
+
+OpenAI Codex will create several files and may ask you to confirm before proceeding, depending on your approval settings.
+
+When OpenAI Codex finishes, it will tell you how to view the dashboard. Typically:
+
+```text
+Open the file dashboard.html in your browser, or run the following
+command to start a local server...
+```
+
+**Open the file in your browser** and take a look at what OpenAI Codex built.
+
+<details>
+<summary>What you should see</summary>
+
+Your first version should have:
+
+- **Header** with "Mediterranean Insurance Group" in navy blue
+- **4 summary cards** showing Total Claims (200), Total Incurred (EUR ~14-15M), Average Claim Size (EUR ~70-75K), and Open Claims percentage (~20-25%)
+- **Bar chart** of claims count by region — Catalonia and Andalusia should have the most
+- **Donut chart** of claims by status — Settled should be the largest slice
+- **Bar chart** of total incurred by product line — Motor should be highest
+- **Line chart** of monthly claims trend — should show some seasonal variation
+- **Data table** at the bottom listing individual claims
+
+It will probably look rough — colours might not match, spacing may be off, numbers might not have EUR formatting. That's normal. Step 3 is where you polish it.
+
+</details>
+
+---
+
+## Step 3: Iterate on the UI
+
+The first version will be functional but probably not exactly what you envisioned. This is normal. Now you iterate.
+
+### Sample refinement prompts:
+
+**Fix the layout:**
+```text
+The dashboard looks good but I want some changes:
+- Make the summary cards at the top larger with bigger numbers
+- Add a EUR symbol and European number formatting to all monetary values
+- The charts are too small -- make them taller
+- Add the MIG logo text "Mediterranean Insurance Group" in the header
+```
+
+**Improve the design:**
+```text
+The design needs to feel more polished:
+- Add subtle shadows to the summary cards
+- Use a light gray background (#F5F6FA) instead of white
+- Make the header bar navy blue with white text
+- Add a subtle border between sections
+- The font should be clean and modern (use Inter or Segoe UI)
+```
+
+**Fix data display:**
+```text
+In the claims table at the bottom:
+- Format all EUR amounts with European number formatting (1.234,56)
+- Add alternating row colors for readability
+- Make the status column show colored badges (green for Settled,
+  amber for Under Review, red for Open, gray for Denied)
+- Sort by date of loss descending by default
+- Add pagination -- show 20 rows per page
+```
+
+---
+
+## Step 4: Add Features
+
+Once the basic dashboard looks right, add more functionality.
+
+### Add data visualizations:
+
+```text
+Add a new section below the existing charts with:
+
+1. A heat map table showing average claim size by region (rows) and
+   product line (columns). Color cells from green (low) through yellow
+   to red (high).
+
+2. A bar chart showing the top 10 largest claims with their IDs and
+   amounts.
+
+3. A combined ratio estimate card -- assume a 30% expense ratio and
+   calculate the combined ratio based on the claims data and an assumed
+   EUR 150M earned premium.
+```
+
+<details>
+<summary>What these additions look like</summary>
+
+- **Heatmap table:** A grid with regions as rows and product lines as columns. Each cell shows the average claim size with background colour ranging from green (low, e.g. EUR 30K) through yellow to red (high, e.g. EUR 150K+). This makes it immediately obvious where the expensive claims cluster.
+- **Top 10 claims bar chart:** A horizontal bar chart listing the 10 largest claims by ID, with amounts. Useful for spotting outliers.
+- **Combined ratio card:** A single KPI card showing the estimated combined ratio (e.g. 109,8%) calculated as `(Total Incurred + Expenses) / Earned Premium`. Highlighted in red if above 100%.
+
+</details>
+
+### Add interactivity:
+
+```text
+When I click on a bar in the "claims by region" chart, the entire
+dashboard should filter to show only that region's data. Clicking
+again should reset the filter.
+```
+
+### Add an export feature:
+
+```text
+Add an "Export to CSV" button that downloads the currently filtered
+claims data as a CSV file. Put the button next to the data table.
+```
+
+### Add a detail view:
+
+```text
+When I click on a row in the claims table, show a detail panel on the
+right side with all the claim information in a nicely formatted card.
+Include a timeline showing: date of loss, date reported, date of last
+update.
+```
+
+---
+
+## Step 5: Save to GitHub (Optional)
+
+If you want to save your project and share it with colleagues, OpenAI Codex can help you set up a GitHub repository.
+
+### Sample prompt:
+
+```text
+Help me save this project to GitHub. I have a GitHub account but I have
+never created a repository from the command line. Walk me through it
+step by step.
+```
+
+OpenAI Codex will guide you through:
+1. Initializing a git repository
+2. Creating a `.gitignore` file
+3. Making your first commit
+4. Creating a remote repository on GitHub
+5. Pushing your code
+
+---
+
+## Step 6: Deploy (Optional)
+
+If you want your dashboard accessible via a URL (so colleagues can view it without installing anything), OpenAI Codex can help you deploy it.
+
+### Sample prompt:
+
+```text
+I want my colleagues to be able to see this dashboard without
+installing anything. What is the simplest way to deploy this as a
+website they can access via a URL? I want free or very cheap hosting.
+```
+
+OpenAI Codex will likely suggest options like:
+
+- **GitHub Pages** (free, good for static HTML dashboards)
+- **Vercel** (free tier, good for Next.js apps)
+- **Netlify** (free tier, simple drag-and-drop deployment)
+
+It will walk you through the deployment step by step.
+
+---
+
+## What to Do When Something Breaks
+
+Things will break. A chart might not render. A filter might stop working. The layout might look wrong. This is completely normal in software development. Here is how to handle it:
+
+### Step 1: Describe the problem
+
+```text
+Something is wrong. The bar chart for claims by region is not showing
+any data. The other charts work fine. The filter dropdowns are all set
+to "All". Can you fix it?
+```
+
+### Step 2: Let OpenAI Codex diagnose and fix
+
+OpenAI Codex will look at the code, identify the issue, and fix it. You do not need to understand what went wrong technically.
+
+### Step 3: If it is still broken, give more context
+
+```text
+It's still not working. Here is what I see: the chart area is blank,
+there is a small error icon in the bottom left of my browser. The
+region filter dropdown does show all 6 regions correctly. This
+started happening after you added the heat map in the last change.
+```
+
+### Step 3.5: Clear the conversation if OpenAI Codex is going in circles
+
+If OpenAI Codex seems to be repeating the same fix or going in circles, start a fresh session in the same folder. This gives Codex a clean read of the current files without the baggage of a long chat history. Your files on disk are not affected, and your AGENTS.md rules still apply.
+
+### Step 4: If you are stuck, start a fresh section
+
+```text
+Let's start the charts section from scratch. Keep all the data and
+the summary cards at the top, but rebuild the chart section. Use a
+simpler approach this time.
+```
+
+**The golden rule: Do not try to debug the code yourself.** Describe what you see, what you expected, and when it started. Let OpenAI Codex handle the rest.
+
+---
+
+## Summary
+
+In this exercise you learned to:
+
+- Describe a software application in natural language
+- Let OpenAI Codex handle all technical implementation
+- Iterate on design, functionality, and features through conversation
+- Handle errors and breakages without technical knowledge
+- Optionally save and deploy your application
+
+The key takeaway: **You do not need to be a developer to build useful tools.** With OpenAI Codex, the skill that matters is clearly describing what you need -- which is exactly what you do as a professional every day.

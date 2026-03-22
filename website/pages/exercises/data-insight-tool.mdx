@@ -10,15 +10,32 @@ description: "Build an end-to-end analytical workflow to identify white space ex
 
 ---
 
-## Files
+## Setup
 
-**Download:** [market_penetration.csv](../data/exercise-2/market_penetration.csv) | [demographics.csv](../data/exercise-2/demographics.csv) | [accident_frequency.csv](../data/exercise-2/accident_frequency.csv) | [product_lines.csv](../data/exercise-2/product_lines.csv)
+1. Create a folder for this exercise (e.g. `data-insight/`) and inside it create a subfolder called `data/`
+2. Download the four CSV files into the `data/` folder:
+   <ul>
+     <li><a href="../data/exercise-2/market_penetration.csv" download>market_penetration.csv</a></li>
+     <li><a href="../data/exercise-2/demographics.csv" download>demographics.csv</a></li>
+     <li><a href="../data/exercise-2/accident_frequency.csv" download>accident_frequency.csv</a></li>
+     <li><a href="../data/exercise-2/product_lines.csv" download>product_lines.csv</a></li>
+   </ul>
+3. Open your terminal in the `data-insight/` folder and start OpenAI Codex
+
+```text
+data-insight/
+└── data/
+    ├── market_penetration.csv
+    ├── demographics.csv
+    ├── accident_frequency.csv
+    └── product_lines.csv
+```
 
 ---
 
 ## Objective
 
-Build an end-to-end analytical workflow using OpenAI Codex. You will retrieve and combine insurance market and demographic data, identify **white spaces** (regions with high risk exposure but low insurance penetration), and produce executive-ready output -- without writing any code.
+Build an end-to-end analytical workflow using OpenAI Codex that retrieves and combines insurance market and demographic data, structures it into a clean dataset, identifies **white spaces** (regions with high risk exposure but low insurance penetration), and produces executive-ready output -- all without writing any code yourself.
 
 By the end of this exercise, you will have gone from four raw CSV files to a ranked list of expansion opportunities, interactive visualizations, and a professional memo for a senior stakeholder.
 
@@ -44,7 +61,6 @@ Isabel needs someone to combine these sources, find the regions where demand is 
 ## Prerequisites
 
 - OpenAI Codex installed and configured
-- Terminal open in this exercise directory
 - Familiarity with CSV data (no coding experience required)
 
 ---
@@ -82,7 +98,7 @@ Read all the CSV files in the data/ folder and give me a summary of what data we
 - It may flag observations like: uneven product coverage across regions, year-over-year data available only for market penetration, or regions with very small policy counts
 
 **What to look for in the output:**
-- Does Codex identify that `region_code` is the join key across files?
+- Does OpenAI Codex identify that `region_code` is the join key across files?
 - Does it note that `market_penetration.csv` has multiple rows per region (by product line and year)?
 - Does it highlight the difference in granularity between files?
 
@@ -169,7 +185,7 @@ Read all the CSV files in the data/ folder and give me a summary of what data we
 **What to look for:**
 - Does the join produce 68 rows (one per region)?
 - Are the calculated columns sensible? (Spain/Portugal should show higher penetration; Italy/France lower)
-- Does Codex handle the aggregation from product-line level to region level correctly?
+- Does OpenAI Codex handle the aggregation from product-line level to region level correctly?
 
 > **Tip:** If you want to keep product-line detail, try: *"Actually, keep the product_line breakdown in the combined dataset too -- I want to see penetration by region AND product line."*
 
@@ -244,9 +260,9 @@ Analyze the combined dataset to find white spaces - regions where there is high 
 **What to look for:**
 - Does the scoring methodology make business sense?
 - Are the top regions plausible? (Expect large Italian regions like Lombardy, Lazio, Campania and French regions like Ile-de-France, Provence-Alpes-Cote d'Azur)
-- Does Codex explain its methodology, or does it just present numbers?
+- Does OpenAI Codex explain its methodology, or does it just present numbers?
 
-> **Tip:** Push Codex to refine the analysis: *"Weight the opportunity score more heavily toward regions where MIG already has some presence (market share > 0.1%) -- pure greenfield markets may be too risky."*
+> **Tip:** Push OpenAI Codex to refine the analysis: *"Weight the opportunity score more heavily toward regions where MIG already has some presence (market share > 0.1%) -- pure greenfield markets may be too risky."*
 
 <details>
 <summary>Example output from this step</summary>
@@ -373,7 +389,7 @@ the initial Chart.js CDN load.
 
 ### Example Final Result (Browser View)
 
-![Exercise 1 final browser result](./images/exercise-1-screenshot.jpg)
+![Exercise 2 final browser result](./images/exercise-1-screenshot.jpg)
 
 _Example output of the generated interactive visualization page opened in a browser._
 
@@ -490,15 +506,15 @@ By completing this exercise, you will have practiced:
 - Try being explicit: *"Read the file at data/market_penetration.csv"*
 
 ### "The join produced fewer rows than expected"
-- Check if Codex is filtering to a single year. The `market_penetration.csv` file has data for both 2024 and 2025. Ask Codex: *"How many rows does the merged dataset have? I expected 68 regions."*
+- Check if OpenAI Codex is filtering to a single year. The `market_penetration.csv` file has data for both 2024 and 2025. Ask Codex: *"How many rows does the merged dataset have? I expected 68 regions."*
 
 ### "The opportunity score does not make sense"
-- Ask Codex to explain its methodology: *"Walk me through how you calculated the opportunity score. What weight did you give each factor?"*
+- Ask OpenAI Codex to explain its methodology: *"Walk me through how you calculated the opportunity score. What weight did you give each factor?"*
 - Then adjust: *"Increase the weight of population growth and decrease the weight of GDP per capita."*
 
 ### "The HTML charts are not rendering"
 - Open the file directly in Chrome, Firefox, or Safari (not by double-clicking -- use File > Open or drag into the browser)
-- Check if Codex used a CDN link for Chart.js. If you are offline, ask: *"Inline the Chart.js library directly in the HTML file instead of using a CDN."*
+- Check if OpenAI Codex used a CDN link for Chart.js. If you are offline, ask: *"Inline the Chart.js library directly in the HTML file instead of using a CDN."*
 
 ### "The output is too long / too short"
 - OpenAI Codex responds to length guidance. Try: *"Keep the executive summary to one page maximum"* or *"Give me a more detailed breakdown with numbers for every region."*

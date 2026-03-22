@@ -1,6 +1,6 @@
-# Module 1.2: Project Memory with AGENTS.md
+# Module 2.2: Project Memory with AGENTS.md
 
-> **Time:** 15 minutes | **Prerequisites:** [Module 1.1: First Steps](../1.1-first-steps/README.md)
+> **Time:** 15 minutes | **Prerequisites:** [Module 2.1: First Steps](../2.1-first-steps/README.md)
 
 ## The Problem
 
@@ -17,7 +17,7 @@ AGENTS.md is a plain text file you place in your project folder. When you start 
 You can have:
 
 - **Project-level AGENTS.md** -- lives in your project folder, applies to that project only
-- **Global AGENTS.md** -- lives in your home directory (`~/.codex/AGENTS.md`), applies to every session everywhere
+- **Global AGENTS.md** -- lives in your home directory (`~/.codex/AGENTS.md` on Mac/Linux, `%USERPROFILE%\\.codex\\AGENTS.md` on Windows), applies to every session everywhere
 
 ![AGENTS.md hierarchy across repositories and users](images/agents-md-hierarchy.png)
 
@@ -34,14 +34,14 @@ Most people use project-level files. Use a global file for preferences that appl
 
 ---
 
-## Creating a AGENTS.md for an Insurance Project
+## Creating an AGENTS.md for an Insurance Project
 
 You can create this file in two ways.
 
 ### Option A: Ask Codex to create it
 
 ```text
-Create a AGENTS.md file in the current directory with the following project context:
+Create an AGENTS.md file in the current directory with the following project context:
 
 This is a project for Mediterranean Insurance Group (MIG), a mid-size
 European insurer headquartered in Barcelona. We operate across Spain,
@@ -148,16 +148,69 @@ OpenAI Codex automatically applies the right currency, number format, terminolog
 
 ---
 
+## MIG Context Files
+
+For this course, a set of detailed company context files are available. Create a `company-context/` folder inside your project folder and download these files into it:
+
+- <a href="../../website/public/data/COMPANY.md" download>COMPANY.md</a> — MIG overview, financials, strategy
+- <a href="../../website/public/data/PRODUCTS.md" download>PRODUCTS.md</a> — Insurance product lines and metrics
+- <a href="../../website/public/data/PERSONAS.md" download>PERSONAS.md</a> — Key stakeholder profiles
+- <a href="../../website/public/data/MARKET.md" download>MARKET.md</a> — Southern European insurance market landscape
+
+Your folder should look like this:
+
+```text
+your-project/
+├── AGENTS.md
+└── company-context/
+    ├── COMPANY.md
+    ├── MARKET.md
+    ├── PERSONAS.md
+    └── PRODUCTS.md
+```
+
+Once downloaded, you can reference them from your AGENTS.md:
+
+```markdown
+## Reference Files
+- See company-context/COMPANY.md for MIG overview and financials
+- See company-context/PRODUCTS.md for product line details
+- See company-context/PERSONAS.md for stakeholder profiles
+- See company-context/MARKET.md for market context
+```
+
+Codex will read these files when it needs deeper context about MIG.
+
+### Organizing Context for Different Work
+
+The same pattern works for any project. Keep context files in folders that match your work:
+
+```text
+your-project/
+├── AGENTS.md
+├── company-context/          # Who the company is
+│   ├── COMPANY.md
+│   └── PRODUCTS.md
+├── case-context/             # Specific case or engagement
+│   ├── scope.md
+│   ├── stakeholders.md
+│   └── constraints.md
+└── data/                     # Working files
+    ├── claims-q4-2025.csv
+    └── portfolio-summary.xlsx
+```
+
+Then reference the relevant folders in your AGENTS.md. Codex will navigate the files as needed; you do not have to paste everything into the session.
+
+---
+
 ## Tips for Maintaining Your AGENTS.md
 
 1. **Start small.** You do not need to write the perfect AGENTS.md on day one. Start with the basics (who you are, what project this is, key formatting rules) and add rules as you discover needs.
 
-2. **Use # to add rules on the fly.** When Codex does something you do not like, add a rule immediately:
-   ```text
-   # Never abbreviate country names -- always write "Spain" not "ES"
-   ```
+2. **Update it when Codex misses something.** If Codex uses the wrong format, terminology, or tone, add the missing rule to `AGENTS.md` immediately.
 
-3. **Keep it under 1-2 pages.** A AGENTS.md that is too long becomes noise. Focus on rules that you would otherwise repeat in every session.
+3. **Keep it under 1-2 pages.** An AGENTS.md that is too long becomes noise. Focus on rules that you would otherwise repeat in every session.
 
 4. **Review it periodically.** As projects evolve, some rules become irrelevant. Clean it up every few weeks.
 
@@ -169,9 +222,9 @@ OpenAI Codex automatically applies the right currency, number format, terminolog
 
 ## Exercise: Create Your Own AGENTS.md
 
-Take 5 minutes to create a AGENTS.md for a project you are currently working on. Include at minimum:
+Take 5 minutes to create an AGENTS.md for a project you are currently working on. Include at minimum:
 
-1. One paragraph of project context (who is the client, what is the engagement about)
+1. One paragraph of project context (who is it for, what is the project about)
 2. Three terminology rules specific to your work
 3. Two formatting preferences
 4. Two quality rules
@@ -179,7 +232,7 @@ Take 5 minutes to create a AGENTS.md for a project you are currently working on.
 You can do this by asking Codex:
 
 ```text
-Create a AGENTS.md for my current project. Here's the context:
+Create an AGENTS.md for my current project. Here's the context:
 [describe your project in 2-3 sentences]
 
 I want rules for terminology, formatting, and quality. Ask me questions
@@ -190,4 +243,4 @@ if you need more detail.
 
 ## Next Step
 
-Proceed to [Module 2.1: Writing an Underwriting Brief](../../2-insurance-workflows/2.1-underwriting-brief/README.md) to apply what you have learned to a real insurance workflow.
+Proceed to [Module 3.1: Writing an Underwriting Brief](../../3-insurance-workflows/3.1-underwriting-brief/README.md) to apply what you have learned to a real insurance workflow.

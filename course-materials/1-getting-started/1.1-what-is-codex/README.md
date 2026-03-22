@@ -44,4 +44,4 @@ _Key training principle: if decisions are not explicit in files, tests, or docs,
 
 ## Next Step
 
-Proceed to [Install OpenAI Codex](../0.2-install-codex/README.md) to set up your environment.
+Proceed to [Install OpenAI Codex](../1.2-install-codex/README.md) to set up your environment.

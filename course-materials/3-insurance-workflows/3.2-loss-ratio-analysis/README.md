@@ -1,6 +1,6 @@
-# Module 2.2: Loss Ratio Analysis with OpenAI Codex
+# Module 3.2: Loss Ratio Analysis with OpenAI Codex
 
-> **Time:** 30 minutes | **Prerequisites:** [Module 2.1: Underwriting Brief](../2.1-underwriting-brief/README.md)
+> **Time:** 30 minutes | **Prerequisites:** [Module 3.1: Underwriting Brief](../3.1-underwriting-brief/README.md)
 
 ## The Scenario
 
@@ -121,26 +121,6 @@ For each calculation:
 - Include claim count and average claim size alongside the ratios
 
 Present the results in clear tables.
-```
-
-### Expected output format:
-
-Codex should produce tables like:
-
-```text
-LOSS RATIO BY REGION -- 2025
-==============================
-
-| Region         | Earned Prem (EUR) | Incurred (EUR) | # Claims | Avg Claim | Loss Ratio | Status |
-|----------------|-------------------|----------------|----------|-----------|------------|--------|
-| Catalonia      | 95.200.000        | 61.880.000     | 312      | 198.333   | 65,0%      | OK     |
-| Madrid         | 88.400.000        | 60.112.000     | 287      | 209.417   | 68,0%      | OK     |
-| Andalusia      | 72.100.000        | 62.006.000     | 341      | 181.835   | 86,0%      | RED    |
-| Valencia       | 65.300.000        | 52.240.000     | 298      | 175.302   | 80,0%      | YELLOW |
-| Basque Country | 41.500.000        | 25.730.000     | 124      | 207.500   | 62,0%      | OK     |
-| Galicia        | 38.900.000        | 24.497.000     | 118      | 207.601   | 63,0%      | OK     |
-
-TOTAL            | 401.400.000       | 286.465.000    | 1.480    | 193.557   | 71,4%      | YELLOW |
 ```
 
 <details>
@@ -456,10 +436,10 @@ In this module you learned to:
 - Generate professional visualizations
 - Produce executive-ready summaries with actionable recommendations
 
-OpenAI Codex can do in 30 minutes what typically takes a half-day of spreadsheet work. When you ask Codex to write and execute scripts for calculations, the math is exact. Still, spot-check at least two or three results against your own math as a second layer of assurance -- this confirms the script logic is correct, not just the arithmetic.
+The key takeaway: **OpenAI Codex significantly speeds up spreadsheet-heavy analysis.** When you ask Codex to write and execute scripts for calculations, the math is exact. Still, spot-check at least two or three results against your own math -- this confirms the script logic is correct, not only the arithmetic.
 
 ---
 
 ## Next Step
 
-Proceed to [Module 2.3: Market Entry Assessment](../2.3-market-assessment/README.md) to learn how OpenAI Codex can help with strategic analysis using web research.
+Proceed to [Module 3.3: Market Entry Assessment](../3.3-market-assessment/README.md) to learn how OpenAI Codex can help with strategic analysis using web research.

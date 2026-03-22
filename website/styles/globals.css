@@ -100,6 +100,20 @@ article blockquote {
   opacity: 0.9;
 }
 
+.nextra-content a[download] {
+  color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 45%);
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+
+.nextra-content a[download]:hover {
+  text-decoration: none;
+}
+
+.dark .nextra-content a[download] {
+  color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 55%);
+}
+
 .nextra-content h1 {
   font-size: 2.25rem;
   font-weight: 700;

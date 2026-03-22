@@ -1,8 +1,3 @@
----
-title: "Module 5: Vibe Coding"
-description: "Build real insurance applications using natural language -- no coding experience required."
----
-
 # Module 5: Vibe Coding
 
 > **Time:** 45 minutes | **Prerequisites:** Completion of Modules 2 to 4 recommended
@@ -19,9 +14,9 @@ Non-technical professionals are building real, functional applications this way.
 
 ## Exercise
 
-In this module you will build the **[MIG Claims Dashboard](claims-dashboard)** — a web application with charts, filters, and a claims table for Mediterranean Insurance Group. It takes about 45 minutes.
+In this module you will build the **[MIG Claims Dashboard](claims-dashboard.md)** — a web application with charts, filters, and a claims table for Mediterranean Insurance Group. It takes about 45 minutes.
 
-Before starting, read [The Plan First Workflow](plan-first-workflow) to learn a technique for keeping complex builds on track.
+Before starting, read [The Plan First Workflow](plan-first-workflow.md) to learn a technique for keeping complex builds on track.
 
 ## Mindset Tips: Think Like a PM, Not a Coder
 
@@ -51,10 +46,10 @@ Once you are comfortable with vibe coding, the possibilities expand:
 | Reinsurance treaty comparison calculator | Medium | 1 hour |
 | Client reporting portal | Advanced | 2 hours |
 
-For medium and advanced projects, consider the [Plan First workflow](plan-first-workflow) to stay in control as complexity grows. If you find yourself repeating the same workflows, package them as [reusable skills](building-skills).
+For medium and advanced projects, consider the [Plan First workflow](plan-first-workflow.md) to stay in control as complexity grows. If you find yourself repeating the same workflows, package them as [reusable skills](building-skills.md).
 
 ---
 
 ## Next Step
 
-Proceed to the [Course Wrap-Up](../wrap-up) for a summary of what you have learned and what to do next.
+Proceed to the [Course Wrap-Up](../5-wrap-up/README.md) for a summary of what you have learned and what to do next.

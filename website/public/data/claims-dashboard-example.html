@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIG Claims Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Inter, sans-serif; background: #F5F6FA; color: #333; }
+.header { background: #1B365D; color: white; padding: 20px 32px; display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 22px; font-weight: 600; }
+.header span { font-size: 13px; opacity: 0.7; }
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.filters { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+.filters select, .filters input { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; background: white; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+.card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.card .label { font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 0.5px; }
+.card .value { font-size: 28px; font-weight: 700; color: #1B365D; margin: 6px 0 2px; }
+.card .sub { font-size: 12px; color: #999; }
+.charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.chart-box { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.chart-box h3 { font-size: 14px; font-weight: 600; color: #1B365D; margin-bottom: 12px; }
+.chart-box canvas { width: 100% !important; height: 260px !important; }
+.table-section { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.table-section h3 { font-size: 14px; font-weight: 600; color: #1B365D; margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: #f0f1f5; padding: 10px 12px; text-align: left; font-weight: 600; color: #555; border-bottom: 2px solid #e0e0e0; }
+td { padding: 9px 12px; border-bottom: 1px solid #eee; }
+tr:nth-child(even) { background: #fafbfc; }
+.badge { padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; display: inline-block; }
+.badge-open { background: #fee2e2; color: #dc2626; }
+.badge-review { background: #fef3c7; color: #d97706; }
+.badge-settled { background: #d1fae5; color: #059669; }
+.badge-denied { background: #e5e7eb; color: #6b7280; }
+.badge-reopened { background: #ede9fe; color: #7c3aed; }
+.highlight { color: #F2A900; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Mediterranean Insurance Group</h1>
+    <span>Claims Dashboard — 2024/2025</span>
+  </div>
+  <div style="text-align:right">
+    <span>Last updated: 15/01/2026</span>
+  </div>
+</div>
+<div class="container">
+  <div class="filters">
+    <select id="regionFilter"><option value="">All Regions</option><option>Catalonia</option><option>Madrid</option><option>Andalusia</option><option>Valencia</option><option>Basque Country</option><option>Galicia</option></select>
+    <select id="productFilter"><option value="">All Product Lines</option><option>Motor</option><option>Property</option><option>Liability</option><option>Marine</option><option>Health</option></select>
+    <input type="date" id="dateFrom" value="2024-01-01">
+    <input type="date" id="dateTo" value="2025-12-31">
+  </div>
+  <div class="cards">
+    <div class="card"><div class="label">Total Claims</div><div class="value">200</div><div class="sub">2024–2025</div></div>
+    <div class="card"><div class="label">Total Incurred</div><div class="value highlight">EUR 14.823.450</div><div class="sub">Gross incurred</div></div>
+    <div class="card"><div class="label">Avg Claim Size</div><div class="value">EUR 74.117</div><div class="sub">Per claim</div></div>
+    <div class="card"><div class="label">Open Claims</div><div class="value">23%</div><div class="sub">46 of 200</div></div>
+  </div>
+  <div class="charts-row">
+    <div class="chart-box"><h3>Claims Count by Region</h3><canvas id="regionChart"></canvas></div>
+    <div class="chart-box"><h3>Claims by Status</h3><canvas id="statusChart"></canvas></div>
+  </div>
+  <div class="charts-row">
+    <div class="chart-box"><h3>Total Incurred by Product Line (EUR)</h3><canvas id="productChart"></canvas></div>
+    <div class="chart-box"><h3>Monthly Claims Trend</h3><canvas id="trendChart"></canvas></div>
+  </div>
+  <div class="table-section">
+    <h3>Claims Detail</h3>
+    <table>
+      <thead><tr><th>Claim ID</th><th>Date of Loss</th><th>Region</th><th>Product</th><th>Status</th><th>Incurred (EUR)</th><th>Claimant</th></tr></thead>
+      <tbody id="claimsTable"></tbody>
+    </table>
+  </div>
+</div>
+<script>
+const regions = ['Catalonia','Madrid','Andalusia','Valencia','Basque Country','Galicia'];
+const regionCounts = [52, 38, 42, 28, 22, 18];
+const statuses = ['Open','Under Review','Settled','Denied','Reopened'];
+const statusCounts = [46, 32, 88, 24, 10];
+const statusColors = ['#dc2626','#d97706','#059669','#6b7280','#7c3aed'];
+const products = ['Motor','Property','Liability','Marine','Health'];
+const productIncurred = [5240000, 3180000, 2890000, 1620000, 1893450];
+const months = ['Jan 24','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan 25','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const monthCounts = [7,6,8,9,7,8,10,11,9,8,7,6,8,7,9,10,8,9,11,10,8,9,8,7];
+
+new Chart(document.getElementById('regionChart'), {
+  type: 'bar',
+  data: { labels: regions, datasets: [{ label: 'Claims', data: regionCounts, backgroundColor: '#1B365D', borderRadius: 4 }] },
+  options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('statusChart'), {
+  type: 'doughnut',
+  data: { labels: statuses, datasets: [{ data: statusCounts, backgroundColor: statusColors }] },
+  options: { responsive: true, plugins: { legend: { position: 'right' } } }
+});
+new Chart(document.getElementById('productChart'), {
+  type: 'bar',
+  data: { labels: products, datasets: [{ label: 'Incurred EUR', data: productIncurred, backgroundColor: ['#1B365D','#2d5a9e','#4a7bc7','#7ba3d9','#F2A900'], borderRadius: 4 }] },
+  options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { callback: v => 'EUR ' + (v/1e6).toFixed(1) + 'M' } } } }
+});
+new Chart(document.getElementById('trendChart'), {
+  type: 'line',
+  data: { labels: months, datasets: [{ label: 'Claims per month', data: monthCounts, borderColor: '#F2A900', backgroundColor: 'rgba(242,169,0,0.1)', fill: true, tension: 0.3, pointRadius: 3 }] },
+  options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+});
+
+const names = ['García López','Martínez Ruiz','Fernández Torres','Rodríguez Sanz','Pérez Navarro','Sánchez Gil','Díaz Moreno','López Herrera','González Vega','Muñoz Castro','Romero Ortiz','Álvarez Marín','Jiménez Ramos','Ruiz Domínguez','Hernández Vargas','Torres Medina','Ramírez Cruz','Flores Reyes','Gómez Aguilar','Morales León'];
+const badgeClass = {'Open':'badge-open','Under Review':'badge-review','Settled':'badge-settled','Denied':'badge-denied','Reopened':'badge-reopened'};
+const tbody = document.getElementById('claimsTable');
+for (let i = 0; i < 20; i++) {
+  const r = regions[i % 6], p = products[i % 5], s = statuses[i % 5];
+  const m = String(1 + (i % 12)).padStart(2,'0'), d = String(1 + (i * 3) % 28).padStart(2,'0');
+  const yr = i < 10 ? '2024' : '2025';
+  const amt = (20000 + Math.floor(Math.random() * 180000)).toLocaleString('de-DE');
+  tbody.innerHTML += `<tr><td>CLM-${yr}-${String(1001+i)}</td><td>${d}/${m}/${yr}</td><td>${r}</td><td>${p}</td><td><span class="badge ${badgeClass[s]}">${s}</span></td><td>${amt}</td><td>${names[i]}</td></tr>`;
+}
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
-# Module 2.3: Market Entry Assessment with OpenAI Codex
+# Module 3.3: Market Entry Assessment with OpenAI Codex
 
-> **Time:** 30 minutes | **Prerequisites:** [Module 2.2: Loss Ratio Analysis](../2.2-loss-ratio-analysis/README.md)
+> **Time:** 30 minutes | **Prerequisites:** [Module 3.2: Loss Ratio Analysis](../3.2-loss-ratio-analysis/README.md)
 
 ## The Scenario
 
@@ -60,7 +60,7 @@ Save this as portugal-market-overview.md
 
 > **Tip:** When presenting market data to stakeholders, exact URLs let them verify your numbers independently. Always ask Codex to include source URLs in research output.
 
-> **Important:** Web data may not always be perfectly current. Codex will do its best to find recent figures and will flag when data is from an older source. Always verify critical numbers independently before including them in a client deliverable.
+> **Important:** Web data may not always be perfectly current. OpenAI Codex will do its best to find recent figures and will flag when data is from an older source. Always verify critical numbers independently before including them in a client deliverable.
 
 ### Follow up for more depth:
 
@@ -426,7 +426,7 @@ acronyms on first use.
 
 **Executive Summary (excerpt)**
 
-Mediterranean Insurance Group has a unique window of opportunity in Portugal. The 2024 acquisition of LusoProtect gives MIG an operational platform in the fastest-growing insurance market in its footprint (6,9% CAGR vs. 4,2% in Spain). The Portuguese non-life market is projected to grow from EUR 6,6 billion to EUR 9,2 billion by 2028, and MIG is positioned to capture a disproportionate share of that growth.
+Mediterranean Insurance Group has a favourable entry point in Portugal. The 2024 acquisition of LusoProtect gives MIG an operational platform in the fastest-growing insurance market in its footprint (6,9% CAGR vs. 4,2% in Spain). The Portuguese non-life market is projected to grow from EUR 6,6 billion to EUR 9,2 billion by 2028, and MIG is positioned to capture a disproportionate share of that growth.
 
 Our top three opportunities are: (1) SME commercial property -- an underserved segment where MIG's existing Spanish expertise transfers directly; (2) Motor expansion -- improving LusoProtect's 6,7% market share through pricing modernisation and fleet products; (3) Residential property cross-sell -- leveraging the motor customer base and low Portuguese home insurance penetration.
 
@@ -519,9 +519,9 @@ When Codex searches the web for market data, keep these points in mind:
 
 1. **Verify critical numbers.** Web search gives you a strong starting point, but always cross-check key figures (market size, competitor shares) against authoritative sources like ASF annual reports or Swiss Re sigma studies.
 
-2. **Check the dates.** Market data can be 1-2 years old. Codex will try to flag this, but always confirm you are working with the most recent available data.
+2. **Check the dates.** Market data can be 1-2 years old. OpenAI Codex will try to flag this, but always confirm you are working with the most recent available data.
 
-3. **Distinguish fact from estimate.** Codex will sometimes need to estimate (e.g., market share for smaller players). It should flag these, but review critically.
+3. **Distinguish fact from estimate.** OpenAI Codex will sometimes need to estimate (e.g., market share for smaller players). It should flag these, but review critically.
 
 4. **Regulatory details require expert review.** Use Codex's research as a starting point, but have your legal or compliance team validate any regulatory conclusions before acting on them.
 
@@ -537,10 +537,10 @@ In this module you learned to:
 - Generate board-ready strategy documents
 - Stress-test strategies with devil's advocate prompting
 
-OpenAI Codex doubles as a research and strategy partner. The combination of web search, data structuring, and iterative analysis lets you produce in 30 minutes what would normally take several days of desk research and writing.
+The key takeaway: **OpenAI Codex handles both research and writing**, which makes strategic analysis significantly faster. Web search, data structuring, and iterative analysis in a single session can compress what might take a day or more of desk research into 30 minutes.
 
 ---
 
 ## Next Step
 
-Proceed to [Exercise 1: Executive Onramp](../../../exercises/exercise-1-executive-onramp/README.md), the first page in Module 3: Practice Exercises, to apply these workflows independently before moving on to custom app building.
+Proceed to [Exercise 1: Executive Onramp](../../../exercises/exercise-1-executive-onramp/README.md), the first page in Module 4: Practice Exercises, to apply these workflows independently before moving on to custom app building.

@@ -1,11 +1,15 @@
 ---
-title: "Module 2.2: Loss Ratio Analysis"
+title: "Module 3.2: Loss Ratio Analysis"
 description: "Analyze motor portfolio loss ratios across Spanish regions with OpenAI Codex."
 ---
 
-# Module 2.2: Loss Ratio Analysis with OpenAI Codex
+import imgByRegion from './images/loss-ratio-by-region.png'
+import imgTrend from './images/quarterly-trend-worst-regions.png'
+import imgHeatmap from './images/loss-ratio-heatmap.png'
 
-> **Time:** 30 minutes | **Prerequisites:** [Module 2.1: Underwriting Brief](/insurance-workflows/underwriting-brief)
+# Module 3.2: Loss Ratio Analysis with OpenAI Codex
+
+> **Time:** 30 minutes | **Prerequisites:** [Module 3.1: Underwriting Brief](/insurance-workflows/underwriting-brief)
 
 ## The Scenario
 
@@ -102,7 +106,7 @@ CLM-10004,2023,1,Andalusia,Commercial Fleet,Theft,99498.19,Closed,05/03/2023
 
 ## Step 2: Calculate Loss Ratios
 
-Once you have the data, ask Codex to perform the analysis.
+Once you have the data, ask OpenAI Codex to perform the analysis.
 
 > **Why "write and execute a script"?** OpenAI Codex can run code directly in your terminal. By asking it to write and execute a Python script rather than calculate in its head, you get mathematically guaranteed results. LLMs are text predictors -- they can make arithmetic mistakes on large datasets. A Python script does perfect math every time.
 
@@ -126,26 +130,6 @@ For each calculation:
 - Include claim count and average claim size alongside the ratios
 
 Present the results in clear tables.
-```
-
-### Expected output format:
-
-Codex should produce tables like:
-
-```text
-LOSS RATIO BY REGION -- 2025
-==============================
-
-| Region         | Earned Prem (EUR) | Incurred (EUR) | # Claims | Avg Claim | Loss Ratio | Status |
-|----------------|-------------------|----------------|----------|-----------|------------|--------|
-| Catalonia      | 95.200.000        | 61.880.000     | 312      | 198.333   | 65,0%      | OK     |
-| Madrid         | 88.400.000        | 60.112.000     | 287      | 209.417   | 68,0%      | OK     |
-| Andalusia      | 72.100.000        | 62.006.000     | 341      | 181.835   | 86,0%      | RED    |
-| Valencia       | 65.300.000        | 52.240.000     | 298      | 175.302   | 80,0%      | YELLOW |
-| Basque Country | 41.500.000        | 25.730.000     | 124      | 207.500   | 62,0%      | OK     |
-| Galicia        | 38.900.000        | 24.497.000     | 118      | 207.601   | 63,0%      | OK     |
-
-TOTAL            | 401.400.000       | 286.465.000    | 1.480    | 193.557   | 71,4%      | YELLOW |
 ```
 
 <details>
@@ -317,20 +301,37 @@ Make them clean and professional -- these will go into a presentation
 for the CUO.
 ```
 
-> **Note:** Codex will likely create these as HTML files with embedded JavaScript charts (using a library like Chart.js). You can open them in any web browser by double-clicking the file.
+> **Note:** OpenAI Codex will likely create these as HTML files with embedded JavaScript charts (using a library like Chart.js). You can open them in any web browser by double-clicking the file.
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', margin: '1.5rem 0'}}>
+<div style={{textAlign: 'center'}}>
+<a href="../data/loss-ratio-visualizations/loss-ratio-by-region.html" target="_blank">
+<img src={imgByRegion.src} alt="Loss ratio by region bar chart" style={{width: '100%', borderRadius: '4px', border: '1px solid #e0e0e0'}} />
+</a>
+<p style={{fontSize: '0.85rem', marginTop: '0.5rem'}}><a href="../data/loss-ratio-visualizations/loss-ratio-by-region.html" target="_blank">Loss Ratio by Region</a></p>
+</div>
+<div style={{textAlign: 'center'}}>
+<a href="../data/loss-ratio-visualizations/quarterly-trend-worst-regions.html" target="_blank">
+<img src={imgTrend.src} alt="Quarterly trend line chart" style={{width: '100%', borderRadius: '4px', border: '1px solid #e0e0e0'}} />
+</a>
+<p style={{fontSize: '0.85rem', marginTop: '0.5rem'}}><a href="../data/loss-ratio-visualizations/quarterly-trend-worst-regions.html" target="_blank">Quarterly Trends</a></p>
+</div>
+<div style={{textAlign: 'center'}}>
+<a href="../data/loss-ratio-visualizations/loss-ratio-heatmap.html" target="_blank">
+<img src={imgHeatmap.src} alt="Loss ratio heatmap by region and segment" style={{width: '100%', borderRadius: '4px', border: '1px solid #e0e0e0'}} />
+</a>
+<p style={{fontSize: '0.85rem', marginTop: '0.5rem'}}><a href="../data/loss-ratio-visualizations/loss-ratio-heatmap.html" target="_blank">Heatmap by Segment</a></p>
+</div>
+</div>
 
 <details>
-<summary>Example output from this step</summary>
+<summary>Detailed description of each visualization</summary>
 
-Codex creates three HTML files with Chart.js visualizations:
+**1. loss-ratio-by-region.html** — Bar chart showing 2025 loss ratios by region. Andalusia (91,1%) and Valencia (83,1%) are highlighted in red and yellow respectively, clearly exceeding the 70% target line and 85% critical threshold line. Catalonia, Madrid, Basque Country, and Galicia all appear in green below the target.
 
-**1. loss-ratio-by-region.html** -- Bar chart showing 2025 loss ratios by region. Andalusia (91,1%) and Valencia (83,1%) are highlighted in red and yellow respectively, clearly exceeding the 70% target line and 85% critical threshold line. Catalonia, Madrid, Basque Country, and Galicia all appear in green below the target.
+**2. quarterly-trend-worst-regions.html** — Line chart tracking quarterly loss ratios for Andalusia (red line), Valencia (orange line), and the portfolio average (blue dashed line) across 12 quarters from 2023 Q1 to 2025 Q4. Both Andalusia and Valencia show significant volatility quarter-to-quarter but a clear upward trend, consistently above the 70% target line.
 
-**2. quarterly-trend-worst-regions.html** -- Line chart tracking quarterly loss ratios for Andalusia (red line), Valencia (orange line), and the portfolio average (blue dashed line) across 12 quarters from 2023 Q1 to 2025 Q4. Both Andalusia and Valencia show significant volatility quarter-to-quarter but a clear upward trend, consistently above the 70% target line.
-
-**3. loss-ratio-heatmap.html** -- Color-coded table with regions as rows and segments as columns. The heatmap makes it immediately clear that all three segments in Andalusia are red (&gt;80%), and Commercial Fleet is the worst-performing segment across regions. Basque Country and Galicia are uniformly green.
-
-Open any of these files in a browser to view the interactive charts. They use Chart.js loaded from a CDN, so an internet connection is needed.
+**3. loss-ratio-heatmap.html** — Color-coded table with regions as rows and segments as columns. The heatmap makes it immediately clear that all three segments in Andalusia are red (&gt;80%), and Commercial Fleet is the worst-performing segment across regions. Basque Country and Galicia are uniformly green.
 
 </details>
 
@@ -461,10 +462,10 @@ In this module you learned to:
 - Generate professional visualizations
 - Produce executive-ready summaries with actionable recommendations
 
-OpenAI Codex can do in 30 minutes what typically takes a half-day of spreadsheet work. When you ask Codex to write and execute scripts for calculations, the math is exact. Still, spot-check at least two or three results against your own math as a second layer of assurance -- this confirms the script logic is correct, not just the arithmetic.
+The key takeaway: **OpenAI Codex significantly speeds up spreadsheet-heavy analysis.** When you ask OpenAI Codex to write and execute scripts for calculations, the math is exact. Still, spot-check at least two or three results against your own math -- this confirms the script logic is correct, not only the arithmetic.
 
 ---
 
 ## Next Step
 
-Proceed to [Module 2.3: Market Entry Assessment](/insurance-workflows/market-assessment) to learn how OpenAI Codex can help with strategic analysis using web research.
+Proceed to [Module 3.3: Market Entry Assessment](/insurance-workflows/market-assessment) to learn how OpenAI Codex can help with strategic analysis using web research.

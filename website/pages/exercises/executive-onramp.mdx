@@ -10,17 +10,11 @@ description: "Zero-to-one onboarding for executive users with copy/paste wins an
 
 ---
 
-## Files
-
-**Download:** <a href="../data/exercise-1/COMPANY.md" download>COMPANY.md</a> | <a href="../data/exercise-1/MARKET.md" download>MARKET.md</a> | <a href="../data/exercise-1/PERSONAS.md" download>PERSONAS.md</a> | <a href="../data/exercise-1/PRODUCTS.md" download>PRODUCTS.md</a>
-
----
-
 ## Objective
 
 Get from zero to practical value with OpenAI Codex in one session.
 
-This exercise is designed for senior consulting profiles who are:
+This exercise is designed for senior professionals who are:
 
 - Interested in generative AI and tools like OpenAI Codex
 - Strong in business judgment but not hands-on with coding
@@ -37,38 +31,38 @@ By the end of this exercise, you will have:
 
 ## Exercise Design: Two Blocks
 
-### Block A: Copy/Paste Wins
-
-Fast confidence wins. You copy prompts exactly, get strong results, and see what good looks like.
-
-### Block B: Guided Thinking
-
-Progressive challenge. We remove scaffolding step by step so you decide what to ask and how to steer output quality.
+- **Block A — Copy/Paste Wins:** You copy prompts exactly, get strong results, and see what good looks like.
+- **Block B — Guided Thinking:** We remove scaffolding step by step so you decide what to ask and how to steer output quality.
 
 ---
 
 ## Prerequisites
 
 - OpenAI Codex installed and configured
-- Terminal open in the repository root
 - No coding experience required
 
-Recommended folder context:
+## Setup
+
+1. Create a folder for this exercise (e.g. `mig-exercise`) and inside it create a subfolder called `company-context/`
+2. Download these four files into the `company-context/` folder:
+   <ul>
+     <li><a href="../data/exercise-1/COMPANY.md" download>COMPANY.md</a></li>
+     <li><a href="../data/exercise-1/MARKET.md" download>MARKET.md</a></li>
+     <li><a href="../data/exercise-1/PERSONAS.md" download>PERSONAS.md</a></li>
+     <li><a href="../data/exercise-1/PRODUCTS.md" download>PRODUCTS.md</a></li>
+   </ul>
+3. Open your terminal in the `mig-exercise/` folder and start OpenAI Codex
+
+Your folder should look like this:
 
 ```text
-<your-project-folder>/codex-workshop
+mig-exercise/
+└── company-context/
+    ├── COMPANY.md
+    ├── MARKET.md
+    ├── PERSONAS.md
+    └── PRODUCTS.md
 ```
-
----
-
-## Working Data (No Additional Data Setup Needed)
-
-Use existing repository context files:
-
-- `company-context/COMPANY.md`
-- `company-context/MARKET.md`
-- `company-context/PERSONAS.md`
-- `company-context/PRODUCTS.md`
 
 These files provide enough business context to create executive-grade outputs without writing code.
 
@@ -103,6 +97,37 @@ Constraints:
 - Specific facts and numbers
 - Action-oriented recommendations
 
+<details>
+<summary>Example output</summary>
+
+**MIG Executive Committee — Board Briefing**
+
+**Current Position**
+- EUR 1,8B gross written premium (GWP), ~2.500 employees across 4 markets
+- Combined ratio: 96,2% — profitable but with limited margin for deterioration
+- Solvency II ratio: 178% — well-capitalized, capacity for growth investment
+- LusoProtect acquisition (Portugal, 2024) adds EUR 95M GWP and ASF-licensed platform
+- Project Tramuntana digital transformation 60% complete (EUR 57M of EUR 95M deployed)
+
+**Top 3 Opportunities (12-18 months)**
+1. **Portugal expansion via LusoProtect** — SME commercial property segment is underserved (32% penetration in rural areas). Target: EUR 113M Portugal GWP by end of 2026.
+2. **Digital distribution acceleration** — Portuguese market is ~10% digital vs. 20% EU average. First-mover advantage in digital motor and home products.
+3. **Reinsurance cost optimization** — Combined MIG+LusoProtect portfolio (EUR 1,9B) enables renegotiation of facultative treaties. Estimated saving: EUR 3-4M annually.
+
+**Top 3 Risks (12-18 months)**
+1. **Integration execution risk** — SiGeSeg platform migration to Guidewire on critical path. Delay beyond Q4 2027 blocks commercial product launches.
+2. **Motor portfolio deterioration in Spain** — Andalusia loss ratio at 91,1%, well above 70% target. If unchecked, adds ~EUR 12M to annual incurred claims.
+3. **Regulatory divergence** — ASF (Portugal) requirements for Solvency II reporting differ from DGSFP (Spain). Compliance setup requires EUR 1,2M investment.
+
+**5 Actions for Next Quarter**
+1. Approve Year 1 Portugal investment case (EUR 9,5M) at April board meeting
+2. Launch Earnix pricing deployment for LusoProtect motor book — target go-live Q3 2026
+3. Commission independent actuarial review of Andalusia motor portfolio
+4. Begin broker partnership outreach in Lisbon and Porto for commercial property
+5. Complete Project Tramuntana Phase 3 milestone review (digital claims FNOL)
+
+</details>
+
 ---
 
 ### Step A2: Turn insight into a 3-slide storyline (~10 min)
@@ -130,6 +155,37 @@ For each slide provide:
 - Tight narrative flow across slides
 - Business language suitable for clients and steering committees
 - Clear "so what" on every slide
+
+<details>
+<summary>Example output</summary>
+
+**Slide 1: MIG is well-positioned but faces a critical growth window**
+
+- EUR 1,8B GWP with 178% solvency ratio — strong capital base for investment
+- Core Spanish market growing at 4,2% — solid but decelerating
+- LusoProtect acquisition gives us a licensed platform in the fastest-growing market in our footprint (Portugal: 6,9% CAGR)
+- Window of opportunity: Portuguese SME commercial market is underserved before larger players invest
+
+*Speaker notes: Frame the urgency. We have 12-18 months before Fidelidade or Ageas move into the SME commercial gap. Our capital position allows us to invest without compromising solvency.*
+
+**Slide 2: Portugal is the growth engine — three segments to target**
+
+- **SME commercial property:** 32% penetration in rural areas, EUR 660M addressable market, minimal dedicated competition
+- **Motor expansion:** Deploy Earnix pricing to improve LusoProtect's 6,7% share — target 8,5% by 2028
+- **Digital home insurance:** Portuguese market 10% digital vs. 20% EU average — first-mover advantage for urban renters
+
+*Speaker notes: The scorecard analysis ranks these three segments highest on both attractiveness and feasibility. They build on capabilities MIG already has in Spain.*
+
+**Slide 3: Invest EUR 25,5M over 3 years — breakeven by Year 3**
+
+- Year 1 (2026): EUR 9,5M investment → launch commercial property + Earnix pricing (target EUR 113M GWP)
+- Year 2 (2027): EUR 10M investment → scale motor + launch home (target EUR 153M GWP)
+- Year 3 (2028): EUR 6M investment → combined ratio below 97% (target EUR 198M GWP)
+- **Decision needed:** Approve Year 1 investment at April board; appoint Portugal integration lead by May
+
+*Speaker notes: The EUR 25,5M total is ~1,4% of current GWP — manageable within existing capital buffers. Conservative scenario still reaches EUR 165M GWP by 2028.*
+
+</details>
 
 ---
 
@@ -160,11 +216,37 @@ Include:
 - No generic filler
 - Explicit decision asks
 
+<details>
+<summary>Example output</summary>
+
+**Subject line options:**
+1. MIG Portugal — Three priorities for your review ahead of April steering committee
+2. Steering committee prep: Portugal growth plan — decisions needed
+3. MIG x LusoProtect: recommended next steps for April
+
+**Email:**
+
+Dear Ms. Torres,
+
+Following our analysis of MIG's Portugal expansion opportunity, I wanted to share three priority recommendations ahead of the April steering committee.
+
+**1. Approve Year 1 investment (EUR 9,5M).** The LusoProtect platform gives us a licensed, operational base in a market growing at 6,9% annually. The SME commercial property segment is materially underserved — 32% penetration in rural areas versus 58% in Spain. Delaying beyond Q2 risks losing first-mover advantage.
+
+**2. Deploy Earnix pricing for the motor book immediately.** LusoProtect's motor portfolio (EUR 68M GWP) is priced using manual tariffs. Migrating to GLM-based pricing would improve loss ratios by an estimated 3-5 percentage points within 12 months — a EUR 2-3,4M annual impact.
+
+**3. Appoint a Portugal integration lead by May.** Execution risk is the primary concern. A dedicated senior leader with dual reporting to Barcelona and Lisbon will be critical for the SiGeSeg migration and broker partnership buildout.
+
+I have prepared a detailed briefing pack covering the market analysis, competitive landscape, and financial projections. I would welcome 30 minutes before the steering committee to walk through the key assumptions and address any questions.
+
+Best regards
+
+</details>
+
 ---
 
 ### Step A4: Stress-test the recommendation (~10 min)
 
-**Goal:** Use Codex as a thinking challenger, not only a drafting tool.
+**Goal:** Use OpenAI Codex as a thinking challenger, not only a drafting tool.
 
 **Prompt to copy/paste:**
 
@@ -185,6 +267,46 @@ Be direct. Avoid polite filler.
 - Evidence gaps identified clearly
 - Improved recommendations after challenge
 
+<details>
+<summary>Example output</summary>
+
+**5 Objections a Skeptical CFO/COO Would Raise**
+
+**1. "EUR 25,5M is a lot to bet on a market we don't know."**
+- *Why it's valid:* MIG has zero track record in Portugal. The EUR 9,5M Year 1 ask assumes we can build broker relationships and launch commercial products simultaneously — both are unproven.
+- *Evidence missing:* No pilot data. No broker letters of intent. No comparable precedent from MIG's history of entering new markets.
+- *How to address:* Stage the investment with explicit go/no-go gates. Commit EUR 4M for H1 2026 (Earnix + team hiring); release the remaining EUR 5,5M only after Q2 broker pipeline review.
+
+**2. "Why not just fix Andalusia first? That's EUR 12M in excess losses sitting in our own backyard."**
+- *Why it's valid:* Andalusia motor loss ratio at 91,1% is an immediate P&L drag. Fixing it requires no acquisition integration, no new regulatory relationships.
+- *Evidence missing:* No comparison of risk-adjusted ROI between Andalusia remediation vs. Portugal growth.
+- *How to address:* Run both in parallel. The Andalusia fix is an underwriting action (re-pricing, portfolio pruning) that doesn't compete for the same resources as Portugal expansion.
+
+**3. "The EUR 198M GWP target by 2028 assumes 8,5% motor market share — that's a 27% increase in 3 years."**
+- *Why it's valid:* Motor is the most competitive segment. Fidelidade alone holds ~30%. Growing share requires either price competition (margin destruction) or product differentiation (investment).
+- *Evidence missing:* No customer acquisition cost estimates. No competitor response modelling.
+- *How to address:* Model a conservative scenario at 7,5% share (EUR 165M GWP). The business case still works at breakeven by late Year 3.
+
+**4. "Integration risk is being underestimated — the SiGeSeg migration is on the critical path."**
+- *Why it's valid:* Platform migrations in insurance routinely run 6-12 months late. If SiGeSeg delays past Q4 2027, commercial product launches slip to 2028.
+- *Evidence missing:* No independent technical assessment of SiGeSeg migration complexity.
+- *How to address:* Commission a 4-week technical due diligence before committing Year 2 budget. Build a parallel launch path using LusoProtect's existing platform for simple products.
+
+**5. "We're spreading management attention too thin — Tramuntana is only 60% complete."**
+- *Why it's valid:* Project Tramuntana has EUR 38M remaining spend. Adding Portugal creates competing demands on the same CTO, CFO, and operations teams.
+- *Evidence missing:* No resource capacity analysis showing whether current teams can absorb Portugal workload.
+- *How to address:* The Portugal integration lead (Recommendation #3) should have a dedicated team — not shared Tramuntana resources. Budget an additional EUR 1,2M for 4 Portugal-specific hires.
+
+**Revised Recommendations**
+
+1. **Stage the investment with gates** — approve EUR 4M for H1 2026, with a Q2 review before releasing the full Year 1 budget
+2. **Run Andalusia remediation in parallel** — separate workstream, separate budget, separate owner
+3. **Model conservative and base scenarios** — present both to the steering committee with explicit assumptions
+4. **Commission SiGeSeg technical assessment** — 4 weeks, independent assessor, before Year 2 commitment
+5. **Appoint a dedicated Portugal team** — do not load Tramuntana resources
+
+</details>
+
 ---
 
 ## Block B: Guided Thinking
@@ -195,7 +317,9 @@ This block progressively removes scaffolding.
 
 **Goal:** Learn a reusable prompt structure for executive work.
 
-Use this template and complete the blanks:
+Here is a template for structuring executive prompts. Your task is to fill in the `[BRACKETS]` yourself, then paste the completed prompt into OpenAI Codex.
+
+**The template:**
 
 ```text
 You are my [ROLE].
@@ -215,11 +339,35 @@ Before answering:
 3) Then provide the deliverable
 ```
 
-**Practice prompt:**
+**What to do:**
+
+1. Copy the template into a text editor
+2. Fill in every `[BRACKET]` for this scenario: *a steering committee pre-read for MIG's Portugal growth plan*. Use the MIG context files for reference.
+3. Paste your completed prompt into OpenAI Codex and run it
+4. Compare the output to what you got in Block A — is it more focused?
+
+<details>
+<summary>Example of a filled-in prompt</summary>
 
 ```text
-Apply this template to produce a steering committee pre-read for MIG's Portugal growth plan.
+You are my strategy advisor.
+Task: Write a steering committee pre-read for MIG's Portugal expansion
+Audience: CEO and 4 regional directors (non-technical, time-poor)
+Decision needed: Whether to approve EUR 25M investment over 3 years
+Context files: company-context/COMPANY.md, company-context/MARKET.md
+Constraints:
+- Length: 400 words max
+- Tone: Confident but balanced, flag uncertainties clearly
+- Format: Bullet points with a summary table of key metrics
+- Must include: GWP targets, investment required, breakeven timeline, top 3 risks
+
+Before answering:
+1) Ask up to 3 clarifying questions if needed
+2) State assumptions
+3) Then provide the deliverable
 ```
+
+</details>
 
 ---
 
@@ -346,18 +494,6 @@ Suggested interpretation:
 
 5. **No challenge of first draft**
 - Fix: always add one "challenge this recommendation" turn.
-
----
-
-## Suggested Outputs to Save
-
-If you want a reusable starter pack for future executive work, save these outputs:
-
-1. `executive_brief.md`
-2. `three_slide_storyline.md`
-3. `stakeholder_email.md`
-4. `risk_challenge.md`
-5. `my_prompt_playbook.md` (top 5 reusable prompts)
 
 ---
 

@@ -8,13 +8,30 @@ description: "Automate quarterly claims report generation with data analysis and
 **Duration:** ~55 minutes  
 **Difficulty:** Intermediate
 
-## Mediterranean Insurance Group (MIG) - Quarterly Claims Report Automation
-
 ---
 
-## Files
+## Setup
 
-**Download:** [claims_q1_2025.csv](../data/exercise-4/claims_q1_2025.csv) | [claims_q2_2025.csv](../data/exercise-4/claims_q2_2025.csv) | [claims_q3_2025.csv](../data/exercise-4/claims_q3_2025.csv) | [claims_q4_2025.csv](../data/exercise-4/claims_q4_2025.csv) | <a href="../data/exercise-4/report_template.md" download>report_template.md</a>
+1. Create a folder for this exercise (e.g. `automated-reporting/`) and inside it create a subfolder called `data/`
+2. Download all five files into the `data/` folder:
+   <ul>
+     <li><a href="../data/exercise-4/claims_q1_2025.csv" download>claims_q1_2025.csv</a></li>
+     <li><a href="../data/exercise-4/claims_q2_2025.csv" download>claims_q2_2025.csv</a></li>
+     <li><a href="../data/exercise-4/claims_q3_2025.csv" download>claims_q3_2025.csv</a></li>
+     <li><a href="../data/exercise-4/claims_q4_2025.csv" download>claims_q4_2025.csv</a></li>
+     <li><a href="../data/exercise-4/report_template.md" download>report_template.md</a></li>
+   </ul>
+3. Open your terminal in the `automated-reporting/` folder and start OpenAI Codex
+
+```text
+automated-reporting/
+└── data/
+    ├── claims_q1_2025.csv
+    ├── claims_q2_2025.csv
+    ├── claims_q3_2025.csv
+    ├── claims_q4_2025.csv
+    └── report_template.md
+```
 
 ---
 
@@ -47,9 +64,8 @@ Pierre wants to automate this end-to-end. When new quarterly data lands in the `
 
 ## Prerequisites
 
-- OpenAI Codex CLI installed and configured.
-- A terminal open in this exercise folder.
-- Python 3.9+ available (for the final automation script).
+- OpenAI Codex installed and configured
+- Python 3.9+ available (for the final automation script)
 
 ---
 
@@ -92,7 +108,7 @@ OpenAI Codex will read all four CSV files and the report template, then produce 
 
 **What to look for:**
 
-- Does Codex correctly identify all four quarters?
+- Does OpenAI Codex correctly identify all four quarters?
 - Does it flag the seasonal differences?
 - Does it mention the fraud flags and claim statuses?
 
@@ -324,7 +340,7 @@ An HTML file (`quarterly_report_charts.html`) that:
 <details>
 <summary>💡 Example output from this step</summary>
 
-Codex generates a self-contained HTML file (`quarterly_report_charts.html`) with five Chart.js charts. The file includes:
+OpenAI Codex generates a self-contained HTML file (`quarterly_report_charts.html`) with five Chart.js charts. The file includes:
 
 **Chart 1 -- Claims Volume Trend (line chart):**
 Plots total claims per quarter: Q1=132, Q2=126, Q3=136, Q4=133. Shows the seasonal dip in Q2 and recovery in Q3-Q4.
@@ -379,7 +395,7 @@ Now imagine Q1 2026 data just arrived. Generate a sample Q1 2026 dataset with re
 
 - Does the Q1 2026 data show realistic winter patterns (elevated motor claims)?
 - Does the report correctly identify YoY growth of approximately 5%?
-- Did Codex reuse the same report structure, or did it invent a new one?
+- Did OpenAI Codex reuse the same report structure, or did it invent a new one?
 
 <details>
 <summary>💡 Example output from this step</summary>
@@ -510,23 +526,23 @@ By completing this exercise, you will have practiced:
 
 ## Troubleshooting Tips
 
-### "Codex says it cannot read the files"
+### "OpenAI Codex says it cannot read the files"
 Make sure you launched OpenAI Codex from this exercise directory (or its parent). OpenAI Codex needs the files to be within its working context. You can also provide absolute paths in your prompt.
 
 ### "The KPI numbers do not match when I spot-check"
-This can happen if Codex misinterprets which column to use. Clarify in your prompt:
+This can happen if OpenAI Codex misinterprets which column to use. Clarify in your prompt:
 - **Reported amount** = `reported_amount_eur` (initial estimate of the claim).
 - **Paid amount** = `paid_amount_eur` (actual disbursement, 0 if not yet paid).
 - **Reserved amount** = `reserved_amount_eur` (funds set aside for open claims).
 
 ### "The HTML charts are blank when I open the file"
-Check that your browser is not blocking the CDN script (e.g., Chart.js). If you are behind a corporate proxy, ask Codex to embed the library inline instead of loading from a CDN.
+Check that your browser is not blocking the CDN script (e.g., Chart.js). If you are behind a corporate proxy, ask OpenAI Codex to embed the library inline instead of loading from a CDN.
 
 ### "The report structure changed between Step 3 and Step 5"
 OpenAI Codex does not automatically remember earlier outputs across separate sessions. If you are in the same session, it should be consistent. If you started a new session, paste the report structure or refer to the saved file: "Use the same structure as quarterly_report_Q4_2025.md."
 
 ### "The Python script fails to run"
-Check which Python version you have (`python --version` or `python3 --version`). The script may require `pandas` -- install it with `pip install pandas` if needed. If Codex generated the script using only the standard library, ensure the CSV parsing logic handles the date formats correctly.
+Check which Python version you have (`python --version` or `python3 --version`). The script may require `pandas` -- install it with `pip install pandas` if needed. If OpenAI Codex generated the script using only the standard library, ensure the CSV parsing logic handles the date formats correctly.
 
 ### "I want to customize the report further"
 Great -- that is encouraged. Try follow-up prompts like:
@@ -540,4 +556,4 @@ Great -- that is encouraged. Try follow-up prompts like:
 
 This exercise demonstrates a realistic actuarial workflow: taking raw quarterly data and transforming it into a management-ready report with commentary and visualizations. The key insight is that once the structure is defined, regenerating the report with new data becomes a single prompt -- saving Pierre nearly two days of work every quarter.
 
-**Next exercise:** Exercise 4 (coming soon).
+**Next module:** [Module 5: Vibe Coding](/vibe-coding) — build full applications using natural language.

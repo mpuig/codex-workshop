@@ -1,6 +1,6 @@
-# Module 1.1: First Steps with OpenAI Codex
+# Module 2.1: First Steps with OpenAI Codex
 
-> **Time:** 30 minutes | **Prerequisites:** OpenAI Codex installed and authenticated ([Getting Started](../../0-getting-started/README.md))
+> **Time:** 30 minutes | **Prerequisites:** OpenAI Codex installed and authenticated ([Install OpenAI Codex](../../1-getting-started/1.2-install-codex/README.md))
 
 ## What You Will Learn
 
@@ -13,7 +13,7 @@
 
 ## How to Give Instructions
 
-OpenAI Codex works like talking to a capable colleague. You type what you need in plain language, and Codex figures out how to do it.
+OpenAI Codex works like talking to a very capable colleague. You type what you need in plain language, and Codex figures out how to do it.
 
 **Good instructions are:**
 
@@ -35,7 +35,7 @@ When you want Codex to read a file on your computer, use the `@` symbol followed
 Summarize the key findings in @/Users/yourname/Documents/mig-claims-q3-2024.csv
 ```
 
-Codex will read the file and work with its contents. This works with:
+OpenAI Codex will read the file and work with its contents. This works with:
 
 - CSV and Excel exports
 - PDF documents
@@ -54,7 +54,7 @@ Create a file called renewal-summary.md with a structured summary of the
 key renewal terms for our marine cargo portfolio.
 ```
 
-Codex will write the file and tell you where it saved it.
+OpenAI Codex will write the file and tell you where it saved it.
 
 ---
 
@@ -68,7 +68,7 @@ Codex will write the file and tell you where it saved it.
 
 ### Try it:
 
-If you have a claims document available, reference it directly:
+Download the sample report from the website (`/data/claims-report.pdf`), or use any claims document you have. Then reference it in OpenAI Codex:
 
 ```text
 Read @/path/to/claims-report.pdf and give me a structured summary with:
@@ -80,18 +80,36 @@ Read @/path/to/claims-report.pdf and give me a structured summary with:
 Format it as a brief I can scan in 2 minutes.
 ```
 
-If you do not have a file handy, ask Codex to work with a hypothetical:
+<details>
+<summary>Example output</summary>
 
-```text
-I'm going to describe a claims scenario. Pretend this is a quarterly claims
-report for MIG's commercial property line in Catalonia.
+**Claims Brief — Commercial Property, Catalonia Q4 2025**
 
-We had 47 claims this quarter, total incurred EUR 3.2M. The largest was a
-warehouse fire in Tarragona at EUR 890K. There were 12 water damage claims
-averaging EUR 45K each, which is up 30% from last quarter.
+**Overview**
 
-Summarize this as a structured claims brief for our underwriting committee.
-```
+| Metric | Value |
+|--------|-------|
+| Total claims | 47 (up 14% vs Q3) |
+| Total incurred | EUR 3.247.680 (up 22% vs Q3) |
+| Average claim size | EUR 69.099 |
+| Open claims | 18 |
+
+**Top 3 Claims by Value**
+
+1. **CP-2025-4471 — EUR 890.000** (Open, SIU referral). Warehouse fire in Tarragona (Logística del Mediterráneo S.L.). Referred to Special Investigations Unit due to delayed notification and recent premium change. Loss adjuster report pending.
+2. **CP-2025-4523 — EUR 214.000** (Under review). Kitchen fire at Hotel Rambla Palace, Barcelona.
+3. **CP-2025-4387 — EUR 178.500** (Settled). Electrical damage to lab equipment at Farmacèutica Vallès S.A., Sabadell.
+
+**Notable Trends and Red Flags**
+
+- **Water damage spike:** 12 claims (EUR 541.200), up 71% QoQ. Linked to exceptional November rainfall (187% of normal). Eight claims reported within a two-week window.
+- **Fire dominates incurred costs:** 5 fire claims account for 38% of total incurred (EUR 1.234.000), driven by the Tarragona warehouse loss.
+- **Frequency above target:** Q4 frequency at 3,66% exceeds the 3,20% annual target.
+- **SIU referral on largest claim:** Delayed notification (3-day gap) and recent coverage changes on CP-2025-4471 warrant close monitoring.
+- **Reinsurance recovery in progress:** Tarragona loss breached the EUR 500.000 facultative attachment point.
+
+</details>
+
 
 **What to look for:** Codex should produce a clean, organized summary with sections, not a wall of text.
 
@@ -177,13 +195,13 @@ This back-and-forth is how you get the best results. Think of it as editing draf
 
 ## Tips for Effective Prompting
 
-1. **Be specific about format.** Say "create a table" or "use bullet points" or "write it as an executive summary under 200 words." Codex will match whatever format you request.
+1. **Be specific about format.** Say "create a table" or "use bullet points" or "write it as an executive summary under 200 words." OpenAI Codex will match whatever format you request.
 
 2. **Provide context.** Codex does not know about your specific projects unless you tell it. Spend a sentence or two explaining the situation.
 
 3. **Iterate freely.** Your first prompt rarely produces the perfect result. Follow up with refinements. This is normal and expected.
 
-4. **Use Codex as a thinking partner.** Do not just ask Codex to write -- ask it to challenge your assumptions, identify what you might be missing, or suggest alternatives.
+4. **Use OpenAI Codex as a thinking partner.** Do not just ask Codex to write -- ask it to challenge your assumptions, identify what you might be missing, or suggest alternatives.
 
 5. **Check the output.** Codex is powerful but not infallible. Always review numbers, regulatory references, and client-facing communications before using them.
 
@@ -205,4 +223,4 @@ For these exercises, start with `-a on-request` so you can review risky actions.
 
 ## Next Step
 
-Proceed to [Module 1.2: Project Memory with AGENTS.md](../1.2-project-memory/README.md) to learn how to give OpenAI Codex persistent context about your projects and preferences.
+Proceed to [Module 2.2: Project Memory with AGENTS.md](../2.2-project-memory/README.md) to learn how to give OpenAI Codex persistent context about your projects and preferences.

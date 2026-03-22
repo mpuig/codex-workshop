@@ -1,8 +1,3 @@
----
-title: "Course Wrap-Up"
-description: Summary of what you have learned and next steps for applying OpenAI Codex in your work.
----
-
 # Course Wrap-Up
 
 You have completed the core modules of the OpenAI Codex training course:

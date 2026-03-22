@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quarterly Loss Ratio Trends</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; background: #f8f9fa; }
+  .chart-container { background: white; border-radius: 8px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  h1 { color: #2c3e50; font-size: 1.4em; }
+</style>
+</head>
+<body>
+<div class="chart-container">
+  <h1>Quarterly Loss Ratio Trends -- Andalusia &amp; Valencia vs. Portfolio Average</h1>
+  <canvas id="chart" width="850" height="420"></canvas>
+</div>
+<script>
+new Chart(document.getElementById('chart'), {
+  type: 'line',
+  data: {
+    labels: ["2023 Q1", "2023 Q2", "2023 Q3", "2023 Q4", "2024 Q1", "2024 Q2", "2024 Q3", "2024 Q4", "2025 Q1", "2025 Q2", "2025 Q3", "2025 Q4"],
+    datasets: [
+      {
+        label: 'Andalusia',
+        data: [57.6, 95.9, 85.6, 91.6, 96.8, 57.8, 112.2, 83.5, 103.2, 73.1, 103.6, 85.1],
+        borderColor: 'rgba(220, 53, 69, 1)',
+        backgroundColor: 'rgba(220, 53, 69, 0.1)',
+        borderWidth: 2.5,
+        tension: 0.3,
+        pointRadius: 4,
+        fill: false
+      },
+      {
+        label: 'Valencia',
+        data: [78.8, 87.6, 91.2, 51.2, 46.2, 85.5, 98.0, 88.9, 75.3, 80.8, 83.5, 92.6],
+        borderColor: 'rgba(255, 152, 0, 1)',
+        backgroundColor: 'rgba(255, 152, 0, 0.1)',
+        borderWidth: 2.5,
+        tension: 0.3,
+        pointRadius: 4,
+        fill: false
+      },
+      {
+        label: 'Portfolio Average',
+        data: [65.8, 67.2, 76.9, 64.3, 68.6, 56.2, 78.1, 78.0, 80.2, 62.8, 76.9, 66.8],
+        borderColor: 'rgba(33, 150, 243, 1)',
+        backgroundColor: 'rgba(33, 150, 243, 0.1)',
+        borderWidth: 2,
+        borderDash: [5, 5],
+        tension: 0.3,
+        pointRadius: 3,
+        fill: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) { return ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(1) + '%'; }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 30,
+        max: 130,
+        title: { display: true, text: 'Loss Ratio (%)' },
+        ticks: { callback: function(v) { return v + '%'; } }
+      },
+      x: { title: { display: true, text: 'Quarter' } }
+    },
+    animation: { duration: 800 }
+  },
+  plugins: [{
+    afterDraw: function(chart) {
+      var ctx = chart.ctx;
+      var yAxis = chart.scales.y;
+      var xAxis = chart.scales.x;
+      ctx.save();
+      ctx.strokeStyle = 'rgba(255, 193, 7, 0.5)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      var y70 = yAxis.getPixelForValue(70);
+      ctx.beginPath();
+      ctx.moveTo(xAxis.left, y70);
+      ctx.lineTo(xAxis.right, y70);
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(255, 193, 7, 0.8)';
+      ctx.font = '10px sans-serif';
+      ctx.fillText('70% target', xAxis.left - 2, y70 - 5);
+      ctx.restore();
+    }
+  }]
+});
+</script>
+</body>
+</html>

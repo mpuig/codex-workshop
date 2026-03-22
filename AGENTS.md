@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Training materials for consultancy teams on using OpenAI Codex for insurance workflows. All content uses a fictional company context: **Mediterranean Insurance Group (MIG)**, a mid-size European insurer headquartered in Barcelona.
+Training materials for non-technical professionals on using OpenAI Codex for insurance workflows. All content uses a fictional company context: **Mediterranean Insurance Group (MIG)**, a mid-size European insurer headquartered in Barcelona.
 
 ## Company Context: Mediterranean Insurance Group (MIG)
 
@@ -15,8 +15,8 @@ Training materials for consultancy teams on using OpenAI Codex for insurance wor
 
 ## Repository Structure
 
-- `course-materials/` -- Training modules (0-Getting Started through 4-Vibe Coding)
-- `exercises/` -- Three hands-on exercises with CSV/JSON data files
+- `course-materials/` -- Training modules (1-Getting Started through 5-Wrap Up, plus 6-Advanced Tips)
+- `exercises/` -- Four hands-on exercises with CSV/JSON/MD data files
 - `company-context/` -- Detailed MIG company docs (COMPANY.md, PRODUCTS.md, PERSONAS.md, MARKET.md)
 - `website/` -- Nextra-based documentation site (Next.js 14 + nextra-theme-docs)
 

@@ -1,11 +1,11 @@
 ---
-title: "Module 2.1: Writing an Underwriting Brief"
+title: "Module 3.1: Writing an Underwriting Brief"
 description: "Use OpenAI Codex to analyze a commercial property portfolio and generate a professional underwriting brief."
 ---
 
-# Module 2.1: Writing an Underwriting Brief with OpenAI Codex
+# Module 3.1: Writing an Underwriting Brief with OpenAI Codex
 
-> **Time:** 30 minutes | **Prerequisites:** [Module 1.2: Project Memory](/fundamentals/project-memory)
+> **Time:** 30 minutes | **Prerequisites:** [Module 2.2: Project Memory](/fundamentals/project-memory)
 
 ## The Scenario
 
@@ -117,7 +117,7 @@ I have everything needed to proceed. Shall I begin the exposure concentration an
 
 ## Step 2: Analyze Exposure Concentrations
 
-Now ask Codex to think analytically about the risk.
+Now ask OpenAI Codex to think analytically about the risk.
 
 ### Sample prompt:
 
@@ -139,27 +139,6 @@ Analyze the exposure concentrations in this portfolio. I want to understand:
    (e.g., a wildfire or flood) could affect multiple facilities?
 
 Present this as a risk concentration analysis with a summary table.
-```
-
-### Expected output format:
-
-Codex should produce something structured like:
-
-```text
-EXPOSURE CONCENTRATION ANALYSIS
-================================
-
-1. Geographic Distribution of TSI
-----------------------------------
-| City      | # Sites | Total TSI (EUR) | % of Portfolio |
-|-----------|---------|-----------------|----------------|
-| Valencia  | 4       | 39.000.000      | 27,2%          |
-| Alicante  | 4       | 43.800.000      | 30,5%          |
-| Castellon | 3       | 33.000.000      | 23,0%          |
-| Murcia    | 2       | 24.500.000      | 17,1%          |
-| Albacete  | 1       | 3.200.000       | 2,2%           |
-
-Key concern: Alicante represents 30,5% of total exposure...
 ```
 
 <details>
@@ -396,7 +375,7 @@ MIG's property treaty has an excess point of EUR 5.000.000. The following scenar
 
 ## Using Codex as a Thinking Partner
 
-The most useful part of OpenAI Codex here is structured thinking, not document generation. Try prompts like these:
+OpenAI Codex is most useful for structured thinking, not only document generation. Try prompts like these:
 
 | Prompt | Purpose |
 |--------|---------|
@@ -418,10 +397,10 @@ In this module you learned to:
 - Iterate on drafts with targeted feedback
 - Use Codex as a thinking partner, not just a writer
 
-Give Codex the data, tell it what structure you want, and then challenge the output. The best results come from two or three rounds of refinement.
+The key takeaway: **give Codex the data, tell it what structure you want, and then challenge the output.** The best results come from two or three rounds of refinement.
 
 ---
 
 ## Next Step
 
-Proceed to [Module 2.2: Loss Ratio Analysis](/insurance-workflows/loss-ratio-analysis) to work with claims and premium data in a quantitative workflow.
+Proceed to [Module 3.2: Loss Ratio Analysis](/insurance-workflows/loss-ratio-analysis) to work with claims and premium data in a quantitative workflow.

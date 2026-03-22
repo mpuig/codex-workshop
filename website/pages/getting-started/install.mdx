@@ -108,6 +108,29 @@ Give me a brief overview in plain language.
 
 OpenAI Codex will respond directly in your terminal. You are ready to go.
 
+<details>
+<summary>Example output</summary>
+
+The Solvency II standard formula calculates the **Solvency Capital Requirement (SCR)** — the minimum capital an insurer must hold to survive a 1-in-200-year adverse event. The structure works bottom-up:
+
+1. **Individual risk modules** — each major risk type gets its own capital charge:
+   - **Market risk** (interest rates, equity, property, currency, spread, concentration)
+   - **Counterparty default risk** (reinsurer or debtor failure)
+   - **Life underwriting risk** (mortality, longevity, disability, lapse, expense, catastrophe)
+   - **Health underwriting risk** (similar sub-risks, health-specific)
+   - **Non-life underwriting risk** (premium/reserve, lapse, catastrophe)
+
+2. **Aggregation with correlation matrices** — the sub-modules within each risk type are combined using prescribed correlation matrices, then the five top-level modules are aggregated the same way. This diversification benefit reduces the total.
+
+3. **Add-ons** — the aggregated figure is adjusted for:
+   - **Operational risk** (a formulaic add-on)
+   - **Loss-absorbing capacity** of technical provisions and deferred taxes (reduces the SCR)
+   - **Intangible asset risk** (if applicable)
+
+**Result:** the final SCR number in EUR, which the insurer compares against its **Own Funds** to derive the **Solvency II ratio** (Own Funds ÷ SCR). A ratio above 100% means compliant; most insurers target well above that.
+
+</details>
+
 ---
 
 ## Quick Reference: Session Control
@@ -125,4 +148,4 @@ Codex behavior is controlled by CLI options and config:
 ## Next Step
 
 For non-technical executive users, start with [Exercise 1: Executive Onramp](/exercises/executive-onramp).
-Then proceed to [Module 1.1: First Steps with OpenAI Codex](/fundamentals/first-steps) to learn how to give effective instructions and complete your first insurance tasks.
+Then proceed to [Module 2.1: First Steps with OpenAI Codex](/fundamentals/first-steps) to learn how to give effective instructions and complete your first insurance tasks.
